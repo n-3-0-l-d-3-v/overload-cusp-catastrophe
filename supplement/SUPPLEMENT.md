@@ -213,14 +213,44 @@ sensitivity of a test that fires on noise 42% of the time.
 ## S6. The early-warning estimator failure
 
 `m5_ews_summary.csv`. Data simulated from a model that **genuinely contains a
-fold**, so the correct answer is known by construction.
+fold**, so the correct answer is known by construction. Ninety configurations
+— five window lengths × two detrending choices × three series lengths — at 500
+replicates each, 15,000 series in total.
 
-- Closed-form theory recovers **+0.565** against a predicted +0.50. Theory and
-  implementation agree.
-- Rolling-window `−log AC1` returns **negative** slopes where +0.5 is predicted.
-- Rolling variance returns **positive** slopes where −0.5 is predicted.
-- Holds across windows 20 to 240 samples, with and without detrending, at series
-  lengths 1,500 / 6,000 / 20,000.
+Closed-form theory recovers **+0.565** against a predicted +0.50. Theory and
+implementation agree.
+
+The rolling estimators fail in **two distinct regimes**, and it matters which
+one you are in.
+
+**Regime 1, windows 20–120: the sign is inverted, and not marginally.**
+
+| Estimator | Window | Predicted | Median | Replicates with wrong sign |
+|---|---|---|---|---|
+| −log AC1 | 30 | +0.5 | **−0.216** | 95% |
+| −log AC1 | 120 | +0.5 | −0.043 | 66% |
+| variance | 30 | −0.5 | **+0.307** | 99% |
+| variance | 120 | −0.5 | +0.028 | 68% |
+
+Several configurations invert in **all 500** replicates.
+
+**Regime 2, window 240: the estimate collapses onto zero.**
+
+| Estimator | Window | Predicted | Median | Replicates with wrong sign |
+|---|---|---|---|---|
+| −log AC1 | 240 | +0.5 | +0.026 | 32% |
+| variance | 240 | −0.5 | −0.014 | 40% |
+
+Here the median finally carries the *right* sign — at a magnitude of roughly
+5% of the predicted one, with the sign close to a coin flip. It is right by
+accident, not by measurement.
+
+An earlier draft of this work claimed the sign was wrong "in every
+configuration tested". At 500 replicates that is false: 16 of the 60 rolling
+configurations carry the correct sign, all of them at window 240. The corrected
+claim is stronger, not weaker. **Nowhere on the grid does an estimate come near
+±0.5.** Widening the window does not rescue the estimator; it trades a
+confident wrong answer for no answer at all.
 
 **Mechanism.** Critical slowing down means the relaxation time diverges at the
 fold. A fixed-width window therefore saturates precisely where the effect is
@@ -228,8 +258,9 @@ strongest: windowed AC1 → 1, so −log AC1 → 0, exactly in the regime the
 indicator exists to measure. Detrending then strips the low-frequency power
 carrying what is left, which is why detrended variants are *worse*, not better.
 
-This is structural. More data does not fix it. Raising n by an order of
-magnitude does not recover the sign.
+This is structural. More data does not fix it: raising n by an order of
+magnitude leaves the sign where it was, and widening the window only drives the
+estimate towards zero.
 
 **Why this matters beyond this paper.** Rolling AC1 and variance are the
 standard early-warning indicators, applied across ecology and psychopathology.
