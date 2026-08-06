@@ -1,33 +1,23 @@
-[22:50:59] mega_run starting: blocks ['recovery', 'size', 'power', 'persistence', 'ews', 'noise'], -2 job slots
-[22:50:59] RECOVERY: 600 reps x 6 lengths
-[22:51:08]    at n>=500: mean |bias| 0.0245, min corr 0.073
-[22:51:08]    recovery finished in 10s
-[22:51:08] SIZE: 2000 reps x 6 lengths (calibrated on first 500)
-[23:02:21]    nominal size 0.420, calibrated 0.057 (target 0.05)
-[23:02:21]    size finished in 673s
-[23:02:21] POWER: 600 reps x 6 lengths x 4 regimes
-Traceback (most recent call last):
-  File "C:\Users\Neil Thomas Mathew\Downloads\research\final\code\experiments\mega_run.py", line 463, in <module>
-    main()
-  File "C:\Users\Neil Thomas Mathew\Downloads\research\final\code\experiments\mega_run.py", line 457, in main
-    BLOCKS[nm]()
-  File "C:\Users\Neil Thomas Mathew\Downloads\research\final\code\experiments\mega_run.py", line 243, in block_power
-    out = Parallel(n_jobs=N_JOBS, verbose=0)(
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 2072, in __call__
-    return output if self.return_generator else list(output)
-                                                ^^^^^^^^^^^^
-  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 1682, in _get_outputs
-    yield from self._retrieve()
-  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 1784, in _retrieve
-    self._raise_error_fast()
-  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 1859, in _raise_error_fast
-    error_job.get_result(self.timeout)
-  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 758, in get_result
-    return self._return_or_raise()
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 773, in _return_or_raise
-    raise self._result
-joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
-
-Detailed tracebacks of the workers should have been printed to stderr in the executor process if faulthandler was not disabled.
+[01:14:32] mega_run starting: blocks ['recovery', 'size', 'ews', 'noise', 'persistence', 'power'], 10 workers, rep-scale 1.0, N_SURR 200
+[01:14:32] RECOVERY: 2000 reps x 6 lengths
+[01:14:39]    m1_recovery: chunk 1/5 (20%), eta 24s
+[01:14:42]    m1_recovery: chunk 2/5 (40%), eta 14s
+[01:14:46]    m1_recovery: chunk 3/5 (60%), eta 9s
+[01:14:52]    m1_recovery: chunk 4/5 (80%), eta 4s
+[01:14:59]    m1_recovery: chunk 5/5 (100%), eta 0s
+[01:15:00]    n=200 recovery: lam=0.93, sigma=0.97, alpha0=0.14, alpha_A=0.03, eps=0.04
+[01:15:00]    recovery finished in 27s
+[01:15:00] SIZE: 5000 reps x 6 lengths (calibrated on first 1250)
+[01:16:12]    m2_size: chunk 1/75 (1%), eta 89m31s
+[01:17:27]    m2_size: chunk 2/75 (3%), eta 89m25s
+[01:18:40]    m2_size: chunk 3/75 (4%), eta 88m03s
+[01:18:49]    m2_size: chunk 4/75 (5%), eta 67m50s
+[01:18:49]    m2_size: chunk 5/75 (7%), eta 53m37s
+[01:18:50]    m2_size: chunk 6/75 (8%), eta 44m08s
+[01:18:50]    m2_size: chunk 7/75 (9%), eta 37m22s
+[01:18:51]    m2_size: chunk 8/75 (11%), eta 32m17s
+[01:18:51]    m2_size: chunk 9/75 (12%), eta 28m20s
+[01:18:52]    m2_size: chunk 10/75 (13%), eta 25m09s
+[01:18:52]    m2_size: chunk 11/75 (15%), eta 22m34s
+[01:18:53]    m2_size: chunk 12/75 (16%), eta 20m24s
+[01:19:32]    m2_size: chunk 13/75 (17%), eta 21m39s

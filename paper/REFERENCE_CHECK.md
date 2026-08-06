@@ -1,84 +1,111 @@
-# Reference verification status
+# Reference verification
 
-Every citation in `refs.bib`, with how far it has been verified. Verification
-was done programmatically against the **Crossref API** (`api.crossref.org`),
-which returns the publisher's deposited metadata, on 2026-07-22.
+Every entry in `refs.bib` that carries a DOI has been checked against the
+metadata the publisher deposited, not against a search engine. Crossref is the
+authority for articles and conference papers; DataCite for datasets, which are
+registered there instead and return a Crossref 404 that means nothing.
+
+Reproduce with:
+
+```bash
+python code/experiments/check_citations.py --crossref
+```
+
+**Status as of 2026-08-07:** 46 entries — 42 verified clean, 4 without a DOI,
+0 disagreements.
 
 ---
 
-## Corrections made — read this section
+## Why this file exists
 
-Nine entries carried over from the earlier draft's resource list were **wrong**,
-six of them seriously (wrong authors, wrong venue, or in one case a completely
-different paper). All are now corrected against Crossref. Had these been
-submitted, they would have been a significant credibility problem.
+Round 4 of the self-review spot-checked nine entries and found six wrong. One
+DOI resolved to an entirely different paper. At that base rate the remaining
+entries could not be assumed clean, so the check was automated and run over all
+46. It found two further defects that four rounds of human reading had missed.
 
-| Old key | What was wrong | Corrected to |
+Citation errors are not cosmetic. A wrong DOI in a submitted manuscript is the
+kind of thing that gets a paper desk-rejected, and if it survives review it
+becomes a correction notice.
+
+---
+
+## Corrections made in this pass (2026-08-07)
+
+### `wichers2021` → `helmich2021` — wrong first author, wrong pages
+
+Two independent errors in one entry.
+
+| Field | Was | Should be |
 |---|---|---|
-| `millidge2023` | **Wrong authors.** Attributed to "Millidge, Beren et al."; the paper is by Arthur, Vine, Buckingham, Brosnan, Wilson & Harris | `arthur2023` |
-| `bos2021` | **Wrong paper entirely.** DOI `10.1016/j.jad.2020.11.104` resolves to Squarcina et al., "Deep learning for the prediction of treatment response in depression" — not an early-warning-signals paper at all | `wichers2020` (Wichers, Smit & Snippe, *J. Person-Oriented Research* 6(1):1–15, doi `10.17505/jpor.2020.22042`) |
-| `turanbirol2023` | **Wrong authors.** Attributed to "Turan Birol & Singh"; the paper is by Li, Henning & Camerer | `li2023` |
-| `can2024` | **Wrong authors and wrong venue.** Attributed to "Can, Yekta Said et al." in *IEEE Rev. Biomed. Eng.*; the paper is by Cano, Cubillos, Alfaro & Romo in *Sensors* 24(24):8137 | `cano2024` |
-| `kirtley2025openesm` | **Wrong authors.** Attributed to "Kirtley, Olivia J. et al."; openESM is by Siepe, Haslbeck, Kloft & Büchner, *Behavior Research Methods* 58:240 (2026) | `siepe2026` |
-| `auge2025` | Wrong first name (Pauline → **Pierre**), wrong year (2025 → **2024**) | `auge2024` |
-| `kiep2025` | Wrong year (2025 → **2023**), issue 6 not stated | `kiep2023` |
-| `chen2025ema` | Wrong year (2025 → **2024**); volume/pages added (29:1374–1389) | `chen2024ema` |
-| `smit2025` | Volume/issue/pages were missing; now 13(4):760–773 | `smit2025` (unchanged key) |
+| First author | Wichers, Marieke | **Helmich, Marieke A.** (Wichers is fourth) |
+| Pages | 105–110 | **51–58** |
 
-One further entry was **removed** in an earlier pass:
+Same class of defect as the six found in Round 4: an author-year key that looks
+plausible, attached to metadata nobody re-read. Key renamed to match the actual
+first author so the error cannot silently return.
 
-- `sano2019` — the earlier draft's title, volume and pages did not resolve to
-  any real IEEE TAFFC record. Not cited in the manuscript. Do not reinstate
-  without a DOI that resolves.
+### Three entries dated to online-first rather than the issue cited
 
-**Lesson recorded in the progress log:** a citation list inherited from notes
-is not a verified bibliography. Six of nine spot-checked entries were wrong.
+`kiep2023` → **`kiep2025`**, `auge2024` → **`auge2025`**,
+`chen2024ema` → **`chen2025ema`**.
 
----
+Each carried the volume, issue and page numbers of the print issue while giving
+the year the article first appeared online. That is internally inconsistent: a
+reader following *J. Autism Dev. Disord.* **55**(6), 2075–2084 arrives at a 2025
+issue, not a 2023 one.
 
-## CONFIRMED against Crossref (2026-07-22)
+| Key | Online-first | Print issue | Year now cited |
+|---|---|---|---|
+| `kiep2025` | 2023-05-12 | 55(6), Jun 2025 | 2025 |
+| `auge2025` | 2024-05-18 | 55(8), Aug 2025 | 2025 |
+| `chen2025ema` | 2024-12-18 | 29(6), Jun 2025 | 2025 |
 
-| Key | Verified |
-|---|---|
-| `arthur2023` | Arthur, Vine, Buckingham, Brosnan, Wilson, Harris. *PLOS Comput. Biol.* 19(9):e1011473, 2023 |
-| `scheeren2025` | Scheeren, Nieuwenhuis, Crane, Roke, Begeer. *Autism* 29(12):3002–3013, 2025 |
-| `auge2024` | Augé, Maruani, Humeau, Ellul, Cartigny, Lefebvre, Dellapiazza, Delorme. *JADD* 55(8):2788–2796, 2024 |
-| `smit2025` | Smit, Helmich, Bringmann, Oldehinkel, Wichers, Snippe. *Clin. Psychol. Sci.* 13(4):760–773, 2025 |
-| `wichers2020` | Wichers, Smit, Snippe. *J. Person-Oriented Res.* 6(1):1–15, 2020 |
-| `li2023` | Li, Henning, Camerer. *Front. Behav. Econ.* 2:1225856, 2023 |
-| `kiep2023` | Kiep, Spek, Ceulemans, Noens. *JADD* 55(6):2075–2084, 2023 |
-| `chen2024ema` | Chen, Xi, Greene, Mandy. *Autism* 29:1374–1389, 2024 |
-| `cano2024` | Cano, Cubillos, Alfaro, Romo. *Sensors* 24(24):8137, 2024 |
-| `siepe2026` | Siepe, Haslbeck, Kloft, Büchner. *Behav. Res. Methods* 58:240, 2026 |
-| `hosseini2022nurse` | Hosseini, Gottumukkala, Katragadda, Bhupatiraju, Ashkar, Borst, Cochran. *Sci. Data* 9:255, 2022 |
-| `adamou2026` | Adamou, Kehagias, Antoniou. *Front. Psychiatry* 17:1787120, 2026 |
-
-## CONFIRMED by direct retrieval (datasets downloaded this session)
-
-| Key | Note |
-|---|---|
-| `schmidt2018wesad` | Downloaded from the authors' mirror linked off UCI ID 465; contents match (15 subjects, 4 conditions, E4 + RespiBAN) |
-| `amin2022exam` | PhysioNet record retrieved; 10 students × 3 exams, ODC-BY v1.0 |
-| `hosseini2022nurse` | Zenodo record 5514277; 15 nurses, 609 sessions |
-
-## CANONICAL (stable bibliographic record, standard works)
-
-`kramers1940` · `thom1975` · `zeeman1976` · `gilmore1981` · `gardiner2009` ·
-`wissel1984` · `scheffer2009` · `scheffer2012` · `dakos2012` · `ditlevsen2010` ·
-`boettiger2012` · `leemput2014` · `vandermaas1992` · `grasman2009` ·
-`julier2004` · `hutzenthaler2012` · `boucsein2012` · `benedek2010` ·
-`greco2016cvxeda` · `posadaquintero2020` · `shaffer2017` · `pellicano2012` ·
-`chrysaitis2023` · `demetriou2018` · `demetriou2019` · `maclennan2022` ·
-`nahumshani2018` · `eisenberg2019` · `wichers2021` · `sussmann1978` ·
-`zahler1977`
-
-These are foundational or widely-reproduced references whose details are
-stable. Spot-checking a sample is still advisable before final submission, but
-none is a carried-over note of uncertain provenance.
+Round 4 moved these the wrong way, changing correct 2025 dates to the
+online-first years while keeping the print volume and pages. This pass reverses
+that and records why, so a future round does not flip them a third time.
+`chen2025ema` was also missing its issue number.
 
 ---
 
-## Count
+## Two false-positive classes the checker used to produce
 
-45 entries, 45 cited, all resolving. Verified with
-`python code/experiments/check_citations.py`.
+Both were bugs in the checking script, not in the bibliography. Recording them
+because a checker that cries wolf gets ignored, which is worse than no checker.
+
+**Online-first dates.** Crossref's `issued` field is the earliest registered
+date, which for any journal that posts ahead of print is not the year of the
+issue being cited. The script now prefers `published-print` and falls back to
+`issued`. This removed four spurious reports (`demetriou2018`, `leemput2014`,
+`maclennan2022`, `nahumshani2018`), all of which were correct as written.
+
+**Dataset DOIs.** PhysioNet registers with DataCite, so `amin2022exam`
+(10.13026/kvkb-aj90) returned a Crossref 404 that read as "the DOI is wrong".
+It is not; the record is correct in every field. The script now falls back to
+the DataCite API before reporting a DOI as bad.
+
+---
+
+## Entries without a DOI
+
+Four, all pre-dating routine DOI assignment. Each was confirmed against the
+publisher's own catalogue record by hand; none is machine-checkable and none
+should be flagged in future runs.
+
+| Key | Work |
+|---|---|
+| `thom1975` | Thom, *Structural Stability and Morphogenesis*, W. A. Benjamin, 1975 |
+| `zeeman1976` | Zeeman, "Catastrophe theory", *Sci. Am.* 234(4), 65–83, 1976 |
+| `gilmore1981` | Gilmore, *Catastrophe Theory for Scientists and Engineers*, Wiley, 1981 |
+| `gardiner2009` | Gardiner, *Stochastic Methods*, 4th ed., Springer, 2009 |
+
+---
+
+## Consistency
+
+`check_citations.py` also confirms that every key cited in `main.tex` exists in
+`refs.bib`, and reports entries that are never cited.
+
+- Cited keys in the conference paper: **16**. All resolve. No `[?]` markers.
+- Uncited entries: **30**. These belong to `main_full_journal.tex`, the
+  long-form draft kept for the journal version. They are retained deliberately;
+  a single shared bibliography is easier to keep correct than two.
