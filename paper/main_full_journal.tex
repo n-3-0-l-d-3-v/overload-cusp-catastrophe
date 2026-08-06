@@ -594,15 +594,40 @@ numerical computation, and verifies parameter recovery on simulated data.
 \section{Results}
 \label{sec:results}
 
-\subsection{The estimator recovers what it should}
-Across 30 simulated units the profiled least-squares estimator recovers eight
-of nine parameters with correlations above $0.95$ between true and estimated
-values (drive coefficients $r=0.95$--$0.99$, $\alpha_0$ $r=0.98$, $\lambda$
-$r=0.997$, $\sigma$ $r=0.999$) and absolute biases below $0.02$. The exception
-is the slow-variable rate $\varepsilon$ ($r=0.51$), which is only weakly
-identified from series of this length. We flag that explicitly rather than
-bury it: every conclusion depending on $\varepsilon$, principally P4, is
-reported as exploratory.
+\subsection{What the estimator recovers, and at what length}
+\label{sec:recovery}
+On long series the estimator behaves impeccably. Across 30 simulated units at
+$n=4000$ windows it recovers eight of nine parameters with correlations above
+$0.95$ ($\alpha_0$ at $r=0.98$, $\lambda$ at $r=0.997$, $\sigma$ at $r=0.999$),
+absolute biases below $0.02$, and only the slow rate $\varepsilon$ lagging at
+$r=0.51$.
+
+That number is reported here because it is the one an earlier draft of this
+work led with, and it is close to meaningless as a description of what these
+corpora support. Two things make it optimistic. The series are $4000$ windows
+long against a median of $194$ in the data, and the true $\lambda$ is drawn
+from $[0.10,0.28]$ against a median of $0.0059$ in the real fits. The estimator
+was being asked an easy question.
+
+Asked the honest one --- randomised truth, 2000 replicates at each of six
+lengths spanning the observed range, $1.2\times10^{4}$ series in all --- the
+picture changes completely, and it is that study rather than this paragraph
+that should be read as the result. At the median observed length only $\lambda$ ($\rho=0.94$) and $\sigma$
+($\rho=0.99$) are recovered on both rank and value. The splitting factor sits
+at $\rho=0.57$ and $r=0.15$.
+
+Worse, the two measures never reconverge. By $n=1000$ the rank recovery of
+$\alpha_0$ reaches $\rho=0.88$ while its value recovery is $r=0.10$, because
+$a=\theta_2/\theta_1$ and nothing bounds $\theta_1$ away from zero: the
+recovered $\hat\alpha_0$ spans $[-140,3.3]$ against a $99$th percentile of
+$2.0$, so one replicate in two thousand destroys the linear correlation.
+Dividing by a small number preserves order and destroys scale. Length therefore
+buys a defensible ranking of participants by $\alpha_0$ and never buys a
+reportable value.
+
+Every conclusion depending on $\varepsilon$ or $\alpha_A$ --- principally P3 to
+P5 --- is reported as exploratory, and on this evidence cannot be made
+confirmatory by collecting longer recordings alone.
 
 \begin{figure}[t]
 \centering
