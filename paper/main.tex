@@ -384,16 +384,16 @@ ground-truth cusp data? The closed-form theory does. The rolling-window
 estimators return the wrong sign.}
 \label{tab:ewsval}
 \centering
-\begin{tabular}{@{}llrr@{}}
+\begin{tabular}{@{}lcccr@{}}
 \toprule
-Estimator & Detrend & Window & Median exponent \\
+Estimator & Predicted & Detrend & Window & Median \\
 \midrule
-theory $\lambda_{\text{rel}}(\mu)$ & n/a & n/a & $\mathbf{+0.565}$ \\
+theory $\lambda_{\text{rel}}(\mu)$ & $+0.5$ & --- & --- & $\mathbf{+0.565}$ \\
 \midrule
-$-\log$AC1 (predicted $+0.5$) & no  & 30  & $-0.262$ \\
-$-\log$AC1 (predicted $+0.5$) & no  & 120 & $-0.035$ \\
-variance (predicted $-0.5$)   & no  & 30  & $+0.311$ \\
-variance (predicted $-0.5$)   & yes & 120 & $+0.036$ \\
+$-\log$AC1 & $+0.5$ & no  & 30  & $-0.262$ \\
+$-\log$AC1 & $+0.5$ & no  & 120 & $-0.035$ \\
+variance   & $-0.5$ & no  & 30  & $+0.311$ \\
+variance   & $-0.5$ & yes & 120 & $+0.036$ \\
 \bottomrule
 \end{tabular}
 \end{table}

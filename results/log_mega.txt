@@ -21,3 +21,17 @@
 [01:18:52]    m2_size: chunk 11/75 (15%), eta 22m34s
 [01:18:53]    m2_size: chunk 12/75 (16%), eta 20m24s
 [01:19:32]    m2_size: chunk 13/75 (17%), eta 21m39s
+[01:20:53]    m2_size: chunk 14/75 (19%), eta 25m38s
+[01:22:13]    m2_size: chunk 15/75 (20%), eta 28m55s
+[01:23:04]    m2_size: chunk 16/75 (21%), eta 29m47s
+[01:23:05]    m2_size: chunk 17/75 (23%), eta 27m35s
+[01:23:05]    m2_size: chunk 18/75 (24%), eta 25m38s
+[01:23:06]    m2_size: chunk 19/75 (25%), eta 23m52s
+[01:23:06]    m2_size: chunk 20/75 (27%), eta 22m18s
+[01:23:07]    m2_size: chunk 21/75 (28%), eta 20m52s
+[01:23:07]    m2_size: chunk 22/75 (29%), eta 19m34s
+[01:23:08]    m2_size: chunk 23/75 (31%), eta 18m23s
+[01:23:08]    m2_size: chunk 24/75 (32%), eta 17m18s
+[01:23:09]    m2_size: chunk 25/75 (33%), eta 16m18s
+[01:24:34]    m2_size: chunk 26/75 (35%), eta 18m02s
+[01:26:01]    m2_size: chunk 27/75 (36%), eta 19m35s
