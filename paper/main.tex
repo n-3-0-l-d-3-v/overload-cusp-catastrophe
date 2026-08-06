@@ -60,14 +60,17 @@ power of the splitting factor; near the fold, variance and log-autocorrelation
 scale as $\mp 1/2$ in distance to the tipping point. Estimation is exact, since
 conditional on the slow variable the drift is linear in a reparameterised
 coefficient vector. Three findings follow, of which two concern method rather
-than physiology. A Monte Carlo study over $3.6\times10^{3}$ simulated series
-shows that at the lengths wearable corpora actually supply, only the relaxation
-rate and the diffusion coefficient are identified; the control parameters
-carrying the geometry are not. That bounds what any cusp analysis of such data
-can claim, this one included. Next, the rolling-window variance and
-autocorrelation indicators the early-warning literature runs on return exponents
-of the wrong sign on data simulated from a model that does contain a fold, so we
-withdraw our own early-warning test rather than report it. Finally, across 147
+than physiology. A Monte Carlo study over $1.2\times10^{4}$ simulated series
+shows that at the lengths wearable corpora supply, only the relaxation rate and
+the diffusion coefficient are recovered. The parameters carrying the geometry
+are ratios with an unbounded denominator, so length buys their ordering but
+never their value: rank correlation for the splitting factor reaches $0.88$ at
+$n=1000$ while its linear correlation stays at $0.10$. That bounds any cusp
+analysis of such data, this one included. Next,
+the rolling-window variance and autocorrelation indicators the early-warning
+literature runs on return exponents of the wrong sign on data simulated from a
+model that does contain a fold, so we withdraw our own early-warning test rather
+than report it. Finally, across 147
 recordings from 40 people in three open corpora, the one identifiable prediction
 is not supported above a surrogate-calibrated null; measured power bounds this
 to excluding strong and moderate dynamics. The work is motivated by autistic
@@ -135,11 +138,11 @@ than title the work after a group it does not measure.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.94\textwidth]{fig1_geometry}
+\includegraphics[width=0.86\textwidth]{fig1_geometry}
 \caption{The geometry from which everything else follows. (a) The cusp potential
 at three levels of drive $b$. (b) The bifurcation set in the $(a,b)$ plane, with
 the five functional states appearing as regions rather than as assigned labels.
-(c) The hysteresis loop, whose width is fixed by \eqref{eq:hyst} rather than
+(c) The hysteresis loop, whose width is fixed by Prop.~\ref{prop:hyst} rather than
 merely being positive.}
 \label{fig:geometry}
 \end{figure*}
@@ -165,32 +168,28 @@ That is a mechanistic reading of the refractory period qualitative accounts
 describe.
 
 \subsection{Folds and two scaling laws}
-Equilibria solve $x^3-ax-b=0$. Its discriminant $4a^3-27b^2$ is positive exactly
-when two stable basins coexist. Folds occur where $V''(x)=0$, that is at
+Equilibria solve $x^3-ax-b=0$, whose discriminant $4a^3-27b^2$ is positive
+exactly when two stable basins coexist. Folds sit where $V''(x)=0$, at
 $x_\pm=\pm\sqrt{a/3}$, giving critical drives $\pm b_c(a)$ with
 $b_c(a)=\tfrac{2}{3\sqrt3}a^{3/2}$.
 
 \begin{proposition}[Hysteresis width, P1]\label{prop:hyst}
 For $a>0$ the system jumps to the upper branch at $b=+b_c$ and returns at
 $b=-b_c$, so the loop has width
-\begin{equation}
-\Delta b(a)=\tfrac{4}{3\sqrt3}\,a^{3/2}.
-\label{eq:hyst}
-\end{equation}
+$\Delta b(a)=\tfrac{4}{3\sqrt3}\,a^{3/2}$.
 \end{proposition}
 
 Linearising \eqref{eq:sde} about a stable equilibrium gives a relaxation rate
-$\lambda_{\text{rel}}=3x^{*2}-a$, which vanishes at a fold. Critical slowing
-down is therefore a theorem here rather than an assumption. Writing
-$\mu=b_c-b$ for the distance to the fold, the normal form gives
-$\lambda_{\text{rel}}\propto\mu^{1/2}$, hence
+$\lambda_{\text{rel}}=3x^{*2}-a$ that vanishes at a fold, so critical slowing
+down is a theorem here rather than an assumption. With $\mu=b_c-b$ the distance
+to the fold, the normal form gives $\lambda_{\text{rel}}\propto\mu^{1/2}$, hence
 
 \begin{proposition}[Early-warning exponents, P2]\label{prop:ews}
 $\Var(x)\propto\mu^{-1/2}$ and $-\log\mathrm{AC1}\propto\mu^{+1/2}$.
 \end{proposition}
 
-These are point hypotheses about exponents. They differ in kind from the usual
-directional claim that an indicator rises before a transition, which the
+These are point hypotheses about exponents, differing in kind from the usual
+directional claim that an indicator rises before a transition --- which the
 sceptical literature shows arises spuriously on almost any autocorrelated series
 \cite{ditlevsen2010,boettiger2012}.
 
@@ -199,11 +198,11 @@ Crossing basin membership with the bistability condition partitions the $(a,b)$
 plane into five regions (Fig.~\ref{fig:geometry}b): \emph{calm} and
 \emph{focused} in the lower basin when monostable, \emph{stuck} in the lower
 basin while an overloaded attractor coexists, \emph{overloaded} in the upper
-basin, and \emph{recovering} in the upper basin once demand has fallen below the
-level that would have put the system there. The last two matter most.
-Qualitative work uses both words freely; to our knowledge neither has previously
-had a precise mathematical meaning. Between-basin moves are
-noise-induced escapes with Kramers rate
+basin, and \emph{recovering} there once demand has fallen below the level that
+would have put the system there. The last two matter most: qualitative work uses
+both words freely, and to our knowledge neither has previously had a precise
+mathematical meaning. Between-basin moves are noise-induced escapes with Kramers
+rate
 $r=\tfrac{1}{2\pi}\sqrt{|V''(x^*)V''(x_s)|}\exp(-2\Delta V/\sigma^2)$
 \cite{kramers1940}, so the kernel is a deterministic function of
 $(a_t,b_t,\sigma)$: twenty counted probabilities replaced by nine interpretable
@@ -225,16 +224,15 @@ accelerometry. Windowing and quality screening leave \textbf{147 recordings from
 
 \subsection{Sensor assignment and a negative control}
 Read the load coordinate and its drivers off the same sensor and the model stops
-being falsifiable, because shared measurement noise alone will manufacture the
-coupling. We therefore assign the two to disjoint sensors. Which signal carries
-the load is then settled by measurement rather than preference: the coordinate
-of a slow relaxation process must itself be slow. At a \SI{30}{\second} window,
-tonic electrodermal activity has lag-1 autocorrelation $0.98$. A cardiac index
-built from heart rate and RMSSD has $0.19$, RMSSD over so few beats being
-dominated by beat-detection error. Configuration B (tonic EDA) is therefore
-primary and configuration C (skin temperature) a robustness check. We keep
-configuration A, the cardiac index, as a \emph{negative control}: a working
-pipeline should find nothing in it.
+being falsifiable, since shared measurement noise alone manufactures the
+coupling; we therefore assign them to disjoint sensors. Which signal carries the
+load is settled by measurement, not preference: the coordinate of a slow
+relaxation process must itself be slow. At a \SI{30}{\second} window tonic
+electrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index
+from heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by
+beat-detection error. Configuration B (tonic EDA) is therefore primary and C
+(skin temperature) a robustness check. We keep A, the cardiac index, as a
+\emph{negative control}: a working pipeline should find nothing in it.
 
 \subsection{Estimation}
 Taking the Euler map of \eqref{eq:sde} as the model, rather than as an
@@ -248,11 +246,11 @@ reparameterised coefficient vector,
 \end{equation}
 with $\theta_1=\lambda$, $\theta_2=\lambda\alpha_0$, $\theta_3=\lambda\alpha_A$
 and $\theta_{4:7}=\lambda\beta_{0:U}$. Since $A_t$ depends only on
-$\varepsilon$, the fit is ordinary least squares profiled over a single scalar:
-exact, with no bounds, no starting values and no local optima. We impose
-$\theta_1\ge0$, because a negative value places the system outside the model
-rather than merely fitting it badly, and we retain units where that constraint
-binds so that no reported proportion is conditioned on its own outcome.
+$\varepsilon$, the fit is ordinary least squares profiled over one scalar:
+exact, no bounds, no starting values, no local optima. We impose
+$\theta_1\ge0$, since a negative value puts the system outside the model rather
+than merely fitting it badly, and we keep units where that constraint binds so
+no reported proportion is conditioned on its own outcome.
 
 \subsection{Nulls}
 The nominal $t$-test on $\theta_1$ is unusable here. Tonic EDA is close to a
@@ -273,66 +271,84 @@ Before testing anything we asked which parameters are recoverable at the series
 lengths on offer. This is not a formality. It turned out to be the result that
 organises the rest of the paper.
 
-We simulated from the model with randomised true parameters and refitted, 600
-replicates at each of six lengths, then correlated true against estimated values
-(Table~\ref{tab:ident}, Fig.~\ref{fig:ident}a). At $n=1000$ most parameters are
-at least moderately recovered. At $n=200$, which is the median length in these
-corpora, only two are: the relaxation rate $\lambda$ at $r=0.91$ and the
-diffusion coefficient $\sigma$ at $r=0.95$. The splitting factor $\alpha_0$ sits
-at $r=0.06$, the debt gain $\alpha_A$ at $r=-0.07$, and the slow rate
-$\varepsilon$ at $r=0.07$.
+We simulated from the model with randomised true parameters and refitted, 2000
+replicates at each of six lengths, and compared true against estimated values
+(Table~\ref{tab:ident}, Fig.~\ref{fig:ident}a).
+
+Two correlations are reported, because they answer different questions and the
+gap between them is the finding. Spearman's $\rho$ asks whether the
+\emph{ordering} survives; Pearson's $r$ asks whether the \emph{number} can be
+read off. For $\lambda$ and $\sigma$ they agree, and both are high from $n=100$
+up. Everywhere else they diverge.
+
+The splitting factor carries the geometry, so it is the case that matters. Its
+rank recovery climbs with length, $\rho=0.33$ at $n=100$ to $0.88$ at $n=1000$.
+Its value recovery does not climb at all: $r=0.15$ at $n=200$, $r=0.10$ at
+$n=1000$. There $\hat\alpha_0$ spans $[-140,3.3]$ against a $99$th percentile of
+$2.0$, so one blow-up in two thousand replicates destroys the linear
+correlation. That is the model's own arithmetic, not a quirk of the
+simulation.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig9_identifiability}
-\caption{(a) Recovery correlation against series length, 600 replicates per
-point. Only $\lambda$ and $\sigma$ clear a useful threshold at the median
-observed length. (b) The failure mechanism: absolute error in the recovered
-splitting factor rises as $\hat\lambda$ falls, because $a=\theta_2/\theta_1$.
-The median $\hat\lambda$ in the real corpora lies below the whole simulated
-range.}
+\caption{(a) Rank recovery against series length, 2000 replicates per point.
+(b) The mechanism: error in the recovered splitting factor rises as
+$\hat\lambda$ falls, because $a=\theta_2/\theta_1$. The median $\hat\lambda$ in
+the real corpora lies below the whole simulated range.}
 \label{fig:ident}
 \end{figure}
 
 \begin{table}[t]
-\caption{Correlation between true and estimated parameters, 600 replicates per
-cell. At the median observed length ($n=200$) only $\lambda$ and $\sigma$ are
-identified. The control parameters carrying the geometry require $n\gtrsim500$.}
+\caption{Parameter recovery, 2000 replicates per cell. $\rho$ (Spearman) asks
+whether the ordering is recovered, $r$ (Pearson) whether the value is. Only
+$\lambda$ and $\sigma$ score well on both. For $\alpha_0$ they diverge and stay
+diverged.}
 \label{tab:ident}
 \centering
-\begin{tabular}{@{}lrrrr@{}}
+\begin{tabular}{@{}lcccc@{}}
 \toprule
-Parameter & $n=100$ & $n=200$ & $n=500$ & $n=1000$ \\
+& \multicolumn{2}{c}{Spearman $\rho$} & \multicolumn{2}{c}{Pearson $r$} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Parameter & $n{=}200$ & $n{=}1000$ & $n{=}200$ & $n{=}1000$ \\
 \midrule
-$\lambda$ (relaxation rate) & $0.82$ & $\mathbf{0.91}$ & $\mathbf{0.98}$ & $\mathbf{0.97}$ \\
-$\sigma$ (diffusion)        & $0.96$ & $\mathbf{0.95}$ & $\mathbf{0.99}$ & $\mathbf{0.99}$ \\
-$\beta_S$ (sensory drive)   & $0.33$ & $0.22$ & $0.80$ & $0.65$ \\
-$\beta_T$ (task switch)     & $0.21$ & $0.26$ & $0.74$ & $0.82$ \\
-$\alpha_0$ (splitting)      & $0.02$ & $0.06$ & $0.66$ & $0.59$ \\
-$\alpha_A$ (debt gain)      & $0.05$ & $-0.07$ & $0.07$ & $0.16$ \\
-$\varepsilon$ (slow rate)   & $0.01$ & $0.07$ & $0.21$ & $0.27$ \\
+$\lambda$ (relaxation)      & $\mathbf{0.94}$ & $\mathbf{0.98}$ & $\mathbf{0.93}$ & $\mathbf{0.97}$ \\
+$\sigma$ (diffusion)        & $\mathbf{0.99}$ & $\mathbf{1.00}$ & $\mathbf{0.97}$ & $\mathbf{0.99}$ \\
+$\beta_S$ (sensory drive)   & $0.64$ & $0.91$ & $0.26$ & $0.76$ \\
+$\beta_T$ (task switch)     & $0.58$ & $0.88$ & $0.34$ & $0.83$ \\
+$\alpha_0$ (splitting)      & $0.57$ & $0.88$ & $0.15$ & $0.10$ \\
+$\alpha_A$ (debt gain)      & $0.32$ & $0.72$ & $0.03$ & $0.18$ \\
+$\varepsilon$ (slow rate)   & $0.10$ & $0.44$ & $0.04$ & $0.25$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 The consequence is sharp, and it binds any study of this kind rather than only
 ours. Recovered geometry is built from the ratios $a=\theta_2/\theta_1$ and
-$b=\theta_4/\theta_1$. Both therefore inflate without bound as $\hat\lambda$
-approaches zero (Fig.~\ref{fig:ident}b), and that is exactly what the real fits
-do. Among units where the constraint does not bind, the median $\hat\lambda$ is
-$0.0059$ and the median recovered $\hat\alpha_0$ is $12$ --- attractors near
-$\pm2$ on a coordinate standardised to unit variance. These are not weakly
-bistable systems. They are systems with no restoring cubic term whatever, whose
-apparent geometry is an artefact of dividing by something close to zero. The
-median $\hat\lambda$ also falls below the entire range our simulation covers, so
-the recordings sit further into the non-identified regime than any of the
-$3.6\times10^{3}$ synthetic series used to map it.
+$b=\theta_4/\theta_1$, and nothing bounds $\theta_1$ away from zero. Both
+therefore inflate without bound as $\hat\lambda$ falls (Fig.~\ref{fig:ident}b).
+That explains the pattern in Table~\ref{tab:ident} exactly: dividing by a small
+number preserves order, which is why $\rho$ recovers, and destroys scale, which
+is why $r$ does not.
 
-One of the five pre-stated predictions survives as evaluable: the existence of
-the restoring cubic term, governed by the single well-identified parameter. P1
-needs the ratio of two badly identified quantities and P2 the distance to the
-fold, while P3 through P5 rest on $\varepsilon$ and $\alpha_A$. We report that
-structure rather than four numbers dressed up as tests.
+The real fits behave the same way. Among units where the constraint does not
+bind, the median $\hat\lambda$ is $0.0059$ and the median recovered
+$\hat\alpha_0$ is $12$ --- attractors near $\pm2$ on a coordinate standardised
+to unit variance. These are not weakly bistable systems. They are systems with
+no restoring cubic term whatever, whose apparent geometry is an artefact of the
+division. That median $\hat\lambda$ also falls below the entire range our
+simulation covers, so the recordings sit further into the non-identified regime
+than any of the $1.2\times10^{4}$ synthetic series used to map it.
+
+The practical reading is narrower than "collect more data": length buys a
+defensible \emph{ranking} by $\alpha_0$, never a reportable value.
+
+One of the five pre-stated predictions survives as evaluable here: the existence
+of the restoring cubic term, governed by $\theta_1$, the only parameter
+recovered on both measures. P1 needs the ratio of two badly identified
+quantities and P2 the distance to the fold, while P3 through P5 rest on
+$\varepsilon$ and $\alpha_A$. We report that structure rather than four numbers
+dressed up as tests.
 
 % =====================================================================
 \section{Results}
@@ -341,23 +357,20 @@ structure rather than four numbers dressed up as tests.
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig10_size_power}
-\caption{(a) Size on random-walk input. The nominal test rejects at roughly
-$0.42$ irrespective of series length, while surrogate calibration restores
-approximately nominal size. (b) Power of the calibrated test on input that
-genuinely contains a cusp. At the median observed length, strong and moderate
-dynamics are detected and weak dynamics largely are not. Bands are Wilson
-intervals.}
+\caption{(a) Size on random-walk input: the nominal test rejects at roughly
+$0.42$ at every length, surrogate calibration restores nominal size. (b) Power
+on input that genuinely contains a cusp. Bands are Wilson intervals.}
 \label{fig:powersize}
 \end{figure}
 
 \subsection{The nominal test is invalid; the calibrated one is powered}
-Over $12{,}000$ random-walk replicates spanning six lengths, the nominal
-one-sided $t$-test on $\theta_1$ rejects $42.0\%$ of the time rather than $5\%$.
-The inflation does not shrink with sample size. It grows, from $36.8\%$
-($95\%$ CI $[34.7,38.9]$) at $n=100$ to $44.4\%$ $([42.2,46.5])$ at $n=1000$ ---
+Over $30{,}000$ random-walk replicates spanning six lengths, the nominal
+one-sided $t$-test on $\theta_1$ rejects $41.9\%$ of the time rather than $5\%$.
+The inflation does not shrink with sample size. It grows, from $36.3\%$
+($95\%$ CI $[35.0,37.7]$) at $n=100$ to $44.4\%$ $([43.0,45.8])$ at $n=1000$ ---
 the signature of spurious regression on an integrated series, not a small-sample
 artefact. Surrogate calibration restores nominal size across the same grid:
-$5.7\%$ pooled over $3{,}000$ replicates, every per-length interval covering
+$5.0\%$ pooled over $7{,}500$ replicates, every per-length interval covering
 $0.05$. Calibration costs power, so we quote power for the test actually used.
 At $n=200$ it is $1.00$ for strong cusp dynamics, $0.76$ for moderate and $0.24$
 for weak, reaching $1.00$ everywhere by $n=1000$ (Fig.~\ref{fig:powersize}). The
@@ -376,18 +389,16 @@ $-\log\mathrm{AC1}$ returns negative slopes where $+0.5$ is predicted, and
 rolling variance returns positive slopes where $-0.5$ is
 (Table~\ref{tab:ewsval}). The sign is wrong in every configuration tested.
 
-This is structural, not a matter of noise. Critical slowing down means the
-relaxation time diverges at the fold, so a fixed-width window saturates exactly
-where the effect is largest; detrending then strips the low-frequency power
-carrying what survives. An order of magnitude more data does not recover the
-sign. We withdraw our own P2 test as uninterpretable, and the caution
-generalises: a directional early-warning result obtained this way is weak
-evidence in either direction.
+This is structural, not noise. Critical slowing down means the relaxation time
+diverges at the fold, so a fixed-width window saturates exactly where the effect
+is largest; detrending then strips the low-frequency power carrying what
+survives. An order of magnitude more data does not recover the sign. We withdraw
+our own P2 test as uninterpretable, and the caution generalises: a directional
+early-warning result obtained this way is weak evidence either way.
 
 \begin{table}[t]
-\caption{Can the standard early-warning estimator recover the exponent on
-ground-truth cusp data? The closed-form theory does. The rolling-window
-estimators return the wrong sign.}
+\caption{Recovering the exponent from ground-truth cusp data. The closed-form
+theory does; the rolling-window estimators return the wrong sign.}
 \label{tab:ewsval}
 \centering
 \begin{tabular}{@{}lcccr@{}}
@@ -432,32 +443,32 @@ truth.
 
 Robustness is mixed, and we report it that way. Configuration B sits at nominal
 under both the random-walk ($0.046$) and the harder IAAFT ($0.069$) ensembles,
-and holds across \SIrange{30}{120}{\second} windows. Configurations A and C are
-elevated, at $0.11$ to $0.16$. We tested three explanations for that and all
-three failed. IAAFT did not bring C down. Clipping rates run opposite to the
-effect. A size study on AR(1) series, $\phi$ from $0$ to $1$, found no
-persistence at which the calibrated test over-rejects. What is left is nonlinear
-structure the surrogates cannot reproduce. But A is the negative control, built
-on a coordinate already shown to be noise-dominated, so the parsimonious reading
-is motion and peak-detection artefact rather than a fold. A test that fires on
-the negative control is telling us that significance does not mean cusp there.
-That is why the conclusion rests on B alone.
+and holds across \SIrange{30}{120}{\second} windows. A and C are elevated, at
+$0.11$ to $0.16$. Three explanations were tested and all three failed: IAAFT did
+not bring C down, clipping rates run opposite to the effect, and an AR(1) size
+study ($\phi$ from $0$ to $1$) found no persistence at which the calibrated test
+over-rejects. What is left is nonlinear structure the surrogates cannot
+reproduce. But A is the negative control, built on a coordinate already shown to
+be noise-dominated, so the parsimonious reading is motion and peak-detection
+artefact rather than a fold. A test that fires on the negative control tells us
+significance does not mean cusp there, which is why the conclusion rests on B.
 
 % =====================================================================
 \section{Discussion and Conclusion}
 
 Modelling overload as motion in a cusp potential trades a descriptive account
-for a generative one whose consequences can be computed in advance. States
-become basins, the kernel becomes a function of nine parameters, and sudden
-onset, delayed recovery and two exponents become point hypotheses. Precision of
-that kind costs something: the model can lose. Here it did.
+for a generative one whose consequences compute in advance. States become
+basins, the kernel a function of nine parameters, sudden onset and delayed
+recovery point hypotheses. Precision of that kind costs something: the model can
+lose. Here it did.
 
 The identifiability result is the more durable contribution. Every attempt to
-fit cusp geometry to wearable physiology inherits the same ratio structure, so
-such a study needs either far longer records --- order $n\gtrsim500$ windows ---
-or a reparameterisation that estimates $a$ and $b$ directly. A splitting factor
-of 12 recovered from a 200-window recording is not a finding, and the arithmetic
-that produces it is in no way specific to our implementation.
+fit cusp geometry to wearable physiology inherits the same ratio structure, and
+the remedy depends on what is wanted. Ranking participants by $\alpha_0$ needs
+length, order $n\gtrsim500$ windows. Reporting a value needs a reparameterisation
+estimating $a$ and $b$ directly, since length alone never fixed it in our
+simulations. A splitting factor of 12 from a 200-window recording is not a
+finding, and the arithmetic producing it is not specific to our implementation.
 
 \emph{Limitations.} No autistic participants are analysed, so the motivating
 claim is untested rather than refuted. Tonic electrodermal activity is a
@@ -465,10 +476,9 @@ peripheral, artefact-prone proxy for a latent construct. Weak cusp dynamics stay
 compatible with everything reported here. Our estimator critique covers
 fixed-width rolling indicators with and without Gaussian detrending, which is
 what the applied literature mostly runs; it says nothing about adaptive-bandwidth
-or spectral estimators, which we did not test. Note also that longer records
-rescue $\alpha_0$ but not everything: in Table~\ref{tab:ident} the debt gain
-$\alpha_A$ and the slow rate $\varepsilon$ fail to reach $r=0.3$ at any length
-we simulated, $n=1000$ included.
+or spectral estimators, which we did not test. Note also that longer records rescue
+rankings, not values, and not every parameter even in rank: the slow rate
+$\varepsilon$ reaches only $\rho=0.44$ at $n=1000$.
 
 \emph{Toward validation.} We pre-specify the study that would test the mechanism
 in its intended population: 28 days of ecological momentary assessment with

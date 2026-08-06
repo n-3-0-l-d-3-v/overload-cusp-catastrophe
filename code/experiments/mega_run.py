@@ -69,6 +69,7 @@ import warnings                                                  # noqa: E402
 from pathlib import Path                                         # noqa: E402
 
 import numpy as np                                               # noqa: E402
+from scipy.stats import spearmanr                                # noqa: E402
 import pandas as pd                                              # noqa: E402
 from joblib import Parallel, delayed                             # noqa: E402
 
@@ -308,11 +309,23 @@ def block_recovery(resume=True):
             t, e = t[m], e[m]
             if len(t) < 3:
                 continue
+            # Pearson and Spearman answer different questions here, and the
+            # gap between them is itself a result. The geometry parameters are
+            # ratios with a near-zero denominator, so their sampling
+            # distribution is heavy-tailed: at n=1000 the recovered alpha0
+            # spans [-140, 3.3] while its 99th percentile is 2.0. One blow-up
+            # is enough to drag Pearson from 0.88 to 0.10. Pearson therefore
+            # measures whether the estimate can be read as a number; Spearman
+            # measures whether the ordering survives. Reporting only one of
+            # them would overstate the result in one direction or the other.
             rows.append({
                 "n": n, "param": k, "n_rep": int(len(t)),
                 "bias": float((e - t).mean()),
                 "rmse": float(np.sqrt(((e - t) ** 2).mean())),
                 "corr": float(np.corrcoef(t, e)[0, 1]) if t.std() > 0 else np.nan,
+                "spearman": float(spearmanr(t, e).statistic) if t.std() > 0 else np.nan,
+                "p99_abs_est": float(np.percentile(np.abs(e), 99)),
+                "max_abs_est": float(np.abs(e).max()),
             })
     s = pd.DataFrame(rows)
     s.to_csv(RESULTS / "m1_recovery_summary.csv", index=False)

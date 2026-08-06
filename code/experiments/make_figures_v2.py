@@ -82,7 +82,7 @@ def fig_identifiability():
 
     # Two rows, not two columns: at \columnwidth a side-by-side pair leaves
     # each panel 1.7in wide, which is too narrow for a log axis and a legend.
-    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.95),
+    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.70),
                              gridspec_kw={"height_ratios": [1.25, 1.0]},
                              constrained_layout=True)
 
@@ -167,7 +167,7 @@ def fig_size_power():
     # Stacked, sharing the log-x series-length axis. Both panels are rejection
     # rates against the same abscissa, so one x-label serves both and each
     # panel keeps the full column width.
-    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.70), sharex=True,
+    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.50), sharex=True,
                              sharey=True, constrained_layout=True)
     ax = axes[0]
     ax.plot(s["n"], s["size_nominal"], "o-", color=C["bad"], ms=3.2,

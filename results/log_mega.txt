@@ -86,3 +86,9 @@
 [01:44:38]    nominal size 0.419, calibrated 0.050 (target 0.05)
 [01:44:38]    size finished in 29m38s
 [01:44:38] EWS: 500 reps x 3 lengths x 5 windows x 2
+[01:45:31]    m5_ews: chunk 1/12 (8%), eta 9m44s
+[01:46:20]    m5_ews: chunk 2/12 (17%), eta 8m32s
+[01:47:10]    m5_ews: chunk 3/12 (25%), eta 7m36s
+[01:47:59]    m5_ews: chunk 4/12 (33%), eta 6m42s
+[01:51:26]    m5_ews: chunk 5/12 (42%), eta 9m31s
+[01:54:50]    m5_ews: chunk 6/12 (50%), eta 10m11s
