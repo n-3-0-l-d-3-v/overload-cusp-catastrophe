@@ -1,0 +1,80 @@
+name: check
+
+# Every defect this guards against reached a submission-ready state at least
+# once in this project's history: a test suite that could not import its own
+# package, two bibliography entries that compiled to blank lines, and figures
+# LaTeX had silently halved. None of them produced a nonzero exit code on
+# their own, so each check below asserts the property explicitly.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    name: tests and citation consistency
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Unit tests
+        run: python -m pytest
+
+      - name: Citation consistency
+        # Offline: every \cite key resolves to an entry in refs.bib.
+        # The Crossref pass is deliberately not run here; it needs the network
+        # and would fail the build on someone else's API outage.
+        run: python code/experiments/check_citations.py
+
+  paper:
+    name: manuscript compiles clean
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pypdf
+
+      - name: Install Tectonic
+        run: |
+          curl -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/
+
+      - name: Conference paper -- 5 pages, no overfull boxes, no empty refs
+        run: |
+          python code/experiments/compile_paper.py \
+            --tex main.tex --target 5 --strict
+
+      - name: Journal draft -- no overfull boxes, no empty refs
+        run: |
+          python code/experiments/compile_paper.py \
+            --tex main_full_journal.tex --strict
+
+      - name: Upload compiled PDFs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-papers
+          path: |
+            paper/paper_5page.pdf
+            paper/main_full_journal.pdf
+          if-no-files-found: warn
