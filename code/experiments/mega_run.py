@@ -9,37 +9,68 @@ point.
 Why the scale matters. A rejection rate estimated from 40 replicates carries a
 Monte Carlo standard error of about 3.5 points near p = 0.5, which is the same
 order as the effects being reported. At 500 replicates that falls to about 2.2
-points, and at 2000 to roughly 1.1. Claims of the form "size is 0.42, not 0.05"
-deserve the tighter number, so we pay for it in compute rather than hedge in
-prose.
+points, at 2000 to roughly 1.1, and at 5000 to 0.7. Claims of the form "size is
+0.42, not 0.05" deserve the tighter number, so we pay for it in compute rather
+than hedge in prose.
 
-Runs on all cores via joblib. Each block writes its own CSV so a partial run
-still leaves usable output.
+Execution model
+---------------
+An earlier version dispatched every replicate to joblib in one call and lost a
+six-hour run to a `TerminatedWorkerError` partway through the third block. Two
+causes, both fixed here.
 
-    python experiments/mega_run.py --block all
-    python experiments/mega_run.py --block size      # just one block
+*BLAS oversubscription.* Each loky worker spawned its own OpenMP/MKL thread
+pool, so eleven workers on a twelve-thread machine asked for well over a
+hundred threads. The thread-limit environment variables are now set before
+numpy is imported, which is the only point at which they take effect.
+
+*No checkpointing.* Work is now split into chunks. Each chunk runs in a fresh
+worker pool, appends its rows to a partial CSV and records itself as done, so a
+crash costs one chunk rather than the whole block and `--resume` picks up where
+it stopped. A chunk that dies is bisected and retried, which isolates a single
+poison replicate instead of discarding several hundred good ones.
+
+Usage
+-----
+    python code/experiments/mega_run.py --block all --resume
+    python code/experiments/mega_run.py --block size
+    python code/experiments/mega_run.py --block all --rep-scale 0.1   # smoke test
+
+Every block writes `m<k>_*_raw.csv` and `m<k>_*_summary.csv` into results/.
+Checkpoints live in results/_checkpoints/ and are not part of the artefact.
 
 Blocks
 ------
-recovery    parameter recovery, 600 replicates over randomised truth
-size        test size on random walks, 2000 replicates x 6 lengths
-power       power on genuine cusps, 600 replicates x 6 lengths x 4 regimes
-persistence size vs AR(1) persistence, 400 replicates x 9 phi values
-ews         early-warning estimator validation, 200 replicates x full grid
+recovery    parameter recovery, randomised truth, 6 series lengths
+size        test size on random walks, nominal vs surrogate-calibrated
+power       power on genuine cusps, 6 lengths x 4 effect regimes
+persistence size vs AR(1) persistence, both surrogate ensembles
+ews         early-warning estimator validation against closed-form ground truth
 noise       robustness of the null to noise level and driver strength
 """
 
 from __future__ import annotations
 
-import argparse
-import sys
-import time
-import warnings
-from pathlib import Path
+import os
 
-import numpy as np
-import pandas as pd
-from joblib import Parallel, delayed
+# Must precede the numpy import: these are read once, when the native
+# libraries are first loaded. Each worker process gets one BLAS thread, and
+# parallelism comes from the process pool instead. Setting them afterwards is
+# silently ineffective, which is what bit the previous run.
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
+           "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS"):
+    os.environ.setdefault(_v, "1")
+
+import argparse                                                  # noqa: E402
+import json                                                      # noqa: E402
+import sys                                                       # noqa: E402
+import time                                                      # noqa: E402
+import warnings                                                  # noqa: E402
+from pathlib import Path                                         # noqa: E402
+
+import numpy as np                                               # noqa: E402
+import pandas as pd                                              # noqa: E402
+from joblib import Parallel, delayed                             # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 warnings.filterwarnings("ignore")
@@ -51,18 +82,27 @@ from chm.estimate import fit_mle, rw_surrogate_test              # noqa: E402
 
 RESULTS = Path(__file__).resolve().parents[2] / "results"
 RESULTS.mkdir(exist_ok=True, parents=True)
+CKPT = RESULTS / "_checkpoints"
+CKPT.mkdir(exist_ok=True, parents=True)
 
 SEED = 20260722
-N_JOBS = -2                      # all cores but one, keeps the machine usable
+N_JOBS = 10                      # 6 physical cores; leaves headroom for the OS
 
-# Replication counts. Chosen so Monte Carlo SE on a proportion is < 0.012.
-REP_RECOVERY = 600
-REP_SIZE = 2000
-REP_POWER = 600
-REP_PERSIST = 400
-REP_EWS = 200
-REP_NOISE = 400
+# Replication counts. Chosen so the Monte Carlo SE on a proportion is under
+# 0.01 for the headline claims (size, power) and under 0.02 elsewhere.
+REP_RECOVERY = 2000
+REP_SIZE = 5000
+REP_POWER = 2000
+REP_PERSIST = 1000
+REP_EWS = 500
+REP_NOISE = 1000
 N_SURR = 200                     # surrogates inside each calibrated test
+
+# Chunk sizes, picked so one chunk is roughly one to three minutes of wall
+# time. Surrogate-calibrated jobs cost ~N_SURR fits each and get small chunks;
+# the cheap blocks get large ones so checkpoint overhead stays negligible.
+CHUNK_SURR = 400
+CHUNK_CHEAP = 2500
 
 LENGTHS = (100, 150, 200, 300, 500, 1000)
 PHIS = (0.0, 0.3, 0.5, 0.7, 0.85, 0.95, 0.98, 0.995, 1.0)
@@ -74,9 +114,25 @@ REGIMES = {
     "marginal": dict(alpha0=0.4, alpha_A=0.1, lam=0.03, sigma=0.20),
 }
 
+REP_SCALE = 1.0                  # overridden by --rep-scale
+
+
+def reps(base):
+    """Replication count after --rep-scale, never below one."""
+    return max(1, int(round(base * REP_SCALE)))
+
 
 def log(msg):
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
+
+
+def fmt_dur(s):
+    s = int(s)
+    if s < 90:
+        return f"{s}s"
+    if s < 5400:
+        return f"{s // 60}m{s % 60:02d}s"
+    return f"{s // 3600}h{(s % 3600) // 60:02d}m"
 
 
 def smooth(n, rng, k=25):
@@ -108,6 +164,105 @@ def wilson(k, n, z=1.96):
 
 
 # --------------------------------------------------------------------------- #
+# chunked, checkpointed executor
+# --------------------------------------------------------------------------- #
+def _safe(worker, job):
+    """Never let one bad replicate take down a chunk."""
+    try:
+        return worker(*job)
+    except Exception:
+        return None
+
+
+def _run_batch(worker, jobs, n_jobs):
+    """
+    Run a batch, bisecting on worker death.
+
+    A `TerminatedWorkerError` means a worker process was killed -- segfault in
+    a native library, or the OS reclaiming memory. joblib cannot tell us which
+    replicate did it, so we halve the batch and retry. A single poison job is
+    isolated in log2(len(jobs)) passes and returned as None; everything around
+    it survives.
+    """
+    if not jobs:
+        return []
+    try:
+        with Parallel(n_jobs=min(n_jobs, len(jobs)), backend="loky",
+                      max_nbytes=None, batch_size=1) as par:
+            return list(par(delayed(_safe)(worker, j) for j in jobs))
+    except Exception as exc:
+        if len(jobs) == 1:
+            log(f"      dropped one replicate: {type(exc).__name__}")
+            return [None]
+        mid = len(jobs) // 2
+        log(f"      worker died on {len(jobs)} jobs "
+            f"({type(exc).__name__}); bisecting")
+        return (_run_batch(worker, jobs[:mid], n_jobs)
+                + _run_batch(worker, jobs[mid:], n_jobs))
+
+
+def run_chunked(name, worker, jobs, chunk=CHUNK_SURR, resume=True):
+    """
+    Execute `jobs` in checkpointed chunks and return the collected rows.
+
+    State lives in two files. `<name>.json` records which chunk indices are
+    finished and the job-list fingerprint they belong to; `<name>_partial.csv`
+    holds the rows produced so far. Changing the replication count changes the
+    fingerprint, which invalidates the checkpoint rather than silently mixing
+    two different runs.
+    """
+    state_f = CKPT / f"{name}.json"
+    part_f = CKPT / f"{name}_partial.csv"
+    total = len(jobs)
+    n_chunks = (total + chunk - 1) // chunk
+    fingerprint = f"{total}:{chunk}:{N_SURR}:{SEED}"
+
+    state = {"fingerprint": fingerprint, "done": []}
+    if resume and state_f.exists():
+        try:
+            prev = json.loads(state_f.read_text())
+            if prev.get("fingerprint") == fingerprint:
+                state = prev
+                log(f"   resuming {name}: {len(state['done'])}/{n_chunks} "
+                    f"chunks already done")
+            else:
+                log(f"   {name}: checkpoint is for a different job set, "
+                    f"starting over")
+                part_f.unlink(missing_ok=True)
+        except Exception:
+            part_f.unlink(missing_ok=True)
+    else:
+        part_f.unlink(missing_ok=True)
+
+    done = set(state["done"])
+    t0 = time.time()
+    completed_now = 0
+
+    for ci in range(n_chunks):
+        if ci in done:
+            continue
+        rows = [r for r in _run_batch(worker, jobs[ci * chunk:(ci + 1) * chunk],
+                                      N_JOBS) if r]
+        if rows:
+            df = pd.DataFrame(rows)
+            df.to_csv(part_f, mode="a", header=not part_f.exists(), index=False)
+        done.add(ci)
+        state["done"] = sorted(done)
+        state_f.write_text(json.dumps(state))
+
+        completed_now += 1
+        remaining = n_chunks - len(done)
+        rate = (time.time() - t0) / completed_now
+        log(f"   {name}: chunk {len(done)}/{n_chunks} "
+            f"({100 * len(done) / n_chunks:.0f}%), "
+            f"eta {fmt_dur(rate * remaining)}")
+
+    if not part_f.exists():
+        return pd.DataFrame()
+    return pd.read_csv(part_f)
+
+
+# --------------------------------------------------------------------------- #
 # blocks
 # --------------------------------------------------------------------------- #
 def _one_recovery(seed, n):
@@ -124,74 +279,77 @@ def _one_recovery(seed, n):
     if not np.all(np.isfinite(x)):
         return None
     est = fit_mle(x, S, T, U)["params"]
-    keys = ("beta0", "beta_S", "beta_T", "beta_U", "alpha0",
-            "alpha_A", "lam", "sigma", "eps")
-    return {"n": n, **{f"true_{k}": getattr(true, k) for k in keys},
-            **{f"est_{k}": getattr(est, k) for k in keys}}
+    out = {"n": n}
+    for k in ("beta0", "beta_S", "beta_T", "beta_U", "alpha0", "alpha_A",
+              "lam", "sigma", "eps"):
+        out[f"true_{k}"] = getattr(true, k)
+        out[f"est_{k}"] = getattr(est, k)
+    return out
 
 
-def block_recovery(rng_seed=SEED):
-    log(f"RECOVERY: {REP_RECOVERY} reps x {len(LENGTHS)} lengths")
-    jobs = [(rng_seed + 100000 * i + j, n)
-            for i, n in enumerate(LENGTHS) for j in range(REP_RECOVERY)]
-    out = Parallel(n_jobs=N_JOBS, verbose=0)(
-        delayed(_one_recovery)(s, n) for s, n in jobs)
-    df = pd.DataFrame([r for r in out if r])
+def block_recovery(resume=True):
+    R = reps(REP_RECOVERY)
+    log(f"RECOVERY: {R} reps x {len(LENGTHS)} lengths")
+    jobs = [(SEED + 100000 * i + j, n)
+            for i, n in enumerate(LENGTHS) for j in range(R)]
+    df = run_chunked("m1_recovery", _one_recovery, jobs,
+                     chunk=CHUNK_CHEAP, resume=resume)
+    if df.empty:
+        return df
     df.to_csv(RESULTS / "m1_recovery_raw.csv", index=False)
 
-    keys = ("beta0", "beta_S", "beta_T", "beta_U", "alpha0",
-            "alpha_A", "lam", "sigma", "eps")
     rows = []
     for n in LENGTHS:
         d = df[df["n"] == n]
-        for k in keys:
+        for k in ("beta0", "beta_S", "beta_T", "beta_U", "alpha0", "alpha_A",
+                  "lam", "sigma", "eps"):
             t, e = d[f"true_{k}"], d[f"est_{k}"]
             m = np.isfinite(t) & np.isfinite(e)
-            if m.sum() < 3:
+            t, e = t[m], e[m]
+            if len(t) < 3:
                 continue
-            rows.append({"n": n, "param": k, "n_rep": int(m.sum()),
-                         "bias": float((e[m] - t[m]).mean()),
-                         "rmse": float(np.sqrt(((e[m] - t[m])**2).mean())),
-                         "corr": float(np.corrcoef(t[m], e[m])[0, 1])})
+            rows.append({
+                "n": n, "param": k, "n_rep": int(len(t)),
+                "bias": float((e - t).mean()),
+                "rmse": float(np.sqrt(((e - t) ** 2).mean())),
+                "corr": float(np.corrcoef(t, e)[0, 1]) if t.std() > 0 else np.nan,
+            })
     s = pd.DataFrame(rows)
     s.to_csv(RESULTS / "m1_recovery_summary.csv", index=False)
-    if not len(s):
-        log("   no summary rows (too few replicates)")
-        return s
-    big = s[s["n"] >= 500] if (s["n"] >= 500).any() else s
-    log(f"   at n>={int(big['n'].min())}: mean |bias| "
-        f"{big['bias'].abs().mean():.4f}, min corr {big['corr'].min():.3f}")
+    at200 = s[s["n"] == 200].set_index("param")["corr"]
+    log("   n=200 recovery: " + ", ".join(
+        f"{k}={at200.get(k, float('nan')):.2f}"
+        for k in ("lam", "sigma", "alpha0", "alpha_A", "eps")))
     return s
 
 
-def _one_size(seed, n, surrogate):
+def _one_size(seed, n, do_surrogate):
     rng = np.random.default_rng(seed)
     S, T, U = smooth(n, rng), smooth(n, rng), smooth(n, rng)
-    rw = np.cumsum(rng.standard_normal(n) * 0.2)
-    sd = rw.std()
-    rw = (rw - rw.mean()) / (sd if sd > 1e-12 else 1.0)
-    f = fit_mle(rw, S, T, U)
-    nominal = bool(f.get("lam_significant"))
-    cal = np.nan
-    if surrogate:
+    x = np.cumsum(rng.standard_normal(n))
+    x = (x - x.mean()) / (x.std() + 1e-12)
+    f = fit_mle(x, S, T, U)
+    row = {"n": n, "nominal": float(bool(f.get("lam_significant"))),
+           "calibrated": np.nan}
+    if do_surrogate:
         try:
-            r = rw_surrogate_test(rw, S, T, U, n_surr=N_SURR, rng=rng,
+            r = rw_surrogate_test(x, S, T, U, n_surr=N_SURR, rng=rng,
                                   statistics=("lam_t",))
-            cal = float(r["lam_t"]["p"] < 0.05)
+            row["calibrated"] = float(r["lam_t"]["p"] < 0.05)
         except Exception:
             pass
-    return {"n": n, "nominal": float(nominal), "calibrated": cal}
+    return row
 
 
-def block_size(rng_seed=SEED + 1):
-    """Nominal size at full replication; calibrated on a large subsample."""
-    log(f"SIZE: {REP_SIZE} reps x {len(LENGTHS)} lengths "
-        f"(calibrated on first {REP_SIZE//4})")
-    jobs = [(rng_seed + 100000 * i + j, n, j < REP_SIZE // 4)
-            for i, n in enumerate(LENGTHS) for j in range(REP_SIZE)]
-    out = Parallel(n_jobs=N_JOBS, verbose=0)(
-        delayed(_one_size)(s, n, sur) for s, n, sur in jobs)
-    df = pd.DataFrame(out)
+def block_size(resume=True):
+    R = reps(REP_SIZE)
+    log(f"SIZE: {R} reps x {len(LENGTHS)} lengths "
+        f"(calibrated on first {R // 4})")
+    jobs = [(SEED + 1 + 100000 * i + j, n, j < R // 4)
+            for i, n in enumerate(LENGTHS) for j in range(R)]
+    df = run_chunked("m2_size", _one_size, jobs, chunk=CHUNK_SURR, resume=resume)
+    if df.empty:
+        return df
     df.to_csv(RESULTS / "m2_size_raw.csv", index=False)
 
     rows = []
@@ -202,7 +360,8 @@ def block_size(rng_seed=SEED + 1):
         kc, nc = int(c.sum()), len(c)
         lo_n, hi_n = wilson(kn, nn)
         lo_c, hi_c = wilson(kc, nc)
-        rows.append({"n": n, "n_rep_nominal": nn, "size_nominal": kn / nn,
+        rows.append({"n": n, "n_rep_nominal": nn,
+                     "size_nominal": kn / nn if nn else np.nan,
                      "ci_lo_nominal": lo_n, "ci_hi_nominal": hi_n,
                      "n_rep_calibrated": nc,
                      "size_calibrated": kc / nc if nc else np.nan,
@@ -234,15 +393,17 @@ def _one_power(seed, n, regime, kw):
             "calibrated": cal}
 
 
-def block_power(rng_seed=SEED + 2):
-    log(f"POWER: {REP_POWER} reps x {len(LENGTHS)} lengths x {len(REGIMES)} regimes")
-    jobs = [(rng_seed + 1000000 * i + 1000 * ri + j, n, name, kw)
+def block_power(resume=True):
+    R = reps(REP_POWER)
+    log(f"POWER: {R} reps x {len(LENGTHS)} lengths x {len(REGIMES)} regimes")
+    jobs = [(SEED + 2 + 1000000 * i + 1000 * ri + j, n, name, kw)
             for i, n in enumerate(LENGTHS)
             for ri, (name, kw) in enumerate(REGIMES.items())
-            for j in range(REP_POWER)]
-    out = Parallel(n_jobs=N_JOBS, verbose=0)(
-        delayed(_one_power)(s, n, nm, kw) for s, n, nm, kw in jobs)
-    df = pd.DataFrame([r for r in out if r])
+            for j in range(R)]
+    df = run_chunked("m3_power", _one_power, jobs, chunk=CHUNK_SURR,
+                     resume=resume)
+    if df.empty:
+        return df
     df.to_csv(RESULTS / "m3_power_raw.csv", index=False)
 
     rows = []
@@ -284,18 +445,22 @@ def _one_persist(seed, phi, n=200):
     return res
 
 
-def block_persistence(rng_seed=SEED + 3):
-    log(f"PERSISTENCE: {REP_PERSIST} reps x {len(PHIS)} phi values, both ensembles")
-    jobs = [(rng_seed + 100000 * i + j, phi)
-            for i, phi in enumerate(PHIS) for j in range(REP_PERSIST)]
-    out = Parallel(n_jobs=N_JOBS, verbose=0)(
-        delayed(_one_persist)(s, phi) for s, phi in jobs)
-    df = pd.DataFrame(out)
+def block_persistence(resume=True):
+    R = reps(REP_PERSIST)
+    log(f"PERSISTENCE: {R} reps x {len(PHIS)} phi values, both ensembles")
+    jobs = [(SEED + 3 + 100000 * i + j, phi)
+            for i, phi in enumerate(PHIS) for j in range(R)]
+    df = run_chunked("m4_persistence", _one_persist, jobs,
+                     chunk=CHUNK_SURR // 2, resume=resume)
+    if df.empty:
+        return df
     df.to_csv(RESULTS / "m4_persistence_raw.csv", index=False)
 
     rows = []
     for phi in PHIS:
         d = df[df["phi"] == phi]
+        if not len(d):
+            continue
         row = {"phi": phi, "mean_ac1": float(d["ac1"].mean()), "n_rep": len(d)}
         for kind in ("rw", "iaaft"):
             v = d[kind].dropna()
@@ -344,28 +509,32 @@ def _one_ews(seed, n, win, detr):
             "theory": g_true, "ac1": g_ac1, "variance": g_var}
 
 
-def block_ews(rng_seed=SEED + 4):
+def block_ews(resume=True):
+    R = reps(REP_EWS)
     lengths = (1500, 6000, 20000)
     windows = (20, 30, 60, 120, 240)
-    log(f"EWS: {REP_EWS} reps x {len(lengths)} lengths x {len(windows)} windows x 2")
-    jobs = [(rng_seed + 1000000 * i + 10000 * wi + 10 * int(d) + j, n, w, d)
+    log(f"EWS: {R} reps x {len(lengths)} lengths x {len(windows)} windows x 2")
+    jobs = [(SEED + 4 + 1000000 * i + 10000 * wi + 10 * int(d) + j, n, w, d)
             for i, n in enumerate(lengths)
             for wi, w in enumerate(windows)
             for d in (False, True)
-            for j in range(REP_EWS)]
-    out = Parallel(n_jobs=N_JOBS, verbose=0)(
-        delayed(_one_ews)(s, n, w, d) for s, n, w, d in jobs)
-    df = pd.DataFrame([r for r in out if r])
+            for j in range(R)]
+    df = run_chunked("m5_ews", _one_ews, jobs, chunk=CHUNK_CHEAP // 2,
+                     resume=resume)
+    if df.empty:
+        return df
     df.to_csv(RESULTS / "m5_ews_raw.csv", index=False)
 
     rows = []
     for n in lengths:
         for w in windows:
             for d in (False, True):
-                sub = df[(df["n"] == n) & (df["window"] == w) & (df["detrend"] == d)]
+                sub = df[(df["n"] == n) & (df["window"] == w)
+                         & (df["detrend"] == d)]
                 if not len(sub):
                     continue
-                for est, pred in (("theory", 0.5), ("ac1", 0.5), ("variance", -0.5)):
+                for est, pred in (("theory", 0.5), ("ac1", 0.5),
+                                  ("variance", -0.5)):
                     v = sub[est].dropna()
                     if not len(v):
                         continue
@@ -385,7 +554,8 @@ def block_ews(rng_seed=SEED + 4):
         f"{int((np.sign(roll['median']) == np.sign(roll['predicted'])).sum())}"
         f"/{len(roll)}")
     th = s[s["estimator"] == "theory"]
-    log(f"   theory median exponent {th['median'].median():+.3f} (predicted +0.500)")
+    log(f"   theory median exponent {th['median'].median():+.3f} "
+        f"(predicted +0.500)")
     return s
 
 
@@ -406,17 +576,19 @@ def _one_noise(seed, sigma, drive_scale, n=200):
         return None
 
 
-def block_noise(rng_seed=SEED + 5):
+def block_noise(resume=True):
+    R = reps(REP_NOISE)
     sigmas = (0.10, 0.20, 0.30, 0.45, 0.60)
     drives = (0.5, 1.0, 1.5)
-    log(f"NOISE: {REP_NOISE} reps x {len(sigmas)} sigmas x {len(drives)} drives")
-    jobs = [(rng_seed + 100000 * i + 1000 * di + j, sg, dr)
+    log(f"NOISE: {R} reps x {len(sigmas)} sigmas x {len(drives)} drives")
+    jobs = [(SEED + 5 + 100000 * i + 1000 * di + j, sg, dr)
             for i, sg in enumerate(sigmas)
             for di, dr in enumerate(drives)
-            for j in range(REP_NOISE)]
-    out = Parallel(n_jobs=N_JOBS, verbose=0)(
-        delayed(_one_noise)(s, sg, dr) for s, sg, dr in jobs)
-    df = pd.DataFrame([r for r in out if r])
+            for j in range(R)]
+    df = run_chunked("m6_noise", _one_noise, jobs, chunk=CHUNK_SURR,
+                     resume=resume)
+    if df.empty:
+        return df
     df.to_csv(RESULTS / "m6_noise_raw.csv", index=False)
 
     rows = []
@@ -437,26 +609,46 @@ def block_noise(rng_seed=SEED + 5):
 
 
 BLOCKS = {"recovery": block_recovery, "size": block_size, "power": block_power,
-          "persistence": block_persistence, "ews": block_ews, "noise": block_noise}
+          "persistence": block_persistence, "ews": block_ews,
+          "noise": block_noise}
+
+# Cheapest first, so a run that is interrupted early still leaves the blocks
+# the paper depends on most heavily in a finished state.
+ORDER = ["recovery", "size", "ews", "noise", "persistence", "power"]
 
 
 def main():
+    global REP_SCALE
     ap = argparse.ArgumentParser()
     ap.add_argument("--block", default="all",
                     help="all, or comma-separated: " + ",".join(BLOCKS))
+    ap.add_argument("--rep-scale", type=float, default=1.0,
+                    help="scale every replication count (0.02 for a smoke test)")
+    ap.add_argument("--resume", action="store_true",
+                    help="reuse checkpoints from an interrupted run")
+    ap.add_argument("--jobs", type=int, default=N_JOBS)
     args = ap.parse_args()
-    names = list(BLOCKS) if args.block == "all" else args.block.split(",")
+
+    REP_SCALE = args.rep_scale
+    globals()["N_JOBS"] = args.jobs
+    names = ORDER if args.block == "all" else args.block.split(",")
 
     t0 = time.time()
-    log(f"mega_run starting: blocks {names}, {N_JOBS} job slots")
+    log(f"mega_run starting: blocks {names}, {args.jobs} workers, "
+        f"rep-scale {REP_SCALE}, N_SURR {N_SURR}")
     for nm in names:
         if nm not in BLOCKS:
             log(f"   unknown block {nm}, skipping")
             continue
         t = time.time()
-        BLOCKS[nm]()
-        log(f"   {nm} finished in {time.time()-t:.0f}s")
-    log(f"ALL DONE in {time.time()-t0:.0f}s -> {RESULTS}")
+        try:
+            BLOCKS[nm](resume=args.resume)
+            log(f"   {nm} finished in {fmt_dur(time.time() - t)}")
+        except Exception as exc:
+            # One block failing must not cost the blocks after it.
+            log(f"   {nm} FAILED after {fmt_dur(time.time() - t)}: "
+                f"{type(exc).__name__}: {exc}")
+    log(f"ALL DONE in {fmt_dur(time.time() - t0)} -> {RESULTS}")
 
 
 if __name__ == "__main__":
