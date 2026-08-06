@@ -213,11 +213,11 @@ parameters that move with demand.
 \label{sec:methods}
 
 \subsection{Corpora}
-Three open corpora, each taken from its primary repository rather than a mirror,
-span a gradient of experimental control: WESAD, 15 subjects in a controlled
-laboratory protocol \cite{schmidt2018wesad}; Wearable Exam Stress, 10 students
-across 30 examinations \cite{amin2022exam}; and Nurse Stress, 15 nurses across
-roughly \SI{1250}{\hour} of hospital shifts \cite{hosseini2022nurse}. All supply
+Three open corpora, each from its primary repository rather than a mirror, span
+a gradient of experimental control: WESAD, 15 subjects in a laboratory protocol
+\cite{schmidt2018wesad}; Wearable Exam Stress, 10 students across 30
+examinations \cite{amin2022exam}; and Nurse Stress, 15 nurses across roughly
+\SI{1250}{\hour} of hospital shifts \cite{hosseini2022nurse}. All supply
 Empatica E4 electrodermal activity, blood volume pulse, skin temperature and
 accelerometry. Windowing and quality screening leave \textbf{147 recordings from
 40 people}, median 194 windows each.
@@ -268,11 +268,9 @@ one-step predictive log-density.
 \label{sec:ident}
 
 Before testing anything we asked which parameters are recoverable at the series
-lengths on offer. This is not a formality. It turned out to be the result that
-organises the rest of the paper.
-
-We simulated from the model with randomised true parameters and refitted, 2000
-replicates at each of six lengths, and compared true against estimated values
+lengths on offer. Not a formality: it turned out to organise the rest of the
+paper. We simulated with randomised true parameters and refitted, 2000
+replicates at each of six lengths, then compared true against estimated values
 (Table~\ref{tab:ident}, Fig.~\ref{fig:ident}a).
 
 Two correlations are reported, because they answer different questions and the
@@ -383,63 +381,67 @@ and we checked ours before trusting it. On data simulated from a model that
 genuinely contains a fold, the exponent computed from the true equilibrium
 curvature comes back at $+0.565$ against a predicted $+0.5$: theory and
 implementation agree. The rolling-window indicators the early-warning literature
-relies on \cite{scheffer2009,dakos2012} do not. Over a grid of window lengths,
-detrending choices and series lengths reaching $n=20{,}000$, rolling
-$-\log\mathrm{AC1}$ returns negative slopes where $+0.5$ is predicted, and
-rolling variance returns positive slopes where $-0.5$ is
-(Table~\ref{tab:ewsval}). The sign is wrong in every configuration tested.
+relies on \cite{scheffer2009,dakos2012} do not. We swept five window lengths,
+two detrending choices and three series lengths to $n=20{,}000$: ninety
+configurations, 500 replicates each. The failure has two regimes
+(Table~\ref{tab:ewsval}). At windows of 20 to 120 the sign is systematically
+\emph{inverted}, and near-totally so --- $99\%$ of replicates carry the wrong
+sign for variance at window 30, and some configurations invert in all 500. At
+window 240 both indicators instead collapse onto zero, medians between $-0.018$
+and $+0.027$, the sign a coin flip. Nowhere on the grid does an estimate come
+near the predicted magnitude.
 
-This is structural, not noise. Critical slowing down means the relaxation time
-diverges at the fold, so a fixed-width window saturates exactly where the effect
-is largest; detrending then strips the low-frequency power carrying what
-survives. An order of magnitude more data does not recover the sign. We withdraw
-our own P2 test as uninterpretable, and the caution generalises: a directional
+This is structural. Critical slowing down means the relaxation time diverges at
+the fold, so a fixed-width window saturates exactly where the effect is largest,
+and detrending strips the low-frequency power carrying what survives. Widening
+the window does not fix it, it only drives the estimate to zero. We withdraw our
+own P2 test as uninterpretable, and the caution generalises: a directional
 early-warning result obtained this way is weak evidence either way.
 
 \begin{table}[t]
-\caption{Recovering the exponent from ground-truth cusp data. The closed-form
-theory does; the rolling-window estimators return the wrong sign.}
+\caption{Recovering the exponent from ground-truth cusp data, 1500 replicates
+per row. Theory does; the rolling estimators invert at short windows and
+collapse to zero at long ones.}
 \label{tab:ewsval}
 \centering
-\begin{tabular}{@{}lcccr@{}}
+\begin{tabular}{@{}lccrrr@{}}
 \toprule
-Estimator & Predicted & Detrend & Window & Median \\
+Estimator & Pred. & Detr. & Win. & Median & Wrong sign \\
 \midrule
-theory $\lambda_{\text{rel}}(\mu)$ & $+0.5$ & --- & --- & $\mathbf{+0.565}$ \\
+theory $\lambda_{\text{rel}}(\mu)$ & $+0.5$ & --- & --- & $\mathbf{+0.565}$ & --- \\
 \midrule
-$-\log$AC1 & $+0.5$ & no  & 30  & $-0.262$ \\
-$-\log$AC1 & $+0.5$ & no  & 120 & $-0.035$ \\
-variance   & $-0.5$ & no  & 30  & $+0.311$ \\
-variance   & $-0.5$ & yes & 120 & $+0.036$ \\
+$-\log$AC1 & $+0.5$ & no & 30 & $-0.216$ & $95\%$ \\
+$-\log$AC1 & $+0.5$ & no & 240 & $+0.026$ & $32\%$ \\
+variance & $-0.5$ & no & 30 & $+0.307$ & $99\%$ \\
+variance & $-0.5$ & no & 240 & $-0.014$ & $40\%$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{The identifiable prediction is not supported}
 Under the calibrated test the restoring cubic term is significant in $2.7\%$ of
-the 147 units, against a nominal $5\%$: $0.0\%$ for WESAD ($n=15$), $0.0\%$ for
-the examinations ($n=30$), $3.9\%$ for the nurse sessions ($n=102$). Because
-those 102 units come from 15 nurses we also weight one vote per person, giving
-$1.5\%$ (Wilson interval $[0.0,3.1]\%$), with $10\%$ of people showing at least
-one significant session. That last figure is the most generous reading available
-and is still what chance produces across several sessions each.
+the 147 units against a nominal $5\%$: $0.0\%$ for WESAD ($n=15$), $0.0\%$ for
+the examinations ($n=30$), $3.9\%$ for the nurse sessions ($n=102$). Since those
+102 units come from 15 nurses we also weight one vote per person, giving $1.5\%$
+(Wilson $[0.0,3.1]\%$), with $10\%$ of people showing at least one significant
+session --- the most generous reading available, and still what chance produces
+across several sessions each.
 
-Held-out prediction agrees from another direction. The full model does not beat
-its own nested monostable special case: it wins on $33.8\%$ of units, median
-difference $-0.25$ nats per step, Wilcoxon $p=8\times10^{-5}$ in the simpler
-model's favour. The monostable model is this model with the cubic term switched
-off, so that is the cleanest available statement that the term is doing no work.
-Prospective onset prediction gives AUC between $0.50$ and $0.46$ at lead times
-of 3 to 12 windows. Chance.
+Held-out prediction agrees from another direction. The full model loses to its
+own nested monostable special case: it wins on $33.8\%$ of units, median
+difference $-0.25$ nats per step, Wilcoxon $p=8\times10^{-5}$ for the simpler
+model. Since the monostable model is this model with the cubic term switched
+off, that is the cleanest available statement that the term does no work.
+Prospective onset prediction gives AUC $0.50$ to $0.46$ at lead times of 3 to 12
+windows. Chance.
 
 \subsection{Structure without fold structure}
 The null is specific, and calling it noise would be wrong. Two of the three
 calibrated statistics do exceed their surrogate nulls: the likelihood ratio
-against the monostable restriction at $40.8\%$ of units, and marginal bimodality
-at $49.7\%$. Only the statistic isolating the cubic term sits at chance. A
-bimodal marginal with no cubic drift is precisely the configuration in which a
-study reporting distributional evidence alone concludes the opposite of the
-truth.
+against the monostable restriction at $40.8\%$ of units, marginal bimodality at
+$49.7\%$. Only the statistic isolating the cubic term sits at chance. A bimodal
+marginal with no cubic drift is precisely the configuration in which a study
+reporting distributional evidence alone concludes the opposite of the truth.
 
 Robustness is mixed, and we report it that way. Configuration B sits at nominal
 under both the random-walk ($0.046$) and the harder IAAFT ($0.069$) ensembles,
@@ -471,28 +473,25 @@ simulations. A splitting factor of 12 from a 200-window recording is not a
 finding, and the arithmetic producing it is not specific to our implementation.
 
 \emph{Limitations.} No autistic participants are analysed, so the motivating
-claim is untested rather than refuted. Tonic electrodermal activity is a
-peripheral, artefact-prone proxy for a latent construct. Weak cusp dynamics stay
-compatible with everything reported here. Our estimator critique covers
-fixed-width rolling indicators with and without Gaussian detrending, which is
-what the applied literature mostly runs; it says nothing about adaptive-bandwidth
-or spectral estimators, which we did not test. Note also that longer records rescue
-rankings, not values, and not every parameter even in rank: the slow rate
+claim is untested rather than refuted. Tonic EDA is a peripheral,
+artefact-prone proxy. Weak cusp dynamics stay compatible with everything here.
+Our estimator critique covers fixed-width rolling indicators with and without
+Gaussian detrending, which is what the applied literature mostly runs; it says
+nothing about adaptive-bandwidth or spectral estimators, untested here. And
+longer records rescue rankings, not values --- nor every parameter even in rank:
 $\varepsilon$ reaches only $\rho=0.44$ at $n=1000$.
 
 \emph{Toward validation.} We pre-specify the study that would test the mechanism
 in its intended population: 28 days of ecological momentary assessment with
 continuous wrist physiology in autistic adults and a matched comparison group,
-using the same estimator, nulls and falsification criteria as here. The primary
+using the same estimator, nulls and falsification criteria. The primary
 hypothesis is a between-group difference in $\alpha_0$, better powered than the
-within-group detection attempted here, with $n\gtrsim500$ windows per
-participant so that parameter sits inside the identifiable regime. The debt
-mechanism needs more than length: with $\alpha_A$ and $\varepsilon$
-unrecoverable from passive data at any duration tested, P3 to P5 will need
-either experimental control over recovery intervals or a hierarchical fit that
-pools them across participants. A second well-powered null under those
-conditions would be evidence that overload is not a cusp catastrophe at
-physiological timescales.
+within-group detection attempted here, at $n\gtrsim500$ windows per participant.
+The debt mechanism needs more than length: with $\alpha_A$ and $\varepsilon$
+unrecoverable from passive data at any duration tested, P3 to P5 need either
+experimental control over recovery intervals or a hierarchical fit pooling them
+across participants. A second well-powered null under those conditions would be
+evidence that overload is not a cusp catastrophe at physiological timescales.
 
 \section*{Acknowledgment}
 I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets

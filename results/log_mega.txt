@@ -96,3 +96,17 @@
 [02:01:41]    m5_ews: chunk 8/12 (67%), eta 8m31s
 [02:12:15]    m5_ews: chunk 9/12 (75%), eta 9m12s
 [02:22:45]    m5_ews: chunk 10/12 (83%), eta 7m37s
+[02:33:30]    m5_ews: chunk 11/12 (92%), eta 4m26s
+[02:43:58]    m5_ews: chunk 12/12 (100%), eta 0s
+[02:43:58]    rolling configs with correct median sign: 16/60
+[02:43:58]    theory median exponent +0.565 (predicted +0.500)
+[02:43:58]    ews finished in 59m19s
+[02:43:58] NOISE: 1000 reps x 5 sigmas x 3 drives
+[02:45:17]    m6_noise: chunk 1/38 (3%), eta 48m53s
+[02:46:39]    m6_noise: chunk 2/38 (5%), eta 48m18s
+[02:48:00]    m6_noise: chunk 3/38 (8%), eta 47m07s
+[02:49:22]    m6_noise: chunk 4/38 (11%), eta 45m58s
+[02:50:45]    m6_noise: chunk 5/38 (13%), eta 44m49s
+[02:52:08]    m6_noise: chunk 6/38 (16%), eta 43m34s
+[02:53:30]    m6_noise: chunk 7/38 (18%), eta 42m16s
+[02:54:53]    m6_noise: chunk 8/38 (21%), eta 40m58s
