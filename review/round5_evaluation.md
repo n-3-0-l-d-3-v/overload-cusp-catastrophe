@@ -158,6 +158,27 @@ This also corrected an overstatement in S4, which had said α_A "never becomes
 identified". In rank it reaches 0.72 at n=1000. The value never does. The
 earlier phrasing would have been easy for a reviewer to falsify.
 
+### The full grid refuted one of our own claims
+
+The paper said the rolling estimators return the wrong sign "in every
+configuration tested". At 500 replicates across all ninety configurations that
+is **false**: 16 of 60 rolling configurations carry the correct sign, every one
+of them at the longest window.
+
+The corrected statement is stronger. There are two regimes. At windows 20–120
+the sign is inverted and near-totally so — 99% of replicates wrong for variance
+at window 30, with several configurations inverting in all 500. At window 240
+both indicators collapse onto zero (medians −0.018 to +0.027), so the sign
+becomes a coin flip and the "correct" cases are correct by accident at a
+twentieth of the predicted magnitude.
+
+So widening the window does not rescue the estimator. It trades a confident
+wrong answer for no answer. That is a sharper indictment of the method than the
+overclaim was, and unlike the overclaim it survives contact with 15,000 series.
+
+Worth recording as the fourth claim in this project to survive one round of
+checking and fail the next.
+
 ### A gap in the pre-registration
 
 Table I shows ε reaching only ρ = 0.44 at n=1000 and α_A's value never
@@ -174,7 +195,7 @@ a hierarchical fit pooling those parameters across participants.
 | Dimension | R4 | R5 | Why |
 |---|---|---|---|
 | Novelty | 8 | 8 | Unchanged |
-| Rigour | 10 | 10 | Held. The Spearman/Pearson split is a real gain, but three of five defects this round were visible in the PDF and four rounds had not looked |
+| Rigour | 10 | 10 | Held. The Spearman/Pearson split and the two-regime EWS correction are real gains, but three of five defects this round were visible in the PDF and four rounds had not looked |
 | Empirical support | 7 | 8 | Recovery and size at 2–5× replication; the identifiability claim is now decomposed rather than asserted |
 | Clarity | 8 | 9 | Figures legible; Table I carries the argument instead of restating it |
 | Impact | 8 | 8 | Unchanged |
