@@ -1,0 +1,51 @@
+# ---------------------------------------------------------------------------
+# Corpora. Downloaded programmatically; never committed.
+# Run `python code/experiments/fetch_data.py` to reproduce data/raw/.
+# Provenance, URLs, checksums and licences: data/DATASETS.md
+# ---------------------------------------------------------------------------
+data/raw/
+data/*.zip
+data/*.xlsx
+data/*.tar.gz
+
+# ---------------------------------------------------------------------------
+# Build toolchain. tectonic.exe is a 48 MB vendored binary; fetch it from
+# https://github.com/tectonic-typesetting/tectonic/releases instead.
+# ---------------------------------------------------------------------------
+tools/
+*.exe
+
+# ---------------------------------------------------------------------------
+# LaTeX intermediates
+# ---------------------------------------------------------------------------
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.toc
+*.lof
+*.lot
+paper/build/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# ---------------------------------------------------------------------------
+# Editors, OS, Office lock files
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+~$*

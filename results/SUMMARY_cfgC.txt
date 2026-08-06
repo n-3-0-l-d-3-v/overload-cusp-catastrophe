@@ -1,0 +1,79 @@
+======================================================================
+CONFIG C
+======================================================================
+
+[E1] Parameter recovery (30 simulated units)
+   beta0    bias=+0.0171 rmse=0.0727 r=0.963
+   beta_S   bias=+0.0051 rmse=0.0287 r=0.991
+   beta_T   bias=+0.0034 rmse=0.0392 r=0.950
+   beta_U   bias=-0.0049 rmse=0.0294 r=0.971
+   alpha0   bias=-0.0179 rmse=0.0974 r=0.981
+   alpha_A  bias=+0.0064 rmse=0.0899 r=0.956
+   lam      bias=-0.0000 rmse=0.0043 r=0.997
+   sigma    bias=-0.0009 rmse=0.0035 r=0.999
+   eps      bias=+0.0082 rmse=0.0442 r=0.508
+
+[E2] Fits: 157 units
+   EXAM: n=30  median alpha0=0.068  median lam=0.000  median sigma=0.049  pct_bistable=0.480
+   NURSE: n=112  median alpha0=1.657  median lam=0.005  median sigma=0.119  pct_bistable=0.199
+   WESAD: n=15  median alpha0=5.571  median lam=0.002  median sigma=0.045  pct_bistable=0.500
+   state occupancy (median across units):
+      calm        0.118
+      focused     0.126
+      stuck       0.014
+      overloaded  0.402
+      recovering  0.000
+
+[E3] Bistability, 157 units
+   RW null, CUBIC TERM (decisive)     frac p<.05 = 0.115  (n=157)
+   nested monostable LRT              frac p<.05 = 0.229  (n=157)
+   random-walk null, LR stat          frac p<.05 = 0.287  (n=157)
+   random-walk null, bimodality       frac p<.05 = 0.261  (n=157)
+   random-walk null, alpha0           frac p<.05 = 0.139  (n=108)
+   EXAM: CUBIC frac=0.067 | RW-LR frac=0.433  RW-bimod frac=0.933  n=30
+   NURSE: CUBIC frac=0.107 | RW-LR frac=0.205  RW-bimod frac=0.098  n=112
+   WESAD: CUBIC frac=0.267 | RW-LR frac=0.600  RW-bimod frac=0.133  n=15
+
+[E4] Held-out one-step log-density (67 units)
+   CHM       +0.0543  [-0.4107, +0.5193]  n=67
+   Markov    -0.7509  [-0.8052, -0.6966]  n=67
+   Logistic  +nan  [+nan, +nan]  n=0
+   HMM       -16.1025  [-21.7756, -10.4294]  n=67
+   OU        +0.5886  [+0.3328, +0.8444]  n=67
+   GBM       -69.0059  [-117.0338, -20.9780]  n=67
+   CHM vs OU (nested):  median diff=-0.0864  Wilcoxon p=3.06e-04  win rate=0.269
+   CHM vs GBM (black box): median diff=+23.8250  win rate=1.000
+
+[E5/P1] Hysteresis width vs a^{3/2}
+   exponent=0.942  95% CI [0.734, 1.165]  R2=0.518  n=63
+   predicted 1.5 -> REJECTED
+   loop width>0 in 0.703 of 91 units; mean=+1.787 [-1.440, +5.013]
+   per-unit entry>exit significant in 0.187 of 91
+
+[E6/P2] Early-warning scaling exponents
+   variance (pred -0.50)    median=-0.010  mean=+0.008 [-0.056, +0.072]  n=98
+      -> predicted -0.50 OUTSIDE mean CI
+   -logAC1 (pred +0.50)     median=-0.002  mean=+0.014 [-0.020, +0.048]  n=98
+      -> predicted +0.50 OUTSIDE mean CI
+      EXAM: median var exponent=-0.106 (n=16)
+      NURSE: median var exponent=-0.012 (n=73)
+      WESAD: median var exponent=+0.069 (n=9)
+   auc_lead3: mean AUC=0.494 [0.474, 0.514] n=84
+   auc_lead6: mean AUC=0.509 [0.477, 0.541] n=80
+   auc_lead12: mean AUC=0.503 [0.468, 0.539] n=75
+   Kendall-tau trend vs AR(1) surrogate: frac p<.05 = 0.139 (n=101)
+
+[E7/P3] Dwell-time over-dispersion vs geometric
+   overloaded  CV_obs=1.499  CV_geom=0.941  excess=+0.735 [+0.587, +0.882]  n=72
+      KS vs geometric rejected in 0.556 of 72
+   stuck       CV_obs=1.098  CV_geom=0.824  excess=+0.477 [+0.304, +0.650]  n=52
+      KS vs geometric rejected in 0.827 of 52
+
+[E8/P4] Re-entry hazard (exploratory)
+   median gap=2.0 windows, n=55
+   KS vs exponential rejected in 0.564 of 55
+
+[E9] Derived states vs WESAD protocol labels
+   P(high-load | stress)=0.656  P(high-load | other)=0.837
+   median odds ratio=0.00
+   Fisher p<.05 in 0.778 of 9 subjects

@@ -1,0 +1,26 @@
+
+E3, config B — calibrated tests, clustered by person
+==================================================================
+  cubic term (decisive)
+     units                : 147
+     people               : 40
+     unit-level rate      : 0.027
+     subject-level rate   : 0.015  (95% CI [-0.000, 0.031])
+     >=1 sig. session     : 0.100 of people
+  likelihood ratio
+     units                : 147
+     people               : 40
+     unit-level rate      : 0.408
+     subject-level rate   : 0.537  (95% CI [0.416, 0.658])
+     >=1 sig. session     : 0.850 of people
+  marginal bimodality
+     units                : 147
+     people               : 40
+     unit-level rate      : 0.497
+     subject-level rate   : 0.533  (95% CI [0.406, 0.660])
+     >=1 sig. session     : 0.750 of people
+
+wrote C:\Users\Neil Thomas Mathew\Downloads\research\final\results\e14_clustered_cfgB.csv
+
+Read: if the subject-level rate tracks the unit-level rate,
+the pooled figure is not an artefact of session counts.

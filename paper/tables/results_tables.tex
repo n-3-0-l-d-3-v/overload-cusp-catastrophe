@@ -1,0 +1,87 @@
+\begin{table}[t]
+\caption{Held-out one-step-ahead predictive log-density per step (higher is better), mean and 95\% CI across units. OU is the monostable model nested inside CHM; GBM is a black-box reference that produces no thresholds, no hysteresis width and no exponents.}
+\label{tab:comparison}
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Model & Log-density & 95\% CI \\
+\midrule
+\textbf{CHM (ours)} & \textbf{-7.743} & $[-16.730, +1.245]$ \\
+OU & -0.163 & $[-0.286, -0.040]$ \\
+Markov & -0.662 & $[-0.714, -0.611]$ \\
+Logistic & -0.899 & $[-1.066, -0.731]$ \\
+HMM & -13.366 & $[-18.355, -8.378]$ \\
+GBM & -26.699 & $[-35.268, -18.130]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Can the standard early-warning estimator recover the exponent, on series simulated from a model that genuinely contains a fold? The theory reproduces its own exponent; every rolling-window configuration returns the wrong sign.}
+\label{tab:ewsval}
+\centering
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Estimator & Detrend & Window & Predicted & Median \\
+\midrule
+theory $\lambda(\mu)$ & --- & --- & $+0.50$ & $\mathbf{+0.565}$ \\
+\midrule
+rolling $-\log$AC1 & no & 30 & $+0.50$ & $-0.262$ \\
+rolling $-\log$AC1 & no & 60 & $+0.50$ & $-0.185$ \\
+rolling $-\log$AC1 & no & 120 & $+0.50$ & $-0.035$ \\
+rolling $-\log$AC1 & yes & 30 & $+0.50$ & $-0.030$ \\
+rolling $-\log$AC1 & yes & 60 & $+0.50$ & $-0.056$ \\
+rolling $-\log$AC1 & yes & 120 & $+0.50$ & $-0.021$ \\
+rolling variance & no & 30 & $-0.50$ & $+0.311$ \\
+rolling variance & no & 60 & $-0.50$ & $+0.182$ \\
+rolling variance & no & 120 & $-0.50$ & $+0.045$ \\
+rolling variance & yes & 30 & $-0.50$ & $+0.080$ \\
+rolling variance & yes & 60 & $-0.50$ & $+0.070$ \\
+rolling variance & yes & 120 & $-0.50$ & $+0.036$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Test size and power at the sample sizes the corpora provide. The nominal test would have found a genuine cusp, but it also finds one in over 40\% of random walks; calibration restores size at some cost in power against weak dynamics.}
+\label{tab:powersize}
+\centering
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Input & $n$ & Nominal & Calibrated \\
+\midrule
+cusp: moderate & 100 & 0.87 & 0.64 \\
+cusp: moderate & 200 & 0.97 & 0.76 \\
+cusp: moderate & 500 & 1.00 & 1.00 \\
+cusp: moderate & 1000 & 1.00 & 1.00 \\
+cusp: strong & 100 & 1.00 & 0.96 \\
+cusp: strong & 200 & 1.00 & 1.00 \\
+cusp: strong & 500 & 1.00 & 1.00 \\
+cusp: strong & 1000 & 1.00 & 1.00 \\
+cusp: weak & 100 & 0.55 & 0.12 \\
+cusp: weak & 200 & 0.77 & 0.24 \\
+cusp: weak & 500 & 0.98 & 0.72 \\
+cusp: weak & 1000 & 1.00 & 1.00 \\
+random walk (null) & 100 & 0.45 & 0.12 \\
+random walk (null) & 200 & 0.38 & 0.04 \\
+random walk (null) & 500 & 0.44 & 0.04 \\
+random walk (null) & 1000 & 0.43 & 0.08 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Pre-stated predictions and outcomes. Exponents are compared against their theoretical values by bootstrap confidence interval.}
+\label{tab:predictions}
+\centering
+\begin{tabular}{@{}llll@{}}
+\toprule
+ID & Prediction & Predicted & Observed \\
+\midrule
+P1 & hysteresis width & $3/2$ & $1.07\ [0.86, 1.29]$ \\
+P2 & EWS variance & $-1/2$ & $-0.41\ [-0.71, -0.11]$ \\
+P2 & EWS $-\log$AC1 & $+1/2$ & $-0.02\ [-0.12, +0.09]$ \\
+P3 & dwell over-dispersion & $>0$ & $+0.83\ [+0.59, +1.08]$ \\
+\bottomrule
+\end{tabular}
+\end{table}

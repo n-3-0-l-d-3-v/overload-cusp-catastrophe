@@ -1,0 +1,14 @@
+# Normalise line endings in the repository; check out native on Windows.
+* text=auto
+
+*.py   text diff=python
+*.tex  text diff=tex
+*.bib  text
+*.md   text
+*.csv  text
+*.txt  text
+
+*.png  binary
+*.pdf  binary
+*.zip  binary
+*.exe  binary

@@ -1,0 +1,31 @@
+
+config B: 87 units
+
+config C: 87 units
+
+config A: 87 units
+
+========================================================================
+Cubic-term rejection rate by surrogate ensemble
+========================================================================
+config   units  median AC1  p<.05 (RW)  p<.05 (IAAFT)
+A           87       0.314       0.115          0.138
+B           87       0.983       0.046          0.069
+C           87       0.996       0.149          0.161
+
+Read: nominal is 0.05. If configuration C falls to nominal under
+IAAFT but not under RW, the elevation was the null model, not the
+signal -- and the RW ensemble is inadequate for trended series.
+
+Per-corpus detail:
+  A EXAM   n= 30  RW=0.300  IAAFT=0.333
+  A NURSE  n= 42  RW=0.024  IAAFT=0.048
+  A WESAD  n= 15  RW=0.000  IAAFT=0.000
+  B EXAM   n= 30  RW=0.000  IAAFT=0.100
+  B NURSE  n= 42  RW=0.095  IAAFT=0.071
+  B WESAD  n= 15  RW=0.000  IAAFT=0.000
+  C EXAM   n= 30  RW=0.067  IAAFT=0.233
+  C NURSE  n= 42  RW=0.167  IAAFT=0.095
+  C WESAD  n= 15  RW=0.267  IAAFT=0.200
+
+wrote C:\Users\Neil Thomas Mathew\Downloads\research\final\results\e13_surrogate_comparison.csv

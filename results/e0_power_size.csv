@@ -1,0 +1,17 @@
+n,regime,reject_nominal,reject_calibrated,n_rep
+100,random walk (null),0.45,0.12,100
+100,cusp: strong,1.0,0.96,100
+100,cusp: moderate,0.87,0.64,100
+100,cusp: weak,0.55,0.12,100
+200,random walk (null),0.38,0.04,100
+200,cusp: strong,1.0,1.0,100
+200,cusp: moderate,0.97,0.76,100
+200,cusp: weak,0.77,0.24,100
+500,random walk (null),0.44,0.04,100
+500,cusp: strong,1.0,1.0,100
+500,cusp: moderate,1.0,1.0,100
+500,cusp: weak,0.98,0.72,100
+1000,random walk (null),0.43,0.08,100
+1000,cusp: strong,1.0,1.0,100
+1000,cusp: moderate,1.0,1.0,100
+1000,cusp: weak,1.0,1.0,100

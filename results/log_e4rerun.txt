@@ -1,0 +1,19 @@
+[10:43:32] loading WESAD
+[10:44:13]   15 frames
+[10:44:13] E2  fitting 15 units [WESAD]
+[10:44:13] loading EXAM
+[10:44:21]   30 frames
+[10:44:21] E2  fitting 30 units [EXAM]
+[10:44:22] loading NURSE
+[10:45:16]   112 frames
+[10:45:16] E2  fitting 112 units [NURSE]
+[10:45:25] total units: 157
+[10:45:25] E4  held-out model comparison
+Model is not converging.  Current: -550.202050434775 is not greater than -550.1960764509853. Delta is -0.005973983789658632
+Model is not converging.  Current: -555.7727134396816 is not greater than -555.7716323116036. Delta is -0.001081128077998983
+Model is not converging.  Current: -129.0719343250574 is not greater than -129.0230810919917. Delta is -0.04885323306569944
+Model is not converging.  Current: -190.09861466756445 is not greater than -190.09486335496885. Delta is -0.0037513125955968007
+Model is not converging.  Current: 289.90377734329445 is not greater than 289.9542089844531. Delta is -0.05043164115863874
+Model is not converging.  Current: 33.69008155867998 is not greater than 33.74401569982783. Delta is -0.05393414114784889
+Model is not converging.  Current: -360.4371988627002 is not greater than -360.3169943241758. Delta is -0.1202045385243764
+Model is not converging.  Current: -674.6716446344918 is not greater than -674.6435481709616. Delta is -0.02809646353023254

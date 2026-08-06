@@ -1,0 +1,376 @@
+[21:02:55] loading WESAD
+  WESAD S2: 202 windows
+  WESAD S3: 216 windows
+  WESAD S4: 214 windows
+  WESAD S5: 208 windows
+  WESAD S6: 235 windows
+  WESAD S7: 174 windows
+  WESAD S8: 182 windows
+  WESAD S9: 174 windows
+  WESAD S10: 183 windows
+  WESAD S11: 174 windows
+  WESAD S13: 184 windows
+  WESAD S14: 184 windows
+  WESAD S15: 175 windows
+  WESAD S16: 187 windows
+  WESAD S17: 197 windows
+[21:03:44] E2  fitting 15 units [WESAD]
+[21:03:44] loading EXAM
+  EXAM Final: 779 windows
+  EXAM Midterm 1: 372 windows
+  EXAM Midterm 2: 371 windows
+  EXAM Final: 769 windows
+  EXAM Midterm 1: 389 windows
+  EXAM Midterm 2: 433 windows
+  EXAM Final: 844 windows
+  EXAM Midterm 1: 399 windows
+  EXAM Midterm 2: 462 windows
+  EXAM Final: 860 windows
+  EXAM Midterm 1: 407 windows
+  EXAM Midterm 2: 341 windows
+  EXAM Final: 530 windows
+  EXAM Midterm 1: 389 windows
+  EXAM Midterm 2: 446 windows
+  EXAM Final: 508 windows
+  EXAM Midterm 1: 400 windows
+  EXAM Midterm 2: 400 windows
+  EXAM Final: 797 windows
+  EXAM Midterm 1: 371 windows
+  EXAM Midterm 2: 473 windows
+  EXAM Final: 654 windows
+  EXAM Midterm 1: 412 windows
+  EXAM Midterm 2: 360 windows
+  EXAM Final: 596 windows
+  EXAM Midterm 1: 359 windows
+  EXAM Midterm 2: 332 windows
+  EXAM Final: 473 windows
+  EXAM Midterm 1: 422 windows
+  EXAM Midterm 2: 414 windows
+[21:03:51] E2  fitting 30 units [EXAM]
+[21:03:52] loading NURSE
+  NURSE 15_1594140175: 260 windows
+  NURSE 15_1594149654: 70 windows
+  NURSE 15_1594213322: 183 windows
+  NURSE 15_1594220239: 495 windows
+  NURSE 15_1594238057: 101 windows
+  NURSE 15_1594298975: 402 windows
+  NURSE 15_1594311202: 465 windows
+  NURSE 15_1594325201: 198 windows
+  NURSE 15_1594380033: 285 windows
+  NURSE 15_1595334888: 251 windows
+  NURSE 15_1595347920: 71 windows
+  NURSE 15_1595360012: 60 windows
+  NURSE 15_1595425036: 172 windows
+  NURSE 15_1595433234: 192 windows
+  NURSE 15_1595446619: 237 windows
+  NURSE 15_1595592772: 244 windows
+  NURSE 15_1595600598: 115 windows
+  NURSE 15_1595608145: 313 windows
+  NURSE 15_1595854651: 73 windows
+  NURSE 15_1595857850: 73 windows
+  NURSE 15_1595871983: 446 windows
+  NURSE 15_1595940277: 208 windows
+  NURSE 15_1595947283: 101 windows
+  NURSE 15_1595953571: 492 windows
+  NURSE 15_1596027852: 282 windows
+  NURSE 15_1596037241: 436 windows
+  NURSE 15_1596204744: 402 windows
+  NURSE 15_1596219716: 60 windows
+  NURSE 15_1596222922: 178 windows
+  NURSE 15_1596547439: 116 windows
+  NURSE 15_1596551659: 424 windows
+  NURSE 15_1596564517: 346 windows
+  NURSE 15_1596634348: 72 windows
+  NURSE 15_1596636683: 368 windows
+  NURSE 15_1596648020: 165 windows
+  NURSE 15_1596653112: 216 windows
+  NURSE 5C_1586886712: 784 windows
+  NURSE 5C_1587297777: 1072 windows
+  NURSE 5C_1587336033: 80 windows
+  NURSE 5C_1587569014: 624 windows
+  NURSE 5C_1587593875: 138 windows
+  NURSE 5C_1587661745: 409 windows
+  NURSE 5C_1587674047: 387 windows
+  NURSE 5C_1588974475: 319 windows
+  NURSE 5C_1589028738: 734 windows
+  NURSE 5C_1589199875: 1111 windows
+  NURSE 5C_1589286789: 387 windows
+  NURSE 5C_1589298448: 1046 windows
+  NURSE 5C_1589803857: 1407 windows
+  NURSE 5C_1589889161: 1410 windows
+  NURSE 5C_1592926305: 668 windows
+  NURSE 5C_1593006542: 387 windows
+  NURSE 5C_1593018622: 410 windows
+  NURSE 5C_1593094946: 460 windows
+  NURSE 6B_1587569373: 520 windows
+  NURSE 6B_1587585327: 526 windows
+  NURSE 6B_1587653438: 163 windows
+  NURSE 6B_1588961203: 208 windows
+  NURSE 6B_1588970444: 430 windows
+  NURSE 6B_1589052301: 191 windows
+  NURSE 6B_1589901451: 160 windows
+  NURSE 6B_1590172247: 510 windows
+  NURSE 6B_1592925729: 194 windows
+  NURSE 6B_1592996203: 742 windows
+  NURSE 6B_1593024104: 217 windows
+  NURSE 6B_1593083317: 95 windows
+  NURSE 6B_1593091155: 325 windows
+  NURSE 6B_1593101741: 181 windows
+  NURSE 6B_1593110897: 193 windows
+  NURSE 6B_1593168956: 212 windows
+  NURSE 6B_1593176942: 194 windows
+  NURSE 6B_1593191957: 195 windows
+  NURSE 6B_1593427701: 321 windows
+  NURSE 6B_1593437366: 122 windows
+  NURSE 6B_1593446044: 302 windows
+  NURSE 6B_1593455714: 127 windows
+  NURSE 6B_1593514692: 682 windows
+  NURSE 6D_1594757863: 94 windows
+  NURSE 6D_1594831043: 262 windows
+  NURSE 6D_1594910470: 682 windows
+  NURSE 6D_1594998483: 561 windows
+  NURSE 6D_1595339521: 293 windows
+  NURSE 6D_1595523837: 348 windows
+  NURSE 6D_1595604487: 622 windows
+  NURSE 7A_1587228286: 566 windows
+  NURSE 7A_1587298286: 455 windows
+  NURSE 7A_1587326219: 91 windows
+  NURSE 7A_1587556854: 880 windows
+  NURSE 7A_1587583295: 598 windows
+  NURSE 7A_1587643240: 1537 windows
+  NURSE 7A_1588977047: 227 windows
+  NURSE 7A_1589025873: 634 windows
+  NURSE 7A_1589055551: 70 windows
+  NURSE 7A_1592926372: 188 windows
+  NURSE 7A_1592933285: 265 windows
+  NURSE 7A_1592941276: 157 windows
+  NURSE 7A_1593091052: 175 windows
+  NURSE 7A_1593104418: 140 windows
+  NURSE 7A_1593115159: 151 windows
+  NURSE 7A_1593177044: 502 windows
+  NURSE 7A_1593192268: 255 windows
+  NURSE 7A_1593436174: 120 windows
+  NURSE 7A_1593521778: 197 windows
+  NURSE 7A_1593527735: 139 windows
+  NURSE 7A_1593534070: 250 windows
+  NURSE 7A_1593609973: 278 windows
+  NURSE 7A_1593620516: 129 windows
+  NURSE 7A_1593633083: 92 windows
+  NURSE 7A_1593696872: 124 windows
+  NURSE 7A_1593701029: 183 windows
+  NURSE 7A_1593709119: 424 windows
+  NURSE 7A_1594043417: 196 windows
+[21:04:14] E2  fitting 112 units [NURSE]
+[21:04:15] E5  hysteresis width vs the a^{3/2} law
+[21:04:16] E6  early-warning scaling exponents
+[21:07:24] E7  dwell-time over-dispersion
+[21:07:24] E8  re-entry hazard after recovery
+[21:07:24] E9  external validation of derived states
+[21:07:24] E4  held-out model comparison
+Model is not converging.  Current: -429.4133849176075 is not greater than -429.3446006509707. Delta is -0.06878426663683967
+Model is not converging.  Current: -310.0294453449027 is not greater than -309.9694259293946. Delta is -0.060019415508065777
+Model is not converging.  Current: -510.30891766848833 is not greater than -510.2908126742407. Delta is -0.01810499424760792
+Model is not converging.  Current: -488.111267434276 is not greater than -488.0996679321925. Delta is -0.01159950208347027
+Model is not converging.  Current: -711.3328677177377 is not greater than -711.3324453462752. Delta is -0.0004223714624913555
+Model is not converging.  Current: -208.60096095508845 is not greater than -208.432768810617. Delta is -0.1681921444714476
+Model is not converging.  Current: -612.1678271743458 is not greater than -612.1659658673445. Delta is -0.0018613070012634125
+Model is not converging.  Current: -447.5724920122639 is not greater than -447.53630727797025. Delta is -0.03618473429366986
+Model is not converging.  Current: -228.58901236710486 is not greater than -228.58788520801897. Delta is -0.0011271590858825675
+Model is not converging.  Current: -317.02403356970086 is not greater than -316.99775896538034. Delta is -0.026274604320519757
+Model is not converging.  Current: 277.1890533154888 is not greater than 277.2206298748171. Delta is -0.03157655932830039
+Model is not converging.  Current: 101.51554985038669 is not greater than 101.52316213334234. Delta is -0.0076122829556481975
+Model is not converging.  Current: 367.6956470382636 is not greater than 367.70608730858754. Delta is -0.010440270323954337
+Model is not converging.  Current: 68.50816354038506 is not greater than 68.50919168518726. Delta is -0.0010281448022055883
+Model is not converging.  Current: -351.7219663258647 is not greater than -351.7199349057613. Delta is -0.002031420103378423
+Model is not converging.  Current: -405.76546997480915 is not greater than -405.6858225149246. Delta is -0.0796474598845407
+Model is not converging.  Current: -215.63486226854542 is not greater than -215.49790803563602. Delta is -0.13695423290940312
+Model is not converging.  Current: -418.0968500442047 is not greater than -418.0895457043073. Delta is -0.007304339897416412
+Model is not converging.  Current: -1656.9265388433237 is not greater than -1656.9246929435374. Delta is -0.001845899786303562
+Model is not converging.  Current: -1585.7055056913619 is not greater than -1585.6811654824553. Delta is -0.024340208906551197
+Model is not converging.  Current: -344.2216025473158 is not greater than -344.1896473985449. Delta is -0.031955148770919095
+Model is not converging.  Current: 1414.1611462882252 is not greater than 1414.1611540924655. Delta is -7.804240340192337e-06
+Model is not converging.  Current: 1490.3638294329803 is not greater than 1490.3768084423016. Delta is -0.012979009321270496
+Model is not converging.  Current: -308.67365073012024 is not greater than -308.6495848929774. Delta is -0.024065837142870805
+Model is not converging.  Current: -285.57552166556957 is not greater than -285.57271420048164. Delta is -0.0028074650879261753
+Model is not converging.  Current: 928.0519666027727 is not greater than 928.1694835111463. Delta is -0.11751690837354545
+Model is not converging.  Current: 668.9430145590721 is not greater than 668.9656969574744. Delta is -0.022682398402253057
+Model is not converging.  Current: -899.2363432886302 is not greater than -899.2349104834739. Delta is -0.0014328051563552435
+Model is not converging.  Current: -79.38921405564336 is not greater than -79.2367438468387. Delta is -0.1524702088046581
+Model is not converging.  Current: -720.6993618362338 is not greater than -720.4970975928962. Delta is -0.20226424333759496
+Model is not converging.  Current: -453.87374490836174 is not greater than -453.80802096657226. Delta is -0.06572394178948571
+Model is not converging.  Current: -41.420714894382975 is not greater than -41.42041761933223. Delta is -0.0002972750507481692
+Model is not converging.  Current: 319.7259801120102 is not greater than 319.73008008609645. Delta is -0.0040999740862730505
+Model is not converging.  Current: 362.53820138267434 is not greater than 362.57796566724534. Delta is -0.03976428457099246
+Model is not converging.  Current: 256.48688597999825 is not greater than 256.71698353512477. Delta is -0.23009755512651964
+Model is not converging.  Current: -62.789952022486325 is not greater than -62.78359029240107. Delta is -0.006361730085252759
+Model is not converging.  Current: -586.4722529055413 is not greater than -586.4710138200321. Delta is -0.0012390855091553021
+Model is not converging.  Current: -836.8335482281632 is not greater than -836.3960772493047. Delta is -0.4374709788585278
+Model is not converging.  Current: -1208.6878141218247 is not greater than -1208.6874799475645. Delta is -0.00033417426016058016
+Model is not converging.  Current: -816.1781925299464 is not greater than -816.1778437213834. Delta is -0.00034880856298968865
+Model is not converging.  Current: -1327.4383532242416 is not greater than -1327.398382743914. Delta is -0.03997048032761086
+Model is not converging.  Current: -1195.7355137297861 is not greater than -1195.6863592958903. Delta is -0.04915443389586471
+Model is not converging.  Current: -1369.938807066624 is not greater than -1369.8088877518526. Delta is -0.12991931477131402
+Model is not converging.  Current: -2891.4928640866174 is not greater than -2891.484945854845. Delta is -0.00791823177223705
+Model is not converging.  Current: -4279.137738135837 is not greater than -4279.054822611286. Delta is -0.08291552455102646
+Model is not converging.  Current: -4887.286576361934 is not greater than -4887.28320202796. Delta is -0.0033743339736247435
+Model is not converging.  Current: -1470.9015249167096 is not greater than -1470.881087510258. Delta is -0.02043740645149228
+[21:08:46] E3  bistability: nested LRT + random-walk surrogate test
+[21:08:50]      S2: LR=1.0 p_nested=0.554 p_rw(LR)=0.842 p_rw(bimod)=1.000
+[21:08:53]      S3: LR=6.3 p_nested=0.059 p_rw(LR)=0.257 p_rw(bimod)=0.950
+[21:08:57]      S4: LR=0.8 p_nested=0.347 p_rw(LR)=0.842 p_rw(bimod)=1.000
+[21:09:00]      S5: LR=0.2 p_nested=0.911 p_rw(LR)=0.980 p_rw(bimod)=0.921
+[21:09:04]      S6: LR=3.1 p_nested=0.248 p_rw(LR)=0.604 p_rw(bimod)=0.832
+[21:09:08]      S7: LR=3.8 p_nested=0.644 p_rw(LR)=0.545 p_rw(bimod)=0.921
+[21:09:11]      S8: LR=2.7 p_nested=0.158 p_rw(LR)=0.564 p_rw(bimod)=0.980
+[21:09:15]      S9: LR=5.7 p_nested=0.564 p_rw(LR)=0.297 p_rw(bimod)=0.960
+[21:09:18]      S10: LR=6.0 p_nested=0.059 p_rw(LR)=0.287 p_rw(bimod)=1.000
+[21:09:22]      S11: LR=1.4 p_nested=0.455 p_rw(LR)=0.703 p_rw(bimod)=0.950
+[21:09:25]      S13: LR=0.6 p_nested=0.149 p_rw(LR)=0.921 p_rw(bimod)=0.861
+[21:09:29]      S14: LR=0.8 p_nested=0.614 p_rw(LR)=0.861 p_rw(bimod)=0.782
+[21:09:32]      S15: LR=9.3 p_nested=0.020 p_rw(LR)=0.119 p_rw(bimod)=0.881
+[21:09:36]      S16: LR=12.0 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.653
+[21:09:40]      S17: LR=3.5 p_nested=0.050 p_rw(LR)=0.545 p_rw(bimod)=0.822
+[21:09:45]      S1: LR=0.0 p_nested=1.000 p_rw(LR)=0.970 p_rw(bimod)=0.634
+[21:09:49]      S1: LR=0.9 p_nested=0.743 p_rw(LR)=0.901 p_rw(bimod)=0.545
+[21:09:53]      S1: LR=21.2 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.673
+[21:09:59]      S10: LR=6.5 p_nested=0.020 p_rw(LR)=0.228 p_rw(bimod)=0.614
+[21:10:03]      S10: LR=15.2 p_nested=0.010 p_rw(LR)=0.040 p_rw(bimod)=0.337
+[21:10:07]      S10: LR=1.0 p_nested=0.663 p_rw(LR)=0.901 p_rw(bimod)=0.762
+[21:10:13]      S2: LR=9.6 p_nested=0.010 p_rw(LR)=0.059 p_rw(bimod)=0.921
+[21:10:17]      S2: LR=2.4 p_nested=0.347 p_rw(LR)=0.653 p_rw(bimod)=0.406
+[21:10:21]      S2: LR=4.2 p_nested=0.168 p_rw(LR)=0.465 p_rw(bimod)=0.644
+[21:10:27]      S3: LR=1.3 p_nested=0.505 p_rw(LR)=0.881 p_rw(bimod)=0.832
+[21:10:31]      S3: LR=25.3 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.416
+[21:10:35]      S3: LR=30.4 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.950
+[21:10:40]      S4: LR=44.6 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.881
+[21:10:44]      S4: LR=6.7 p_nested=0.069 p_rw(LR)=0.208 p_rw(bimod)=0.614
+[21:10:49]      S4: LR=20.0 p_nested=0.515 p_rw(LR)=0.010 p_rw(bimod)=0.653
+[21:10:54]      S5: LR=7.8 p_nested=0.050 p_rw(LR)=0.139 p_rw(bimod)=0.931
+[21:10:58]      S5: LR=16.9 p_nested=0.010 p_rw(LR)=0.020 p_rw(bimod)=0.366
+[21:11:02]      S5: LR=2.4 p_nested=0.119 p_rw(LR)=0.634 p_rw(bimod)=0.842
+[21:11:08]      S6: LR=6.2 p_nested=0.020 p_rw(LR)=0.168 p_rw(bimod)=1.000
+[21:11:12]      S6: LR=6.8 p_nested=0.030 p_rw(LR)=0.178 p_rw(bimod)=0.178
+[21:11:16]      S6: LR=4.0 p_nested=0.030 p_rw(LR)=0.436 p_rw(bimod)=0.881
+[21:11:21]      S7: LR=23.6 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.782
+[21:11:26]      S7: LR=6.8 p_nested=0.050 p_rw(LR)=0.218 p_rw(bimod)=0.277
+[21:11:30]      S7: LR=0.8 p_nested=0.851 p_rw(LR)=0.941 p_rw(bimod)=0.832
+[21:11:34]      S8: LR=30.0 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.713
+[21:11:39]      S8: LR=5.9 p_nested=0.069 p_rw(LR)=0.158 p_rw(bimod)=0.010
+[21:11:43]      S8: LR=32.5 p_nested=0.020 p_rw(LR)=0.010 p_rw(bimod)=0.683
+[21:11:47]      S9: LR=14.2 p_nested=0.149 p_rw(LR)=0.030 p_rw(bimod)=0.950
+[21:11:52]      S9: LR=2.5 p_nested=0.297 p_rw(LR)=0.614 p_rw(bimod)=0.257
+[21:11:56]      S9: LR=5.9 p_nested=0.059 p_rw(LR)=0.248 p_rw(bimod)=0.752
+[21:12:00]      15_1594140175: LR=0.4 p_nested=0.842 p_rw(LR)=0.931 p_rw(bimod)=0.950
+[21:12:03]      15_1594149654: LR=-0.2 p_nested=0.713 p_rw(LR)=0.980 p_rw(bimod)=0.911
+[21:12:07]      15_1594213322: LR=5.6 p_nested=0.069 p_rw(LR)=0.337 p_rw(bimod)=0.980
+[21:12:11]      15_1594220239: LR=8.7 p_nested=0.040 p_rw(LR)=0.139 p_rw(bimod)=0.960
+[21:12:16]      15_1594238057: LR=0.1 p_nested=0.238 p_rw(LR)=0.970 p_rw(bimod)=0.931
+[21:12:20]      15_1594298975: LR=1.6 p_nested=0.554 p_rw(LR)=0.713 p_rw(bimod)=0.980
+[21:12:25]      15_1594311202: LR=10.1 p_nested=0.020 p_rw(LR)=0.139 p_rw(bimod)=0.980
+[21:12:29]      15_1594325201: LR=2.1 p_nested=0.040 p_rw(LR)=0.693 p_rw(bimod)=0.970
+[21:12:33]      15_1594380033: LR=0.7 p_nested=0.347 p_rw(LR)=0.891 p_rw(bimod)=0.931
+[21:12:37]      15_1595334888: LR=0.7 p_nested=0.119 p_rw(LR)=0.881 p_rw(bimod)=0.941
+[21:12:40]      15_1595347920: LR=1.6 p_nested=0.376 p_rw(LR)=0.723 p_rw(bimod)=0.792
+[21:12:44]      15_1595360012: LR=4.0 p_nested=0.356 p_rw(LR)=0.376 p_rw(bimod)=0.960
+[21:12:47]      15_1595425036: LR=4.7 p_nested=0.119 p_rw(LR)=0.426 p_rw(bimod)=0.950
+[21:12:51]      15_1595433234: LR=1.6 p_nested=0.030 p_rw(LR)=0.792 p_rw(bimod)=0.970
+[21:12:55]      15_1595446619: LR=3.7 p_nested=0.178 p_rw(LR)=0.455 p_rw(bimod)=0.931
+[21:12:59]      15_1595592772: LR=6.8 p_nested=0.455 p_rw(LR)=0.139 p_rw(bimod)=0.931
+[21:13:02]      15_1595600598: LR=1.2 p_nested=0.267 p_rw(LR)=0.851 p_rw(bimod)=0.970
+[21:13:06]      15_1595608145: LR=0.0 p_nested=0.099 p_rw(LR)=0.990 p_rw(bimod)=0.851
+[21:13:09]      15_1595854651: LR=4.3 p_nested=0.515 p_rw(LR)=0.356 p_rw(bimod)=0.871
+[21:13:12]      15_1595857850: LR=0.8 p_nested=0.663 p_rw(LR)=0.842 p_rw(bimod)=0.911
+[21:13:18]      15_1595871983: LR=4.8 p_nested=0.119 p_rw(LR)=0.406 p_rw(bimod)=0.970
+[21:13:23]      15_1595940277: LR=-2.9 p_nested=0.634 p_rw(LR)=1.000 p_rw(bimod)=0.960
+[21:13:26]      15_1595947283: LR=0.4 p_nested=0.802 p_rw(LR)=0.921 p_rw(bimod)=0.960
+[21:13:30]      15_1595953571: LR=3.8 p_nested=0.178 p_rw(LR)=0.455 p_rw(bimod)=0.980
+[21:13:34]      15_1596027852: LR=4.5 p_nested=0.059 p_rw(LR)=0.356 p_rw(bimod)=0.901
+[21:13:39]      15_1596037241: LR=-0.7 p_nested=0.040 p_rw(LR)=0.990 p_rw(bimod)=0.960
+[21:13:44]      15_1596204744: LR=1.7 p_nested=0.287 p_rw(LR)=0.752 p_rw(bimod)=0.980
+[21:13:47]      15_1596219716: LR=2.1 p_nested=0.228 p_rw(LR)=0.594 p_rw(bimod)=0.891
+[21:13:51]      15_1596222922: LR=4.6 p_nested=0.050 p_rw(LR)=0.386 p_rw(bimod)=0.941
+[21:13:54]      15_1596547439: LR=0.9 p_nested=0.574 p_rw(LR)=0.762 p_rw(bimod)=0.990
+[21:13:58]      15_1596551659: LR=1.0 p_nested=0.594 p_rw(LR)=0.832 p_rw(bimod)=1.000
+[21:14:02]      15_1596564517: LR=0.6 p_nested=0.228 p_rw(LR)=0.921 p_rw(bimod)=0.950
+[21:14:06]      15_1596634348: LR=3.2 p_nested=0.515 p_rw(LR)=0.495 p_rw(bimod)=0.980
+[21:14:11]      15_1596636683: LR=1.0 p_nested=0.228 p_rw(LR)=0.842 p_rw(bimod)=1.000
+[21:14:15]      15_1596648020: LR=2.8 p_nested=0.228 p_rw(LR)=0.525 p_rw(bimod)=0.921
+[21:14:19]      15_1596653112: LR=3.0 p_nested=0.158 p_rw(LR)=0.495 p_rw(bimod)=0.980
+[21:14:25]      5C_1586886712: LR=51.4 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.327
+[21:14:32]      5C_1587297777: LR=4.3 p_nested=0.079 p_rw(LR)=0.386 p_rw(bimod)=0.970
+[21:14:37]      5C_1587336033: LR=0.8 p_nested=0.644 p_rw(LR)=0.901 p_rw(bimod)=0.970
+[21:14:42]      5C_1587569014: LR=18.4 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.990
+[21:14:46]      5C_1587593875: LR=6.4 p_nested=0.020 p_rw(LR)=0.238 p_rw(bimod)=0.980
+[21:14:51]      5C_1587661745: LR=0.8 p_nested=0.020 p_rw(LR)=0.871 p_rw(bimod)=0.960
+[21:14:56]      5C_1587674047: LR=6.6 p_nested=0.248 p_rw(LR)=0.198 p_rw(bimod)=0.980
+[21:15:01]      5C_1588974475: LR=2.7 p_nested=0.168 p_rw(LR)=0.614 p_rw(bimod)=0.960
+[21:15:07]      5C_1589028738: LR=24.5 p_nested=0.069 p_rw(LR)=0.010 p_rw(bimod)=0.980
+[21:15:14]      5C_1589199875: LR=1.7 p_nested=0.089 p_rw(LR)=0.792 p_rw(bimod)=0.990
+[21:15:18]      5C_1589286789: LR=1.3 p_nested=0.584 p_rw(LR)=0.812 p_rw(bimod)=0.980
+[21:15:25]      5C_1589298448: LR=1.9 p_nested=0.317 p_rw(LR)=0.644 p_rw(bimod)=0.950
+[21:15:32]      5C_1589803857: LR=11.7 p_nested=0.010 p_rw(LR)=0.020 p_rw(bimod)=0.990
+[21:15:41]      5C_1589889161: LR=40.6 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=0.990
+[21:15:46]      5C_1592926305: LR=0.6 p_nested=0.832 p_rw(LR)=0.911 p_rw(bimod)=0.980
+[21:15:51]      5C_1593006542: LR=7.2 p_nested=0.040 p_rw(LR)=0.168 p_rw(bimod)=0.931
+[21:15:55]      5C_1593018622: LR=18.1 p_nested=0.010 p_rw(LR)=0.020 p_rw(bimod)=0.980
+[21:16:00]      5C_1593094946: LR=1.4 p_nested=0.525 p_rw(LR)=0.782 p_rw(bimod)=0.980
+[21:16:05]      6B_1587569373: LR=3.0 p_nested=0.198 p_rw(LR)=0.574 p_rw(bimod)=0.891
+[21:16:09]      6B_1587585327: LR=9.3 p_nested=0.030 p_rw(LR)=0.119 p_rw(bimod)=0.950
+[21:16:13]      6B_1587653438: LR=1.5 p_nested=0.277 p_rw(LR)=0.733 p_rw(bimod)=0.970
+[21:16:17]      6B_1588961203: LR=9.1 p_nested=0.030 p_rw(LR)=0.109 p_rw(bimod)=0.911
+[21:16:21]      6B_1588970444: LR=-2.1 p_nested=0.485 p_rw(LR)=0.990 p_rw(bimod)=0.960
+[21:16:25]      6B_1589052301: LR=1.2 p_nested=0.158 p_rw(LR)=0.782 p_rw(bimod)=0.941
+[21:16:28]      6B_1589901451: LR=2.8 p_nested=0.248 p_rw(LR)=0.584 p_rw(bimod)=0.931
+[21:16:33]      6B_1590172247: LR=4.1 p_nested=0.020 p_rw(LR)=0.465 p_rw(bimod)=0.842
+[21:16:37]      6B_1592925729: LR=6.6 p_nested=0.040 p_rw(LR)=0.198 p_rw(bimod)=0.911
+[21:16:42]      6B_1592996203: LR=8.6 p_nested=0.020 p_rw(LR)=0.168 p_rw(bimod)=0.980
+[21:16:46]      6B_1593024104: LR=1.0 p_nested=0.545 p_rw(LR)=0.842 p_rw(bimod)=1.000
+[21:16:49]      6B_1593083317: LR=0.8 p_nested=0.644 p_rw(LR)=0.881 p_rw(bimod)=0.891
+[21:16:53]      6B_1593091155: LR=3.4 p_nested=0.218 p_rw(LR)=0.554 p_rw(bimod)=0.931
+[21:16:56]      6B_1593101741: LR=2.8 p_nested=0.198 p_rw(LR)=0.584 p_rw(bimod)=0.980
+[21:17:00]      6B_1593110897: LR=1.4 p_nested=0.624 p_rw(LR)=0.842 p_rw(bimod)=0.931
+[21:17:03]      6B_1593168956: LR=8.2 p_nested=0.010 p_rw(LR)=0.109 p_rw(bimod)=0.960
+[21:17:07]      6B_1593176942: LR=2.2 p_nested=0.287 p_rw(LR)=0.644 p_rw(bimod)=0.970
+[21:17:10]      6B_1593191957: LR=2.1 p_nested=0.287 p_rw(LR)=0.683 p_rw(bimod)=0.980
+[21:17:14]      6B_1593427701: LR=0.6 p_nested=0.782 p_rw(LR)=0.931 p_rw(bimod)=0.911
+[21:17:17]      6B_1593437366: LR=2.4 p_nested=0.287 p_rw(LR)=0.614 p_rw(bimod)=0.901
+[21:17:21]      6B_1593446044: LR=-0.4 p_nested=0.099 p_rw(LR)=0.990 p_rw(bimod)=1.000
+[21:17:25]      6B_1593455714: LR=-3.0 p_nested=0.634 p_rw(LR)=1.000 p_rw(bimod)=0.772
+[21:17:30]      6B_1593514692: LR=0.9 p_nested=0.069 p_rw(LR)=0.871 p_rw(bimod)=0.980
+[21:17:33]      6D_1594757863: LR=0.4 p_nested=0.812 p_rw(LR)=0.881 p_rw(bimod)=0.584
+[21:17:37]      6D_1594831043: LR=2.1 p_nested=0.327 p_rw(LR)=0.683 p_rw(bimod)=0.941
+[21:17:42]      6D_1594910470: LR=1.4 p_nested=0.535 p_rw(LR)=0.762 p_rw(bimod)=0.931
+[21:17:47]      6D_1594998483: LR=5.6 p_nested=0.059 p_rw(LR)=0.317 p_rw(bimod)=0.792
+[21:17:51]      6D_1595339521: LR=3.8 p_nested=0.020 p_rw(LR)=0.455 p_rw(bimod)=0.990
+[21:17:55]      6D_1595523837: LR=2.1 p_nested=0.198 p_rw(LR)=0.574 p_rw(bimod)=0.931
+[21:18:00]      6D_1595604487: LR=2.0 p_nested=0.475 p_rw(LR)=0.604 p_rw(bimod)=0.921
+[21:18:05]      7A_1587228286: LR=3.2 p_nested=0.188 p_rw(LR)=0.604 p_rw(bimod)=0.941
+[21:18:09]      7A_1587298286: LR=1.8 p_nested=0.307 p_rw(LR)=0.713 p_rw(bimod)=0.931
+[21:18:12]      7A_1587326219: LR=-0.3 p_nested=0.386 p_rw(LR)=0.990 p_rw(bimod)=0.891
+[21:18:18]      7A_1587556854: LR=8.1 p_nested=0.010 p_rw(LR)=0.129 p_rw(bimod)=0.990
+[21:18:23]      7A_1587583295: LR=3.8 p_nested=0.188 p_rw(LR)=0.495 p_rw(bimod)=0.990
+[21:18:31]      7A_1587643240: LR=0.6 p_nested=0.792 p_rw(LR)=0.911 p_rw(bimod)=0.931
+[21:18:35]      7A_1588977047: LR=10.3 p_nested=0.010 p_rw(LR)=0.069 p_rw(bimod)=1.000
+[21:18:40]      7A_1589025873: LR=-0.1 p_nested=0.040 p_rw(LR)=0.990 p_rw(bimod)=1.000
+[21:18:43]      7A_1589055551: LR=1.5 p_nested=0.416 p_rw(LR)=0.653 p_rw(bimod)=0.554
+[21:18:47]      7A_1592926372: LR=0.7 p_nested=0.089 p_rw(LR)=0.931 p_rw(bimod)=1.000
+[21:18:51]      7A_1592933285: LR=1.9 p_nested=0.297 p_rw(LR)=0.743 p_rw(bimod)=0.990
+[21:18:54]      7A_1592941276: LR=0.7 p_nested=0.703 p_rw(LR)=0.921 p_rw(bimod)=0.941
+[21:18:58]      7A_1593091052: LR=1.6 p_nested=0.356 p_rw(LR)=0.762 p_rw(bimod)=0.990
+[21:19:01]      7A_1593104418: LR=0.9 p_nested=0.079 p_rw(LR)=0.851 p_rw(bimod)=0.970
+[21:19:05]      7A_1593115159: LR=4.8 p_nested=0.396 p_rw(LR)=0.366 p_rw(bimod)=0.861
+[21:19:09]      7A_1593177044: LR=28.2 p_nested=0.010 p_rw(LR)=0.010 p_rw(bimod)=1.000
+[21:19:13]      7A_1593192268: LR=-2.6 p_nested=0.634 p_rw(LR)=1.000 p_rw(bimod)=0.950
+[21:19:16]      7A_1593436174: LR=1.0 p_nested=0.505 p_rw(LR)=0.842 p_rw(bimod)=0.960
+[21:19:20]      7A_1593521778: LR=-4.6 p_nested=0.624 p_rw(LR)=1.000 p_rw(bimod)=1.000
+[21:19:23]      7A_1593527735: LR=0.1 p_nested=0.980 p_rw(LR)=0.990 p_rw(bimod)=0.851
+[21:19:27]      7A_1593534070: LR=0.3 p_nested=0.693 p_rw(LR)=0.950 p_rw(bimod)=0.941
+[21:19:31]      7A_1593609973: LR=-1.5 p_nested=0.584 p_rw(LR)=1.000 p_rw(bimod)=0.980
+[21:19:34]      7A_1593620516: LR=1.5 p_nested=0.485 p_rw(LR)=0.782 p_rw(bimod)=0.891
+[21:19:37]      7A_1593633083: LR=0.3 p_nested=0.752 p_rw(LR)=0.941 p_rw(bimod)=1.000
+[21:19:41]      7A_1593696872: LR=4.4 p_nested=0.297 p_rw(LR)=0.337 p_rw(bimod)=0.980
+[21:19:44]      7A_1593701029: LR=4.7 p_nested=0.020 p_rw(LR)=0.317 p_rw(bimod)=0.990
+[21:19:49]      7A_1593709119: LR=9.0 p_nested=0.030 p_rw(LR)=0.129 p_rw(bimod)=0.980
+[21:19:53]      7A_1594043417: LR=3.6 p_nested=0.158 p_rw(LR)=0.525 p_rw(bimod)=0.980
+[21:19:53] done in 1017s -> C:\Users\Neil Thomas Mathew\Downloads\research\final\results
+[21:19:53] P1 hysteresis exponent: {'n': 9, 'exponent': 0.1265324921734405, 'ci_lo': -0.7385464221123696, 'ci_hi': 1.766256704307295, 'r2': 0.0068763183719388644, 'predicted': 1.5, 'consistent': True}

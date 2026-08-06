@@ -1,0 +1,8 @@
+window=   30s  units= 48  median n=   194  AC1=0.970  identified=0.500  calibrated sig=0.062
+window=   60s  units= 37  median n=   107  AC1=0.963  identified=0.649  calibrated sig=0.054
+window=  120s  units= 15  median n=   100  AC1=0.851  identified=0.800  calibrated sig=0.133
+window=  300s  units=  0  median n=   nan  AC1=nan  identified=nan  calibrated sig=nan
+
+wrote C:\Users\Neil Thomas Mathew\Downloads\research\final\results\e11_timescale.csv
+
+Read this as: if 'calibrated sig' stays near the 0.05 nominal rate across every window, the null is not a sampling artefact.

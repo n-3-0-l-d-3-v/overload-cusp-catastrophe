@@ -1,0 +1,33 @@
+[22:50:59] mega_run starting: blocks ['recovery', 'size', 'power', 'persistence', 'ews', 'noise'], -2 job slots
+[22:50:59] RECOVERY: 600 reps x 6 lengths
+[22:51:08]    at n>=500: mean |bias| 0.0245, min corr 0.073
+[22:51:08]    recovery finished in 10s
+[22:51:08] SIZE: 2000 reps x 6 lengths (calibrated on first 500)
+[23:02:21]    nominal size 0.420, calibrated 0.057 (target 0.05)
+[23:02:21]    size finished in 673s
+[23:02:21] POWER: 600 reps x 6 lengths x 4 regimes
+Traceback (most recent call last):
+  File "C:\Users\Neil Thomas Mathew\Downloads\research\final\code\experiments\mega_run.py", line 463, in <module>
+    main()
+  File "C:\Users\Neil Thomas Mathew\Downloads\research\final\code\experiments\mega_run.py", line 457, in main
+    BLOCKS[nm]()
+  File "C:\Users\Neil Thomas Mathew\Downloads\research\final\code\experiments\mega_run.py", line 243, in block_power
+    out = Parallel(n_jobs=N_JOBS, verbose=0)(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 2072, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 1682, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 1784, in _retrieve
+    self._raise_error_fast()
+  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 1859, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 758, in get_result
+    return self._return_or_raise()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Neil Thomas Mathew\AppData\Roaming\Python\Python312\site-packages\joblib\parallel.py", line 773, in _return_or_raise
+    raise self._result
+joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process managed by the executor was unexpectedly terminated. This could be caused by a segmentation fault while calling the function or by an excessive memory usage causing the Operating System to kill the worker.
+
+Detailed tracebacks of the workers should have been printed to stderr in the executor process if faulthandler was not disabled.
