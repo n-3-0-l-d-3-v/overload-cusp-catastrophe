@@ -399,7 +399,8 @@ five regimes, and they map onto the vocabulary the qualitative literature
 already uses:
 
 \begin{center}
-\begin{tabular}{@{}lll@{}}
+\footnotesize
+\begin{tabular}{@{}l p{0.29\columnwidth} p{0.30\columnwidth}@{}}
 \toprule
 & $\Bidx\le0$ (monostable) & $\Bidx>0$ (bistable)\\
 \midrule
@@ -471,13 +472,14 @@ unfalsifiable, since shared measurement noise alone could produce apparent
 coupling. Load and drivers are therefore assigned to disjoint sensors:
 
 \begin{center}
-\begin{tabular}{@{}llll@{}}
+\footnotesize
+\begin{tabular}{@{}l p{0.22\columnwidth} p{0.27\columnwidth} l@{}}
 \toprule
 config & $x$ & drivers & role\\
 \midrule
 B & tonic EDA & HR, HR-uncertainty, ACC & primary\\
-C & skin temperature & SCR rate, EDA-uncertainty, ACC & robustness\\
-A & $z(\mathrm{HR})-z(\mathrm{RMSSD})$ & as C & negative control\\
+C & skin temperature & SCR rate, EDA-uncertainty, ACC & robust.\\
+A & $z(\mathrm{HR})$ ${-}\,z(\mathrm{RMSSD})$ & as C & control\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -924,13 +926,14 @@ structure is real, it is simply not fold structure.
 Rejection rates for the cubic term:
 
 \begin{center}
-\begin{tabular}{@{}llrr@{}}
+\footnotesize
+\begin{tabular}{@{}l l l r@{}}
 \toprule
 Config & Load coordinate & Role & Cubic $p<0.05$ \\
 \midrule
 B & tonic EDA & primary & $0.051$ \\
 C & skin temperature & robustness & $0.115$ \\
-A & $z(\mathrm{HR})-z(\mathrm{RMSSD})$ & negative control & $0.051$ \\
+A & $z(\mathrm{HR}){-}z(\mathrm{RMSSD})$ & neg. control & $0.051$ \\
 \bottomrule
 \end{tabular}
 \end{center}

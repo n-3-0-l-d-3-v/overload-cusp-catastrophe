@@ -148,6 +148,11 @@ def main():
         shutil.copy(PAPER / "refs.bib", build)
         for f in FIGS.glob("*.pdf"):
             shutil.copy(f, build)
+        # The journal draft \input's the generated results tables. Without
+        # these the build halts on a missing-file error partway through.
+        if (PAPER / "tables").is_dir():
+            shutil.copytree(PAPER / "tables", build / "tables",
+                            dirs_exist_ok=True)
 
         if kind == "tectonic":
             r = subprocess.run(

@@ -92,3 +92,5 @@
 [01:47:59]    m5_ews: chunk 4/12 (33%), eta 6m42s
 [01:51:26]    m5_ews: chunk 5/12 (42%), eta 9m31s
 [01:54:50]    m5_ews: chunk 6/12 (50%), eta 10m11s
+[01:58:18]    m5_ews: chunk 7/12 (58%), eta 9m45s
+[02:01:41]    m5_ews: chunk 8/12 (67%), eta 8m31s

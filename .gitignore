@@ -52,3 +52,4 @@ Thumbs.db
 
 # Monte Carlo checkpoints (resume state, not artefact)
 results/_checkpoints/
+paper/main_full_journal.pdf
