@@ -252,14 +252,22 @@ def fit_mle(x, S, T, U, dt=1.0, monostable=False, eps_grid=EPS_GRID,
     X = design_matrix(x, S, T, U, A, dt)
     y = np.diff(np.asarray(x, float))
     lam_t = lam_p = np.nan
+    lam_t_error = None
     try:
         XtX_inv = np.linalg.pinv(X.T @ X)
         se = float(np.sqrt(max(s2 * XtX_inv[0, 0], _TINY)))
         lam_t = float(th[0] / se)
         from scipy.stats import t as _tdist
         lam_p = float(_tdist.sf(lam_t, df=max(len(y) - X.shape[1], 1)))
-    except Exception:
-        pass
+    except Exception as exc:
+        # Do NOT swallow this silently. If the t-statistic cannot be formed,
+        # lam_p stays NaN and `lam_significant` below evaluates to False --
+        # which is indistinguishable from a unit that was tested and found
+        # non-significant. A systematic failure here would therefore
+        # manufacture exactly the null result this paper reports, and no
+        # caller would see anything wrong. Recording the reason lets callers
+        # count failures instead of absorbing them into the denominator.
+        lam_t_error = f"{type(exc).__name__}: {exc}"
 
     k = (6 if monostable else 7) + 2          # coefficients + sigma + eps
     n = len(x) - 1
@@ -281,6 +289,11 @@ def fit_mle(x, S, T, U, dt=1.0, monostable=False, eps_grid=EPS_GRID,
         "lam_t": lam_t,
         "lam_p": lam_p,
         "lam_significant": bool(np.isfinite(lam_p) and lam_p < 0.05),
+        # None when the t-statistic was computed. A string when it could not
+        # be, in which case `lam_significant` is False for want of a test
+        # rather than for want of an effect. Callers that aggregate
+        # significance rates must treat these as missing, not as negatives.
+        "lam_t_error": lam_t_error,
         "free": FREE,
     }
 

@@ -250,24 +250,46 @@ def fig_ews_grid():
     _save(fig, "fig11_ews_grid")
 
 
+def _wilson(k, n, z=1.96):
+    if n == 0:
+        return (float("nan"), float("nan"))
+    p = k / n
+    d = 1 + z**2 / n
+    c = p + z**2 / (2 * n)
+    h = z * np.sqrt(p * (1 - p) / n + z**2 / (4 * n**2))
+    return ((c - h) / d, (c + h) / d)
+
+
 def fig_persistence():
-    f = RESULTS / "m4_persistence_summary.csv"
+    """
+    Size against AR(1) persistence.
+
+    Reads E15 rather than the Monte Carlo block. The full persistence block
+    was not run to completion, and the paper's claim -- that no persistence
+    makes the calibrated test over-reject -- rests on E15 at 40 replicates per
+    phi. Plotting the source the paper actually cites keeps figure and text on
+    the same evidence. Forty replicates is thin, and the Wilson bands drawn
+    here are wide enough to show it rather than hide it.
+    """
+    f = RESULTS / "e15_size_vs_persistence.csv"
     if not f.exists():
-        print("  persistence: no data yet")
+        print("  persistence: no data")
         return
     d = pd.read_csv(f).sort_values("phi")
     fig, ax = plt.subplots(figsize=(COL1, 2.2), constrained_layout=True)
     for kind, col, mk, lab in (("rw", C["bad"], "o", "random-walk surrogates"),
                                ("iaaft", C["alt"], "s", "IAAFT surrogates")):
-        ax.plot(d["phi"], d[f"size_{kind}"], marker=mk, color=col, ms=3.5,
-                label=lab)
-        ax.fill_between(d["phi"], d[f"ci_lo_{kind}"], d[f"ci_hi_{kind}"],
-                        color=col, alpha=0.16, lw=0)
+        y = d[f"size_{kind}"].to_numpy()
+        n = d["n_rep"].to_numpy()
+        lo, hi = zip(*[_wilson(round(a * b), b) for a, b in zip(y, n)])
+        ax.plot(d["phi"], y, marker=mk, color=col, ms=3.5, label=lab)
+        ax.fill_between(d["phi"], lo, hi, color=col, alpha=0.16, lw=0)
     ax.axhline(0.05, color=C["ref"], ls="--", lw=0.8, label="nominal 0.05")
     ax.set_xlabel(r"AR(1) persistence $\phi$ (no cusp present)")
     ax.set_ylabel("false-positive rate")
-    ax.set_title("calibrated size holds at every persistence")
-    ax.legend(frameon=False)
+    ax.set_title(f"calibrated size vs persistence "
+                 f"({int(d['n_rep'].iloc[0])} reps/point)", fontsize=8)
+    ax.legend(frameon=False, fontsize=6)
     _save(fig, "fig12_persistence")
 
 
