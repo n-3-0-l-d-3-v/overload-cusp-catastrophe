@@ -206,10 +206,13 @@ def fig_size_power():
     ax.set_xlabel("series length $n$ (windows)")
     ax.set_ylabel("rejection rate")
     ax.set_title("(b) power: input that genuinely contains a cusp", fontsize=8)
-    ax.set_ylim(-0.05, 1.08)
-    ax.legend(frameon=False, fontsize=6, ncol=2, loc="lower right",
-              handlelength=1.8, columnspacing=0.9, labelspacing=0.3,
-              borderpad=0.2)
+    # Power curves rise from bottom-left to top-right and converge on 1.0, so
+    # every corner of the axes is occupied at some length. Extra headroom above
+    # the ceiling gives the legend somewhere to sit that is not on the data.
+    ax.set_ylim(-0.05, 1.46)
+    ax.legend(frameon=False, fontsize=5.6, ncol=4, loc="upper center",
+              handlelength=1.4, handletextpad=0.4, columnspacing=0.8,
+              labelspacing=0.2, borderpad=0.1)
 
     _save(fig, "fig10_size_power")
 
