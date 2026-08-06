@@ -426,3 +426,96 @@ The paper's ceiling is set by one thing that no amount of analysis fixes: the
 target population is not in the data. That is stated in the abstract, the
 scope paragraph, the limitations and the title — which no longer names a
 population it does not measure.
+
+---
+
+# Session: 2026-08-07 — submission readiness
+
+Goal: get the artefact into a state that can be published as a repository and
+submitted as a paper. Everything except acquiring autistic-participant data.
+
+## The pattern this session exposed
+
+Four rounds of self-review read the **manuscript**. None read the **compiled
+PDF**, and none ran the **test suite**. Three of the five defects below are
+invisible in the `.tex` source, and all three would have reached a reviewer.
+
+The lesson is cheap to state and was expensive to learn: a LaTeX run that exits
+zero is not evidence of anything. Overfull boxes, scaled-down figures and empty
+`\bibitem`s are all warnings or silence, never errors.
+
+## Defects
+
+| # | Defect | How it hid |
+|---|---|---|
+| D1 | References [5] and [6] printed blank | BibTeX has no comment character; `@article{key, % note` makes the note the first field name. Empty `\bibitem`, no warning, exit 0 |
+| D2 | Figs. 2 and 3 unreadable in print | Authored 7.16in, included at `\columnwidth`; LaTeX scaled fonts by 0.5. Not a warning condition |
+| D3 | Test suite could not run | `code/` never on `sys.path`; the README's own command failed at collection |
+| D4 | Four more bad references | Only caught by checking all 46 against Crossref/DataCite rather than spot-checking |
+| D5 | Previous Monte Carlo run had crashed | BLAS oversubscription killed a worker; no checkpointing, so four blocks were lost and the supplement cited their 2–3 replicate remains |
+
+D1 is the one to remember. The notes that broke those entries were added *by
+Round 4's citation audit* — a fix that introduced a worse defect than the one it
+repaired, in a file format where the mistake is silent.
+
+## What the re-run changed in the science
+
+Recovery went from 600 to 2000 replicates per length. Pearson correlation for
+α₀ at n=1000 **fell from 0.59 to 0.10**, which looked like a broken run.
+
+It was not. The recovered α̂₀ at that length spans [−140, 3.3] against a 99th
+percentile of 2.0. One replicate in two thousand drags the linear correlation to
+the floor. Spearman on the same data is **0.88**.
+
+That gap is the paper's own thesis appearing in its own diagnostics: `a = θ₂/θ₁`
+with nothing bounding θ₁ away from zero. **Dividing by a small number preserves
+order and destroys scale.** Reporting Pearson alone understates recovery;
+Spearman alone overstates what can be published from it. Both are now reported.
+
+The claim is consequently sharper than it was:
+
+> Length buys a defensible **ranking** by α₀ (ρ: 0.33 → 0.88).
+> Length never buys a reportable **value** (r: 0.15 at n=200, 0.10 at n=1000).
+
+Two corrections followed. S4 had said α_A "never becomes identified" — in rank it
+reaches 0.72, and the old phrasing was easy to falsify. And the pre-registration
+justified itself entirely on `n ≳ 500` rescuing α₀, without noticing that P3–P5
+rest on the two parameters length does *not* fix.
+
+## A contradiction between our own two documents
+
+`main_full_journal.tex` opened its results with "The estimator recovers what it
+should": α₀ at r = 0.98. The conference paper's central finding is that α₀ is
+not recoverable. Both were in the repository.
+
+The journal number is not wrong; it answers an easier question. E1 simulates at
+**n = 4000** windows against a median of **194** in the corpora, and draws true
+λ from [0.10, 0.28] against a median of **0.0059** in the real fits. Two
+compounding optimisms, neither disclosed where the claim was made.
+
+Kept the number and explained why it misleads, rather than deleting it. A reader
+learns more from the contrast than from a clean page.
+
+## Infrastructure
+
+- `mega_run.py` rewritten: thread limits set before numpy import, work chunked
+  and checkpointed, dying chunks bisected to isolate one poison replicate,
+  `--resume` continues an interrupted run. Replication raised 2–5×.
+- `compile_paper.py` now asserts page count, reports overfull boxes with source
+  lines, and **fails on empty bibliography entries** — the only tool in the
+  chain that catches D1.
+- `make_figures_v2.py` records each figure's intended width and refuses to save
+  a mismatch, which is D2 made impossible.
+- `check_citations.py` verifies every DOI against Crossref with a DataCite
+  fallback. Two of its own findings turned out to be checker bugs, both fixed;
+  a checker that cries wolf gets ignored.
+- Added `pyproject.toml`, `requirements.txt`, `LICENSE`, `CITATION.cff`,
+  `reproduce.py`, and CI asserting all three defect classes on every push.
+
+## State
+
+Conference paper: 5 pages, zero overfull boxes, no unresolved references,
+`--strict` clean. Journal draft: 14 pages, same. 32 tests pass. 42 of 46
+references verified against publisher metadata, 0 disagreements.
+
+Unchanged, and unchangeable today: no autistic participants, and a null result.
