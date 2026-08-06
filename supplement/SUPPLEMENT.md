@@ -98,65 +98,111 @@ positive results.
 
 ## S4. Identifiability (the load-bearing result)
 
-`m1_recovery_summary.csv`, 600 replicates per cell, 3,600 synthetic series.
+`m1_recovery_summary.csv`, 2000 replicates per cell, 12,000 synthetic series.
 
-Correlation between true and estimated parameter:
+Two correlations, because they answer different questions and the gap between
+them is the result. **Spearman ρ** asks whether the ordering is recovered.
+**Pearson r** asks whether the value is.
+
+**Spearman ρ — is the ordering recovered?**
 
 | Parameter | n=100 | n=150 | n=200 | n=300 | n=500 | n=1000 |
 |---|---|---|---|---|---|---|
-| λ relaxation | 0.824 | 0.906 | **0.912** | 0.958 | 0.978 | 0.971 |
-| σ diffusion | 0.963 | 0.975 | **0.953** | 0.988 | 0.994 | 0.988 |
-| β_S sensory | 0.330 | 0.366 | 0.215 | 0.608 | 0.803 | 0.645 |
-| β_T switch | 0.208 | 0.199 | 0.256 | 0.616 | 0.738 | 0.822 |
-| β_U uncertainty | 0.213 | 0.162 | 0.288 | 0.516 | 0.649 | 0.696 |
-| β₀ intercept | 0.175 | 0.181 | 0.138 | 0.444 | 0.616 | 0.677 |
-| α₀ splitting | 0.015 | 0.075 | 0.056 | 0.500 | 0.662 | 0.594 |
-| α_A debt gain | 0.052 | −0.033 | −0.066 | 0.036 | 0.073 | 0.162 |
-| ε slow rate | 0.013 | 0.067 | 0.065 | 0.127 | 0.205 | 0.268 |
+| λ relaxation | 0.833 | 0.909 | **0.936** | 0.960 | 0.978 | 0.975 |
+| σ diffusion | 0.969 | 0.978 | **0.985** | 0.990 | 0.994 | 0.997 |
+| β_S sensory | 0.462 | 0.584 | 0.643 | 0.762 | 0.829 | 0.906 |
+| β_T switch | 0.389 | 0.485 | 0.575 | 0.671 | 0.799 | 0.877 |
+| β_U uncertainty | 0.342 | 0.435 | 0.526 | 0.621 | 0.692 | 0.831 |
+| β₀ intercept | 0.516 | 0.549 | 0.595 | 0.697 | 0.776 | 0.863 |
+| α₀ splitting | 0.327 | 0.446 | 0.569 | 0.683 | 0.780 | 0.879 |
+| α_A debt gain | 0.189 | 0.246 | 0.316 | 0.389 | 0.534 | 0.720 |
+| ε slow rate | 0.047 | 0.080 | 0.103 | 0.209 | 0.316 | 0.439 |
 
-**Read this table before believing any cusp result on wearable data.**
+**Pearson r — is the value recovered?**
 
-At n=200 (the median in these corpora) only λ and σ are identified. The
-splitting factor, which is the entire scientific content of the model, is at
-r = 0.06. It is not measured. It is noise.
+| Parameter | n=100 | n=150 | n=200 | n=300 | n=500 | n=1000 |
+|---|---|---|---|---|---|---|
+| λ relaxation | 0.820 | 0.902 | **0.930** | 0.957 | 0.977 | 0.970 |
+| σ diffusion | 0.954 | 0.977 | **0.973** | 0.982 | 0.990 | 0.993 |
+| β_S sensory | 0.155 | 0.229 | 0.264 | 0.669 | 0.794 | 0.755 |
+| β_T switch | 0.213 | 0.186 | 0.342 | 0.482 | 0.718 | 0.831 |
+| β_U uncertainty | 0.186 | 0.151 | 0.287 | 0.512 | 0.631 | 0.699 |
+| β₀ intercept | 0.225 | 0.097 | 0.175 | 0.498 | 0.578 | 0.240 |
+| α₀ splitting | 0.072 | 0.051 | 0.145 | 0.504 | 0.638 | **0.102** |
+| α_A debt gain | 0.027 | 0.004 | 0.026 | 0.013 | 0.054 | 0.184 |
+| ε slow rate | 0.023 | 0.022 | 0.041 | 0.129 | 0.201 | 0.251 |
 
-Consequence: `a = θ₂/θ₁` inflates without bound as `θ₁ → 0`. In the real fits
-the median `λ̂` is **0.0059**, and the median recovered `α̂₀` is **12**, which
-would put attractors at roughly ±2 on a unit-variance coordinate. Those are not
-weakly bistable people. They are people with no restoring cubic term, divided by
-a number close to zero.
+**Read these tables before believing any cusp result on wearable data.**
 
-The real `λ̂` is *below the entire simulated range*. The recordings sit further
-into non-identifiability than any of the 3,600 synthetic series used to map it.
+At n=200, the median in these corpora, only λ and σ score well on both. The
+splitting factor — the entire scientific content of the model — has ρ = 0.57 and
+r = 0.15. You could rank people by it, badly. You could not report a number.
 
-**α_A never becomes identified**, even at n=1000 (r=0.16). Any claim resting on
-the recovery-debt gain is unsupported at any length we tested.
+### Why the two disagree
+
+`a = θ₂/θ₁`, and nothing bounds `θ₁` away from zero. Dividing by a small number
+**preserves order and destroys scale**, which is exactly the pattern above.
+
+The tail of the recovered splitting factor makes it concrete:
+
+| n | 99th pct \|α̂₀\| | max \|α̂₀\| |
+|---|---|---|
+| 100 | 12.15 | 76.8 |
+| 200 | 4.25 | 68.5 |
+| 500 | 2.39 | 7.5 |
+| 1000 | 2.10 | **139.2** |
+
+At n=1000 the 99th percentile is 2.1 and the maximum is 139. One replicate in
+two thousand is enough to drag Pearson from 0.88 to 0.10. This is not an
+outlier to be trimmed away — it is the estimator doing what the model says it
+must, and trimming it would hide the finding.
+
+**The practical consequence is narrower than "collect more data".** Length buys
+a defensible *ranking* of participants by α₀: ρ climbs 0.33 → 0.88 from n=100 to
+n=1000. Length never buys a reportable *value*: r is 0.15 at n=200 and 0.10 at
+n=1000. A study that needs the value needs a parameterisation estimating `a` and
+`b` directly, not a longer recording.
+
+### The real fits sit outside the simulated range
+
+The median `λ̂` is **0.0059** and the median recovered `α̂₀` is **12**, which would
+put attractors at roughly ±2 on a unit-variance coordinate. Those are not weakly
+bistable people. They are people with no restoring cubic term, divided by a
+number close to zero.
+
+That `λ̂` is *below the entire simulated range*, so the recordings sit further
+into non-identifiability than any of the 12,000 synthetic series used to map it.
+
+**ε is never identified** even in rank (ρ = 0.44 at n=1000), and **α_A only
+reaches ρ = 0.72 there while r stays at 0.18**. Any claim resting on the
+recovery-debt mechanism is unsupported at any length we tested, and more data
+alone will not rescue it.
 
 ---
 
 ## S5. Test size and power
 
-`m2_size_summary.csv`: 12,000 random-walk replicates (nominal), 3,000
+`m2_size_summary.csv`: 30,000 random-walk replicates (nominal), 7,500
 (calibrated).
 
 | n | nominal size | 95% CI | calibrated size | 95% CI |
 |---|---|---|---|---|
-| 100 | 0.368 | [0.347, 0.389] | 0.056 | [0.039, 0.080] |
-| 150 | 0.404 | [0.382, 0.425] | 0.056 | [0.039, 0.080] |
-| 200 | 0.422 | [0.400, 0.443] | 0.056 | [0.039, 0.080] |
-| 300 | 0.429 | [0.407, 0.450] | 0.060 | [0.042, 0.084] |
-| 500 | 0.455 | [0.433, 0.477] | 0.050 | [0.034, 0.073] |
-| 1000 | 0.444 | [0.422, 0.465] | 0.064 | [0.046, 0.089] |
+| 100 | 0.363 | [0.350, 0.377] | 0.050 | [0.040, 0.064] |
+| 150 | 0.404 | [0.391, 0.418] | 0.054 | [0.042, 0.068] |
+| 200 | 0.426 | [0.412, 0.440] | 0.050 | [0.040, 0.064] |
+| 300 | 0.438 | [0.425, 0.452] | 0.042 | [0.032, 0.054] |
+| 500 | 0.440 | [0.427, 0.454] | 0.047 | [0.037, 0.060] |
+| 1000 | 0.444 | [0.430, 0.458] | 0.057 | [0.045, 0.071] |
 
 Two things matter here.
 
 1. **The nominal test is wrong by roughly eightfold**, and Wilson intervals
    exclude 0.05 by an enormous margin at every length.
-2. **It gets worse with more data**, 0.368 → 0.444. Spurious regression on
+2. **It gets worse with more data**, 0.363 → 0.444. Spurious regression on
    integrated series does not wash out asymptotically. Anyone who assumes "more
    data will fix it" is assuming the wrong thing.
 
-Calibrated size sits at 0.050 to 0.064, every interval covering 0.05.
+Calibrated size sits at 0.042 to 0.057, every interval covering 0.05.
 
 Power (`m3_power_summary.csv`) is reported for the calibrated test, since that
 is the one with valid size. Quoting nominal power would be quoting the
