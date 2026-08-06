@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the paper below."
+title: "Overload as a Cusp Catastrophe: research artefact"
+abstract: >-
+  Derivation, estimator, Monte Carlo validation suite and manuscript for a
+  cusp-catastrophe model of sensory and executive overload. Includes the
+  identifiability study bounding what cusp geometry can be recovered from
+  wearable-length recordings, and a ground-truth demonstration that standard
+  rolling-window early-warning indicators return exponents of the wrong sign.
+type: software
+authors:
+  - family-names: Mathew
+    given-names: Neil Thomas
+    orcid: "https://orcid.org/0009-0001-8802-7376"
+    affiliation: "CHRIST (Deemed to be University), Bengaluru, India"
+repository-code: "https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe"
+license: MIT
+keywords:
+  - cusp catastrophe
+  - critical transitions
+  - early-warning signals
+  - identifiability
+  - electrodermal activity
+  - wearable sensing
+  - sensory overload
+
+preferred-citation:
+  type: conference-paper
+  title: >-
+    Overload as a Cusp Catastrophe: Identifiability Limits and a Ground-Truth
+    Failure of Early-Warning Indicators in Wearable Physiology
+  authors:
+    - family-names: Mathew
+      given-names: Neil Thomas
+      orcid: "https://orcid.org/0009-0001-8802-7376"
+      affiliation: "CHRIST (Deemed to be University), Bengaluru, India"
+  year: 2026
+  status: submitted

@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chm"
+version = "1.0.0"
+description = "Cusp-hysteretic model of sensory-executive overload: geometry, estimator, nulls and validation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Neil Thomas Mathew" }]
+keywords = [
+    "cusp catastrophe", "critical transitions", "early-warning signals",
+    "identifiability", "electrodermal activity", "wearable sensing",
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "statsmodels>=0.14",
+    "hmmlearn>=0.3",
+    "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pypdf>=4.0", "pymupdf>=1.24"]
+
+[project.urls]
+Repository = "https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe"
+
+[tool.setuptools]
+package-dir = { "" = "code" }
+
+[tool.setuptools.packages.find]
+where = ["code"]
+include = ["chm*"]
+
+# `pythonpath` puts code/ on sys.path for the test session, so `pytest` works
+# from the repository root without an editable install. Without it the suite
+# fails at collection with ModuleNotFoundError: No module named 'chm', which
+# is what the documented command used to do.
+[tool.pytest.ini_options]
+pythonpath = ["code"]
+testpaths = ["code/tests"]
+addopts = "-q"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::RuntimeWarning",
+]

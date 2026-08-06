@@ -72,3 +72,17 @@
 [01:37:39]    m2_size: chunk 62/75 (83%), eta 4m45s
 [01:38:45]    m2_size: chunk 63/75 (84%), eta 4m31s
 [01:40:55]    m2_size: chunk 64/75 (85%), eta 4m27s
+[01:43:07]    m2_size: chunk 65/75 (87%), eta 4m19s
+[01:44:31]    m2_size: chunk 66/75 (88%), eta 4m01s
+[01:44:32]    m2_size: chunk 67/75 (89%), eta 3m31s
+[01:44:33]    m2_size: chunk 68/75 (91%), eta 3m02s
+[01:44:33]    m2_size: chunk 69/75 (92%), eta 2m34s
+[01:44:34]    m2_size: chunk 70/75 (93%), eta 2m06s
+[01:44:35]    m2_size: chunk 71/75 (95%), eta 1m40s
+[01:44:35]    m2_size: chunk 72/75 (96%), eta 73s
+[01:44:36]    m2_size: chunk 73/75 (97%), eta 48s
+[01:44:37]    m2_size: chunk 74/75 (99%), eta 24s
+[01:44:38]    m2_size: chunk 75/75 (100%), eta 0s
+[01:44:38]    nominal size 0.419, calibrated 0.050 (target 0.05)
+[01:44:38]    size finished in 29m38s
+[01:44:38] EWS: 500 reps x 3 lengths x 5 windows x 2
