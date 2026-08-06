@@ -22,6 +22,20 @@
 \DeclareMathOperator{\Var}{Var}
 \newcommand{\dd}{\mathrm{d}}
 
+% Float and display separation, tightened a little from the IEEEtran defaults.
+% The document has five floats and five displayed equations, and the default
+% gaps pushed the last two references onto a sixth page. These values stay
+% within what IEEE typesetting normally uses; nothing is compressed to the
+% point where the page looks crowded.
+\setlength{\textfloatsep}{9pt plus 2pt minus 2pt}
+\setlength{\floatsep}{9pt plus 2pt minus 2pt}
+\setlength{\intextsep}{9pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{9pt plus 2pt minus 2pt}
+\setlength{\abovedisplayskip}{5pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{5pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{3pt plus 1pt minus 1pt}
+\setlength{\belowdisplayshortskip}{3pt plus 1pt minus 1pt}
+
 \begin{document}
 
 \title{Overload as a Cusp Catastrophe: Identifiability Limits and a
@@ -35,31 +49,29 @@ ORCID: \href{https://orcid.org/0009-0001-8802-7376}{0009-0001-8802-7376}}}
 \maketitle
 
 \begin{abstract}
-Sensory and executive overload is usually modelled by labelling states and
-counting transitions between them. Models of that kind fit any data and predict
-nothing that could refute them. We derive overload instead from the geometry of
-a cusp catastrophe. A latent load coordinate relaxes in a quartic potential
-whose asymmetry follows momentary demand and whose bistability follows a slow
-recovery-debt variable, so the discrete functional states become metastable
-basins and the transition kernel follows from Kramers escape rates. Two
-exponents are fixed in advance: hysteresis width grows as the $3/2$ power of the
-splitting factor, and near the fold the variance and log-autocorrelation scale
-as $\mp 1/2$ in distance to the tipping point. Conditional on the slow variable
-the drift is linear in a reparameterised coefficient vector, so estimation
-reduces to profiled least squares and is exact. Three results follow, and two of
-them concern method rather than physiology. First, a Monte Carlo study over
-$3.6\times10^{3}$ simulated series shows that at the series lengths wearable
-corpora actually supply only the relaxation rate and the diffusion coefficient
-are identified; the control parameters that carry the geometry are not, which
-bounds what any cusp analysis of such data can claim. Second, the rolling-window
-autocorrelation and variance indicators used throughout the early-warning
-literature return exponents of the wrong sign on data simulated from a model
-that genuinely contains a fold, so we withdraw our own early-warning test rather
-than report it. Third, across 147 recordings from 40 people in three open
-corpora, the one identifiable prediction is not supported above a
-surrogate-calibrated null. Measured power bounds this to excluding strong and
-moderate dynamics. The work is motivated by autistic adults; none are analysed
-here, and a pre-registered validation is specified.
+Overload is usually modelled by naming states and counting the transitions
+between them. Such models fit anything and forbid nothing. We derive it instead
+from the geometry of a cusp catastrophe: a latent load coordinate relaxing in a
+quartic potential whose tilt follows momentary demand and whose bistability
+follows accumulated recovery debt. Functional states become metastable basins,
+and the transition kernel follows from Kramers escape rates. The geometry fixes
+two exponents before any data are seen. Hysteresis width grows as the $3/2$
+power of the splitting factor; near the fold, variance and log-autocorrelation
+scale as $\mp 1/2$ in distance to the tipping point. Estimation is exact, since
+conditional on the slow variable the drift is linear in a reparameterised
+coefficient vector. Three findings follow, of which two concern method rather
+than physiology. A Monte Carlo study over $3.6\times10^{3}$ simulated series
+shows that at the lengths wearable corpora actually supply, only the relaxation
+rate and the diffusion coefficient are identified; the control parameters
+carrying the geometry are not. That bounds what any cusp analysis of such data
+can claim, this one included. Next, the rolling-window variance and
+autocorrelation indicators the early-warning literature runs on return exponents
+of the wrong sign on data simulated from a model that does contain a fold, so we
+withdraw our own early-warning test rather than report it. Finally, across 147
+recordings from 40 people in three open corpora, the one identifiable prediction
+is not supported above a surrogate-calibrated null; measured power bounds this
+to excluding strong and moderate dynamics. The work is motivated by autistic
+adults. None are analysed here, and a pre-registered validation is specified.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -80,12 +92,12 @@ dynamics.
 Existing models do not supply one. Computational work on autism is dominated by
 Bayesian and predictive-coding framings whose empirical support a ten-year
 review found mixed and methodologically inconsistent \cite{chrysaitis2023}, and
-the most recent dynamical treatment of symptom trajectories is explicitly
-theoretical and collects no data \cite{adamou2026}. Applied state-transition
-work typically assigns states from experimental condition labels and then counts
-a transition matrix, which is close to circular: the recovered matrix largely
-re-describes the block structure of the protocol, and yields no prediction that
-observation could contradict.
+the most recent dynamical treatment of symptom trajectories is avowedly
+theoretical, collecting no data \cite{adamou2026}. Applied state-transition work
+assigns states from experimental condition labels and counts a transition
+matrix. That is close to circular: the recovered matrix mostly re-describes the
+block structure of the protocol, and yields nothing observation could
+contradict.
 
 We take a different route. Rather than positing states and fitting transitions
 between them, we posit a one-dimensional stochastic relaxation in a cusp
@@ -94,33 +106,27 @@ $V(x;a,b)=\tfrac14 x^4-\tfrac12 a x^2-bx$, where the normal factor $b_t$ carries
 momentary demand and the splitting factor $a_t$ carries depleted regulatory
 capacity. The substantive claim is that capacity does not add to load. It
 changes the geometry. Below a critical $a$ the load tracks demand and returns;
-above it a second attractor appears, and with it a fold, a hysteresis loop and
+above it a second attractor appears, bringing a fold, a hysteresis loop and
 critical slowing down. Sudden onset and slow recovery stop being observations to
-report and become consequences to check, and because the geometry is closed-form
-those consequences are numerical exponents that data can reject. This paper is
-about how far that promise survives contact with real wearable data.
+report and become consequences to check --- numerical exponents that data can
+reject, since the geometry is closed-form. This paper is about how far that
+promise survives contact with real wearable data.
 
-\noindent\textbf{Contributions.}
-\begin{enumerate}
-\item A cusp formulation in which the five functional states are geometric
-regions rather than labels, and the $5\times5$ transition kernel is generated by
-nine interpretable parameters instead of twenty counted frequencies
-(Sec.~\ref{sec:model}).
-\item An exact profiled-least-squares estimator, and a high-replication
-identifiability study showing which parameters are recoverable at the series
-lengths wearable corpora supply (Sec.~\ref{sec:ident}), which bounds every claim
-such an analysis can make, including ours.
-\item A ground-truth demonstration that the standard early-warning indicators
-report the wrong sign on data containing a genuine fold, plus a measurement of
-the eightfold size inflation of the nominal test on near-unit-root series
-(Sec.~\ref{sec:results}).
-\item A calibrated null on 147 recordings, with power characterised so the
-result is a bound rather than an absence.
-\end{enumerate}
+\noindent\textbf{Contributions.} (i) A cusp formulation in which the five
+functional states are geometric regions rather than labels, and the $5\times5$
+kernel is generated by nine interpretable parameters instead of twenty counted
+frequencies (Sec.~\ref{sec:model}). (ii) An exact profiled-least-squares
+estimator, with a high-replication identifiability study bounding what any such
+analysis can claim, ours included (Sec.~\ref{sec:ident}). (iii) A ground-truth
+demonstration that the standard early-warning indicators report the wrong sign
+on data containing a genuine fold, and a measurement of the eightfold size
+inflation of the nominal test on near-unit-root series (Sec.~\ref{sec:results}).
+(iv) A calibrated null on 147 recordings, with power characterised so the result
+is a bound rather than an absence.
 
-\noindent The target population is autistic adults. No public wearable dataset
-of that group exists at the temporal density this model needs
-\cite{cano2024,chen2025ema}, so none are analysed here, and we say so rather
+The target population is autistic adults. No public wearable dataset of that
+group exists at the temporal density this model needs
+\cite{cano2024,chen2025ema}, so none are analysed here --- and we say so rather
 than title the work after a group it does not measure.
 
 % =====================================================================
@@ -194,9 +200,9 @@ plane into five regions (Fig.~\ref{fig:geometry}b): \emph{calm} and
 \emph{focused} in the lower basin when monostable, \emph{stuck} in the lower
 basin while an overloaded attractor coexists, \emph{overloaded} in the upper
 basin, and \emph{recovering} in the upper basin once demand has fallen below the
-level that would have put the system there. The last two are the useful ones.
-Qualitative work uses both words freely, and to our knowledge neither has
-previously had a precise mathematical meaning. Between-basin moves are
+level that would have put the system there. The last two matter most.
+Qualitative work uses both words freely; to our knowledge neither has previously
+had a precise mathematical meaning. Between-basin moves are
 noise-induced escapes with Kramers rate
 $r=\tfrac{1}{2\pi}\sqrt{|V''(x^*)V''(x_s)|}\exp(-2\Delta V/\sigma^2)$
 \cite{kramers1940}, so the kernel is a deterministic function of
@@ -214,21 +220,21 @@ laboratory protocol \cite{schmidt2018wesad}; Wearable Exam Stress, 10 students
 across 30 examinations \cite{amin2022exam}; and Nurse Stress, 15 nurses across
 roughly \SI{1250}{\hour} of hospital shifts \cite{hosseini2022nurse}. All supply
 Empatica E4 electrodermal activity, blood volume pulse, skin temperature and
-accelerometry. After windowing and quality screening this gives \textbf{147
-recordings from 40 people}, median 194 windows each.
+accelerometry. Windowing and quality screening leave \textbf{147 recordings from
+40 people}, median 194 windows each.
 
 \subsection{Sensor assignment and a negative control}
-Reading the load coordinate and its drivers from the same sensor would make the
-model unfalsifiable, since shared measurement noise alone could produce apparent
-coupling, so the two are assigned to disjoint sensors. The load coordinate of a
-slow relaxation process must itself be slow, which is measurable rather than a
-matter of preference: at a \SI{30}{\second} window tonic electrodermal activity
-has lag-1 autocorrelation $0.98$, whereas a cardiac index built from heart rate
-and RMSSD has $0.19$, because RMSSD over so few beats is dominated by
-beat-detection error. Configuration B (tonic EDA) is therefore primary,
-configuration C (skin temperature) is a robustness check, and configuration A
-(the cardiac index) is retained as a \emph{negative control} in which a working
-pipeline should find nothing.
+Read the load coordinate and its drivers off the same sensor and the model stops
+being falsifiable, because shared measurement noise alone will manufacture the
+coupling. We therefore assign the two to disjoint sensors. Which signal carries
+the load is then settled by measurement rather than preference: the coordinate
+of a slow relaxation process must itself be slow. At a \SI{30}{\second} window,
+tonic electrodermal activity has lag-1 autocorrelation $0.98$. A cardiac index
+built from heart rate and RMSSD has $0.19$, RMSSD over so few beats being
+dominated by beat-detection error. Configuration B (tonic EDA) is therefore
+primary and configuration C (skin temperature) a robustness check. We keep
+configuration A, the cardiac index, as a \emph{negative control}: a working
+pipeline should find nothing in it.
 
 \subsection{Estimation}
 Taking the Euler map of \eqref{eq:sde} as the model, rather than as an
@@ -249,18 +255,18 @@ rather than merely fitting it badly, and we retain units where that constraint
 binds so that no reported proportion is conditioned on its own outcome.
 
 \subsection{Nulls}
-The nominal $t$-test on $\theta_1$ is not usable here: tonic EDA is close to a
+The nominal $t$-test on $\theta_1$ is unusable here. Tonic EDA is close to a
 unit-root process, and regressing on an integrated series inflates significance
-in the classical way. Every test is therefore calibrated against surrogate
-ensembles, both random-walk surrogates matched on length, increment variance and
-marginal scale, and amplitude-adjusted Fourier surrogates (IAAFT
-\cite{schreiber1996}) that preserve spectrum and marginal so only nonlinearity
-can drive a rejection. Competing models (homogeneous Markov, covariate logistic,
-Gaussian HMM, the nested Ornstein--Uhlenbeck case, gradient boosting) are scored
-by held-out one-step predictive log-density.
+in the classical way. We calibrate every test against surrogate ensembles:
+random-walk surrogates matched on length, increment variance and marginal scale,
+and amplitude-adjusted Fourier surrogates (IAAFT \cite{schreiber1996}) that
+preserve spectrum and marginal, so only nonlinearity can drive a rejection.
+Competing models --- homogeneous Markov, covariate logistic, Gaussian HMM, the
+nested Ornstein--Uhlenbeck case and gradient boosting --- are scored by held-out
+one-step predictive log-density.
 
 % =====================================================================
-\section{What This Data Can and Cannot Identify}
+\section{What This Data Can Identify}
 \label{sec:ident}
 
 Before testing anything we asked which parameters are recoverable at the series
@@ -309,25 +315,24 @@ $\varepsilon$ (slow rate)   & $0.01$ & $0.07$ & $0.21$ & $0.27$ \\
 \end{tabular}
 \end{table}
 
-The consequence is sharp, and it applies to any study of this kind rather than
-only to ours. The recovered geometry is built from the ratios
-$a=\theta_2/\theta_1$ and $b=\theta_4/\theta_1$, so when $\hat\lambda$ is small
-both inflate without bound (Fig.~\ref{fig:ident}b). That is exactly what the
-real fits show: among units where the constraint does not bind, the median
-$\hat\lambda$ is $0.0059$ and the median recovered $\hat\alpha_0$ is $12$, which
-would place the attractors near $\pm2$ on a coordinate standardised to unit
-variance. Those are not weakly bistable systems. They are systems with no
-restoring cubic term, whose apparent geometry comes from dividing by a number
-close to zero. Note that this median $\hat\lambda$ falls below the entire range
-our simulation covers, so the real recordings sit further into the
-non-identified regime than any of the $3.6\times10^{3}$ synthetic series we used
-to characterise it.
+The consequence is sharp, and it binds any study of this kind rather than only
+ours. Recovered geometry is built from the ratios $a=\theta_2/\theta_1$ and
+$b=\theta_4/\theta_1$. Both therefore inflate without bound as $\hat\lambda$
+approaches zero (Fig.~\ref{fig:ident}b), and that is exactly what the real fits
+do. Among units where the constraint does not bind, the median $\hat\lambda$ is
+$0.0059$ and the median recovered $\hat\alpha_0$ is $12$ --- attractors near
+$\pm2$ on a coordinate standardised to unit variance. These are not weakly
+bistable systems. They are systems with no restoring cubic term whatever, whose
+apparent geometry is an artefact of dividing by something close to zero. The
+median $\hat\lambda$ also falls below the entire range our simulation covers, so
+the recordings sit further into the non-identified regime than any of the
+$3.6\times10^{3}$ synthetic series used to map it.
 
-So exactly one of the five pre-stated predictions is evaluable here: the
-existence of the restoring cubic term, governed by the one well-identified
-parameter. P1 needs the ratio of two poorly identified quantities, P2 the fold
-distance, and P3 to P5 depend on $\varepsilon$ and $\alpha_A$. We report that
-structure rather than four numbers that would look like tests.
+One of the five pre-stated predictions survives as evaluable: the existence of
+the restoring cubic term, governed by the single well-identified parameter. P1
+needs the ratio of two badly identified quantities and P2 the distance to the
+fold, while P3 through P5 rest on $\varepsilon$ and $\alpha_A$. We report that
+structure rather than four numbers dressed up as tests.
 
 % =====================================================================
 \section{Results}
@@ -335,48 +340,49 @@ structure rather than four numbers that would look like tests.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig7_power_size}
+\includegraphics[width=\columnwidth]{fig10_size_power}
 \caption{(a) Size on random-walk input. The nominal test rejects at roughly
 $0.42$ irrespective of series length, while surrogate calibration restores
 approximately nominal size. (b) Power of the calibrated test on input that
 genuinely contains a cusp. At the median observed length, strong and moderate
-dynamics are detected and weak dynamics largely are not.}
+dynamics are detected and weak dynamics largely are not. Bands are Wilson
+intervals.}
 \label{fig:powersize}
 \end{figure}
 
-\subsection{The nominal test is invalid; the calibrated one is adequately powered}
+\subsection{The nominal test is invalid; the calibrated one is powered}
 Over $12{,}000$ random-walk replicates spanning six lengths, the nominal
 one-sided $t$-test on $\theta_1$ rejects $42.0\%$ of the time rather than $5\%$.
 The inflation does not shrink with sample size. It grows, from $36.8\%$
-($95\%$ CI $[34.7,38.9]$) at $n=100$ to $44.4\%$ $([42.2,46.5])$ at $n=1000$,
-which is the signature of spurious regression on an integrated series rather
-than a small-sample artefact. Surrogate calibration restores nominal size across
-the same grid: $5.7\%$ pooled over $3{,}000$ calibrated replicates, with every
-per-length interval covering $0.05$. Calibration costs power, so we quote power
-for the test actually used. At $n=200$ it is $1.00$ for strong cusp dynamics,
-$0.76$ for moderate and $0.24$ for weak, reaching $1.00$ in every regime by
-$n=1000$ (Fig.~\ref{fig:powersize}). The null below therefore excludes strong
-and moderate dynamics. It does not exclude a faint fold.
+($95\%$ CI $[34.7,38.9]$) at $n=100$ to $44.4\%$ $([42.2,46.5])$ at $n=1000$ ---
+the signature of spurious regression on an integrated series, not a small-sample
+artefact. Surrogate calibration restores nominal size across the same grid:
+$5.7\%$ pooled over $3{,}000$ replicates, every per-length interval covering
+$0.05$. Calibration costs power, so we quote power for the test actually used.
+At $n=200$ it is $1.00$ for strong cusp dynamics, $0.76$ for moderate and $0.24$
+for weak, reaching $1.00$ everywhere by $n=1000$ (Fig.~\ref{fig:powersize}). The
+null below therefore excludes strong and moderate dynamics. It does not exclude
+a faint fold.
 
-\subsection{The standard early-warning estimator fails on ground truth}
-Proposition~\ref{prop:ews} is a statement about the system. Testing it requires
-an estimator, and we checked ours before trusting it. Simulating from a model
-that genuinely contains a fold, the exponent computed from the true equilibrium
-curvature is $+0.565$ against a predicted $+0.5$, so theory and implementation
-agree. The rolling-window indicators that the early-warning literature relies on
-\cite{scheffer2009,dakos2012} do not. Across a grid of window lengths,
-detrending choices and series lengths up to $n=20{,}000$, rolling
-$-\log\mathrm{AC1}$ returns negative slopes where $+0.5$ is predicted and
-rolling variance returns positive slopes where $-0.5$ is predicted
-(Table~\ref{tab:ewsval}).
+\subsection{The early-warning estimator fails on ground truth}
+Proposition~\ref{prop:ews} describes the system. Testing it needs an estimator,
+and we checked ours before trusting it. On data simulated from a model that
+genuinely contains a fold, the exponent computed from the true equilibrium
+curvature comes back at $+0.565$ against a predicted $+0.5$: theory and
+implementation agree. The rolling-window indicators the early-warning literature
+relies on \cite{scheffer2009,dakos2012} do not. Over a grid of window lengths,
+detrending choices and series lengths reaching $n=20{,}000$, rolling
+$-\log\mathrm{AC1}$ returns negative slopes where $+0.5$ is predicted, and
+rolling variance returns positive slopes where $-0.5$ is
+(Table~\ref{tab:ewsval}). The sign is wrong in every configuration tested.
 
-The mechanism is structural, not statistical. Critical slowing down means the
-relaxation time diverges at the fold, so a fixed-width window saturates
-precisely where the effect is strongest, and detrending removes the
-low-frequency power carrying what remains. Raising $n$ by an order of magnitude
-does not recover the sign. We therefore withdraw our own P2 test as
-uninterpretable, and the caution generalises: a directional early-warning result
-obtained this way is weak evidence either way.
+This is structural, not a matter of noise. Critical slowing down means the
+relaxation time diverges at the fold, so a fixed-width window saturates exactly
+where the effect is largest; detrending then strips the low-frequency power
+carrying what survives. An order of magnitude more data does not recover the
+sign. We withdraw our own P2 test as uninterpretable, and the caution
+generalises: a directional early-warning result obtained this way is weak
+evidence in either direction.
 
 \begin{table}[t]
 \caption{Can the standard early-warning estimator recover the exponent on
@@ -399,86 +405,91 @@ variance   & $-0.5$ & yes & 120 & $+0.036$ \\
 \end{table}
 
 \subsection{The identifiable prediction is not supported}
-Under the calibrated test, the restoring cubic term is significant in $2.7\%$ of
-the 147 units, against a nominal $5\%$. By corpus the figures are $0.0\%$ for
-WESAD ($n=15$), $0.0\%$ for the examination sessions ($n=30$) and $3.9\%$ for
-the nurse sessions ($n=102$). Because 102 units come from 15 nurses, we also
-weight one vote per person, which gives $1.5\%$ (Wilson interval $[0.0,3.1]\%$),
-with $10\%$ of people showing at least one significant session. That last figure
-is the most generous reading available and is still what chance produces across
-several sessions each.
+Under the calibrated test the restoring cubic term is significant in $2.7\%$ of
+the 147 units, against a nominal $5\%$: $0.0\%$ for WESAD ($n=15$), $0.0\%$ for
+the examinations ($n=30$), $3.9\%$ for the nurse sessions ($n=102$). Because
+those 102 units come from 15 nurses we also weight one vote per person, giving
+$1.5\%$ (Wilson interval $[0.0,3.1]\%$), with $10\%$ of people showing at least
+one significant session. That last figure is the most generous reading available
+and is still what chance produces across several sessions each.
 
-Held-out prediction agrees from a different direction. The full model does not
-beat its own nested monostable special case: it wins on $33.8\%$ of units, with
-a median difference of $-0.25$ nats per step and a Wilcoxon $p=8\times10^{-5}$
-in the simpler model's favour. Since the monostable model is this model with the
-cubic term switched off, that is the cleanest available statement that the cubic
-term is doing no work. Prospective onset prediction gives AUC between $0.50$ and
-$0.46$ at lead times of 3 to 12 windows, which is chance.
+Held-out prediction agrees from another direction. The full model does not beat
+its own nested monostable special case: it wins on $33.8\%$ of units, median
+difference $-0.25$ nats per step, Wilcoxon $p=8\times10^{-5}$ in the simpler
+model's favour. The monostable model is this model with the cubic term switched
+off, so that is the cleanest available statement that the term is doing no work.
+Prospective onset prediction gives AUC between $0.50$ and $0.46$ at lead times
+of 3 to 12 windows. Chance.
 
 \subsection{Structure without fold structure}
-The null is specific, and it would be wrong to summarise it as noise. Two of the
-three statistics we calibrate do exceed their surrogate nulls: the likelihood
-ratio against the monostable restriction at $40.8\%$ of units, and the
-bimodality of the marginal distribution at $49.7\%$. Only the statistic that
-isolates the cubic term sits at chance. A bimodal marginal accompanied by no
-cubic drift is exactly the configuration in which a study reporting
-distributional evidence alone would conclude the opposite of the correct answer.
+The null is specific, and calling it noise would be wrong. Two of the three
+calibrated statistics do exceed their surrogate nulls: the likelihood ratio
+against the monostable restriction at $40.8\%$ of units, and marginal bimodality
+at $49.7\%$. Only the statistic isolating the cubic term sits at chance. A
+bimodal marginal with no cubic drift is precisely the configuration in which a
+study reporting distributional evidence alone concludes the opposite of the
+truth.
 
 Robustness is mixed, and we report it that way. Configuration B sits at nominal
 under both the random-walk ($0.046$) and the harder IAAFT ($0.069$) ensembles,
 and holds across \SIrange{30}{120}{\second} windows. Configurations A and C are
-elevated, at $0.11$ to $0.16$. Three explanations were tested and all failed:
-IAAFT did not bring C down, clipping rates run opposite to the effect, and a
-size study on AR(1) series ($\phi$ from $0$ to $1$) found no persistence at
-which the calibrated test over-rejects. What remains is nonlinear structure the
-surrogates do not reproduce. Since A is the negative control, built on a
-coordinate already shown to be noise-dominated, the parsimonious reading is
-artefact from motion and peak-detection failure rather than a fold. A test that
-fires on the negative control shows that significance does not mean cusp there,
-which is why the conclusion rests on B.
+elevated, at $0.11$ to $0.16$. We tested three explanations for that and all
+three failed. IAAFT did not bring C down. Clipping rates run opposite to the
+effect. A size study on AR(1) series, $\phi$ from $0$ to $1$, found no
+persistence at which the calibrated test over-rejects. What is left is nonlinear
+structure the surrogates cannot reproduce. But A is the negative control, built
+on a coordinate already shown to be noise-dominated, so the parsimonious reading
+is motion and peak-detection artefact rather than a fold. A test that fires on
+the negative control is telling us that significance does not mean cusp there.
+That is why the conclusion rests on B alone.
 
 % =====================================================================
 \section{Discussion and Conclusion}
 
-Modelling overload as motion in a cusp potential replaces a descriptive account
-with a generative one whose consequences are computable in advance. States
+Modelling overload as motion in a cusp potential trades a descriptive account
+for a generative one whose consequences can be computed in advance. States
 become basins, the kernel becomes a function of nine parameters, and sudden
-onset, delayed recovery and two exponents become point hypotheses. The cost of
-that precision is that the model can lose, and here it did.
+onset, delayed recovery and two exponents become point hypotheses. Precision of
+that kind costs something: the model can lose. Here it did.
 
-The identifiability result is the more durable contribution. Any attempt to fit
-cusp geometry to wearable physiology inherits the same ratio structure, so such
-a study needs either much longer records, on the order of $n\gtrsim500$ windows,
-or a reparameterisation that estimates $a$ and $b$ directly. Reporting a
-splitting factor of 12 from a 200-window recording is not a finding, and the
-arithmetic that produces it is not specific to our implementation.
+The identifiability result is the more durable contribution. Every attempt to
+fit cusp geometry to wearable physiology inherits the same ratio structure, so
+such a study needs either far longer records --- order $n\gtrsim500$ windows ---
+or a reparameterisation that estimates $a$ and $b$ directly. A splitting factor
+of 12 recovered from a 200-window recording is not a finding, and the arithmetic
+that produces it is in no way specific to our implementation.
 
 \emph{Limitations.} No autistic participants are analysed, so the motivating
 claim is untested rather than refuted. Tonic electrodermal activity is a
-peripheral, artefact-prone proxy for a latent construct. Weak cusp dynamics
-remain compatible with our data. The estimator critique covers fixed-width
-rolling indicators with and without Gaussian detrending, which is what the
-applied literature mostly uses, and does not extend to adaptive-bandwidth or
-spectral estimators, which we did not test.
+peripheral, artefact-prone proxy for a latent construct. Weak cusp dynamics stay
+compatible with everything reported here. Our estimator critique covers
+fixed-width rolling indicators with and without Gaussian detrending, which is
+what the applied literature mostly runs; it says nothing about adaptive-bandwidth
+or spectral estimators, which we did not test. Note also that longer records
+rescue $\alpha_0$ but not everything: in Table~\ref{tab:ident} the debt gain
+$\alpha_A$ and the slow rate $\varepsilon$ fail to reach $r=0.3$ at any length
+we simulated, $n=1000$ included.
 
 \emph{Toward validation.} We pre-specify the study that would test the mechanism
 in its intended population: 28 days of ecological momentary assessment with
 continuous wrist physiology in autistic adults and a matched comparison group,
 using the same estimator, nulls and falsification criteria as here. The primary
 hypothesis is a between-group difference in $\alpha_0$, better powered than the
-within-group detection attempted here, and the design targets $n\gtrsim500$
-windows per participant so the control parameters sit inside the identifiable
-regime. A second well-powered null under those conditions would be evidence that
-overload is not a cusp catastrophe at physiological timescales.
+within-group detection attempted here, with $n\gtrsim500$ windows per
+participant so that parameter sits inside the identifiable regime. The debt
+mechanism needs more than length: with $\alpha_A$ and $\varepsilon$
+unrecoverable from passive data at any duration tested, P3 to P5 will need
+either experimental control over recovery intervals or a hierarchical fit that
+pools them across participants. A second well-powered null under those
+conditions would be evidence that overload is not a cusp catastrophe at
+physiological timescales.
 
 \section*{Acknowledgment}
-This work uses the WESAD, Wearable Exam Stress and Nurse Stress datasets, and I
-thank their authors for releasing them openly. In accordance with IEEE policy on
-generative AI, the author discloses that an AI assistant was used for code
-implementation, literature organisation and manuscript drafting. The author
-verified all analyses, results and claims, and is solely responsible for the
-content.
+I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets
+for releasing them openly. In accordance with IEEE policy on generative AI, the
+author discloses that an AI assistant was used for code implementation,
+literature organisation and manuscript drafting; the author verified all
+analyses, results and claims and is solely responsible for the content.
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}

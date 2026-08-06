@@ -30,7 +30,21 @@ RESULTS = ROOT / "results"
 FIGS = ROOT / "figures"
 FIGS.mkdir(exist_ok=True, parents=True)
 
-COL1, COL2, DPI = 3.5, 7.16, 600
+# IEEEtran column width is 3.487in and text width 7.16in. A figure must be
+# authored at the width it will be *included* at, because LaTeX scales the
+# whole thing -- fonts included -- to fit \includegraphics[width=...]. A 7.16in
+# figure dropped into a \columnwidth slot is shrunk by a factor of two, which
+# turns 8pt axis labels into 4pt and is why the first version of Figs. 2 and 3
+# was unreadable in print. Nothing in the LaTeX log warns about this.
+COL1, COL2, DPI = 3.487, 7.16, 600
+
+# Which width each figure is authored for. Checked at save time.
+USAGE = {
+    "fig9_identifiability": COL1,
+    "fig10_size_power": COL1,
+    "fig11_ews_grid": COL2,
+    "fig12_persistence": COL1,
+}
 
 plt.rcParams.update({
     "font.family": "serif",
@@ -46,10 +60,17 @@ C = {"good": "#2E7D32", "bad": "#C44E52", "mid": "#DD8452",
 
 
 def _save(fig, name):
+    want = USAGE.get(name)
+    got = fig.get_size_inches()[0]
+    if want and abs(got - want) > 0.35:
+        raise SystemExit(
+            f"{name}: authored {got:.2f}in wide but the manuscript includes "
+            f"it at {want:.2f}in. LaTeX would rescale the fonts by "
+            f"{want / got:.2f}x. Fix the figsize or the USAGE entry.")
     for ext in ("pdf", "png"):
         fig.savefig(FIGS / f"{name}.{ext}", dpi=DPI)
     plt.close(fig)
-    print(f"  wrote figures/{name}.pdf")
+    print(f"  wrote figures/{name}.pdf  ({got:.2f}in wide)")
 
 
 def fig_identifiability():
@@ -59,7 +80,11 @@ def fig_identifiability():
         return
     d = pd.read_csv(f)
 
-    fig, axes = plt.subplots(1, 2, figsize=(COL2, 2.5), constrained_layout=True)
+    # Two rows, not two columns: at \columnwidth a side-by-side pair leaves
+    # each panel 1.7in wide, which is too narrow for a log axis and a legend.
+    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.95),
+                             gridspec_kw={"height_ratios": [1.25, 1.0]},
+                             constrained_layout=True)
 
     # (a) recovery correlation vs length
     ax = axes[0]
@@ -73,18 +98,24 @@ def fig_identifiability():
     for key, lab, col, mk, ls in order:
         s = d[d["param"] == key].sort_values("n")
         if len(s):
-            ax.plot(s["n"], s["corr"], ls, marker=mk, color=col, ms=3.5,
+            ax.plot(s["n"], s["corr"], ls, marker=mk, color=col, ms=3.0,
                     label=lab, alpha=0.9)
     ax.axhline(0.8, color=C["ref"], lw=0.7, ls="--")
-    ax.text(105, 0.82, "identified", fontsize=6, color=C["ref"])
+    ax.text(880, 0.84, "identified", fontsize=5.8, color=C["ref"],
+            ha="right", va="bottom")
     ax.axvline(200, color=C["grey"], lw=0.8, alpha=0.7)
-    ax.text(207, -0.14, "median\nobserved $n$", fontsize=5.5, color=C["grey"])
+    ax.text(200, 1.10, "median observed $n$", fontsize=5.5, color=C["grey"],
+            ha="center", va="bottom")
     ax.set_xscale("log")
     ax.set_xlabel("series length $n$ (windows)")
-    ax.set_ylabel(r"corr(true, estimated)")
-    ax.set_ylim(-0.2, 1.05)
-    ax.set_title("(a) which parameters are recoverable")
-    ax.legend(frameon=False, ncol=2, loc="lower right")
+    ax.set_ylabel(r"corr(true, est.)")
+    # No curve goes below -0.1, so the band under zero is free. Putting the
+    # legend there keeps it off the data instead of on top of it.
+    ax.set_ylim(-0.72, 1.30)
+    ax.set_title("(a) which parameters are recoverable", fontsize=8, pad=9)
+    ax.legend(frameon=False, ncol=4, loc="lower center", fontsize=5.0,
+              handlelength=1.4, handletextpad=0.4, columnspacing=0.7,
+              labelspacing=0.2, borderpad=0.1)
 
     # (b) the failure mode itself: error in alpha0 explodes as lambda-hat -> 0
     ax = axes[1]
@@ -111,14 +142,16 @@ def fig_identifiability():
             ax.plot(xs, med, "-", color=C["bad"], marker="o", ms=3)
             ax.fill_between(xs, lo, hi, color=C["bad"], alpha=0.18, lw=0)
             ax.axvline(0.0059, color=C["alt"], lw=1.0)
-            ax.text(0.0068, max(med) * 0.5,
-                    "median $\\hat\\lambda$\nin real data", fontsize=5.5,
-                    color=C["alt"])
+            ax.annotate("median $\\hat\\lambda$ in\nthe real corpora",
+                        xy=(0.0059, max(med)), xytext=(0.010, max(med) * 1.25),
+                        fontsize=5.8, color=C["alt"], va="center",
+                        arrowprops=dict(arrowstyle="-", color=C["alt"],
+                                        lw=0.6, shrinkA=0, shrinkB=2))
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xlabel(r"estimated $\hat\lambda$")
-    ax.set_ylabel(r"absolute error in $\hat\alpha_0$")
-    ax.set_title(r"(b) the geometry fails as $\hat\lambda\!\to\!0$")
+    ax.set_ylabel(r"abs. error in $\hat\alpha_0$")
+    ax.set_title(r"(b) the geometry fails as $\hat\lambda\!\to\!0$", fontsize=8)
 
     _save(fig, "fig9_identifiability")
 
@@ -131,24 +164,26 @@ def fig_size_power():
         return
     s = pd.read_csv(fs)
 
-    fig, axes = plt.subplots(1, 2, figsize=(COL2, 2.4), sharey=True,
-                             constrained_layout=True)
+    # Stacked, sharing the log-x series-length axis. Both panels are rejection
+    # rates against the same abscissa, so one x-label serves both and each
+    # panel keeps the full column width.
+    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.70), sharex=True,
+                             sharey=True, constrained_layout=True)
     ax = axes[0]
-    ax.plot(s["n"], s["size_nominal"], "o-", color=C["bad"],
+    ax.plot(s["n"], s["size_nominal"], "o-", color=C["bad"], ms=3.2,
             label="nominal $t$-test")
     ax.fill_between(s["n"], s["ci_lo_nominal"], s["ci_hi_nominal"],
                     color=C["bad"], alpha=0.18, lw=0)
     if s["size_calibrated"].notna().any():
-        ax.plot(s["n"], s["size_calibrated"], "s-", color=C["alt"],
+        ax.plot(s["n"], s["size_calibrated"], "s-", color=C["alt"], ms=3.2,
                 label="surrogate-calibrated")
         ax.fill_between(s["n"], s["ci_lo_calibrated"], s["ci_hi_calibrated"],
                         color=C["alt"], alpha=0.18, lw=0)
     ax.axhline(0.05, color=C["ref"], ls="--", lw=0.8, label="nominal 0.05")
-    ax.set_xscale("log")
-    ax.set_xlabel("series length $n$")
     ax.set_ylabel("rejection rate")
-    ax.set_title("(a) size: random-walk input")
-    ax.legend(frameon=False)
+    ax.set_title("(a) size: random-walk input (no cusp)", fontsize=8)
+    ax.legend(frameon=False, fontsize=6, loc="center right",
+              handlelength=1.8, labelspacing=0.3, borderpad=0.2)
 
     ax = axes[1]
     if fp.exists():
@@ -160,16 +195,21 @@ def fig_size_power():
             q = p[p["regime"] == name].sort_values("n")
             if len(q):
                 ax.plot(q["n"], q["power_calibrated"], marker=mk, color=col,
-                        ms=3.5, label=name)
+                        ms=3.2, label=name)
                 ax.fill_between(q["n"], q["ci_lo"], q["ci_hi"], color=col,
                                 alpha=0.15, lw=0)
     ax.axhline(0.05, color=C["ref"], ls="--", lw=0.8)
     ax.axhline(0.8, color=C["grey"], ls=":", lw=0.8)
+    ax.text(0.99, 0.80, "0.8", transform=ax.get_yaxis_transform(),
+            fontsize=5.5, color=C["grey"], ha="right", va="bottom")
     ax.set_xscale("log")
-    ax.set_xlabel("series length $n$")
-    ax.set_title("(b) power: genuine cusp input")
-    ax.set_ylim(-0.03, 1.05)
-    ax.legend(frameon=False)
+    ax.set_xlabel("series length $n$ (windows)")
+    ax.set_ylabel("rejection rate")
+    ax.set_title("(b) power: input that genuinely contains a cusp", fontsize=8)
+    ax.set_ylim(-0.05, 1.08)
+    ax.legend(frameon=False, fontsize=6, ncol=2, loc="lower right",
+              handlelength=1.8, columnspacing=0.9, labelspacing=0.3,
+              borderpad=0.2)
 
     _save(fig, "fig10_size_power")
 
