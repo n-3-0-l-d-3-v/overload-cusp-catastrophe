@@ -62,3 +62,25 @@ rather than a finding.
 
 If a number appears in the paper, its file appears above with its replication.
 A file whose replication is not stated here should be assumed unverified.
+
+---
+
+## Headline totals
+
+Primary simulated series across the completed blocks:
+
+| Block | Series |
+|---|---|
+| recovery | 12,000 |
+| size | 30,000 |
+| ews | 15,000 (one series per job; three estimators share it) |
+| noise | 10,000 |
+| **total** | **67,000** |
+
+A further **3.5 million** surrogate series were generated inside the
+surrogate-calibrated tests (17,500 calibrated replicates × 200 surrogates
+each). Those are not counted in the 67,000: they are machinery for the null,
+not independent draws from the model.
+
+The abstract's `1.2e4` refers to the identifiability study alone, which is the
+recovery block. Do not quote 67,000 for that claim.
