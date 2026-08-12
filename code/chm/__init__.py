@@ -3,9 +3,8 @@ CHM -- Cusp-Hysteretic Markov model of sensory-executive overload.
 
 Reference implementation for the paper
 
-    "Overload as a Cusp Catastrophe: Hysteretic State Transitions and
-     Analytically Derived Early-Warning Scaling Laws in Wearable
-     Physiological Time Series"
+    "When Cusp Geometry Is an Artefact: Non-Identifiability and
+     Sign-Inverting Early-Warning Estimators in Wearable Physiology"
 
 Modules
 -------

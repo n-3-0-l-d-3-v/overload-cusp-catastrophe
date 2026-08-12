@@ -210,6 +210,8 @@ null rather than a positive result. Neither is fixable before the EMA study.
 - [ ] Contact a.m.scheeren@vu.nl about autistic-adult EMA raw data
 - [ ] Power, persistence, EWS and noise blocks at full replication (running)
 - [ ] Refresh Fig. 3 and the power sentence once the power block lands
-- [ ] Decide venue; the paper is at exactly 5 pages with zero overfull boxes
+- [x] Venue page budget decided: six pages (was five when this was written)
+- [ ] Confirm the chosen venue permits six; the paper is at exactly 6 pages
+      with zero overfull boxes
 - [ ] The journal draft (`main_full_journal.tex`) has not had the Spearman
       treatment and still carries the single-correlation framing

@@ -514,7 +514,9 @@ learns more from the contrast than from a clean page.
 
 ## State
 
-Conference paper: 5 pages, zero overfull boxes, no unresolved references,
+Conference paper: 5 pages at the time of this entry (six as of 2026-08-12,
+after the reviewer-requested settings, availability and scoping text went in),
+zero overfull boxes, no unresolved references,
 `--strict` clean. Journal draft: 14 pages, same. 32 tests pass. 42 of 46
 references verified against publisher metadata, 0 disagreements.
 
