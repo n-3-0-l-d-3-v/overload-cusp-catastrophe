@@ -1,14 +1,14 @@
 {
   "artifact": "voice",
-  "created_at": "2026-08-10T23:53:50+00:00",
+  "created_at": "2026-08-12T00:48:45+00:00",
   "offline": false,
   "payload": {
     "minimum_section_words": 150,
     "sections": [
       {
-        "citations_per_paragraph": 1.17,
+        "citations_per_paragraph": 0.78,
         "connectives": [],
-        "hedges_per_hundred_words": 0.53,
+        "hedges_per_hundred_words": 0.44,
         "hyphenation": [
           [
             "closedform",
@@ -23,8 +23,8 @@
             "ground-truth"
           ],
           [
-            "highreplication",
-            "high-replication"
+            "lag1",
+            "lag-1"
           ],
           [
             "metaanalysis",
@@ -41,10 +41,6 @@
           [
             "predictivecoding",
             "predictive-coding"
-          ],
-          [
-            "profiledleastsquares",
-            "profiled-least-squares"
           ],
           [
             "redescribes",
@@ -64,42 +60,38 @@
           ]
         ],
         "label": "Introduction",
-        "oxford_comma": "unknown",
-        "passive_ratio": 0.192,
+        "oxford_comma": "never",
+        "passive_ratio": 0.147,
         "person": "we",
         "scope": "sec-9fbf4a74b17d",
         "sentence_lengths": {
-          "count": 26,
-          "mean": 20.69,
-          "p10": 5.0,
-          "p90": 37.0,
-          "stdev": 12.99
+          "count": 34,
+          "mean": 19.21,
+          "p10": 4.0,
+          "p90": 33.0,
+          "stdev": 10.78
         },
         "spelling": "british",
         "terminology": [
-          [
-            "Sec",
-            6
-          ],
-          [
-            "Sec ref",
-            6
-          ],
           [
             "cite",
             6
           ],
           [
-            "ref",
-            6
+            "model",
+            5
           ],
           [
-            "ref sec",
-            6
+            "study",
+            5
           ],
           [
-            "sec",
-            6
+            "textbf",
+            5
+          ],
+          [
+            "bound",
+            4
           ],
           [
             "cusp",
@@ -110,23 +102,39 @@
             4
           ],
           [
+            "estimators",
+            4
+          ],
+          [
+            "report",
+            4
+          ],
+          [
+            "results",
+            4
+          ],
+          [
+            "wearable",
+            4
+          ],
+          [
             "x",
             4
           ],
           [
-            "claim",
+            "Sec",
             3
           ],
           [
-            "demand",
+            "Sec ref",
             3
           ],
           [
-            "formulation",
+            "fold",
             3
           ],
           [
-            "identifiability",
+            "geometry",
             3
           ],
           [
@@ -134,7 +142,35 @@
             3
           ],
           [
-            "model",
+            "models",
+            3
+          ],
+          [
+            "parameters",
+            3
+          ],
+          [
+            "phenomenology",
+            3
+          ],
+          [
+            "rather",
+            3
+          ],
+          [
+            "ref",
+            3
+          ],
+          [
+            "ref sec",
+            3
+          ],
+          [
+            "result",
+            3
+          ],
+          [
+            "sec",
             3
           ],
           [
@@ -142,11 +178,11 @@
             3
           ],
           [
-            "study",
+            "test",
             3
           ],
           [
-            "wearable",
+            "whose",
             3
           ],
           [
@@ -154,11 +190,15 @@
             3
           ],
           [
+            "across",
+            2
+          ],
+          [
             "adults",
             2
           ],
           [
-            "autistic",
+            "autism",
             2
           ],
           [
@@ -166,11 +206,7 @@
             2
           ],
           [
-            "bound",
-            2
-          ],
-          [
-            "bounding",
+            "belongs",
             2
           ],
           [
@@ -182,11 +218,35 @@
             2
           ],
           [
+            "claim",
+            2
+          ],
+          [
+            "corpora",
+            2
+          ],
+          [
             "critical",
             2
           ],
           [
-            "cusp formulation",
+            "cusp models",
+            2
+          ],
+          [
+            "demand",
+            2
+          ],
+          [
+            "difficulty",
+            2
+          ],
+          [
+            "dynamical",
+            2
+          ],
+          [
+            "dynamics",
             2
           ],
           [
@@ -194,7 +254,11 @@
             2
           ],
           [
-            "estimator",
+            "early-warning estimators",
+            2
+          ],
+          [
+            "empirical",
             2
           ],
           [
@@ -206,15 +270,11 @@
             2
           ],
           [
-            "fold",
+            "fitted",
             2
           ],
           [
-            "functional",
-            2
-          ],
-          [
-            "geometry",
+            "geometric",
             2
           ],
           [
@@ -222,23 +282,19 @@
             2
           ],
           [
-            "group",
+            "identifiability",
             2
           ],
           [
-            "ident",
-            2
-          ],
-          [
-            "identifiability study",
-            2
-          ],
-          [
-            "instead",
+            "kind",
             2
           ],
           [
             "labels",
+            2
+          ],
+          [
+            "length",
             2
           ],
           [
@@ -250,43 +306,27 @@
             2
           ],
           [
+            "nothing",
+            2
+          ],
+          [
+            "onset",
+            2
+          ],
+          [
             "overload",
             2
           ],
           [
-            "parameters",
+            "paper",
             2
           ],
           [
-            "population",
+            "physiology",
             2
           ],
           [
-            "rather",
-            2
-          ],
-          [
-            "recordings",
-            2
-          ],
-          [
-            "report",
-            2
-          ],
-          [
-            "results",
-            2
-          ],
-          [
-            "sec ident",
-            2
-          ],
-          [
-            "sec model",
-            2
-          ],
-          [
-            "sec results",
+            "recording",
             2
           ],
           [
@@ -294,19 +334,39 @@
             2
           ],
           [
-            "study bounding",
+            "shape",
             2
           ],
           [
-            "support",
+            "sign",
             2
           ],
           [
-            "test",
+            "slow",
             2
           ],
           [
-            "whether",
+            "temporal",
+            2
+          ],
+          [
+            "transfers",
+            2
+          ],
+          [
+            "two",
+            2
+          ],
+          [
+            "wearable physiology",
+            2
+          ],
+          [
+            "wrong",
+            2
+          ],
+          [
+            "wrong sign",
             2
           ],
           [
@@ -322,11 +382,11 @@
             1
           ],
           [
-            "Instead",
+            "adult",
             1
           ],
           [
-            "adult",
+            "autistic",
             1
           ],
           [
@@ -338,7 +398,7 @@
             1
           ],
           [
-            "high-replication",
+            "lag-1",
             1
           ],
           [
@@ -358,10 +418,6 @@
             1
           ],
           [
-            "profiled-least-squares",
-            1
-          ],
-          [
             "re-describes",
             1
           ],
@@ -378,7 +434,7 @@
             1
           ]
         ],
-        "word_count": 571
+        "word_count": 684
       },
       {
         "citations_per_paragraph": 0.0,
@@ -526,12 +582,12 @@
         "scope": "sec-e81ca0cec16a",
         "sentence_lengths": {
           "count": 25,
-          "mean": 16.92,
+          "mean": 16.6,
           "p10": 7.0,
           "p90": 28.0,
-          "stdev": 7.35
+          "stdev": 7.38
         },
-        "spelling": "british",
+        "spelling": "unknown",
         "terminology": [
           [
             "theta",
@@ -599,6 +655,10 @@
           ],
           [
             "Table ref",
+            2
+          ],
+          [
+            "answer",
             2
           ],
           [
@@ -790,7 +850,7 @@
             1
           ]
         ],
-        "word_count": 443
+        "word_count": 436
       },
       {
         "citations_per_paragraph": 1.33,
@@ -842,10 +902,10 @@
         "scope": "sec-f372819e40e9",
         "sentence_lengths": {
           "count": 18,
-          "mean": 18.22,
+          "mean": 18.06,
           "p10": 7.0,
           "p90": 31.0,
-          "stdev": 9.84
+          "stdev": 9.63
         },
         "spelling": "unknown",
         "terminology": [
@@ -1036,36 +1096,36 @@
         ],
         "label": "The identifiable prediction is not supported",
         "oxford_comma": "unknown",
-        "passive_ratio": 0.111,
+        "passive_ratio": 0.1,
         "person": "we",
         "scope": "sec-cfa26c7faa43",
         "sentence_lengths": {
-          "count": 9,
-          "mean": 25.22,
+          "count": 10,
+          "mean": 21.2,
           "p10": 6.0,
-          "p90": 40.0,
-          "stdev": 13.97
+          "p90": 35.0,
+          "stdev": 11.34
         },
         "spelling": "unknown",
         "terminology": [
           [
-            "term",
-            5
-          ],
-          [
             "cubic",
-            4
+            3
           ],
           [
             "model",
-            4
-          ],
-          [
-            "cubic term",
             3
           ],
           [
             "n",
+            3
+          ],
+          [
+            "one",
+            3
+          ],
+          [
+            "term",
             3
           ],
           [
@@ -1081,11 +1141,11 @@
             2
           ],
           [
-            "monostable",
+            "case",
             2
           ],
           [
-            "one",
+            "cubic term",
             2
           ],
           [
@@ -1097,15 +1157,19 @@
             2
           ],
           [
-            "restoring",
-            2
-          ],
-          [
             "sessions",
             2
           ],
           [
             "significant",
+            2
+          ],
+          [
+            "special",
+            2
+          ],
+          [
+            "special case",
             2
           ],
           [
@@ -1137,7 +1201,7 @@
             1
           ]
         ],
-        "word_count": 212
+        "word_count": 200
       },
       {
         "citations_per_paragraph": 0.0,
@@ -1145,8 +1209,8 @@
         "hedges_per_hundred_words": 0.0,
         "hyphenation": [
           [
-            "noisedominated",
-            "noise-dominated"
+            "lag1",
+            "lag-1"
           ],
           [
             "overrejects",
@@ -1163,32 +1227,48 @@
         ],
         "label": "Structure without fold structure",
         "oxford_comma": "unknown",
-        "passive_ratio": 0.2,
+        "passive_ratio": 0.125,
         "person": "we",
         "scope": "sec-b32a6264c03d",
         "sentence_lengths": {
-          "count": 15,
-          "mean": 15.27,
-          "p10": 6.0,
-          "p90": 28.0,
-          "stdev": 9.57
+          "count": 16,
+          "mean": 18.12,
+          "p10": 10.0,
+          "p90": 26.0,
+          "stdev": 8.34
         },
         "spelling": "unknown",
         "terminology": [
           [
-            "three",
+            "B",
             3
           ],
           [
-            "B",
-            2
+            "C",
+            3
           ],
           [
-            "C",
-            2
+            "test",
+            3
           ],
           [
             "IAAFT",
+            2
+          ],
+          [
+            "Two",
+            2
+          ],
+          [
+            "across",
+            2
+          ],
+          [
+            "alone",
+            2
+          ],
+          [
+            "artefact",
             2
           ],
           [
@@ -1200,7 +1280,15 @@
             2
           ],
           [
+            "coordinate",
+            2
+          ],
+          [
             "cubic",
+            2
+          ],
+          [
+            "found",
             2
           ],
           [
@@ -1220,6 +1308,18 @@
             2
           ],
           [
+            "rather",
+            2
+          ],
+          [
+            "reporting",
+            2
+          ],
+          [
+            "second",
+            2
+          ],
+          [
             "sits",
             2
           ],
@@ -1228,7 +1328,11 @@
             2
           ],
           [
-            "test",
+            "surrogates",
+            2
+          ],
+          [
+            "three",
             2
           ],
           [
@@ -1240,11 +1344,23 @@
             1
           ],
           [
+            "SI",
+            1
+          ],
+          [
+            "Sec",
+            1
+          ],
+          [
+            "Three",
+            1
+          ],
+          [
             "configuration",
             1
           ],
           [
-            "noise-dominated",
+            "lag-1",
             1
           ],
           [
@@ -1258,14 +1374,18 @@
           [
             "random-walk",
             1
+          ],
+          [
+            "sec",
+            1
           ]
         ],
-        "word_count": 219
+        "word_count": 289
       },
       {
         "citations_per_paragraph": 0.0,
         "connectives": [],
-        "hedges_per_hundred_words": 0.2,
+        "hedges_per_hundred_words": 0.21,
         "hyphenation": [
           [
             "artefactprone",
@@ -1302,15 +1422,15 @@
         ],
         "label": "Discussion and Conclusion",
         "oxford_comma": "never",
-        "passive_ratio": 0.174,
+        "passive_ratio": 0.19,
         "person": "we",
         "scope": "sec-d3a2c0fd1dec",
         "sentence_lengths": {
-          "count": 23,
-          "mean": 21.04,
+          "count": 21,
+          "mean": 22.67,
           "p10": 7.0,
           "p90": 39.0,
-          "stdev": 13.08
+          "stdev": 13.54
         },
         "spelling": "british",
         "terminology": [
@@ -1408,10 +1528,6 @@
           ],
           [
             "mechanism",
-            2
-          ],
-          [
-            "model",
             2
           ],
           [
@@ -1535,15 +1651,15 @@
             1
           ]
         ],
-        "word_count": 490
+        "word_count": 485
       }
     ],
     "whole_paper": {
-      "citations_per_paragraph": 0.41,
+      "citations_per_paragraph": 0.37,
       "connectives": [
         [
           "while",
-          5
+          7
         ],
         [
           "therefore",
@@ -1613,20 +1729,12 @@
           "held-out"
         ],
         [
-          "highreplication",
-          "high-replication"
-        ],
-        [
           "lag1",
           "lag-1"
         ],
         [
           "likelihoodratio",
           "likelihood-ratio"
-        ],
-        [
-          "logautocorrelation",
-          "log-autocorrelation"
         ],
         [
           "logdensity",
@@ -1651,10 +1759,6 @@
         [
           "nearunitroot",
           "near-unit-root"
-        ],
-        [
-          "noisedominated",
-          "noise-dominated"
         ],
         [
           "noiseinduced",
@@ -1707,10 +1811,6 @@
         [
           "prestated",
           "pre-stated"
-        ],
-        [
-          "profiledleastsquares",
-          "profiled-least-squares"
         ],
         [
           "randomwalk",
@@ -1775,15 +1875,15 @@
       ],
       "label": "(whole paper)",
       "oxford_comma": "never",
-      "passive_ratio": 0.178,
+      "passive_ratio": 0.153,
       "person": "we",
       "scope": "whole_paper",
       "sentence_lengths": {
-        "count": 185,
-        "mean": 20.08,
-        "p10": 6.0,
-        "p90": 37.0,
-        "stdev": 11.42
+        "count": 189,
+        "mean": 20.24,
+        "p10": 7.0,
+        "p90": 35.0,
+        "stdev": 10.95
       },
       "spelling": "british",
       "terminology": [
@@ -1793,7 +1893,7 @@
         ],
         [
           "ref",
-          20
+          18
         ],
         [
           "b",
@@ -1804,11 +1904,11 @@
           16
         ],
         [
-          "one",
-          15
+          "rather",
+          16
         ],
         [
-          "rather",
+          "one",
           15
         ],
         [
@@ -1816,7 +1916,11 @@
           14
         ],
         [
-          "cusp",
+          "test",
+          14
+        ],
+        [
+          "emph",
           13
         ],
         [
@@ -1824,32 +1928,20 @@
           13
         ],
         [
-          "geometry",
-          13
-        ],
-        [
           "theta",
           13
         ],
         [
-          "emph",
+          "cusp",
+          12
+        ],
+        [
+          "geometry",
           12
         ],
         [
           "lambda",
           12
-        ],
-        [
-          "test",
-          12
-        ],
-        [
-          "Sec",
-          11
-        ],
-        [
-          "Sec ref",
-          11
         ],
         [
           "alpha",
@@ -1860,23 +1952,15 @@
           11
         ],
         [
-          "lengths",
-          11
-        ],
-        [
-          "ref sec",
-          11
-        ],
-        [
-          "sec",
-          11
-        ],
-        [
           "series",
           11
         ],
         [
-          "two",
+          "study",
+          11
+        ],
+        [
+          "window",
           11
         ],
         [
@@ -1884,11 +1968,35 @@
           11
         ],
         [
-          "cubic",
+          "length",
           10
         ],
         [
-          "early-warning",
+          "lengths",
+          10
+        ],
+        [
+          "replicates",
+          10
+        ],
+        [
+          "two",
+          10
+        ],
+        [
+          "Sec",
+          9
+        ],
+        [
+          "Sec ref",
+          9
+        ],
+        [
+          "across",
+          9
+        ],
+        [
+          "cubic",
           9
         ],
         [
@@ -1896,27 +2004,23 @@
           9
         ],
         [
-          "power",
+          "ref sec",
           9
         ],
         [
-          "replicates",
+          "sec",
           9
         ],
         [
-          "study",
-          9
-        ],
-        [
-          "across",
+          "early-warning",
           8
         ],
         [
-          "ident",
+          "nominal",
           8
         ],
         [
-          "length",
+          "rate",
           8
         ],
         [
@@ -1924,23 +2028,27 @@
           8
         ],
         [
-          "term",
+          "relaxation",
           8
         ],
         [
-          "three",
+          "size",
           8
         ],
         [
-          "window",
-          8
-        ],
-        [
-          "claim",
+          "bound",
           7
         ],
         [
-          "debt",
+          "coordinate",
+          7
+        ],
+        [
+          "ident",
+          7
+        ],
+        [
+          "kind",
           7
         ],
         [
@@ -1948,19 +2056,27 @@
           7
         ],
         [
-          "nominal",
+          "result",
           7
         ],
         [
-          "rate",
+          "results",
           7
         ],
         [
-          "relaxation",
+          "second",
           7
         ],
         [
-          "size",
+          "slow",
+          7
+        ],
+        [
+          "three",
+          7
+        ],
+        [
+          "wearable",
           7
         ],
         [
@@ -1972,7 +2088,15 @@
           6
         ],
         [
+          "artefact",
+          6
+        ],
+        [
           "calibrated",
+          6
+        ],
+        [
+          "claim",
           6
         ],
         [
@@ -1980,23 +2104,27 @@
           6
         ],
         [
-          "coordinate",
+          "corpora",
           6
         ],
         [
-          "cubic term",
+          "debt",
           6
         ],
         [
-          "demand",
+          "dynamics",
           6
         ],
         [
-          "estimator",
+          "estimators",
           6
         ],
         [
-          "factor",
+          "literature",
+          6
+        ],
+        [
+          "models",
           6
         ],
         [
@@ -2008,7 +2136,19 @@
           6
         ],
         [
+          "negative",
+          6
+        ],
+        [
+          "nothing",
+          6
+        ],
+        [
           "null",
+          6
+        ],
+        [
+          "overload",
           6
         ],
         [
@@ -2016,15 +2156,39 @@
           6
         ],
         [
+          "power",
+          6
+        ],
+        [
+          "primary",
+          6
+        ],
+        [
           "r",
           6
         ],
         [
-          "recovered",
+          "report",
           6
         ],
         [
-          "second",
+          "sign",
+          6
+        ],
+        [
+          "surrogates",
+          6
+        ],
+        [
+          "term",
+          6
+        ],
+        [
+          "textbf",
+          6
+        ],
+        [
+          "times10",
           6
         ],
         [
@@ -2032,11 +2196,11 @@
           6
         ],
         [
-          "variance",
+          "value",
           6
         ],
         [
-          "wearable",
+          "variance",
           6
         ],
         [
@@ -2048,23 +2212,35 @@
           6
         ],
         [
-          "artefact",
+          "wrong",
+          6
+        ],
+        [
+          "SI",
           5
         ],
         [
-          "autistic",
+          "autocorrelation",
           5
         ],
         [
-          "bound",
+          "carries",
           5
         ],
         [
-          "corpora",
+          "case",
           5
         ],
         [
-          "dynamics",
+          "correlation",
+          5
+        ],
+        [
+          "cubic term",
+          5
+        ],
+        [
+          "estimator",
           5
         ],
         [
@@ -2072,7 +2248,7 @@
           5
         ],
         [
-          "fit",
+          "factor",
           5
         ],
         [
@@ -2084,22 +2260,6 @@
           5
         ],
         [
-          "indicators",
-          5
-        ],
-        [
-          "instead",
-          5
-        ],
-        [
-          "kind",
-          5
-        ],
-        [
-          "literature",
-          5
-        ],
-        [
           "marginal",
           5
         ],
@@ -2108,19 +2268,11 @@
           5
         ],
         [
-          "negative",
+          "moderate",
           5
         ],
         [
-          "nothing",
-          5
-        ],
-        [
-          "point",
-          5
-        ],
-        [
-          "primary",
+          "onset",
           5
         ],
         [
@@ -2128,35 +2280,11 @@
           5
         ],
         [
-          "report",
-          5
-        ],
-        [
-          "restoring",
-          5
-        ],
-        [
-          "results",
-          5
-        ],
-        [
-          "sign",
-          5
-        ],
-        [
-          "slow",
-          5
-        ],
-        [
-          "splitting",
-          5
-        ],
-        [
-          "splitting factor",
-          5
-        ],
-        [
           "states",
+          5
+        ],
+        [
+          "strong",
           5
         ],
         [
@@ -2164,19 +2292,11 @@
           5
         ],
         [
-          "surrogates",
-          5
-        ],
-        [
           "system",
           5
         ],
         [
-          "times10",
-          5
-        ],
-        [
-          "value",
+          "true",
           5
         ],
         [
@@ -2184,8 +2304,12 @@
           5
         ],
         [
-          "way",
-          5
+          "B",
+          4
+        ],
+        [
+          "C",
+          4
         ],
         [
           "Carlo",
@@ -2212,7 +2336,7 @@
           4
         ],
         [
-          "SI",
+          "SI second",
           4
         ],
         [
@@ -2228,7 +2352,19 @@
           4
         ],
         [
+          "account",
+          4
+        ],
+        [
           "adults",
+          4
+        ],
+        [
+          "alone",
+          4
+        ],
+        [
+          "autistic",
           4
         ],
         [
@@ -2244,15 +2380,7 @@
           4
         ],
         [
-          "carries",
-          4
-        ],
-        [
-          "case",
-          4
-        ],
-        [
-          "correlation",
+          "cardiac",
           4
         ],
         [
@@ -2260,19 +2388,11 @@
           4
         ],
         [
+          "demand",
+          4
+        ],
+        [
           "detrending",
-          4
-        ],
-        [
-          "drift",
-          4
-        ],
-        [
-          "exact",
-          4
-        ],
-        [
-          "exponents",
           4
         ],
         [
@@ -2280,31 +2400,39 @@
           4
         ],
         [
-          "identifiability",
+          "fit",
           4
         ],
         [
-          "kernel",
+          "fixed",
           4
         ],
         [
-          "linear",
+          "indicators",
           4
         ],
         [
-          "models",
+          "lag-1",
           4
         ],
         [
-          "monostable",
+          "lag-1 autocorrelation",
           4
         ],
         [
-          "near",
+          "never",
           4
         ],
         [
-          "overload",
+          "paper",
+          4
+        ],
+        [
+          "physiology",
+          4
+        ],
+        [
+          "process",
           4
         ],
         [
@@ -2316,7 +2444,23 @@
           4
         ],
         [
+          "ratios",
+          4
+        ],
+        [
           "reading",
+          4
+        ],
+        [
+          "recording",
+          4
+        ],
+        [
+          "recovered",
+          4
+        ],
+        [
+          "recovers",
           4
         ],
         [
@@ -2332,11 +2476,19 @@
           4
         ],
         [
-          "restoring cubic",
+          "reported",
           4
         ],
         [
-          "result",
+          "reporting",
+          4
+        ],
+        [
+          "restoring",
+          4
+        ],
+        [
+          "restoring cubic",
           4
         ],
         [
@@ -2344,19 +2496,7 @@
           4
         ],
         [
-          "runs",
-          4
-        ],
-        [
-          "sec ident",
-          4
-        ],
-        [
-          "sec results",
-          4
-        ],
-        [
-          "shows",
+          "sensory",
           4
         ],
         [
@@ -2368,7 +2508,11 @@
           4
         ],
         [
-          "survives",
+          "splitting",
+          4
+        ],
+        [
+          "splitting factor",
           4
         ],
         [
@@ -2384,19 +2528,7 @@
           4
         ],
         [
-          "transition",
-          4
-        ],
-        [
-          "true",
-          4
-        ],
-        [
-          "used",
-          4
-        ],
-        [
-          "whether",
+          "way",
           4
         ],
         [
@@ -2404,16 +2536,8 @@
           4
         ],
         [
-          "wrong",
+          "wrong sign",
           4
-        ],
-        [
-          "B",
-          3
-        ],
-        [
-          "C",
-          3
         ],
         [
           "EDA",
@@ -2440,11 +2564,11 @@
           3
         ],
         [
-          "SI second",
+          "Since",
           3
         ],
         [
-          "Since",
+          "Two",
           3
         ],
         [
@@ -2468,10 +2592,6 @@
           3
         ],
         [
-          "alone",
-          3
-        ],
-        [
           "analysed",
           3
         ],
@@ -2480,11 +2600,15 @@
           3
         ],
         [
-          "autistic adults",
+          "answer",
           3
         ],
         [
-          "autocorrelation",
+          "asks",
+          3
+        ],
+        [
+          "autistic adults",
           3
         ],
         [
@@ -2492,15 +2616,7 @@
           3
         ],
         [
-          "become",
-          3
-        ],
-        [
-          "bounds",
-          3
-        ],
-        [
-          "cardiac",
+          "binds",
           3
         ],
         [
@@ -2508,11 +2624,15 @@
           3
         ],
         [
+          "carrying",
+          3
+        ],
+        [
           "check",
           3
         ],
         [
-          "coefficient",
+          "competing",
           3
         ],
         [
@@ -2520,7 +2640,15 @@
           3
         ],
         [
+          "consequences",
+          3
+        ],
+        [
           "covers",
+          3
+        ],
+        [
+          "curvature",
           3
         ],
         [
@@ -2532,7 +2660,7 @@
           3
         ],
         [
-          "distance",
+          "drift",
           3
         ],
         [
@@ -2540,7 +2668,7 @@
           3
         ],
         [
-          "estimators",
+          "electrodermal",
           3
         ],
         [
@@ -2548,7 +2676,23 @@
           3
         ],
         [
+          "exact",
+          3
+        ],
+        [
           "exactly",
+          3
+        ],
+        [
+          "excludes",
+          3
+        ],
+        [
+          "excludes strong",
+          3
+        ],
+        [
+          "executive",
           3
         ],
         [
@@ -2556,15 +2700,19 @@
           3
         ],
         [
-          "fixed",
+          "exponent",
           3
         ],
         [
-          "follows",
+          "exponents",
           3
         ],
         [
-          "formulation",
+          "failure",
+          3
+        ],
+        [
+          "found",
           3
         ],
         [
@@ -2580,11 +2728,15 @@
           3
         ],
         [
-          "group",
+          "hat lambda",
           3
         ],
         [
-          "hat lambda",
+          "identifiability",
+          3
+        ],
+        [
+          "identified",
           3
         ],
         [
@@ -2600,7 +2752,19 @@
           3
         ],
         [
+          "kernel",
+          3
+        ],
+        [
           "lambda text",
+          3
+        ],
+        [
+          "least",
+          3
+        ],
+        [
+          "linear",
           3
         ],
         [
@@ -2616,7 +2780,7 @@
           3
         ],
         [
-          "measurement",
+          "mechanism",
           3
         ],
         [
@@ -2624,11 +2788,15 @@
           3
         ],
         [
-          "moderate",
+          "moderate dynamics",
           3
         ],
         [
-          "momentary",
+          "monostable",
+          3
+        ],
+        [
+          "near",
           3
         ],
         [
@@ -2640,10 +2808,6 @@
           3
         ],
         [
-          "never",
-          3
-        ],
-        [
           "nine",
           3
         ],
@@ -2652,11 +2816,11 @@
           3
         ],
         [
-          "number",
+          "none",
           3
         ],
         [
-          "onset",
+          "number",
           3
         ],
         [
@@ -2664,7 +2828,7 @@
           3
         ],
         [
-          "paper",
+          "ordering",
           3
         ],
         [
@@ -2680,7 +2844,7 @@
           3
         ],
         [
-          "physiology",
+          "phenomenology",
           3
         ],
         [
@@ -2688,7 +2852,7 @@
           3
         ],
         [
-          "population",
+          "point",
           3
         ],
         [
@@ -2696,11 +2860,15 @@
           3
         ],
         [
+          "powered",
+          3
+        ],
+        [
           "prediction",
           3
         ],
         [
-          "process",
+          "qualitative",
           3
         ],
         [
@@ -2716,15 +2884,7 @@
           3
         ],
         [
-          "ratios",
-          3
-        ],
-        [
           "reaches",
-          3
-        ],
-        [
-          "recording",
           3
         ],
         [
@@ -2740,7 +2900,11 @@
           3
         ],
         [
-          "reported",
+          "returns",
+          3
+        ],
+        [
+          "rolling",
           3
         ],
         [
@@ -2748,11 +2912,15 @@
           3
         ],
         [
-          "scale",
+          "runs",
           3
         ],
         [
-          "sec model",
+          "sec ident",
+          3
+        ],
+        [
+          "sec results",
           3
         ],
         [
@@ -2760,11 +2928,15 @@
           3
         ],
         [
-          "sensory",
+          "shows",
           3
         ],
         [
           "sigma",
+          3
+        ],
+        [
+          "significant",
           3
         ],
         [
@@ -2780,11 +2952,19 @@
           3
         ],
         [
-          "strong",
+          "stays",
           3
         ],
         [
           "supply",
+          3
+        ],
+        [
+          "survive",
+          3
+        ],
+        [
+          "survives",
           3
         ],
         [
@@ -2804,6 +2984,18 @@
           3
         ],
         [
+          "time",
+          3
+        ],
+        [
+          "transition",
+          3
+        ],
+        [
+          "used",
+          3
+        ],
+        [
           "validation",
           3
         ],
@@ -2812,20 +3004,16 @@
           3
         ],
         [
-          "variable",
+          "weak",
           3
         ],
         [
-          "width",
+          "wearable physiology",
           3
         ],
         [
-          "wrong sign",
+          "zero",
           3
-        ],
-        [
-          "AI",
-          2
         ],
         [
           "AR",
@@ -2849,10 +3037,6 @@
         ],
         [
           "Euler map",
-          2
-        ],
-        [
-          "Kramers",
           2
         ],
         [
@@ -2888,19 +3072,23 @@
           2
         ],
         [
-          "Two",
-          2
-        ],
-        [
           "V",
           2
         ],
         [
-          "account",
+          "absence",
+          2
+        ],
+        [
+          "accounts",
           2
         ],
         [
           "activity",
+          2
+        ],
+        [
+          "actually",
           2
         ],
         [
@@ -2912,19 +3100,11 @@
           2
         ],
         [
-          "anything",
-          2
-        ],
-        [
           "approximation",
           2
         ],
         [
           "arithmetic",
-          2
-        ],
-        [
-          "asks",
           2
         ],
         [
@@ -2940,7 +3120,15 @@
           2
         ],
         [
+          "autism",
+          2
+        ],
+        [
           "available",
+          2
+        ],
+        [
+          "away",
           2
         ],
         [
@@ -2956,6 +3144,14 @@
           2
         ],
         [
+          "become",
+          2
+        ],
+        [
+          "belongs",
+          2
+        ],
+        [
           "bias",
           2
         ],
@@ -2968,27 +3164,15 @@
           2
         ],
         [
-          "binds",
-          2
-        ],
-        [
-          "bistability",
-          2
-        ],
-        [
           "boettiger2012",
           2
         ],
         [
-          "bound rather",
+          "bounded",
           2
         ],
         [
-          "bounding",
-          2
-        ],
-        [
-          "built",
+          "bounds",
           2
         ],
         [
@@ -3012,11 +3196,7 @@
           2
         ],
         [
-          "carrying",
-          2
-        ],
-        [
-          "catastrophe",
+          "cell",
           2
         ],
         [
@@ -3040,7 +3220,7 @@
           2
         ],
         [
-          "coefficient vector",
+          "coefficient",
           2
         ],
         [
@@ -3052,11 +3232,11 @@
           2
         ],
         [
-          "competing",
+          "competing models",
           2
         ],
         [
-          "component",
+          "computed",
           2
         ],
         [
@@ -3064,7 +3244,7 @@
           2
         ],
         [
-          "consequences",
+          "consequence",
           2
         ],
         [
@@ -3072,11 +3252,15 @@
           2
         ],
         [
-          "costs",
+          "contains",
           2
         ],
         [
-          "counted",
+          "correlation time",
+          2
+        ],
+        [
+          "costs",
           2
         ],
         [
@@ -3092,11 +3276,7 @@
           2
         ],
         [
-          "curvature",
-          2
-        ],
-        [
-          "cusp catastrophe",
+          "curvature recovers",
           2
         ],
         [
@@ -3104,11 +3284,11 @@
           2
         ],
         [
-          "cusp formulation",
+          "cusp geometry",
           2
         ],
         [
-          "cusp geometry",
+          "cusp models",
           2
         ],
         [
@@ -3121,6 +3301,10 @@
         ],
         [
           "datasets",
+          2
+        ],
+        [
+          "denominator",
           2
         ],
         [
@@ -3144,6 +3328,10 @@
           2
         ],
         [
+          "difficulty",
+          2
+        ],
+        [
           "directional",
           2
         ],
@@ -3152,11 +3340,19 @@
           2
         ],
         [
+          "distance",
+          2
+        ],
+        [
           "ditlevsen2010",
           2
         ],
         [
           "ditlevsen2010 boettiger2012",
+          2
+        ],
+        [
+          "diverges",
           2
         ],
         [
@@ -3176,7 +3372,15 @@
           2
         ],
         [
-          "early-warning indicators",
+          "dynamical",
+          2
+        ],
+        [
+          "dynamics rather",
+          2
+        ],
+        [
+          "early-warning estimators",
           2
         ],
         [
@@ -3188,15 +3392,27 @@
           2
         ],
         [
+          "eightfold",
+          2
+        ],
+        [
+          "eightfold size",
+          2
+        ],
+        [
           "either",
           2
         ],
         [
-          "electrodermal",
+          "electrodermal activity",
           2
         ],
         [
-          "electrodermal activity",
+          "else",
+          2
+        ],
+        [
+          "empirical",
           2
         ],
         [
@@ -3240,19 +3456,11 @@
           2
         ],
         [
-          "executive",
-          2
-        ],
-        [
           "experimental control",
           2
         ],
         [
-          "exponent",
-          2
-        ],
-        [
-          "failure",
+          "exponent computed",
           2
         ],
         [
@@ -3272,6 +3480,10 @@
           2
         ],
         [
+          "fitted",
+          2
+        ],
+        [
           "fitting",
           2
         ],
@@ -3280,15 +3492,7 @@
           2
         ],
         [
-          "follow",
-          2
-        ],
-        [
           "form",
-          2
-        ],
-        [
-          "found",
           2
         ],
         [
@@ -3300,11 +3504,11 @@
           2
         ],
         [
-          "functional",
+          "generative",
           2
         ],
         [
-          "generative",
+          "geometric",
           2
         ],
         [
@@ -3316,7 +3520,7 @@
           2
         ],
         [
-          "grows",
+          "group",
           2
         ],
         [
@@ -3352,10 +3556,6 @@
           2
         ],
         [
-          "identifiability study",
-          2
-        ],
-        [
           "included",
           2
         ],
@@ -3364,19 +3564,15 @@
           2
         ],
         [
+          "instead",
+          2
+        ],
+        [
           "integrated",
           2
         ],
         [
           "integrated series",
-          2
-        ],
-        [
-          "interpretable",
-          2
-        ],
-        [
-          "interpretable parameters",
           2
         ],
         [
@@ -3392,14 +3588,6 @@
           2
         ],
         [
-          "lag-1",
-          2
-        ],
-        [
-          "lag-1 autocorrelation",
-          2
-        ],
-        [
           "lambda alpha",
           2
         ],
@@ -3412,7 +3600,7 @@
           2
         ],
         [
-          "least",
+          "least squares",
           2
         ],
         [
@@ -3421,6 +3609,10 @@
         ],
         [
           "linear correlation",
+          2
+        ],
+        [
+          "literature relies",
           2
         ],
         [
@@ -3452,11 +3644,7 @@
           2
         ],
         [
-          "mean",
-          2
-        ],
-        [
-          "measured",
+          "measurement",
           2
         ],
         [
@@ -3464,19 +3652,7 @@
           2
         ],
         [
-          "mechanism",
-          2
-        ],
-        [
           "median hat",
-          2
-        ],
-        [
-          "method",
-          2
-        ],
-        [
-          "mixed",
           2
         ],
         [
@@ -3484,11 +3660,7 @@
           2
         ],
         [
-          "moderate dynamics",
-          2
-        ],
-        [
-          "momentary demand",
+          "momentary",
           2
         ],
         [
@@ -3504,11 +3676,15 @@
           2
         ],
         [
-          "nine interpretable",
+          "near-unit-root",
           2
         ],
         [
-          "none",
+          "nine parameters",
+          2
+        ],
+        [
+          "nominal test",
           2
         ],
         [
@@ -3521,6 +3697,10 @@
         ],
         [
           "nurses",
+          2
+        ],
+        [
+          "observations",
           2
         ],
         [
@@ -3540,10 +3720,6 @@
           2
         ],
         [
-          "ordering",
-          2
-        ],
-        [
           "overloaded",
           2
         ],
@@ -3556,7 +3732,7 @@
           2
         ],
         [
-          "per point",
+          "per cell",
           2
         ],
         [
@@ -3565,6 +3741,10 @@
         ],
         [
           "point hypotheses",
+          2
+        ],
+        [
+          "population",
           2
         ],
         [
@@ -3580,6 +3760,14 @@
           2
         ],
         [
+          "profiled",
+          2
+        ],
+        [
+          "promise",
+          2
+        ],
+        [
           "proportion",
           2
         ],
@@ -3588,27 +3776,7 @@
           2
         ],
         [
-          "qualitative",
-          2
-        ],
-        [
-          "rates",
-          2
-        ],
-        [
           "read",
-          2
-        ],
-        [
-          "real",
-          2
-        ],
-        [
-          "recovers",
-          2
-        ],
-        [
-          "recovery debt",
           2
         ],
         [
@@ -3616,19 +3784,31 @@
           2
         ],
         [
+          "reject",
+          2
+        ],
+        [
+          "rejection",
+          2
+        ],
+        [
           "rel propto",
           2
         ],
         [
+          "relaxation process",
+          2
+        ],
+        [
+          "relies",
+          2
+        ],
+        [
+          "remains",
+          2
+        ],
+        [
           "removes",
-          2
-        ],
-        [
-          "reparameterised",
-          2
-        ],
-        [
-          "reparameterised coefficient",
           2
         ],
         [
@@ -3640,15 +3820,15 @@
           2
         ],
         [
+          "reproduce",
+          2
+        ],
+        [
           "rest",
           2
         ],
         [
           "rests",
-          2
-        ],
-        [
-          "returns",
           2
         ],
         [
@@ -3660,11 +3840,11 @@
           2
         ],
         [
-          "rolling",
+          "rolling variance",
           2
         ],
         [
-          "roughly",
+          "sample",
           2
         ],
         [
@@ -3672,7 +3852,23 @@
           2
         ],
         [
+          "scale",
+          2
+        ],
+        [
+          "scope",
+          2
+        ],
+        [
           "sde",
+          2
+        ],
+        [
+          "sec model",
+          2
+        ],
+        [
+          "second window",
           2
         ],
         [
@@ -3688,11 +3884,11 @@
           2
         ],
         [
-          "significance",
+          "shape",
           2
         ],
         [
-          "significant",
+          "showing",
           2
         ],
         [
@@ -3704,6 +3900,10 @@
           2
         ],
         [
+          "size inflation",
+          2
+        ],
+        [
           "skin",
           2
         ],
@@ -3712,7 +3912,7 @@
           2
         ],
         [
-          "slow variable",
+          "slow recovery",
           2
         ],
         [
@@ -3724,11 +3924,19 @@
           2
         ],
         [
-          "something",
+          "special",
+          2
+        ],
+        [
+          "special case",
           2
         ],
         [
           "specific",
+          2
+        ],
+        [
+          "spectral",
           2
         ],
         [
@@ -3744,6 +3952,10 @@
           2
         ],
         [
+          "squares",
+          2
+        ],
+        [
           "stable",
           2
         ],
@@ -3752,19 +3964,23 @@
           2
         ],
         [
-          "stays",
+          "stated",
           2
         ],
         [
-          "study bounding",
+          "stays fixed",
           2
         ],
         [
-          "support",
+          "structural",
           2
         ],
         [
-          "supported",
+          "sudden",
+          2
+        ],
+        [
+          "sudden onset",
           2
         ],
         [
@@ -3788,7 +4004,7 @@
           2
         ],
         [
-          "terms",
+          "temporal",
           2
         ],
         [
@@ -3797,10 +4013,6 @@
         ],
         [
           "tests",
-          2
-        ],
-        [
-          "textbf",
           2
         ],
         [
@@ -3816,11 +4028,7 @@
           2
         ],
         [
-          "though",
-          2
-        ],
-        [
-          "time",
+          "time diverges",
           2
         ],
         [
@@ -3828,23 +4036,27 @@
           2
         ],
         [
+          "together",
+          2
+        ],
+        [
           "tonic",
           2
         ],
         [
-          "transitions",
+          "transfers",
+          2
+        ],
+        [
+          "treat",
+          2
+        ],
+        [
+          "true curvature",
           2
         ],
         [
           "truth",
-          2
-        ],
-        [
-          "twenty",
-          2
-        ],
-        [
-          "twenty counted",
           2
         ],
         [
@@ -3864,23 +4076,31 @@
           2
         ],
         [
-          "vector",
+          "variable",
           2
         ],
         [
-          "weak",
+          "whatever",
           2
         ],
         [
-          "withdraw",
+          "whether",
           2
         ],
         [
-          "zero",
+          "width",
+          2
+        ],
+        [
+          "window stays",
           2
         ],
         [
           "AC1",
+          1
+        ],
+        [
+          "AI",
           1
         ],
         [
@@ -3889,6 +4109,10 @@
         ],
         [
           "Adult",
+          1
+        ],
+        [
+          "Among",
           1
         ],
         [
@@ -3928,15 +4152,15 @@
           1
         ],
         [
+          "Catastrophe",
+          1
+        ],
+        [
           "Chance",
           1
         ],
         [
-          "Competing",
-          1
-        ],
-        [
-          "Competing models",
+          "Configurations",
           1
         ],
         [
@@ -3952,19 +4176,11 @@
           1
         ],
         [
-          "Everywhere",
-          1
-        ],
-        [
           "Existing",
           1
         ],
         [
-          "Functional",
-          1
-        ],
-        [
-          "Functional states",
+          "Five",
           1
         ],
         [
@@ -3973,10 +4189,6 @@
         ],
         [
           "Held-out",
-          1
-        ],
-        [
-          "Hysteresis",
           1
         ],
         [
@@ -4004,23 +4216,15 @@
           1
         ],
         [
-          "Next",
-          1
-        ],
-        [
-          "None",
-          1
-        ],
-        [
           "One",
           1
         ],
         [
-          "Overload",
+          "P1",
           1
         ],
         [
-          "P1",
+          "Per",
           1
         ],
         [
@@ -4041,18 +4245,6 @@
         ],
         [
           "Repository",
-          1
-        ],
-        [
-          "Robustness",
-          1
-        ],
-        [
-          "States",
-          1
-        ],
-        [
-          "States become",
           1
         ],
         [
@@ -4100,6 +4292,10 @@
           1
         ],
         [
+          "among",
+          1
+        ],
+        [
           "amplitude-adjusted",
           1
         ],
@@ -4140,19 +4336,15 @@
           1
         ],
         [
+          "catastrophe",
+          1
+        ],
+        [
           "closed-form",
           1
         ],
         [
-          "competing models",
-          1
-        ],
-        [
           "configuration",
-          1
-        ],
-        [
-          "everywhere",
           1
         ],
         [
@@ -4164,19 +4356,7 @@
           1
         ],
         [
-          "functional states",
-          1
-        ],
-        [
-          "high-replication",
-          1
-        ],
-        [
           "likelihood-ratio",
-          1
-        ],
-        [
-          "log-autocorrelation",
           1
         ],
         [
@@ -4201,18 +4381,6 @@
         ],
         [
           "near-totally",
-          1
-        ],
-        [
-          "near-unit-root",
-          1
-        ],
-        [
-          "next",
-          1
-        ],
-        [
-          "noise-dominated",
           1
         ],
         [
@@ -4272,19 +4440,11 @@
           1
         ],
         [
-          "profiled-least-squares",
-          1
-        ],
-        [
           "ranking",
           1
         ],
         [
           "re-describes",
-          1
-        ],
-        [
-          "reporting",
           1
         ],
         [
@@ -4304,19 +4464,7 @@
           1
         ],
         [
-          "states become",
-          1
-        ],
-        [
           "stress",
-          1
-        ],
-        [
-          "sudden",
-          1
-        ],
-        [
-          "sudden onset",
           1
         ],
         [
@@ -4372,10 +4520,10 @@
           1
         ]
       ],
-      "word_count": 3820
+      "word_count": 3953
     }
   },
   "source_file": "main.tex",
-  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
   "tool_version": "0.3.0"
 }

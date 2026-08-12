@@ -82,7 +82,7 @@ def fig_identifiability():
 
     # Two rows, not two columns: at \columnwidth a side-by-side pair leaves
     # each panel 1.7in wide, which is too narrow for a log axis and a legend.
-    fig, axes = plt.subplots(2, 1, figsize=(COL1, 3.30),
+    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.95),
                              gridspec_kw={"height_ratios": [1.30, 1.0]},
                              constrained_layout=True)
 

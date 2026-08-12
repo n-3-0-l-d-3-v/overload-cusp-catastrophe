@@ -1,4 +1,4 @@
-<!-- research-better 0.3.0 | source: main.tex | hash: 6bb4c482d26838d1 | generated: 2026-08-10T23:54:08+00:00 -->
+<!-- research-better 0.3.0 | source: main.tex | hash: b7377eb1363acd41 | generated: 2026-08-12T00:49:08+00:00 -->
 
 # Reviewer questions
 
@@ -27,4 +27,4 @@ was assumed. Questions that depend on venue policy say so.
 
 **What resolves it.** State the hyperparameters in the method or in an appendix.
 
-`s-b244d4ff64f5`
+`s-e9ce7f0bceca`

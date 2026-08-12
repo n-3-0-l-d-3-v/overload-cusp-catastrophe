@@ -1,6 +1,6 @@
 {
   "artifact": "grounding",
-  "created_at": "2026-08-10T23:54:05+00:00",
+  "created_at": "2026-08-12T00:48:52+00:00",
   "offline": false,
   "payload": {
     "citations": {
@@ -238,11 +238,10 @@
           "sources_queried": [
             "arxiv",
             "crossref",
-            "openalex"
+            "openalex",
+            "semantic_scholar"
           ],
-          "sources_unavailable": {
-            "semantic_scholar": "SourceUnavailableError"
-          },
+          "sources_unavailable": {},
           "title_score": 1.0,
           "verdict": "YEAR_MISMATCH"
         },
@@ -1111,16 +1110,14 @@
           "verdict": "VERIFIED"
         }
       ],
-      "coverage_note": "33 of 46 entries resolved and matched. queried arxiv, crossref, openalex, semantic_scholar. could not reach semantic_scholar, so absence of a record means less than usual.",
+      "coverage_note": "33 of 46 entries resolved and matched. queried arxiv, crossref, openalex, semantic_scholar.",
       "sources_queried": [
         "arxiv",
         "crossref",
         "openalex",
         "semantic_scholar"
       ],
-      "sources_unavailable": {
-        "semantic_scholar": "SourceUnavailableError"
-      },
+      "sources_unavailable": {},
       "total": 46,
       "verified": 33
     },
@@ -1128,15 +1125,15 @@
       "checks": [
         {
           "citation_key": "maclennan2022",
-          "claim": "Autistic adults describe functional breakdown under combined sensory and cognitive demand in consistent terms: it arrives suddenly, and it clears slowly \\cite{maclennan2022}.",
-          "coverage": 0.188,
-          "locator": "full_text, block 9, sentence 1",
-          "note": "The full text was read and no passage overlaps this claim. Matching is lexical, so a claim supported in quite different words could be missed. Worth checking by hand before changing anything.",
-          "quote": "Autistic adults commonly experience sensory reactivity differences.",
+          "claim": "Autistic adults report sensory reactivity differences across vision, sound and touch, and describe the difficulty of tolerating and controlling them \\cite{maclennan2022}.",
+          "coverage": 0.467,
+          "locator": "full_text, block 9, sentences 1-2",
+          "note": "The source is about this, and the closest passage does not carry the strength of the claim. Read the quote and check whether your sentence claims more than the source establishes.",
+          "quote": "Autistic adults commonly experience sensory reactivity differences. Sensory hyperreactivity is frequently researched, whilst hyporeactivity and seeking, and experiences across domains, e.g., vision, are often neglected.",
           "source_kind": "full_text",
           "source_url": "https://link.springer.com/content/pdf/10.1007/s10803-021-05186-3.pdf",
-          "span_id": "s-d80ff96849bf",
-          "support": "UNSUPPORTED",
+          "span_id": "s-f8b135ce8bd1",
+          "support": "PARTIAL",
           "unmet": []
         },
         {
@@ -1193,53 +1190,53 @@
         },
         {
           "citation_key": "cano2024",
-          "claim": "No public wearable dataset of that group exists at the temporal density this model needs \\cite{cano2024,chen2025ema}, so none are analysed here, and we say so instead of titling the work after a group it does not measure.",
-          "coverage": 0.056,
+          "claim": "No public wearable dataset of that group exists at the temporal density the model needs \\cite{cano2024,chen2025ema}, so none are analysed here and the paper is not titled after them.",
+          "coverage": 0.125,
           "locator": null,
           "note": "Only the abstract was retrievable and it does not discuss this. An abstract not mentioning something is no evidence the paper does not say it, so this was not checked rather than found wanting.",
           "quote": null,
           "source_kind": "abstract",
           "source_url": "https://www.mdpi.com/1424-8220/24/24/8137/pdf?version=1734683291",
-          "span_id": "s-1959a7d09b45",
+          "span_id": "s-f4156e9aa4e9",
           "support": "UNCHECKABLE",
           "unmet": []
         },
         {
           "citation_key": "chen2025ema",
-          "claim": "No public wearable dataset of that group exists at the temporal density this model needs \\cite{cano2024,chen2025ema}, so none are analysed here, and we say so instead of titling the work after a group it does not measure.",
+          "claim": "No public wearable dataset of that group exists at the temporal density the model needs \\cite{cano2024,chen2025ema}, so none are analysed here and the paper is not titled after them.",
           "coverage": 0.0,
           "locator": null,
           "note": "Only the abstract was retrievable and it does not discuss this. An abstract not mentioning something is no evidence the paper does not say it, so this was not checked rather than found wanting.",
           "quote": null,
           "source_kind": "abstract",
           "source_url": "https://doi.org/10.1177/13623613241305722",
-          "span_id": "s-1959a7d09b45",
+          "span_id": "s-f4156e9aa4e9",
           "support": "UNCHECKABLE",
           "unmet": []
         },
         {
           "citation_key": "ditlevsen2010",
-          "claim": "These are point hypotheses about exponents, differing in kind from the usual directional claim that an indicator rises before a transition --- which the sceptical literature shows arises spuriously on almost any autocorrelated series \\cite{ditlevsen2010,boettiger2012}.",
+          "claim": "These are point hypotheses about exponents, differing in kind from the usual directional claim that an indicator rises before a transition, which the sceptical literature shows arises spuriously on almost any autocorrelated series \\cite{ditlevsen2010,boettiger2012}.",
           "coverage": 0.0,
           "locator": null,
           "note": "Only the abstract was retrievable and it does not discuss this. An abstract not mentioning something is no evidence the paper does not say it, so this was not checked rather than found wanting.",
           "quote": null,
           "source_kind": "abstract",
           "source_url": "",
-          "span_id": "s-7110e1391d66",
+          "span_id": "s-bcbb529fe116",
           "support": "UNCHECKABLE",
           "unmet": []
         },
         {
           "citation_key": "boettiger2012",
-          "claim": "These are point hypotheses about exponents, differing in kind from the usual directional claim that an indicator rises before a transition --- which the sceptical literature shows arises spuriously on almost any autocorrelated series \\cite{ditlevsen2010,boettiger2012}.",
+          "claim": "These are point hypotheses about exponents, differing in kind from the usual directional claim that an indicator rises before a transition, which the sceptical literature shows arises spuriously on almost any autocorrelated series \\cite{ditlevsen2010,boettiger2012}.",
           "coverage": 0.045,
           "locator": null,
           "note": "Only the abstract was retrievable and it does not discuss this. An abstract not mentioning something is no evidence the paper does not say it, so this was not checked rather than found wanting.",
           "quote": null,
           "source_kind": "abstract",
           "source_url": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2012.0125",
-          "span_id": "s-7110e1391d66",
+          "span_id": "s-bcbb529fe116",
           "support": "UNCHECKABLE",
           "unmet": []
         },
@@ -1385,6 +1382,6 @@
     }
   },
   "source_file": "main.tex",
-  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
   "tool_version": "0.3.0"
 }

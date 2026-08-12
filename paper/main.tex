@@ -14,10 +14,10 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{siunitx}
 \usepackage{enumitem}
-% orcidlink draws the small ORCID logo next to the author name.
-% Degrade gracefully if the package is not installed.
-\IfFileExists{orcidlink.sty}{\usepackage{orcidlink}}%
-  {\newcommand{\orcidlink}[1]{}}
+% The ORCID identifier is given as text in the affiliation block. The
+% orcidlink glyph is deliberately not used: it hardcodes ORCID green inside its
+% own picture environment, so \textcolor cannot restyle it, and it would be the
+% only spot colour on an otherwise black page.
 
 \graphicspath{{./}{figures/}{../figures/}}
 
@@ -30,10 +30,10 @@
 % equations sit flush against the paragraphs around them. The paper is six
 % pages now, so these are back at (or above) the IEEEtran defaults and the page
 % is allowed to breathe. Do not re-tighten them to save a line.
-\setlength{\textfloatsep}{16pt plus 4pt minus 3pt}
-\setlength{\floatsep}{14pt plus 3pt minus 3pt}
-\setlength{\intextsep}{14pt plus 3pt minus 3pt}
-\setlength{\dbltextfloatsep}{18pt plus 4pt minus 3pt}
+\setlength{\textfloatsep}{13pt plus 3pt minus 2pt}
+\setlength{\floatsep}{12pt plus 3pt minus 2pt}
+\setlength{\intextsep}{12pt plus 3pt minus 2pt}
+\setlength{\dbltextfloatsep}{14pt plus 3pt minus 2pt}
 \setlength{\dblfloatsep}{14pt plus 3pt minus 3pt}
 \setlength{\abovedisplayskip}{9pt plus 3pt minus 2pt}
 \setlength{\belowdisplayskip}{9pt plus 3pt minus 2pt}
@@ -44,7 +44,7 @@
 % cells than with rules jammed against the text; booktabs supplies the rules,
 % this supplies the air.
 \setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.18}
+\renewcommand{\arraystretch}{1.12}
 
 % Caption text one size down from body, which is IEEE house style and stops
 % the two long captions from competing with the paragraphs beside them.
@@ -52,14 +52,13 @@
 
 \begin{document}
 
-\title{Identifiability Limits of Cusp Models for Overload in Wearable
-Physiology, and a Ground-Truth Failure of Rolling-Window Early-Warning
-Estimators}
+\title{Ratio Non-Identifiability in Cusp Models of Physiological Overload,
+and a Ground-Truth Failure of Rolling-Window Early-Warning Estimators}
 
-\author{\IEEEauthorblockN{Neil Thomas Mathew\,\orcidlink{0009-0001-8802-7376}}
-\IEEEauthorblockA{Department of Computer Applications\\
-CHRIST (Deemed to be University), Bengaluru, India\\
-ORCID: \href{https://orcid.org/0009-0001-8802-7376}{0009-0001-8802-7376}}}
+\author{\IEEEauthorblockN{Neil Thomas Mathew}
+\IEEEauthorblockA{Department of Computer Applications\
+CHRIST (Deemed to be University), Bengaluru, India\
+\href{https://orcid.org/0009-0001-8802-7376}{orcid.org/0009-0001-8802-7376}}}
 
 % Activates the IEEEtranBSTCTL entry in refs.bib (six names, then "et al.").
 % The \cite is invisible in the output; it only passes the control entry to
@@ -80,18 +79,17 @@ whose denominator is not bounded away from zero, so length buys their ordering
 and never their value: rank correlation for the splitting factor reaches $0.88$
 at $n=1000$ while its linear correlation stays at $0.10$. That bound holds for
 any cusp analysis of data of this kind, ours included, and it is the paper's
-primary result. We then show that the rolling-window variance and
-autocorrelation indicators the early-warning literature relies on return
-exponents of the wrong sign on data simulated from a model that does contain a
-fold, wrong in $99\%$ of replicates at a 30-sample window, while the exponent
-computed from the true curvature recovers correctly. The failure is structural:
-the correlation time diverges at the fold while the window stays fixed. We
-withdraw our own early-warning test rather than report it. Applying the one
-prediction that remains identifiable to 147 recordings from 40 people in three
-open corpora returns a surrogate-calibrated null, with power characterised so
-that this excludes strong and moderate dynamics rather than reporting an
-absence. Along the way we measure an eightfold size inflation of the nominal
-test on near-unit-root electrodermal data. The work is motivated by sensory and
+primary result. We then show that the rolling-window variance and autocorrelation indicators
+the early-warning literature relies on return exponents of the wrong sign on
+data simulated from a model that does contain a fold, wrong in $99\%$ of
+replicates at a 30-sample window, while the exponent computed from the true
+curvature recovers correctly. The failure is structural: the correlation time
+diverges at the fold while the window stays fixed. Applying the one prediction
+that remains identifiable to 147 recordings from 40 people in three open
+corpora returns a surrogate-calibrated null, powered so that this excludes
+strong and moderate dynamics rather than reporting an absence. We also measure
+an eightfold size inflation of the nominal test on near-unit-root
+electrodermal data. The work is motivated by sensory and
 executive overload in autistic adults; none are analysed here, and a
 pre-registered validation is specified.
 \end{abstract}
@@ -104,13 +102,17 @@ identifiability, electrodermal activity, wearable sensing, sensory overload.
 % =====================================================================
 \section{Introduction}
 
-Autistic adults describe functional breakdown under combined sensory and
-cognitive demand in consistent terms: it arrives suddenly, and it clears slowly
+Autistic adults report sensory reactivity differences across vision, sound
+and touch, and describe the difficulty of tolerating and controlling them
 \cite{maclennan2022}. Adult cohort studies link sensory atypicality to
 executive difficulty \cite{kiep2025}, and meta-analysis finds executive
 dysfunction across the spectrum, though with smaller effect sizes in adult
-samples than in child ones \cite{demetriou2018}. The phenomenon is not in
-doubt. What is missing is a formal account of the dynamics.
+samples than in child ones \cite{demetriou2018}. The phenomenon is not in doubt;
+a formal account of its dynamics is what is missing. Those accounts suggest a
+characteristic temporal shape, abrupt onset and slow clearance, which any
+dynamical model of overload has to reproduce. We treat that shape as a premise
+to formalise and test, not as a result inherited from the qualitative
+literature.
 
 Existing models do not supply one. Computational work on autism is dominated by
 Bayesian and predictive-coding framings whose empirical support a ten-year
@@ -131,15 +133,15 @@ changes the geometry. Below a critical $a$ the load tracks demand and returns;
 above it a second attractor appears, bringing a fold, a hysteresis loop and
 critical slowing down. Sudden onset and slow recovery stop being observations to
 report and become consequences to check: numerical exponents that data can
-reject, since the geometry is closed-form. That is the promise. This paper asks the prior question, and the answer is
-what it contributes: before asking whether overload \emph{is} a cusp, one has
-to ask which parameters of such a model a wearable recording can support. The
-answer is two, and the two carrying the geometry are not among them. That bound
-is a property of the estimator, not of our corpora, so it constrains any study
-of this kind. We show alongside it that the rolling-window indicators such a
-study would reach for report the wrong sign on data that provably contains a
-fold. Both results are portable, and both stand independently of the negative
-empirical result we report on real recordings.
+reject, since the geometry is closed-form. That is the promise. This paper asks the prior question. We present an
+identifiability analysis of cusp models fitted to wearable physiology, together
+with a ground-truth test of the rolling-window early-warning estimators such a
+model would be checked with. Only two parameters survive a recording of
+wearable length, and the two carrying the geometry are not among them. That
+bound belongs to the estimator rather than to our corpora, so it constrains any
+study of this kind; the estimators, meanwhile, report the wrong sign on data
+that provably contains a fold. Both results are portable, and both stand
+independently of the negative empirical result reported here.
 
 \noindent\textbf{Contributions.}
 \begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=3pt,parsep=0pt]
@@ -325,9 +327,8 @@ for a full replication.
 \section{What This Data Can Identify}
 \label{sec:ident}
 
-Before testing anything we asked which parameters are recoverable at the series
-lengths on offer. Not a formality: it turned out to organise the rest of the
-paper. We simulated with randomised true parameters and refitted, 2000
+Before testing anything we asked which parameters are recoverable at the
+series lengths on offer. The answer organised the rest of the paper. We simulated with randomised true parameters and refitted, 2000
 replicates at each of six lengths, then compared true against estimated values
 (Table~\ref{tab:ident}, Fig.~\ref{fig:ident}a).
 
@@ -399,12 +400,12 @@ than any of the $1.2\times10^{4}$ synthetic series used to map it.
 The practical reading is narrower than ``collect more data'': length buys a
 defensible \emph{ranking} by $\alpha_0$, never a reportable value.
 
-One of the five pre-stated predictions survives as evaluable here: the existence
-of the restoring cubic term, governed by $\theta_1$, the only parameter
-recovered on both measures. P1 needs the ratio of two badly identified
-quantities and P2 the distance to the fold, while P3 through P5 rest on
-$\varepsilon$ and $\alpha_A$. We report that structure rather than four numbers
-dressed up as tests.
+One of the five pre-stated predictions survives as evaluable here: the
+restoring cubic term, governed by $\theta_1$, the only parameter recovered on
+both measures. P1 needs the ratio of two badly identified quantities and P2 the
+distance to the fold, while P3 through P5 rest on $\varepsilon$ and
+$\alpha_A$. We report that structure rather than four numbers dressed up as
+tests.
 
 % =====================================================================
 \section{Results}
@@ -500,19 +501,18 @@ produces
 across several sessions each.
 
 Held-out prediction agrees from another direction. The full model loses to its
-own nested monostable special case: it wins on $33.8\%$ of units, median
+own nested monostable special case, winning on $33.8\%$ of units, median
 difference $-0.25$ nats per step, Wilcoxon $p=8\times10^{-5}$ for the simpler
-model. Since the monostable model is this model with the cubic term switched
-off, that is the cleanest available statement that the term does no work.
-Prospective onset prediction gives AUC $0.50$ to $0.46$ at lead times of 3 to 12
-windows. Chance.
+model. Since that special case is this model with the cubic switched off, it is
+the cleanest available statement that the term does no work. Prospective onset
+prediction gives AUC $0.50$ to $0.46$ at lead times of 3 to 12 windows.
+Chance.
 
-The model has three separable components: the cubic restoring term, the debt
-variable and the driver set. That comparison isolates the cubic term, on which
-the paper's claim rests. We do not ablate the other two in turn,
-because Sec.~\ref{sec:ident} shows $\alpha_A$ and $\varepsilon$ are not
-recovered at these lengths, and removing a component whose parameters are
-unidentified attributes a change in fit to something the data cannot resolve.
+That comparison isolates one of the model's three separable components, the
+cubic term on which the paper's claim rests. We do not ablate the debt variable
+or the driver set in turn: Sec.~\ref{sec:ident} shows $\alpha_A$ and
+$\varepsilon$ are unidentified at these lengths, so removing them would credit
+a change in fit to something the data cannot resolve.
 
 \subsection{Structure without fold structure}
 The null is specific, and calling it noise would be wrong. Two of the three
@@ -522,28 +522,36 @@ $49.7\%$. Only the statistic isolating the cubic term sits at chance. A bimodal
 marginal with no cubic drift is precisely the configuration in which a study
 reporting distributional evidence alone concludes the opposite of the truth.
 
-Robustness is mixed, and we report it that way. Configuration B sits at nominal
-under both the random-walk ($0.046$) and the harder IAAFT ($0.069$) ensembles,
-and holds across \SIrange{30}{120}{\second} windows. A and C are elevated, at
-$0.11$ to $0.16$. We tested three explanations for that. All three failed.
-IAAFT did not bring C down. Clipping rates run opposite to the effect. And an
-AR(1) size study, $\phi$ from $0$ to $1$, found no persistence at which the
-calibrated test over-rejects, though at 40 replicates per point it would miss
-an inflation below roughly $0.15$. What is left is nonlinear structure the
-surrogates cannot
-reproduce. But A is the negative control, built on a coordinate already shown to
-be noise-dominated, so the parsimonious reading is motion and peak-detection
-artefact rather than a fold. A test that fires on the negative control tells us
-significance does not mean cusp there, which is why the conclusion rests on B.
+A test that fires where nothing should be found is a problem for the test, so
+we state it first rather than in passing. Configuration B, the primary, sits at
+nominal under both the random-walk ($0.046$) and the harder IAAFT ($0.069$)
+ensembles, and holds across \SIrange{30}{120}{\second} windows. Configurations
+A and C reject at $0.11$ to $0.16$, and A is the negative control.
+
+Three explanations were tested; all three failed. IAAFT surrogates did not
+bring C down, so a purely spectral artefact does not account for it. Clipping
+rates run opposite to the effect, which rules out saturation. An AR(1) size
+study across $\phi\in[0,1]$ found no persistence at which the calibrated test
+over-rejects. What remains is nonlinear structure the surrogates do not
+reproduce.
+
+Two readings survive, and Sec.~\ref{sec:methods} decides between them on
+independent grounds: at a \SI{30}{\second} window the cardiac coordinate has
+lag-1 autocorrelation $0.19$, so whatever else it carries it cannot be the slow
+coordinate of a relaxation process. The conservative reading is motion and
+peak-detection artefact. Its consequence is not buried: on A and C a
+significant result does not license the word cusp, which is what a negative
+control is for. It is also why the conclusion rests on B alone, and why we
+report B's rejection rate beside A's rather than reporting B by itself.
 
 % =====================================================================
 \section{Discussion and Conclusion}
 
 Modelling overload as motion in a cusp potential trades a descriptive account
-for a generative one whose consequences compute in advance. States become
+for a generative one whose consequences compute in advance: states become
 basins, the kernel a function of nine parameters, sudden onset and delayed
-recovery point hypotheses. Precision of that kind costs something: the model can
-lose. Here it did, twice over and in two different ways. The geometry is not
+recovery point hypotheses. Precision of that kind can lose, and here it lost
+twice, in two different ways. The geometry is not
 recoverable at these lengths, and the one component that is recoverable, the
 restoring cubic, is not supported above a calibrated null and is beaten by
 its own removal on held-out density. Bimodality and a likelihood-ratio excess
@@ -573,17 +581,18 @@ approximation to it we did not, and each could move the fits. And
 longer records rescue rankings, not values; not even every parameter in rank,
 since $\varepsilon$ reaches only $\rho=0.44$ at $n=1000$.
 
-\emph{Toward validation.} We pre-specify the study that would test the mechanism
-in its intended population: 28 days of ecological momentary assessment with
-continuous wrist physiology in autistic adults and a matched comparison group,
-using the same estimator, nulls and falsification criteria. The primary
-hypothesis is a between-group difference in $\alpha_0$, better powered than the
-within-group detection attempted here, at $n\gtrsim500$ windows per participant.
-The debt mechanism needs more than length: with $\alpha_A$ and $\varepsilon$
+\emph{Toward validation.} We pre-specify the study that would test the mechanism in its intended
+population: 28 days of ecological momentary assessment with continuous wrist
+physiology in autistic adults and a matched comparison group, using the same
+estimator, nulls and falsification criteria. The primary hypothesis is a
+between-group difference in $\alpha_0$, better powered than the within-group
+detection attempted here, at $n\gtrsim500$ windows per participant. The debt
+mechanism needs more than length: with $\alpha_A$ and $\varepsilon$
 unrecoverable from passive data at any duration tested, P3 to P5 need either
-experimental control over recovery intervals or a hierarchical fit pooling them
+experimental control over recovery intervals or a hierarchical fit pooling
 across participants. A second well-powered null under those conditions would be
-evidence that overload is not a cusp catastrophe at physiological timescales.
+evidence that overload is not a cusp catastrophe at physiological
+timescales.
 
 \section*{Code and Data Availability}
 The estimator, the analysis pipeline, the Monte Carlo suite, the figure scripts
@@ -597,11 +606,11 @@ programmatically from its primary repository under that repository's own terms,
 with the exact URLs, download dates and byte counts recorded in the artefact.
 
 \section*{Acknowledgment}
-I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets
-for releasing them openly. In accordance with IEEE policy on generative AI, the
-author discloses that an AI assistant was used for code implementation,
-literature organisation and manuscript drafting; the author verified all
-analyses, results and claims and is solely responsible for the content.
+I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress
+datasets for releasing them openly. Per IEEE policy, the author discloses the
+use of an AI assistant for code implementation, literature organisation and
+manuscript drafting; all analyses, results and claims were verified by the
+author, who is solely responsible for the content.
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}

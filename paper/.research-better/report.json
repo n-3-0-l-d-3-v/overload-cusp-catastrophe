@@ -1,12 +1,12 @@
 {
   "artifact": "report",
-  "created_at": "2026-08-10T23:54:08+00:00",
+  "created_at": "2026-08-12T00:49:08+00:00",
   "offline": false,
   "payload": {
     "check": {
       "breaches": [
         "13 unverified citations, limit 0",
-        "3 unsupported claims, limit 0"
+        "2 unsupported claims, limit 0"
       ],
       "thresholds": {
         "max_blocking_questions": 0,
@@ -26,15 +26,16 @@
         3,
         16
       ],
-      "claim": "We present a cusp formulation of overload (Sec.~\\ref{sec:model}), an identifiability study bounding which of its parameters recordings of wearable length can support (Sec.~\\ref{sec:ident}), and a ground-truth test of the rolling-window early-warning estimators the formulation would be checked with (Sec.~\\ref{sec:results}).",
+      "claim": "We present an identifiability analysis of cusp models fitted to wearable physiology, together with a ground-truth test of the rolling-window early-warning estimators such a model would be checked with.",
       "claim_confirmed": false,
       "claims": {
+        "PARTIAL": 1,
         "UNCHECKABLE": 15,
-        "UNSUPPORTED": 3
+        "UNSUPPORTED": 2
       },
       "cuts": {
         "mechanical fluff": 0,
-        "orphan paragraphs": 12,
+        "orphan paragraphs": 17,
         "proposed": 0
       },
       "cuts_refused": 0,
@@ -42,13 +43,12 @@
       "length": {
         "net": null,
         "words_after": null,
-        "words_before": 3715
+        "words_before": 3826
       },
       "not_checked": [
         "edits.json describes an older version of main.tex and was not read. Run: research-better edit main.tex",
         "The contribution claim has not been confirmed. Everything measured against it inherits that doubt.",
         "3 of 16 cited works had retrievable full text. The rest were checked against an abstract or not at all. Nothing here is a judgment of the paper.",
-        "Could not reach semantic_scholar, so a missing record means less than usual.",
         "Overlap was compared against 14 source(s); 2 could not be retrieved. This is not a plagiarism check and does not cover anything the tool cannot read.",
         "The paragraph_shape_uniformity rule is switched off until it has been calibrated.",
         "The sentence_length_variance rule is switched off until it has been calibrated."
@@ -62,7 +62,7 @@
         "flagged": [
           [
             "Introduction, paragraph 1",
-            "unsupported claim + unsupported claim"
+            "unsupported claim + uniform rhythm"
           ],
           [
             "Corpora, paragraph 1",
@@ -77,11 +77,11 @@
             "voice passive ratio"
           ]
         ],
-        "left_alone": 3
+        "left_alone": 4
       }
     }
   },
   "source_file": "main.tex",
-  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
   "tool_version": "0.3.0"
 }

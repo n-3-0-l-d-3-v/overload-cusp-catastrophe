@@ -1,18 +1,36 @@
 {
   "artifact": "novelty",
-  "created_at": "2026-08-10T23:54:40+00:00",
+  "created_at": "2026-08-12T00:48:45+00:00",
   "offline": false,
   "payload": {
-    "claim": "We present a cusp formulation of overload (Sec.~\\ref{sec:model}), an identifiability study bounding which of its parameters recordings of wearable length can support (Sec.~\\ref{sec:ident}), and a ground-truth test of the rolling-window early-warning estimators the formulation would be checked with (Sec.~\\ref{sec:results}).",
-    "claim_confirmed": true,
+    "claim": "We present an identifiability analysis of cusp models fitted to wearable physiology, together with a ground-truth test of the rolling-window early-warning estimators such a model would be checked with.",
+    "claim_confirmed": false,
     "claim_evidence_spans": [],
     "claim_items": [],
-    "claim_span_id": "s-e0c1a4358376",
+    "claim_span_id": "s-97621500b44a",
     "orphans": [
       {
         "char_range": [
-          9293,
-          9357
+          8184,
+          8207
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-f380fd1e2bdf",
+        "text": "\\textbf{Contributions.}"
+      },
+      {
+        "char_range": [
+          9187,
+          9328
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-733259d6a774",
+        "text": "\\textbf{A calibrated null on 147 recordings}, powered so the result excludes strong and moderate dynamics rather than reporting an absence."
+      },
+      {
+        "char_range": [
+          10634,
+          10698
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-efa6690708a6",
@@ -20,8 +38,8 @@
       },
       {
         "char_range": [
-          9478,
-          9589
+          10819,
+          10930
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-009de2f5ac1b",
@@ -29,8 +47,8 @@
       },
       {
         "char_range": [
-          9801,
-          10195
+          11142,
+          11536
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-09257333f545",
@@ -38,8 +56,8 @@
       },
       {
         "char_range": [
-          10237,
-          10482
+          11578,
+          11823
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-2facb926fdad",
@@ -47,8 +65,8 @@
       },
       {
         "char_range": [
-          10711,
-          11027
+          12052,
+          12368
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-7550ae6224c4",
@@ -56,8 +74,8 @@
       },
       {
         "char_range": [
-          11094,
-          11162
+          12435,
+          12503
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-4ae6c3d5baab",
@@ -65,8 +83,8 @@
       },
       {
         "char_range": [
-          13145,
-          14200
+          14483,
+          15538
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-61590542377b",
@@ -74,8 +92,8 @@
       },
       {
         "char_range": [
-          14226,
-          14487
+          15564,
+          15825
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-eba49088cef5",
@@ -83,8 +101,17 @@
       },
       {
         "char_range": [
-          17279,
-          17617
+          18254,
+          18586
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-efe24b424168",
+        "text": "Before testing anything we asked which parameters are recoverable at the series lengths on offer. The answer organised the rest of the paper. We simulated with randomised true parameters and refitted, 2000 replicates at each of six lengths, then compared true against estimated values (Table~\\ref{tab:ident}, Fig.~\\ref{fig:ident}a)."
+      },
+      {
+        "char_range": [
+          18588,
+          18926
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-7fa2a8e619b8",
@@ -92,17 +119,26 @@
       },
       {
         "char_range": [
-          20818,
-          21214
+          21988,
+          22130
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
-        "span_id": "s-3b9b248d45a1",
-        "text": "One of the five pre-stated predictions survives as evaluable here: the existence of the restoring cubic term, governed by $\\theta_1$, the only parameter recovered on both measures. P1 needs the ratio of two badly identified quantities and P2 the distance to the fold, while P3 through P5 rest on $\\varepsilon$ and $\\alpha_A$. We report that structure rather than four numbers dressed up as tests."
+        "span_id": "s-7fe664ed64d6",
+        "text": "The practical reading is narrower than ``collect more data'': length buys a defensible \\emph{ranking} by $\\alpha_0$, never a reportable value."
       },
       {
         "char_range": [
-          27174,
-          27639
+          22132,
+          22511
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-e997b83de5de",
+        "text": "One of the five pre-stated predictions survives as evaluable here: the restoring cubic term, governed by $\\theta_1$, the only parameter recovered on both measures. P1 needs the ratio of two badly identified quantities and P2 the distance to the fold, while P3 through P5 rest on $\\varepsilon$ and $\\alpha_A$. We report that structure rather than four numbers dressed up as tests."
+      },
+      {
+        "char_range": [
+          28431,
+          28896
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-61c858d07de8",
@@ -110,76 +146,89 @@
       },
       {
         "char_range": [
-          32628,
-          33005
+          28898,
+          29277
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-8eb479696d51",
+        "text": "A test that fires where nothing should be found is a problem for the test, so we state it first rather than in passing. Configuration B, the primary, sits at nominal under both the random-walk ($0.046$) and the harder IAAFT ($0.069$) ensembles, and holds across \\SIrange{30}{120}{\\second} windows. Configurations A and C reject at $0.11$ to $0.16$, and A is the negative control."
+      },
+      {
+        "char_range": [
+          34258,
+          34609
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-b25516ce6235",
-        "text": "I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets for releasing them openly. In accordance with IEEE policy on generative AI, the author discloses that an AI assistant was used for code implementation, literature organisation and manuscript drafting; the author verified all analyses, results and claims and is solely responsible for the content."
+        "text": "I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets for releasing them openly. Per IEEE policy, the author discloses the use of an AI assistant for code implementation, literature organisation and manuscript drafting; all analyses, results and claims were verified by the author, who is solely responsible for the content."
       }
     ],
     "roles": {
       "s-009de2f5ac1b": "orphan",
       "s-01a1968d0340": "orphan",
       "s-01b1ccd4733c": "orphan",
-      "s-024bc6d1fa69": "orphan",
-      "s-0413a32e1410": "orphan",
+      "s-022f3f44fad1": "orphan",
+      "s-03cdd71489fb": "limitation",
       "s-05833cf2f76e": "orphan",
+      "s-08d86f26c2b5": "orphan",
       "s-09257333f545": "orphan",
+      "s-0938468d6525": "evidence",
       "s-096f6f16b334": "orphan",
-      "s-09c04e3cc6b9": "orphan",
+      "s-0a221e295376": "evidence",
       "s-0a9ab8b598b9": "limitation",
+      "s-0cd4720a8e9b": "orphan",
       "s-0e075c71c28e": "orphan",
-      "s-0e28fa5f05ce": "orphan",
+      "s-0e28fa5f05ce": "evidence",
+      "s-0e351322ba35": "limitation",
       "s-0f6ea3bb7203": "evidence",
       "s-1074239660ef": "orphan",
-      "s-1263b5463875": "evidence",
+      "s-117d58892642": "limitation",
+      "s-1263b5463875": "orphan",
       "s-12d88e814722": "orphan",
-      "s-138ce16a22d8": "orphan",
       "s-15885fa13913": "orphan",
       "s-158c24f766f2": "limitation",
       "s-169f65734443": "orphan",
       "s-17a0569fde79": "orphan",
       "s-17fca9b16756": "method",
       "s-18f5cd873fa2": "orphan",
-      "s-1959a7d09b45": "limitation",
       "s-19a592e1dd43": "orphan",
       "s-1b5d349830f3": "orphan",
       "s-1baa6766182f": "orphan",
+      "s-1bc82d4ebb01": "orphan",
       "s-1c8ef167143e": "orphan",
-      "s-1e48ab3dfc8d": "orphan",
-      "s-1e7fac21adbb": "orphan",
+      "s-1e6aade9b1c1": "limitation",
       "s-1f399cf305a9": "orphan",
-      "s-2240d9d08596": "orphan",
+      "s-2225c24b185a": "orphan",
+      "s-246d3e110afd": "orphan",
+      "s-2680f9d3226e": "orphan",
       "s-27b8cf101b18": "orphan",
       "s-2ae0b7f1463c": "orphan",
-      "s-2b364d06b805": "orphan",
+      "s-2cf7117bef72": "evidence",
       "s-2da796d40be5": "limitation",
       "s-2facb926fdad": "orphan",
-      "s-30ccefdc7e7c": "limitation",
-      "s-3218ae206bc9": "orphan",
-      "s-330025ce044d": "limitation",
+      "s-3299d3b14901": "limitation",
       "s-330a478f1fd0": "orphan",
-      "s-3330e663d2c8": "orphan",
-      "s-33aa6d5b92b2": "orphan",
+      "s-34fe9f82efcb": "limitation",
       "s-3634c4b2ad54": "limitation",
+      "s-363a45c079b6": "orphan",
       "s-3666775aa9ea": "orphan",
-      "s-389c830c62d6": "orphan",
-      "s-3a1165dfdf52": "orphan",
-      "s-3b9b248d45a1": "orphan",
+      "s-374a8f5277d2": "orphan",
+      "s-39162853118f": "orphan",
+      "s-3b6acc86a21b": "orphan",
       "s-3bd4d37dbe07": "orphan",
       "s-3c604460a70b": "limitation",
-      "s-3d5d8bef0d7b": "evidence",
+      "s-3d5d8bef0d7b": "orphan",
       "s-3da3f85e043c": "orphan",
       "s-3dcca40551b7": "limitation",
       "s-3f2bb1d1073d": "orphan",
-      "s-40f512c316b0": "orphan",
+      "s-40c13643f97d": "limitation",
       "s-4226a09519cc": "orphan",
       "s-4365d6b028d3": "orphan",
       "s-439ea235d85f": "orphan",
-      "s-4868bb48ffd0": "orphan",
-      "s-4a0e45ba7eef": "orphan",
       "s-4ae6c3d5baab": "orphan",
+      "s-4c1428481512": "evidence",
+      "s-4d4befafb8ee": "evidence",
+      "s-50f3939a3ad8": "orphan",
       "s-52cda9d5ffd0": "orphan",
       "s-52e2de4b578c": "orphan",
       "s-532998e4cd42": "orphan",
@@ -187,190 +236,174 @@
       "s-55b5496c7480": "background",
       "s-55f9e4b10849": "orphan",
       "s-5615e0ee7b44": "orphan",
-      "s-583f13fafb0b": "orphan",
-      "s-588acfb0c49c": "evidence",
-      "s-58e830fd9a57": "evidence",
+      "s-574422884d8d": "orphan",
+      "s-588acfb0c49c": "orphan",
       "s-59476761d750": "limitation",
       "s-5bd8c91ab2f7": "orphan",
+      "s-5fa2ef3fcdf5": "orphan",
+      "s-60d151230788": "orphan",
       "s-61590542377b": "orphan",
       "s-61c858d07de8": "orphan",
       "s-63af04b6550f": "orphan",
       "s-6683e3233e92": "orphan",
+      "s-697da77207ce": "limitation",
+      "s-69e3f220dd78": "limitation",
       "s-6a65a596d5f8": "limitation",
-      "s-6d1bf8f1ce5c": "orphan",
       "s-6e357db79ac8": "background",
       "s-6fdececbb827": "evidence",
-      "s-7110e1391d66": "background",
       "s-7193f86fa98d": "evidence",
-      "s-7375f671b219": "orphan",
+      "s-733259d6a774": "orphan",
       "s-73dd8788bec8": "orphan",
       "s-7550ae6224c4": "orphan",
-      "s-77816b48a054": "evidence",
+      "s-764b67e84916": "orphan",
       "s-77b75a0d2229": "limitation",
-      "s-798e10fcceb8": "limitation",
       "s-7a44c1795646": "background",
       "s-7a76c7146fe7": "orphan",
+      "s-7d5c20ef9dbc": "orphan",
       "s-7e191413e596": "orphan",
       "s-7fa2a8e619b8": "orphan",
-      "s-7fe664ed64d6": "evidence",
+      "s-7fe664ed64d6": "orphan",
       "s-805eb26d81d6": "orphan",
+      "s-81c1ab783eaf": "orphan",
       "s-81e90d73e21c": "orphan",
       "s-837ed43db935": "evidence",
-      "s-83ac450b97ad": "orphan",
-      "s-8445fc2cd514": "evidence",
       "s-846c6c92f854": "orphan",
-      "s-84e0db3cae57": "orphan",
       "s-857a386d969d": "orphan",
+      "s-86907ca59f15": "orphan",
       "s-86b5594eb795": "orphan",
       "s-875248142ce9": "limitation",
       "s-8783015187bd": "method",
-      "s-8ec173d08ac3": "orphan",
+      "s-8c4f4370c8d8": "orphan",
+      "s-8eb479696d51": "orphan",
       "s-8f950b3dc7fd": "orphan",
       "s-9197b36b6af4": "method",
       "s-92713d98cad8": "orphan",
       "s-92837ebfa80f": "orphan",
-      "s-93aaa9e8fa63": "orphan",
-      "s-947deeca08ae": "orphan",
-      "s-95b71c3d5d75": "orphan",
-      "s-98bc1ee683fd": "evidence",
-      "s-99a649788d88": "limitation",
+      "s-943d71790d80": "orphan",
+      "s-96ff06f26f93": "orphan",
+      "s-97621500b44a": "contribution",
+      "s-98bc1ee683fd": "orphan",
       "s-9e9168b501ef": "orphan",
       "s-9f1fc7768934": "limitation",
       "s-a02f83dcc9bb": "orphan",
-      "s-a0b7cca40567": "evidence",
+      "s-a0b7cca40567": "orphan",
       "s-a27e4d9aa713": "limitation",
       "s-a2856b97aaa1": "evidence",
+      "s-a4e1002f6851": "orphan",
       "s-a8aaaa61bed8": "limitation",
       "s-a9d770dcbe1f": "orphan",
+      "s-a9e2d86b55b3": "orphan",
       "s-aa94e41ba1c9": "orphan",
-      "s-ac4f001fe2d7": "orphan",
       "s-ae13b7f0d291": "orphan",
       "s-aed5aca68fb8": "limitation",
       "s-af49dfdd8ca2": "limitation",
-      "s-b1e6ad8927ab": "orphan",
-      "s-b244d4ff64f5": "orphan",
       "s-b25516ce6235": "orphan",
-      "s-b3668df3d087": "limitation",
-      "s-b3e6436cd1b4": "orphan",
-      "s-b4ad37bd9893": "evidence",
       "s-b6d8420ad28e": "background",
-      "s-bae61ae4ad24": "evidence",
       "s-bbd4fff38c53": "orphan",
+      "s-bcbb529fe116": "background",
       "s-bcf4d4721495": "orphan",
-      "s-bdbcfadd2a57": "limitation",
+      "s-bd9799099c5a": "orphan",
+      "s-c2c65dead527": "orphan",
+      "s-c2d7d51c5c2b": "orphan",
+      "s-c41015dd69e5": "evidence",
+      "s-c6813e964004": "evidence",
       "s-c8e3588fb4f1": "limitation",
-      "s-c9a0e859f090": "limitation",
       "s-cf579c57e1bb": "limitation",
-      "s-cfa43cee4411": "evidence",
       "s-d0b708885b5a": "limitation",
       "s-d130fa4c982b": "orphan",
+      "s-d656a9678ebe": "orphan",
       "s-d762567a4f81": "orphan",
-      "s-d80ff96849bf": "background",
       "s-d96fe7f30afd": "orphan",
-      "s-da5e85fe9e5e": "evidence",
+      "s-dba488029683": "orphan",
+      "s-dc39365ead7f": "orphan",
       "s-dcf697f2c7e4": "limitation",
-      "s-df78e236a4de": "limitation",
-      "s-e0c1a4358376": "contribution",
+      "s-e0383470c6d5": "orphan",
+      "s-e0a52a7f9d21": "evidence",
+      "s-e1f198e84000": "orphan",
       "s-e308e9ffe4f2": "orphan",
       "s-e4a2db9c137b": "limitation",
       "s-e4df5ffc7470": "background",
-      "s-e6357dc4f83b": "limitation",
+      "s-e706e451a3cb": "orphan",
       "s-e8488482e139": "orphan",
-      "s-eb6cffc93777": "limitation",
+      "s-e997b83de5de": "orphan",
+      "s-e9ce7f0bceca": "orphan",
+      "s-e9d5c61c9fd5": "orphan",
+      "s-eae9c7bbd219": "orphan",
       "s-eba49088cef5": "orphan",
-      "s-ebb9856d402a": "orphan",
-      "s-ecce981f5784": "orphan",
       "s-ecd2e6836c4a": "orphan",
       "s-ed189fa70f65": "evidence",
+      "s-ed3ee6f10767": "orphan",
       "s-edcff14e782f": "orphan",
-      "s-eef385a372be": "limitation",
       "s-efa6690708a6": "orphan",
       "s-efe24b424168": "orphan",
+      "s-f00117041ae8": "evidence",
       "s-f0db463f5d7b": "background",
-      "s-f1999cefd545": "orphan",
       "s-f21d280d43f1": "method",
-      "s-f28b62ea6245": "orphan",
       "s-f380fd1e2bdf": "orphan",
-      "s-f3a78f3ce047": "orphan",
-      "s-f44157a69853": "orphan",
+      "s-f3da4e845719": "limitation",
+      "s-f4156e9aa4e9": "background",
       "s-f552365b4884": "evidence",
       "s-f56f2e6ed9ce": "orphan",
-      "s-f6bb99bf03f4": "orphan",
+      "s-f5ff457ab01c": "method",
       "s-f710015c595a": "limitation",
       "s-f7c0cf292f77": "orphan",
-      "s-f90be7076617": "orphan",
-      "s-f9ad7944e9ff": "evidence",
+      "s-f8b135ce8bd1": "background",
+      "s-f94ca864c917": "limitation",
       "s-fb683ef70fef": "limitation",
       "s-fb974134dcc0": "limitation",
-      "s-fce1d5a0e97c": "method",
-      "s-fe012813aa96": "orphan"
+      "s-fe012813aa96": "orphan",
+      "s-fed39db1cd0e": "orphan"
     },
     "serves": {
-      "s-009de2f5ac1b": [
-        "parameters"
+      "s-022f3f44fad1": [
+        "test"
       ],
       "s-05833cf2f76e": [
         "early-warning"
       ],
-      "s-09c04e3cc6b9": [
-        "bounding",
-        "ident",
+      "s-0938468d6525": [
+        "model"
+      ],
+      "s-0a221e295376": [
+        "cusp",
         "identifiability",
-        "ref",
-        "sec"
+        "models",
+        "physiology",
+        "wearable"
+      ],
+      "s-0e28fa5f05ce": [
+        "analysis",
+        "together"
       ],
       "s-0f6ea3bb7203": [
         "wearable"
       ],
-      "s-1263b5463875": [
-        "recordings"
+      "s-117d58892642": [
+        "cusp"
       ],
       "s-15885fa13913": [
-        "model",
-        "ref",
-        "sec"
+        "model"
       ],
-      "s-158c24f766f2": [
-        "ident",
-        "ref"
-      ],
-      "s-17fca9b16756": [
-        "ref"
-      ],
-      "s-1959a7d09b45": [
-        "model",
-        "wearable"
+      "s-1e6aade9b1c1": [
+        "cusp"
       ],
       "s-1f399cf305a9": [
         "cusp"
       ],
-      "s-3218ae206bc9": [
-        "early-warning",
-        "model",
-        "rolling-window",
-        "test"
+      "s-2225c24b185a": [
+        "estimators"
       ],
-      "s-330025ce044d": [
-        "cusp",
-        "test"
-      ],
-      "s-3330e663d2c8": [
-        "cusp",
-        "model"
-      ],
-      "s-389c830c62d6": [
+      "s-2cf7117bef72": [
         "cusp"
+      ],
+      "s-3b6acc86a21b": [
+        "models"
       ],
       "s-3c604460a70b": [
         "cusp",
         "early-warning",
         "identifiability",
         "wearable"
-      ],
-      "s-3d5d8bef0d7b": [
-        "ident",
-        "parameters",
-        "ref"
       ],
       "s-3dcca40551b7": [
         "cusp"
@@ -379,30 +412,31 @@
         "early-warning",
         "estimators"
       ],
-      "s-40f512c316b0": [
-        "model"
+      "s-4c1428481512": [
+        "model",
+        "wearable"
+      ],
+      "s-4d4befafb8ee": [
+        "early-warning",
+        "estimators",
+        "ground-truth",
+        "test"
+      ],
+      "s-50f3939a3ad8": [
+        "analysis",
+        "cusp"
       ],
       "s-52e2de4b578c": [
         "checked"
       ],
-      "s-55b5496c7480": [
-        "support"
-      ],
-      "s-588acfb0c49c": [
-        "length"
-      ],
-      "s-58e830fd9a57": [
-        "early-warning"
+      "s-574422884d8d": [
+        "model"
       ],
       "s-61590542377b": [
         "model"
       ],
       "s-6a65a596d5f8": [
-        "cusp",
-        "overload"
-      ],
-      "s-6e357db79ac8": [
-        "parameters"
+        "cusp"
       ],
       "s-6fdececbb827": [
         "test"
@@ -410,119 +444,66 @@
       "s-7193f86fa98d": [
         "test"
       ],
-      "s-73dd8788bec8": [
-        "ident",
-        "ref"
-      ],
-      "s-77816b48a054": [
-        "model"
-      ],
-      "s-77b75a0d2229": [
-        "ident",
-        "length",
-        "ref",
-        "sec"
-      ],
-      "s-798e10fcceb8": [
-        "cusp",
-        "overload"
+      "s-764b67e84916": [
+        "wearable"
       ],
       "s-7a76c7146fe7": [
-        "ref",
-        "results",
-        "sec"
-      ],
-      "s-7fe664ed64d6": [
-        "length"
+        "models"
       ],
       "s-837ed43db935": [
         "estimators"
       ],
-      "s-8445fc2cd514": [
-        "recordings"
+      "s-875248142ce9": [
+        "models"
       ],
       "s-8783015187bd": [
         "model"
       ],
-      "s-8ec173d08ac3": [
-        "results"
-      ],
-      "s-98bc1ee683fd": [
-        "recordings"
-      ],
-      "s-99a649788d88": [
-        "length"
-      ],
-      "s-a0b7cca40567": [
-        "ref"
+      "s-8eb479696d51": [
+        "test"
       ],
       "s-a2856b97aaa1": [
         "test"
       ],
       "s-a8aaaa61bed8": [
+        "physiology",
         "test"
-      ],
-      "s-a9d770dcbe1f": [
-        "ref"
       ],
       "s-aed5aca68fb8": [
         "cusp",
+        "physiology",
         "wearable"
-      ],
-      "s-b1e6ad8927ab": [
-        "early-warning",
-        "ground-truth",
-        "ref",
-        "results",
-        "sec",
-        "test"
-      ],
-      "s-b244d4ff64f5": [
-        "overload"
       ],
       "s-b25516ce6235": [
         "wearable"
       ],
-      "s-b4ad37bd9893": [
-        "recordings"
-      ],
-      "s-bae61ae4ad24": [
-        "wearable"
-      ],
-      "s-c9a0e859f090": [
+      "s-c41015dd69e5": [
+        "cusp",
+        "fitted",
         "model"
       ],
-      "s-cf579c57e1bb": [
-        "ref",
-        "results",
-        "sec"
-      ],
-      "s-cfa43cee4411": [
-        "cusp",
-        "formulation",
-        "model",
-        "parameters",
-        "ref",
-        "sec"
-      ],
-      "s-da5e85fe9e5e": [
+      "s-c6813e964004": [
         "test"
       ],
       "s-dcf697f2c7e4": [
         "model"
       ],
+      "s-e0a52a7f9d21": [
+        "early-warning",
+        "model",
+        "rolling-window"
+      ],
       "s-e4df5ffc7470": [
-        "length",
         "test"
       ],
-      "s-e6357dc4f83b": [
-        "ident",
-        "parameters",
-        "ref",
-        "sec"
+      "s-e706e451a3cb": [
+        "model"
       ],
-      "s-eb6cffc93777": [
-        "parameters"
+      "s-e9ce7f0bceca": [
+        "models"
+      ],
+      "s-e9d5c61c9fd5": [
+        "test"
       ],
       "s-eba49088cef5": [
         "model"
@@ -533,21 +514,17 @@
       "s-ed189fa70f65": [
         "test"
       ],
-      "s-efe24b424168": [
-        "parameters"
+      "s-ed3ee6f10767": [
+        "estimators"
+      ],
+      "s-f00117041ae8": [
+        "early-warning"
       ],
       "s-f0db463f5d7b": [
         "wearable"
       ],
-      "s-f21d280d43f1": [
-        "ref"
-      ],
-      "s-f28b62ea6245": [
-        "cusp",
-        "identifiability",
-        "overload"
-      ],
-      "s-f44157a69853": [
+      "s-f4156e9aa4e9": [
+        "model",
         "wearable"
       ],
       "s-f552365b4884": [
@@ -556,22 +533,11 @@
       "s-f710015c595a": [
         "early-warning",
         "rolling-window"
-      ],
-      "s-f9ad7944e9ff": [
-        "cusp",
-        "ref"
-      ],
-      "s-fb974134dcc0": [
-        "length"
-      ],
-      "s-fce1d5a0e97c": [
-        "length",
-        "parameters"
       ]
     },
     "unsupported_claim_parts": []
   },
   "source_file": "main.tex",
-  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
   "tool_version": "0.3.0"
 }

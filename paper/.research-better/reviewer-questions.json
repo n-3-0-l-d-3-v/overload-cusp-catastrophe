@@ -1,6 +1,6 @@
 {
   "artifact": "reviewer-questions",
-  "created_at": "2026-08-10T23:54:08+00:00",
+  "created_at": "2026-08-12T00:49:08+00:00",
   "offline": false,
   "payload": {
     "counts": {
@@ -12,8 +12,8 @@
       {
         "category": "missing_baseline",
         "char_range": [
-          13493,
-          13709
+          14831,
+          15047
         ],
         "question": "Outperforms what, exactly?",
         "quote": "At a \\SI{30}{\\second} window tonic electrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index from heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by beat-detection error.",
@@ -25,14 +25,14 @@
       {
         "category": "undisclosed_method_detail",
         "char_range": [
-          2501,
-          2589
+          3226,
+          3457
         ],
         "question": "What hyperparameters were used?",
         "quote": "",
         "resolution": "State the hyperparameters in the method or in an appendix.",
         "severity": "serious",
-        "span_id": "s-b244d4ff64f5",
+        "span_id": "s-e9ce7f0bceca",
         "why": "The paper never states the hyperparameters. A reader cannot judge whether the result is solid or reproduce it without knowing, and a reviewer will ask rather than guess."
       }
     ],
@@ -40,6 +40,6 @@
     "venue_verified": false
   },
   "source_file": "main.tex",
-  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
   "tool_version": "0.3.0"
 }
