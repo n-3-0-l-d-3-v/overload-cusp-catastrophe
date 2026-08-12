@@ -1,7 +1,9 @@
-# Overload as a Cusp Catastrophe
+# When Cusp Geometry Is an Artefact
 
-Identifiability limits, and a ground-truth failure of early-warning indicators
-in wearable physiology.
+Non-identifiability and sign-inverting early-warning estimators in wearable
+physiology. Cusp geometry recovered from short wearable series is largely an
+artefact of ratios involving a poorly constrained relaxation rate, and rolling
+early-warning indicators can invert sign even when a fold is present.
 
 **Neil Thomas Mathew** — [ORCID 0009-0001-8802-7376](https://orcid.org/0009-0001-8802-7376)
 Department of Computer Applications, CHRIST (Deemed to be University), Bengaluru

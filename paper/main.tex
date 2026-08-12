@@ -83,14 +83,12 @@ the early-warning literature relies on return exponents of the wrong sign on
 data simulated from a model that does contain a fold, wrong in $99\%$ of
 replicates at a 30-sample window, while the exponent computed from the true
 curvature recovers correctly. The failure is structural: the correlation time
-diverges at the fold while the window stays fixed. Applying the one prediction
-that remains identifiable to 147 recordings from 40 people in three open
-corpora returns a surrogate-calibrated null, powered so that this excludes
-strong and moderate dynamics rather than reporting an absence. We also measure
-an eightfold size inflation of the nominal test on near-unit-root
-electrodermal data. The work is motivated by sensory and
-executive overload in autistic adults; none are analysed here, and a
-pre-registered validation is specified.
+diverges at the fold while the window stays fixed. Applying the one prediction that remains identifiable to 147 recordings from
+40 people in three open corpora returns a surrogate-calibrated null, powered so
+that this excludes strong and moderate dynamics rather than reporting an
+absence. The work is motivated by sensory and executive overload in autistic
+adults; none are analysed here, and a pre-registered validation is
+specified.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -178,7 +176,7 @@ and we make none.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.86\textwidth]{fig1_geometry}
+\includegraphics[width=0.78\textwidth]{fig1_geometry}
 \caption{The geometry from which everything else follows. (a) The cusp potential
 at three levels of drive $b$. (b) The bifurcation set in the $(a,b)$ plane, with
 the five functional states appearing as regions rather than as assigned labels.
@@ -315,12 +313,11 @@ $n\in\{100,150,200,300,500,1000\}$ at 2000 replicates per cell for recovery
 ($1.2\times10^{4}$ series), 5000 for size ($30{,}000$ nominal, $7{,}500$
 calibrated) and 100 for power; the early-warning validation covers 90
 configurations (five window widths, two detrending choices, three lengths to
-$n=20{,}000$) at 500 each. Counts were fixed in advance to hold the Monte
-Carlo standard error on a proportion below $0.01$ for size and power. The
-exception is the AR(1) persistence study at 40 replicates per point, which is
-why it is quoted as a bound. All of it is seeded from one master seed and runs
-on one machine, ten workers on a six-core, twelve-thread CPU, about seven hours
-for a full replication.
+$n=20{,}000$) at 500 each. Counts were fixed in advance to hold the Monte Carlo standard error on a
+proportion below $0.01$ for size and power, and the AR(1) persistence study
+runs 1000 replicates at each of nine values of $\phi$. All of it is seeded from
+one master seed and runs on one machine, ten workers on a six-core,
+twelve-thread CPU.
 
 % =====================================================================
 \section{What This Data Can Identify}
@@ -492,12 +489,10 @@ variance & $-0.5$ & no & 240 & $-0.014$ & $40\%$ \\
 \subsection{The identifiable prediction is not supported}
 Under the calibrated test the restoring cubic term is significant in $2.7\%$ of
 the 147 units against a nominal $5\%$: $0.0\%$ for WESAD ($n=15$), $0.0\%$ for
-the examinations ($n=30$), $3.9\%$ for the nurse sessions ($n=102$). Since those
-102 units come from 15 nurses we also weight one vote per person, giving $1.5\%$
-(Wilson $[0.0,3.1]\%$), with $10\%$ of people showing at least one significant
-session. That is the most generous reading available, and still what chance
-produces
-across several sessions each.
+the examinations ($n=30$), $3.9\%$ for the nurse sessions ($n=102$). Since those 102 units come from 15 nurses we also weight one vote per person,
+giving $1.5\%$ (Wilson $[0.0,3.1]\%$), with $10\%$ of people showing at least
+one significant session. That is the most generous reading available, and still
+what chance produces.
 
 Held-out prediction agrees from another direction. The full model loses to its
 own nested monostable special case, winning on $33.8\%$ of units, median
@@ -507,19 +502,19 @@ the cleanest available statement that the term does no work. Prospective onset
 prediction gives AUC $0.50$ to $0.46$ at lead times of 3 to 12 windows.
 Chance.
 
-That comparison isolates one of the model's three separable components, the
-cubic term on which the paper's claim rests. We do not ablate the debt variable
-or the driver set in turn: Sec.~\ref{sec:ident} shows $\alpha_A$ and
-$\varepsilon$ are unidentified at these lengths, so removing them would credit
-a change in fit to something the data cannot resolve.
+That comparison isolates the cubic term, the component the claim rests on. We
+do not ablate the debt variable or the driver set in turn: Sec.~\ref{sec:ident}
+shows $\alpha_A$ and $\varepsilon$ are unidentified at these lengths, so
+removing them would credit a change in fit to something the data cannot
+resolve.
 
 \subsection{Structure without fold structure}
 The null is specific, and calling it noise would be wrong. Two of the three
 calibrated statistics do exceed their surrogate nulls: the likelihood ratio
 against the monostable restriction at $40.8\%$ of units, marginal bimodality at
 $49.7\%$. Only the statistic isolating the cubic term sits at chance. A bimodal
-marginal with no cubic drift is exactly the configuration in which a study
-reporting distributional evidence alone concludes the opposite of the truth.
+marginal with no cubic drift is exactly the configuration in which distributional
+evidence alone concludes the opposite of the truth.
 
 A test that fires where nothing should be found is a problem for the test, so
 we state it first rather than in passing. Configuration B, the primary, sits at
@@ -528,20 +523,21 @@ ensembles, and holds across \SIrange{30}{120}{\second} windows. Configurations
 A and C reject at $0.11$ to $0.16$, and A is the negative control.
 
 Three explanations were tested; all three failed. IAAFT surrogates did not
-bring C down, so a purely spectral artefact does not account for it. Clipping
-rates run opposite to the effect, which rules out saturation. An AR(1) size
-study across $\phi\in[0,1]$ found no persistence at which the calibrated test
-over-rejects. What remains is nonlinear structure the surrogates do not
-reproduce.
+bring C down, so a purely spectral artefact does not account for it. Clipping rates run opposite to the effect, ruling out saturation. And an AR(1)
+size study across $\phi\in[0,1]$, 1000 replicates per point, bounds what
+persistence alone can buy: against random-walk surrogates the calibrated test
+stays at or below nominal, peaking at $0.040$ at the unit root, and against
+IAAFT it reaches $0.094$ there. That covers B's IAAFT rate of $0.069$ but
+leaves A and C unexplained. What remains for those two is nonlinear structure
+the surrogates do not reproduce.
 
 Two readings survive, and Sec.~\ref{sec:methods} decides between them on
 independent grounds: at a \SI{30}{\second} window the cardiac coordinate has
 lag-1 autocorrelation $0.19$, so whatever else it carries it cannot be the slow
-coordinate of a relaxation process. The conservative reading is motion and
-peak-detection artefact. Its consequence is not buried: on A and C a
-significant result does not license the word cusp, which is what a negative
-control is for. It is also why the conclusion rests on B alone, and why we
-report B's rejection rate beside A's rather than reporting B by itself.
+coordinate of a relaxation process. The conservative reading is motion and peak-detection artefact, and its
+consequence is not buried: on A and C a significant result does not license the
+word cusp, which is what a negative control is for, and why the conclusion
+rests on B alone.
 
 % =====================================================================
 \section{Discussion and Conclusion}
@@ -584,14 +580,13 @@ since $\varepsilon$ reaches only $\rho=0.44$ at $n=1000$.
 population: 28 days of ecological momentary assessment with continuous wrist
 physiology in autistic adults and a matched comparison group, using the same
 estimator, nulls and falsification criteria. The primary hypothesis is a
-between-group difference in $\alpha_0$, better powered than the within-group
-detection attempted here, at $n\gtrsim500$ windows per participant. The debt
-mechanism needs more than length: with $\alpha_A$ and $\varepsilon$
-unrecoverable from passive data at any duration tested, P3 to P5 need either
-experimental control over recovery intervals or a hierarchical fit pooling
-across participants. A second well-powered null under those conditions would be
-evidence that overload is not a cusp catastrophe at physiological
-timescales.
+between-group difference in $\alpha_0$ at $n\gtrsim500$ windows per
+participant, better powered than the within-group detection attempted here. P3
+to P5 need more than length: with $\alpha_A$ and $\varepsilon$ unrecoverable
+from passive data at any duration tested, they need experimental control over
+recovery intervals or a hierarchical fit pooling across participants. A second
+well-powered null under those conditions would be evidence that overload is not
+a cusp catastrophe at physiological timescales.
 
 \section*{Code and Data Availability}
 The estimator, the analysis pipeline, the Monte Carlo suite, the figure scripts

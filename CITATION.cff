@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or its results, please cite the paper below."
-title: "Overload as a Cusp Catastrophe: research artefact"
+title: "When Cusp Geometry Is an Artefact: research artefact"
 abstract: >-
   Derivation, estimator, Monte Carlo validation suite and manuscript for a
   cusp-catastrophe model of sensory and executive overload. Includes the
@@ -27,9 +27,8 @@ keywords:
 preferred-citation:
   type: conference-paper
   title: >-
-Identifiability Limits of Cusp Models for Overload in Wearable
-    Physiology, and a Ground-Truth Failure of Rolling-Window Early-Warning
-    Estimators
+    When Cusp Geometry Is an Artefact: Non-Identifiability and
+    Sign-Inverting Early-Warning Estimators in Wearable Physiology
   authors:
     - family-names: Mathew
       given-names: Neil Thomas

@@ -1,6 +1,6 @@
 # Supplementary material
 
-Everything the 5-page conference paper compresses. This is the working document
+Everything the six-page conference paper compresses. This is the working document
 for the journal version and the place to look when a reviewer asks "how do you
 know that?"
 
