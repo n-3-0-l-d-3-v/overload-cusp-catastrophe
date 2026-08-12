@@ -7,6 +7,18 @@
 % =====================================================================
 
 % ---------------------------------------------------------------------
+% IEEEtran.bst control entry. IEEE style lists up to six authors and then
+% "et al."; without this, IEEEtran.bst prints every name, which costs most of
+% a column now that the truncated lists have been expanded. The full lists
+% stay here so the bibliography is checkable against Crossref.
+% ---------------------------------------------------------------------
+@IEEEtranBSTCTL{BSTcontrol,
+  CTLuse_forced_etal       = "yes",
+  CTLmax_names_forced_etal = "6",
+  CTLnames_show_etal       = "1"
+}
+
+% ---------------------------------------------------------------------
 % A. Sensory processing and executive function in autistic adults
 % ---------------------------------------------------------------------
 % Print issue is 55(6), Jun 2025; online-first 2023-05-12. Verified 2026-08-07.
@@ -27,8 +39,13 @@
   doi     = {10.1007/s10803-021-05186-3}
 }
 
+% Crossref deposits initials only for this record; kept as deposited rather
+% than expanded from guesswork. (BibTeX has no in-entry comments -- a "%" line
+% inside the braces voids the entry silently, so this stays outside.)
 @article{demetriou2018,
-  author  = {Demetriou, Eleni A. and others},
+  author  = {Demetriou, E. A. and Lampit, A. and Quintana, D. S. and
+             Naismith, S. L. and Song, Y. J. C. and Pye, J. E. and
+             Hickie, I. and Guastella, A. J.},
   title   = {Autism spectrum disorders: A meta-analysis of executive function},
   journal = {Molecular Psychiatry},
   volume  = {23}, number = {5}, pages = {1198--1204}, year = {2018},
@@ -152,7 +169,10 @@
 }
 
 @article{scheffer2009,
-  author  = {Scheffer, Marten and others},
+  author  = {Scheffer, Marten and Bascompte, Jordi and Brock, William A. and
+             Brovkin, Victor and Carpenter, Stephen R. and Dakos, Vasilis and
+             Held, Hermann and van Nes, Egbert H. and Rietkerk, Max and
+             Sugihara, George},
   title   = {Early-warning signals for critical transitions},
   journal = {Nature},
   volume  = {461}, pages = {53--59}, year = {2009},
@@ -160,7 +180,11 @@
 }
 
 @article{scheffer2012,
-  author  = {Scheffer, Marten and others},
+  author  = {Scheffer, Marten and Carpenter, Stephen R. and
+             Lenton, Timothy M. and Bascompte, Jordi and Brock, William and
+             Dakos, Vasilis and van de Koppel, Johan and
+             van de Leemput, Ingrid A. and Levin, Simon A. and
+             van Nes, Egbert H. and Pascual, Mercedes and Vandermeer, John},
   title   = {Anticipating critical transitions},
   journal = {Science},
   volume  = {338}, number = {6105}, pages = {344--348}, year = {2012},
@@ -168,7 +192,10 @@
 }
 
 @article{dakos2012,
-  author  = {Dakos, Vasilis and others},
+  author  = {Dakos, Vasilis and Carpenter, Stephen R. and Brock, William A. and
+             Ellison, Aaron M. and Guttal, Vishwesha and Ives, Anthony R. and
+             K{'e}fi, Sonia and Livina, Valerie and Seekell, David A. and
+             van Nes, Egbert H. and Scheffer, Marten},
   title   = {Methods for detecting early warnings of critical transitions in
              time series illustrated using simulated ecological data},
   journal = {PLOS ONE},
@@ -194,7 +221,13 @@
 }
 
 @article{leemput2014,
-  author  = {van de Leemput, Ingrid A. and others},
+  author  = {van de Leemput, Ingrid A. and Wichers, Marieke and
+             Cramer, Ang{'e}lique O. J. and Borsboom, Denny and
+             Tuerlinckx, Francis and Kuppens, Peter and van Nes, Egbert H. and
+             Viechtbauer, Wolfgang and Giltay, Erik J. and Aggen, Steven H. and
+             Derom, Catherine and Jacobs, Nele and Kendler, Kenneth S. and
+             van der Maas, Han L. J. and Neale, Michael C. and Peeters, Frenk
+             and Thiery, Evert and Zachar, Peter and Scheffer, Marten},
   title   = {Critical slowing down as early warning for the onset and
              termination of depression},
   journal = {Proceedings of the National Academy of Sciences USA},
@@ -290,7 +323,9 @@
 }
 
 @article{eisenberg2019,
-  author  = {Eisenberg, Ian W. and others},
+  author  = {Eisenberg, Ian W. and Bissett, Patrick G. and
+             Enkavi, A. Zeynep and Li, Jamie and MacKinnon, David P. and
+             Marsch, Lisa A. and Poldrack, Russell A.},
   title   = {Uncovering the structure of self-regulation through data-driven
              ontology discovery},
   journal = {Nature Communications},
@@ -321,7 +356,9 @@
 }
 
 @article{hosseini2022nurse,
-  author  = {Hosseini, Seyedmajid and others},
+  author  = {Hosseini, Seyedmajid and Gottumukkala, Raju and
+             Katragadda, Satya and Bhupatiraju, Ravi Teja and Ashkar, Ziad and
+             Borst, Christoph W. and Cochran, Kenneth},
   title   = {A multimodal sensor dataset for continuous stress detection of
              nurses in a hospital},
   journal = {Scientific Data},
@@ -383,7 +420,9 @@
 % I. Ecological momentary assessment and adaptive intervention
 % ---------------------------------------------------------------------
 @article{nahumshani2018,
-  author  = {Nahum-Shani, Inbal and others},
+  author  = {Nahum-Shani, Inbal and Smith, Shawna N. and Spring, Bonnie J. and
+             Collins, Linda M. and Witkiewitz, Katie and Tewari, Ambuj and
+             Murphy, Susan A.},
   title   = {Just-in-time adaptive interventions ({JITAI}s) in mobile health:
              Key components and design principles for ongoing health behavior
              support},

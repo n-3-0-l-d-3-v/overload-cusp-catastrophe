@@ -64,9 +64,17 @@ def cited_keys(text):
 
 
 def bib_entries(text):
-    """Return {key: {field: value}} for every entry in the file."""
+    """Return {key: {field: value}} for every entry in the file.
+
+    The @IEEEtranBSTCTL control entry is skipped. It is a BibTeX style switch,
+    not a reference: it has no DOI to verify, and \\bstctlcite is deliberately
+    invisible to the citation regex, so counting it would report it as unused
+    for ever.
+    """
     out = {}
     for m in ENTRY_RE.finditer(text):
+        if m.group(1).lower() == "ieeetranbstctl":
+            continue
         key = m.group(2)
         start = m.end()
         depth = 1
