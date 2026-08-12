@@ -1,10 +1,10 @@
-# research-better findings — `main.tex` (5-page IEEE version)
+# research-better findings — `main.tex` (six-page IEEE conference version)
 
 Tool: `research-better 0.3.0`, full 10-pass run on 2026-08-10.
 Command: `research-better --verbose run main.tex`
 Raw artifacts: `.research-better/` (grounding.md, novelty.md, reviewer-questions.md, trace.md, report.md/html/json).
 
-## Status board (updated 2026-08-11, after five fix passes)
+## Status board (updated 2026-08-12, final)
 
 | Item | What | Status |
 |---|---|---|
@@ -19,9 +19,9 @@ Raw artifacts: `.research-better/` (grounding.md, novelty.md, reviewer-questions
 | 5a | Ungrounded critical-slowing sentence | **done** — grounded in Sec. II and Table II |
 | 5b | "never" doing unsupported work | **done** — pinned to the Sec. IV numbers |
 | 5c | Introduction hedging density | **done** — re-measured; mostly a matcher artefact |
-| B1 | Non-identifiability is the result | **partial** — abstract and discussion reframed; the cusp framing still leads the title |
+| B1 | Non-identifiability is the result | **done** — title, abstract, introduction and contributions all lead with the bound |
 | B2 | The identifiable prediction fails | **done** — the two losses now stated jointly |
-| B3 | EWS failure oversold in the title | **done** — narrowed in text and in the title |
+| B3 | EWS failure oversold in the title | **done** — scoped to rolling-window estimators in text and title |
 | B4 | Motivation vs. data mismatch | **done** — corpora justified, framing kept |
 | B5 | Scope and residual arbitrariness | **done** — remaining knobs named in Limitations |
 | B6 | What works — preserve | n/a |
@@ -42,14 +42,15 @@ characters --- so the +4,458 characters of reviewer-requested text spills onto
 a sixth. Holding five would have meant cutting essentially all of it, or
 dropping the geometry figure. The author chose six on the condition that the
 content justifies it. Page 6 comes out nearly full, so it is not a wasted page.
-**The venue's page limit has not been checked and must be before submission.**
+**The venue's page limit was confirmed by the author on 2026-08-12: six pages
+is within budget.**
 
 Changed to make six pages real, rather than leaving assertions that lie:
 
 - `reproduce.py` and `compile_paper.py` asserted 5 pages; both now assert 6.
 - `compile_paper.py` wrote `paper_5page.pdf`. It now writes
   `paper_conference.pdf` --- a filename with a page count in it goes stale
-  silently. **`paper/paper_5page.pdf` is still in the tree and is now stale.**
+  silently. The stale PDF has since been removed from the tree.
 - `README.md` updated for both.
 - `main.tex` preamble records why it is six and that the venue needs checking.
 
@@ -64,14 +65,21 @@ Three defects surfaced while compiling, all fixed:
   It now skips `@IEEEtranBSTCTL`, so the count is 46 entries again.
 
 Current state: **6 pages, 0 overfull boxes, no empty references, 16/16 cited
-keys resolving.**
+keys resolving, and all 18 cited claims verified against source.**
+
+The claim-level audit is the substantive outcome of this whole exercise. The
+`trace` pass flagged three sentences as citing claims their sources do not
+carry. Checking those by hand turned up four such sentences in total, across
+six citations; all four are fixed and the audit is recorded in
+`REFERENCE_CHECK.md`. The tool could only retrieve three full texts, so it
+found the minority of the problem. The rest came from reading the sources.
 
 **The journal draft is synced.** `main_full_journal.tex` carried the same
 defects; it now has the contribution claim sentence, a `Settings` subsection
 with the hyperparameters and hardware, a Code and Data Availability section,
 the negative-control clarification, the general-stress-corpora justification,
-and the narrowed title ("Rolling-Window Early-Warning Estimators"). It compiles
-clean at 14 pages. The supplement was not touched.
+and a title in the same frame as the conference paper. It compiles clean at 14
+pages. The supplement was not touched.
 
 ## Round 2 of the tool: rerun on 2026-08-11, after the fixes
 

@@ -109,3 +109,41 @@ should be flagged in future runs.
 - Uncited entries: **30**. These belong to `main_full_journal.tex`, the
   long-form draft kept for the journal version. They are retained deliberately;
   a single shared bibliography is easier to keep correct than two.
+
+---
+
+## Claim-level audit, 2026-08-12
+
+The checks above verify that each entry *resolves* — right title, authors, year,
+DOI. That is a different question from whether the sentence citing it says what
+the source says. Every cited claim in `main.tex` was checked against its source
+on 2026-08-12, prompted by `research-better`'s `trace` pass flagging three of
+them. **Four sentences were citing claims their sources do not make.** All four
+are fixed; the corrections are in the git history.
+
+| Key | What the sentence claimed | What the source says | Outcome |
+|---|---|---|---|
+| `maclennan2022` | "functional breakdown under combined sensory and cognitive demand ... arrives suddenly, clears slowly" | A thematic study of sensory *reactivity* differences across modalities. Neither the combined sensory–cognitive claim nor the temporal shape appears | Rewritten. The temporal shape is now stated as the premise the paper formalises, not as an inherited finding |
+| `demetriou2018` | adult cohort studies couple sensory atypicality to executive difficulty "with large effect sizes" | A meta-analysis of executive function, not of sensory–executive coupling, reporting *smaller* effect sizes in adults | Rewritten. `kiep2025` now carries the coupling; `demetriou2018` carries the meta-analytic finding, stated correctly |
+| `hosseini2022nurse` | "15 nurses across roughly 1250 h of hospital shifts" | Describes the dataset and setting; states neither figure. Both come from our own audit of the released files (`data/DATASETS.md`) | Rewritten. Counts now attributed to our screening |
+| `cano2024`, `chen2025ema` | "no public wearable dataset of that group exists at the temporal density the model needs" | Reviews of wearable design and of EMA feasibility in autism. Both survey what has been collected; neither asserts the absence | Rewritten. The survey is attributed to them, the absence to us |
+| `ditlevsen2010`, `boettiger2012` | early-warning indicators arise "spuriously on almost any autocorrelated series" | Ditlevsen: the shifts were noise-induced rather than bifurcations, with limited predictability. Boettiger: quantifies a reliability/sensitivity trade-off, notes error rates are hardly ever characterised | Rewritten to say those two things |
+
+Verified as accurate, no change needed:
+
+- `chrysaitis2023` — "empirical support a ten-year review found mixed and
+  methodologically inconsistent". The abstract says results are "highly mixed"
+  and reports "low statistical power and often inconsistent approaches".
+  Confirmed against PubMed and the Edinburgh Research Explorer record; Crossref
+  deposits no abstract for this entry, which is why the automated pass could
+  not check it.
+- `adamou2026` — "avowedly theoretical, collecting no data". The abstract
+  describes developing interpretable mathematical models grounded in
+  neuropsychological theory, with no data collection.
+- `scheffer2009`, `dakos2012` — cited as the source of the rolling-window
+  indicators. These are the canonical methods papers for exactly that.
+- `kramers1940`, `schreiber1996`, `schmidt2018wesad`, `amin2022exam`,
+  `kiep2025` — cited for a formula, a method, and dataset identities
+  respectively; each matches its source.
+
+**Status: all 18 cited claims in `main.tex` verified against source.**
