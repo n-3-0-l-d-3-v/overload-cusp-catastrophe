@@ -1,5 +1,5 @@
 %% =====================================================================
-%% Overload as a Cusp Catastrophe. IEEE conference format (IEEEtran).
+%% When Cusp Geometry Is an Artefact. IEEE conference format (IEEEtran).
 %% Six pages. It was five until the reviewer-requested settings, availability
 %% and scoping text went in; confirm the venue allows six before submitting.
 %% Compile: pdflatex main && bibtex main && pdflatex main && pdflatex main
@@ -162,9 +162,11 @@ independently of the negative empirical result reported here.
 
 \emph{Motivation and scope.} The programme this work belongs to targets
 autistic adults, which is why the phenomenology above is the phenomenology of
-overload. No public wearable dataset of that group exists at the temporal
-density the model needs \cite{cano2024,chen2025ema}, so none are analysed here
-and the paper is not titled after them. That costs the results nothing, because
+overload. Systematic reviews of wearable sensing \cite{cano2024} and ecological
+momentary assessment \cite{chen2025ema} in autism survey what has been
+collected; none of the corpora they describe is openly released at the temporal
+density this model needs, and we could not find one elsewhere. So none are
+analysed here and the paper is not titled after them. That costs the results nothing, because
 the results are about estimators. General stress corpora carry the same sensor,
 sampling rate and recording lengths an autism study would, so a bound measured
 here transfers to that study directly. No claim about the population transfers,
@@ -227,9 +229,10 @@ $\Var(x)\propto\mu^{-1/2}$ and $-\log\mathrm{AC1}\propto\mu^{+1/2}$.
 \end{proposition}
 
 These are point hypotheses about exponents, differing in kind from the usual
-directional claim that an indicator rises before a transition, which the
-sceptical literature shows arises spuriously on almost any autocorrelated series
-\cite{ditlevsen2010,boettiger2012}.
+directional claim that an indicator rises before a transition. The sceptical
+literature notes that such claims hardly ever characterise their error rates,
+and that they fail when a shift is noise-induced rather than driven by a
+bifurcation \cite{ditlevsen2010,boettiger2012}.
 
 \subsection{States and transition kernel}
 Crossing basin membership with the bistability condition partitions the $(a,b)$
