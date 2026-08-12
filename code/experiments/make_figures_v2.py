@@ -82,8 +82,8 @@ def fig_identifiability():
 
     # Two rows, not two columns: at \columnwidth a side-by-side pair leaves
     # each panel 1.7in wide, which is too narrow for a log axis and a legend.
-    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.50),
-                             gridspec_kw={"height_ratios": [1.25, 1.0]},
+    fig, axes = plt.subplots(2, 1, figsize=(COL1, 3.30),
+                             gridspec_kw={"height_ratios": [1.30, 1.0]},
                              constrained_layout=True)
 
     # (a) recovery correlation vs length
@@ -104,18 +104,19 @@ def fig_identifiability():
     ax.text(880, 0.84, "identified", fontsize=5.8, color=C["ref"],
             ha="right", va="bottom")
     ax.axvline(200, color=C["grey"], lw=0.8, alpha=0.7)
-    ax.text(200, 1.10, "median observed $n$", fontsize=5.5, color=C["grey"],
-            ha="center", va="bottom")
+    ax.text(212, -0.30, "median observed $n$", fontsize=5.4, color=C["grey"],
+            ha="left", va="bottom")
     ax.set_xscale("log")
-    ax.set_xlabel("series length $n$ (windows)")
+    ax.set_xlabel("series length $n$ (windows)", labelpad=2)
     ax.set_ylabel(r"corr(true, est.)")
     # No curve goes below -0.1, so the band under zero is free. Putting the
     # legend there keeps it off the data instead of on top of it.
-    ax.set_ylim(-0.72, 1.30)
-    ax.set_title("(a) which parameters are recoverable", fontsize=8, pad=9)
-    ax.legend(frameon=False, ncol=4, loc="lower center", fontsize=5.0,
-              handlelength=1.4, handletextpad=0.4, columnspacing=0.7,
-              labelspacing=0.2, borderpad=0.1)
+    ax.set_ylim(-0.35, 1.12)
+    ax.set_title("(a) which parameters are recoverable", fontsize=8, pad=6)
+    ax.legend(frameon=False, ncol=4, loc="upper center",
+              bbox_to_anchor=(0.5, -0.44), fontsize=5.4,
+              handlelength=1.5, handletextpad=0.4, columnspacing=0.9,
+              labelspacing=0.35, borderpad=0.1)
 
     # (b) the failure mode itself: error in alpha0 explodes as lambda-hat -> 0
     ax = axes[1]
