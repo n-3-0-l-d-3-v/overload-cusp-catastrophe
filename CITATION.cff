@@ -27,8 +27,9 @@ keywords:
 preferred-citation:
   type: conference-paper
   title: >-
-    Overload as a Cusp Catastrophe: Identifiability Limits and a Ground-Truth
-    Failure of Early-Warning Indicators in Wearable Physiology
+Identifiability Limits of Cusp Models for Overload in Wearable
+    Physiology, and a Ground-Truth Failure of Rolling-Window Early-Warning
+    Estimators
   authors:
     - family-names: Mathew
       given-names: Neil Thomas
