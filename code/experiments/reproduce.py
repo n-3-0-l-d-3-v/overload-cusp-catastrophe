@@ -57,8 +57,8 @@ def main():
          [PY, "-m", "pytest"], False),
         ("citation consistency (offline)",
          [PY, "code/experiments/check_citations.py"], False),
-        ("compile manuscript: 5 pages, no overfull boxes, no empty refs",
-         [PY, "code/experiments/compile_paper.py", "--target", "5",
+        ("compile manuscript: 6 pages, no overfull boxes, no empty refs",
+         [PY, "code/experiments/compile_paper.py", "--target", "6",
           "--strict"], True),
     ]
 

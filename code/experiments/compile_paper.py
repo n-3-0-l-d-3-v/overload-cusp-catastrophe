@@ -188,7 +188,10 @@ def main():
             return 1
 
         n = page_count(pdf)
-        out = PAPER / (args.out or ("paper_5page.pdf" if stem == "main"
+        # Not named for a page count: the target moved from 5 to 6 once the
+        # reviewer-requested settings, availability and scoping text went in,
+        # and a filename that encodes the count goes stale silently.
+        out = PAPER / (args.out or ("paper_conference.pdf" if stem == "main"
                                     else f"{stem}.pdf"))
         shutil.copy(pdf, out)
 

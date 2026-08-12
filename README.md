@@ -86,7 +86,7 @@ excluding strong and moderate dynamics — **not** a faint fold.
 │   ├── main_full_journal.tex    long-form draft for the journal version
 │   ├── refs.bib                 46 entries, all DOIs verified
 │   ├── REFERENCE_CHECK.md       what was wrong and how it was found
-│   ├── paper_5page.pdf          compiled output
+│   ├── paper_conference.pdf     compiled output (6 pages)
 │   └── tables/                  auto-generated LaTeX tables
 ├── code/
 │   ├── chm/
@@ -122,7 +122,7 @@ pip install -r requirements.txt
 ```
 
 Everything that needs no data and no network — tests, citation consistency, and
-a manuscript compile that asserts 5 pages, zero overfull boxes and no empty
+a manuscript compile that asserts 6 pages, zero overfull boxes and no empty
 bibliography entries:
 
 ```bash
