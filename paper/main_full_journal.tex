@@ -25,8 +25,8 @@
 \begin{document}
 
 \title{Overload as a Cusp Catastrophe: Derived Scaling Laws for
-Sensory--Executive Tipping Points, and a Ground-Truth Failure of Standard
-Early-Warning Indicators}
+Sensory--Executive Tipping Points, and a Ground-Truth Failure of
+Rolling-Window Early-Warning Estimators}
 
 \author{\IEEEauthorblockN{Neil Thomas Mathew}
 \IEEEauthorblockA{Department of Computer Applications\\
@@ -116,6 +116,11 @@ hypotheses about exponents, and they can fail.
 
 \subsection*{Contributions}
 
+We present a cusp-catastrophe formulation of sensory--executive overload
+together with an identifiability analysis that bounds what any such analysis
+can recover from wearable data, and a ground-truth test of the early-warning
+estimators the formulation would otherwise be checked with.
+
 \begin{enumerate}
 \item A cusp-catastrophe formulation of sensory--executive overload
   (Sec.~\ref{sec:model}) in which the discrete functional states are the
@@ -177,6 +182,13 @@ Section~\ref{sec:protocol} specifies the pre-registered protocol under which
 the predictions would transfer, and states in advance what would falsify them.
 We consider it better to publish a mechanism with an honest scope than to title
 a paper after a population it does not measure.
+
+What the general stress corpora can settle is not whether autistic overload is
+a cusp, but whether the machinery could establish that it is. They carry the
+same sensor, the same sampling rate and the same recording lengths the intended
+study would, so the identifiability bound in Sec.~\ref{sec:recovery} and the
+estimator failure in Sec.~\ref{sec:results} transfer to that study directly.
+No claim about the population transfers, and none is made.
 
 % =====================================================================
 \section{Related Work}
@@ -489,7 +501,10 @@ coordinate of a slow relaxation process must itself be slow; at the
 \SI{30}{\second} analysis window, tonic EDA has lag-1 autocorrelation
 $0.985$ on WESAD whereas $z(\mathrm{HR})-z(\mathrm{RMSSD})$ has $0.19$,
 because RMSSD over so few beats is dominated by beat-detection error. A method
-that reported bistability there would report it for anything.
+that reported bistability there would report it for anything. Both comparisons
+are internal to this paper: the cardiac index is a reference channel used to
+justify a sensor assignment, not a competing method, and no published system is
+claimed to be outperformed anywhere in what follows.
 
 Signals are windowed at \SI{30}{\second} without overlap; overlapping windows
 would manufacture the very autocorrelation the early-warning analysis measures.
@@ -582,8 +597,25 @@ covariate-aware); Gaussian HMM; linear Ornstein--Uhlenbeck with covariate-driven
 mean (the nested monostable case); and gradient-boosted regression on lagged
 features as a deliberately strong black-box reference.
 
+\subsection{Settings}
+Windows are \SI{30}{\second} without overlap, swept to \SI{120}{\second} as a
+robustness check. Calibrated tests draw 200 surrogates, 100 in the power and
+persistence sweeps; IAAFT runs 200 iterations. The Monte Carlo grid uses
+$n\in\{100,150,200,300,500,1000\}$ at 2000 replicates per cell for parameter
+recovery ($1.2\times10^{4}$ series), 5000 for size ($30{,}000$ nominal and
+$7{,}500$ calibrated) and 100 for power; the early-warning validation covers 90
+configurations --- five window widths, two detrending choices, three lengths to
+$n=20{,}000$ --- at 500 replicates each ($1.5\times10^{4}$ series). Replication
+counts were fixed in advance to hold the Monte Carlo standard error on a
+proportion below $0.01$ for size and power and below $0.02$ elsewhere. The
+exception is the AR(1) persistence study at 40 replicates per point, which is
+why it is quoted as a bound rather than an estimate. The suite runs on one
+machine: ten worker processes on a six-core, twelve-thread CPU, roughly seven
+hours of wall time for a full replication.
+
 \subsection{Reproducibility}
-All analyses are seeded and run from a single entry point. The estimator is
+All analyses are seeded from a single master seed and run from a single entry
+point. The estimator is
 deterministic. \texttt{fetch\_data.py} re-downloads from primary repositories
 and aborts on a size mismatch; \texttt{run\_all.py} regenerates every number;
 \texttt{make\_figures.py} regenerates every figure. A test suite of 28 cases
@@ -1226,6 +1258,18 @@ autistic adults --- remains unmeasured, because no public dataset of the
 required density exists. We have said so rather than titled the paper after it,
 and specified in advance what such a dataset would have to show for the model
 to survive.
+
+% =====================================================================
+\section*{Code and Data Availability}
+The estimator, the analysis pipeline, the Monte Carlo suite, the figure scripts
+and this manuscript are released under the MIT licence at
+\url{https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe}, together with
+a provenance table recording the replication count behind every number
+reported. The three corpora are third-party open datasets and are not
+redistributed: WESAD from the UCI Machine Learning Repository (ID 465), and
+Wearable Exam Stress and Nurse Stress from PhysioNet. Each was obtained
+programmatically from its primary repository under that repository's own terms,
+with the exact URLs, download dates and byte counts recorded in the artefact.
 
 % =====================================================================
 \section*{Acknowledgment}
