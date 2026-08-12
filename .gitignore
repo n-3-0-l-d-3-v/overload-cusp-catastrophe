@@ -56,3 +56,6 @@ paper/main_full_journal.pdf
 
 # Extracted prose (regenerate with code/experiments/extract_prose.py)
 paper/prose.txt
+
+# research-better tool cache: large, regenerable, not part of the artefact
+paper/.research-better/cache/
