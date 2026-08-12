@@ -1,0 +1,25 @@
+# research-better 0.3.0 | source: main.tex | hash: 6bb4c482d26838d1 | generated: 2026-08-10T23:54:41+00:00
+--- a/main.tex
++++ b/main.tex
+@@ -168,7 +168,7 @@
+ \end{figure*}
+ 
+ \subsection{Fast dynamics and a slow debt variable}
+-The latent load obeys a gradient relaxation with additive noise,
++
+ \begin{equation}
+ \dd x_t=\lambda\!\left[-x_t^3+a_tx_t+b_t\right]\!\dd t+\sigma\,\dd W_t ,
+ \label{eq:sde}
+@@ -576,11 +576,7 @@
+ with the exact URLs, download dates and byte counts recorded in the artefact.
+ 
+ \section*{Acknowledgment}
+-I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets
+-for releasing them openly. In accordance with IEEE policy on generative AI, the
+-author discloses that an AI assistant was used for code implementation,
+-literature organisation and manuscript drafting; the author verified all
+-analyses, results and claims and is solely responsible for the content.
++
+ 
+ \bibliographystyle{IEEEtran}
+ \bibliography{refs}

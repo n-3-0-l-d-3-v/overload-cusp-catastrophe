@@ -1,0 +1,247 @@
+{
+  "artifact": "edits",
+  "created_at": "2026-08-10T23:54:41+00:00",
+  "offline": false,
+  "payload": {
+    "budget": {
+      "edited_words": 4448,
+      "note": "4516 words to 4448, -68.",
+      "original_words": 4516,
+      "target_reduction": 0.0
+    },
+    "counts": {
+      "CUT": 2,
+      "FIX": 0,
+      "GROUND": 0,
+      "TIGHTEN": 0
+    },
+    "dropped": [
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            9478,
+            9589
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-009de2f5ac1b",
+          "id": "e-57b9c5c899cc",
+          "original": "with control parameters linked to observed drivers and to a slow variable $A_t$\nthat accumulates recovery debt:",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-009de2f5ac1b",
+          "words_delta": -17
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('$A_t$' at line 176). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            9801,
+            10195
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-09257333f545",
+          "id": "e-47742abbbbcc",
+          "original": "Here $\\mathrm{sp}$ is a softplus, $S_t$, $T_t$ and $U_t$ are sensory,\ntask-switch and uncertainty drivers, and $\\lambda$ sets the timescale without\ntouching the geometry. Load above baseline accrues debt, debt raises $a_t$, and\na higher $a_t$ widens the hysteresis loop, so one episode makes the next easier.\nThat is a mechanistic reading of the refractory period qualitative accounts\ndescribe.",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-09257333f545",
+          "words_delta": -59
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('$\\\\mathrm{sp}$' at line 183). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            10237,
+            10482
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-2facb926fdad",
+          "id": "e-896c0e90ecc8",
+          "original": "Equilibria solve $x^3-ax-b=0$, whose discriminant $4a^3-27b^2$ is positive\nexactly when two stable basins coexist. Folds sit where $V''(x)=0$, at\n$x_\\pm=\\pm\\sqrt{a/3}$, giving critical drives $\\pm b_c(a)$ with\n$b_c(a)=\\tfrac{2}{3\\sqrt3}a^{3/2}$.",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-2facb926fdad",
+          "words_delta": -27
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('$x^3-ax-b=0$' at line 191). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            10711,
+            11027
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-7550ae6224c4",
+          "id": "e-1fa02a4da0a1",
+          "original": "Linearising \\eqref{eq:sde} about a stable equilibrium gives a relaxation rate\n$\\lambda_{\\text{rel}}=3x^{*2}-a$ that vanishes at a fold, so critical slowing\ndown is a theorem here rather than an assumption. With $\\mu=b_c-b$ the distance\nto the fold, the normal form gives $\\lambda_{\\text{rel}}\\propto\\mu^{1/2}$, hence",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-7550ae6224c4",
+          "words_delta": -41
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('\\\\eqref{eq:sde}' at line 202). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            11094,
+            11162
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-4ae6c3d5baab",
+          "id": "e-add0ea138dbf",
+          "original": "$\\Var(x)\\propto\\mu^{-1/2}$ and $-\\log\\mathrm{AC1}\\propto\\mu^{+1/2}$.",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-4ae6c3d5baab",
+          "words_delta": -3
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('$\\\\Var(x)\\\\propto\\\\mu^{-1/2}$' at line 208). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            13145,
+            14200
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-61590542377b",
+          "id": "e-692c7f3cc0a3",
+          "original": "Read the load coordinate and its drivers off the same sensor and the model stops\nbeing falsifiable, since shared measurement noise alone manufactures the\ncoupling; we therefore assign them to disjoint sensors. Which signal carries the\nload is settled by measurement, not preference: the coordinate of a slow\nrelaxation process must itself be slow. At a \\SI{30}{\\second} window tonic\nelectrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index\nfrom heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by\nbeat-detection error. Configuration B (tonic EDA) is therefore primary and C\n(skin temperature) a robustness check. We keep A, the cardiac index, as a\n\\emph{negative control}: a working pipeline should find nothing in it. Both\ncomparisons are internal to this paper. The cardiac index is a reference\nchannel used to justify a sensor assignment, not a competing method. No\npublished system is claimed to be outperformed in Sec.~\\ref{sec:results}, where\nevery baseline is one of our own nested or competing models.",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-61590542377b",
+          "words_delta": -164
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('\\\\SI{' at line 250). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            14226,
+            14487
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-eba49088cef5",
+          "id": "e-ba7059cd404c",
+          "original": "Taking the Euler map of \\eqref{eq:sde} as the model, rather than as an\napproximation to it, makes the transition density exactly Gaussian and removes\ndiscretisation bias. Expanding the drift, the mean increment is linear in a\nreparameterised coefficient vector,",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-eba49088cef5",
+          "words_delta": -39
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('\\\\eqref{eq:sde}' at line 262). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            17279,
+            17617
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-7fa2a8e619b8",
+          "id": "e-a64efbc32d59",
+          "original": "Two correlations are reported, because they answer different questions and the\ngap between them is the finding. Spearman's $\\rho$ asks whether the\n\\emph{ordering} survives; Pearson's $r$ asks whether the \\emph{number} can be\nread off. For $\\lambda$ and $\\sigma$ they agree, and both are high from $n=100$\nup. Everywhere else they diverge.",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-7fa2a8e619b8",
+          "words_delta": -51
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('$\\\\rho$' at line 316). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            20818,
+            21214
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-3b9b248d45a1",
+          "id": "e-132bc2431455",
+          "original": "One of the five pre-stated predictions survives as evaluable here: the existence\nof the restoring cubic term, governed by $\\theta_1$, the only parameter\nrecovered on both measures. P1 needs the ratio of two badly identified\nquantities and P2 the distance to the fold, while P3 through P5 rest on\n$\\varepsilon$ and $\\alpha_A$. We report that structure rather than four numbers\ndressed up as tests.",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-3b9b248d45a1",
+          "words_delta": -64
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('$\\\\theta_1$' at line 384). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      },
+      {
+        "edit": {
+          "category": "CUT",
+          "char_range": [
+            27174,
+            27639
+          ],
+          "confidence": 0.3,
+          "evidence": "novelty:orphan:s-61c858d07de8",
+          "id": "e-26478466a5f9",
+          "original": "The null is specific, and calling it noise would be wrong. Two of the three\ncalibrated statistics do exceed their surrogate nulls: the likelihood ratio\nagainst the monostable restriction at $40.8\\%$ of units, marginal bimodality at\n$49.7\\%$. Only the statistic isolating the cubic term sits at chance. A bimodal\nmarginal with no cubic drift is precisely the configuration in which a study\nreporting distributional evidence alone concludes the opposite of the truth.",
+          "proposed": "",
+          "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+          "span_id": "s-61c858d07de8",
+          "words_delta": -72
+        },
+        "note": "Overlaps source the format cannot survive an edit to ('$40.8\\\\%$' at line 499). A broken build costs the author more than the writing problem.",
+        "rule": "protected_range"
+      }
+    ],
+    "edits": [
+      {
+        "category": "CUT",
+        "char_range": [
+          9293,
+          9357
+        ],
+        "confidence": 0.3,
+        "evidence": "novelty:orphan:s-efa6690708a6",
+        "id": "e-9bfe90b18ace",
+        "original": "The latent load obeys a gradient relaxation with additive noise,",
+        "proposed": "",
+        "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+        "span_id": "s-efa6690708a6",
+        "words_delta": -10
+      },
+      {
+        "category": "CUT",
+        "char_range": [
+          32628,
+          33005
+        ],
+        "confidence": 0.3,
+        "evidence": "novelty:orphan:s-b25516ce6235",
+        "id": "e-4dae33556083",
+        "original": "I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets\nfor releasing them openly. In accordance with IEEE policy on generative AI, the\nauthor discloses that an AI assistant was used for code implementation,\nliterature organisation and manuscript drafting; the author verified all\nanalyses, results and claims and is solely responsible for the content.",
+        "proposed": "",
+        "reason": "No sentence in this paragraph serves any part of the contribution claim.",
+        "span_id": "s-b25516ce6235",
+        "words_delta": -58
+      }
+    ],
+    "words_delta": -68
+  },
+  "source_file": "main.tex",
+  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "tool_version": "0.3.0"
+}

@@ -1,0 +1,3472 @@
+{
+  "artifact": "paper",
+  "created_at": "2026-08-10T23:53:50+00:00",
+  "offline": false,
+  "payload": {
+    "citations": [
+      {
+        "id": "cit-c02cdc23bcff",
+        "in_bibliography": false,
+        "key": "maclennan2022",
+        "raw": "\\cite{maclennan2022}",
+        "resolved": null,
+        "sentence_id": "s-d80ff96849bf"
+      },
+      {
+        "id": "cit-3b15cb35bf8b",
+        "in_bibliography": false,
+        "key": "kiep2025",
+        "raw": "\\cite{kiep2025}",
+        "resolved": null,
+        "sentence_id": "s-b6d8420ad28e"
+      },
+      {
+        "id": "cit-893771cf734e",
+        "in_bibliography": false,
+        "key": "demetriou2018",
+        "raw": "\\cite{demetriou2018}",
+        "resolved": null,
+        "sentence_id": "s-b6d8420ad28e"
+      },
+      {
+        "id": "cit-3f16953da7f2",
+        "in_bibliography": false,
+        "key": "chrysaitis2023",
+        "raw": "\\cite{chrysaitis2023}",
+        "resolved": null,
+        "sentence_id": "s-55b5496c7480"
+      },
+      {
+        "id": "cit-323343ef2b47",
+        "in_bibliography": false,
+        "key": "adamou2026",
+        "raw": "\\cite{adamou2026}",
+        "resolved": null,
+        "sentence_id": "s-55b5496c7480"
+      },
+      {
+        "id": "cit-51160499944b",
+        "in_bibliography": false,
+        "key": "cano2024",
+        "raw": "\\cite{cano2024,chen2025ema}",
+        "resolved": null,
+        "sentence_id": "s-1959a7d09b45"
+      },
+      {
+        "id": "cit-77d8a3ae3eeb",
+        "in_bibliography": false,
+        "key": "chen2025ema",
+        "raw": "\\cite{cano2024,chen2025ema}",
+        "resolved": null,
+        "sentence_id": "s-1959a7d09b45"
+      },
+      {
+        "id": "cit-59527dcc19a6",
+        "in_bibliography": false,
+        "key": "ditlevsen2010",
+        "raw": "\\cite{ditlevsen2010,boettiger2012}",
+        "resolved": null,
+        "sentence_id": "s-7110e1391d66"
+      },
+      {
+        "id": "cit-4e717d12e986",
+        "in_bibliography": false,
+        "key": "boettiger2012",
+        "raw": "\\cite{ditlevsen2010,boettiger2012}",
+        "resolved": null,
+        "sentence_id": "s-7110e1391d66"
+      },
+      {
+        "id": "cit-ef4c89d1a1c4",
+        "in_bibliography": false,
+        "key": "kramers1940",
+        "raw": "\\cite{kramers1940}",
+        "resolved": null,
+        "sentence_id": "s-6e357db79ac8"
+      },
+      {
+        "id": "cit-e576397403b1",
+        "in_bibliography": false,
+        "key": "schmidt2018wesad",
+        "raw": "\\cite{schmidt2018wesad}",
+        "resolved": null,
+        "sentence_id": "s-f0db463f5d7b"
+      },
+      {
+        "id": "cit-7f5e5fc672dd",
+        "in_bibliography": false,
+        "key": "amin2022exam",
+        "raw": "\\cite{amin2022exam}",
+        "resolved": null,
+        "sentence_id": "s-f0db463f5d7b"
+      },
+      {
+        "id": "cit-1fc7f4deb1ef",
+        "in_bibliography": false,
+        "key": "hosseini2022nurse",
+        "raw": "\\cite{hosseini2022nurse}",
+        "resolved": null,
+        "sentence_id": "s-f0db463f5d7b"
+      },
+      {
+        "id": "cit-3a0061e42cea",
+        "in_bibliography": false,
+        "key": "schreiber1996",
+        "raw": "\\cite{schreiber1996}",
+        "resolved": null,
+        "sentence_id": "s-e4df5ffc7470"
+      },
+      {
+        "id": "cit-f8efe335a714",
+        "in_bibliography": false,
+        "key": "scheffer2009",
+        "raw": "\\cite{scheffer2009,dakos2012}",
+        "resolved": null,
+        "sentence_id": "s-f710015c595a"
+      },
+      {
+        "id": "cit-8ced931b4437",
+        "in_bibliography": false,
+        "key": "dakos2012",
+        "raw": "\\cite{scheffer2009,dakos2012}",
+        "resolved": null,
+        "sentence_id": "s-f710015c595a"
+      },
+      {
+        "id": "cit-6e16721e9468",
+        "in_bibliography": false,
+        "key": "ditlevsen2010",
+        "raw": "\\cite{ditlevsen2010,boettiger2012}",
+        "resolved": null,
+        "sentence_id": "s-7a44c1795646"
+      },
+      {
+        "id": "cit-7d47eec717d2",
+        "in_bibliography": false,
+        "key": "boettiger2012",
+        "raw": "\\cite{ditlevsen2010,boettiger2012}",
+        "resolved": null,
+        "sentence_id": "s-7a44c1795646"
+      },
+      {
+        "id": "cit-89df8fe3a9c9",
+        "in_bibliography": true,
+        "key": "kiep2025",
+        "raw": "@article{kiep2025} Sensory processing and executive functioning in autistic adults",
+        "resolved": {
+          "authors": [
+            "Kiep, Michelle",
+            "Spek, Annelies",
+            "Ceulemans, Eva",
+            "Noens, Ilse"
+          ],
+          "doi": "10.1007/s10803-023-06008-4",
+          "source": "bibtex",
+          "title": "Sensory processing and executive functioning in autistic adults",
+          "url": null,
+          "venue": "Journal of Autism and Developmental Disorders",
+          "year": 2025
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-1f9b590628fc",
+        "in_bibliography": true,
+        "key": "maclennan2022",
+        "raw": "@article{maclennan2022} In our own words: The complex sensory experiences of autistic adults",
+        "resolved": {
+          "authors": [
+            "MacLennan, Keren",
+            "O'Brien, Sarah",
+            "Tavassoli, Teresa"
+          ],
+          "doi": "10.1007/s10803-021-05186-3",
+          "source": "bibtex",
+          "title": "In our own words: The complex sensory experiences of autistic adults",
+          "url": null,
+          "venue": "Journal of Autism and Developmental Disorders",
+          "year": 2022
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-3eefcd95cb09",
+        "in_bibliography": true,
+        "key": "demetriou2018",
+        "raw": "@article{demetriou2018} Autism spectrum disorders: A meta-analysis of executive function",
+        "resolved": {
+          "authors": [
+            "Demetriou, E. A.",
+            "Lampit, A.",
+            "Quintana, D. S.",
+            "Naismith, S. L.",
+            "Song, Y. J. C.",
+            "Pye, J. E.",
+            "Hickie, I.",
+            "Guastella, A. J."
+          ],
+          "doi": "10.1038/mp.2017.75",
+          "source": "bibtex",
+          "title": "Autism spectrum disorders: A meta-analysis of executive function",
+          "url": null,
+          "venue": "Molecular Psychiatry",
+          "year": 2018
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-846fca967bee",
+        "in_bibliography": true,
+        "key": "demetriou2019",
+        "raw": "@article{demetriou2019} Executive function in autism spectrum disorder: History,\ntheoretical models, empirical findings, and potential as an\nendophenotype",
+        "resolved": {
+          "authors": [
+            "Demetriou, Eleni A.",
+            "DeMayo, Marilena M.",
+            "Guastella, Adam J."
+          ],
+          "doi": "10.3389/fpsyt.2019.00753",
+          "source": "bibtex",
+          "title": "Executive function in autism spectrum disorder: History,\ntheoretical models, empirical findings, and potential as an\nendophenotype",
+          "url": null,
+          "venue": "Frontiers in Psychiatry",
+          "year": 2019
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-72c08f0cd09d",
+        "in_bibliography": true,
+        "key": "auge2025",
+        "raw": "@article{auge2025} Global sensory features are linked to executive and attentional\nimpairments in autism spectrum disorders",
+        "resolved": {
+          "authors": [
+            "Aug{'e}, Pierre",
+            "Maruani, Anna",
+            "Humeau, Elise",
+            "Ellul, Pierre",
+            "Cartigny, Ariane",
+            "Lefebvre, Aline",
+            "Dellapiazza, Florine",
+            "Delorme, Richard"
+          ],
+          "doi": "10.1007/s10803-024-06385-4",
+          "source": "bibtex",
+          "title": "Global sensory features are linked to executive and attentional\nimpairments in autism spectrum disorders",
+          "url": null,
+          "venue": "Journal of Autism and Developmental Disorders",
+          "year": 2025
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-71f68ba60dee",
+        "in_bibliography": true,
+        "key": "pellicano2012",
+        "raw": "@article{pellicano2012} When the world becomes `too real': A {B}ayesian explanation of\nautistic perception",
+        "resolved": {
+          "authors": [
+            "Pellicano, Elizabeth",
+            "Burr, David"
+          ],
+          "doi": "10.1016/j.tics.2012.08.009",
+          "source": "bibtex",
+          "title": "When the world becomes `too real': A {B}ayesian explanation of\nautistic perception",
+          "url": null,
+          "venue": "Trends in Cognitive Sciences",
+          "year": 2012
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-87697cbe3f67",
+        "in_bibliography": true,
+        "key": "chrysaitis2023",
+        "raw": "@article{chrysaitis2023} 10 years of {B}ayesian theories of autism: A comprehensive review",
+        "resolved": {
+          "authors": [
+            "Angeletos Chrysaitis, Nikitas",
+            "Seri{\\`e}s, Peggy"
+          ],
+          "doi": "10.1016/j.neubiorev.2022.105022",
+          "source": "bibtex",
+          "title": "10 years of {B}ayesian theories of autism: A comprehensive review",
+          "url": null,
+          "venue": "Neuroscience \\& Biobehavioral Reviews",
+          "year": 2023
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-c4c13bb7688d",
+        "in_bibliography": true,
+        "key": "arthur2023",
+        "raw": "@article{arthur2023} Testing predictive coding theories of autism spectrum disorder\nusing models of active inference",
+        "resolved": {
+          "authors": [
+            "Arthur, Tom",
+            "Vine, Sam",
+            "Buckingham, Gavin",
+            "Brosnan, Mark",
+            "Wilson, Mark",
+            "Harris, David"
+          ],
+          "doi": "10.1371/journal.pcbi.1011473",
+          "source": "bibtex",
+          "title": "Testing predictive coding theories of autism spectrum disorder\nusing models of active inference",
+          "url": null,
+          "venue": "PLOS Computational Biology",
+          "year": 2023
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-76b71bb6dc93",
+        "in_bibliography": true,
+        "key": "adamou2026",
+        "raw": "@article{adamou2026} A multi-scale mathematical framework for modelling the dynamic\nnature of autism spectrum disorder symptoms: Integrating\npredictive coding, information theory, and network principles",
+        "resolved": {
+          "authors": [
+            "Adamou, Marios",
+            "Kehagias, Athanasios",
+            "Antoniou, Grigoris"
+          ],
+          "doi": "10.3389/fpsyt.2026.1787120",
+          "source": "bibtex",
+          "title": "A multi-scale mathematical framework for modelling the dynamic\nnature of autism spectrum disorder symptoms: Integrating\npredictive coding, information theory, and network principles",
+          "url": null,
+          "venue": "Frontiers in Psychiatry",
+          "year": 2026
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-102815a8e08e",
+        "in_bibliography": true,
+        "key": "thom1975",
+        "raw": "@book{thom1975} Structural Stability and Morphogenesis",
+        "resolved": {
+          "authors": [
+            "Thom, Ren{\\'e}"
+          ],
+          "doi": null,
+          "source": "bibtex",
+          "title": "Structural Stability and Morphogenesis",
+          "url": null,
+          "venue": null,
+          "year": 1975
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-3e52b17e3dff",
+        "in_bibliography": true,
+        "key": "zeeman1976",
+        "raw": "@article{zeeman1976} Catastrophe theory",
+        "resolved": {
+          "authors": [
+            "Zeeman, E. Christopher"
+          ],
+          "doi": null,
+          "source": "bibtex",
+          "title": "Catastrophe theory",
+          "url": null,
+          "venue": "Scientific American",
+          "year": 1976
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-d9a5efdd49b6",
+        "in_bibliography": true,
+        "key": "gilmore1981",
+        "raw": "@book{gilmore1981} Catastrophe Theory for Scientists and Engineers",
+        "resolved": {
+          "authors": [
+            "Gilmore, Robert"
+          ],
+          "doi": null,
+          "source": "bibtex",
+          "title": "Catastrophe Theory for Scientists and Engineers",
+          "url": null,
+          "venue": null,
+          "year": 1981
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-d2b16e98bbb2",
+        "in_bibliography": true,
+        "key": "vandermaas1992",
+        "raw": "@article{vandermaas1992} Stagewise cognitive development: An application of catastrophe\ntheory",
+        "resolved": {
+          "authors": [
+            "van der Maas, Han L. J.",
+            "Molenaar, Peter C. M."
+          ],
+          "doi": "10.1037/0033-295X.99.3.395",
+          "source": "bibtex",
+          "title": "Stagewise cognitive development: An application of catastrophe\ntheory",
+          "url": null,
+          "venue": "Psychological Review",
+          "year": 1992
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-cd7a0b3445be",
+        "in_bibliography": true,
+        "key": "grasman2009",
+        "raw": "@article{grasman2009} Fitting the cusp catastrophe in {R}: A cusp package primer",
+        "resolved": {
+          "authors": [
+            "Grasman, Raoul P. P. P.",
+            "van der Maas, Han L. J.",
+            "Wagenmakers, Eric-Jan"
+          ],
+          "doi": "10.18637/jss.v032.i08",
+          "source": "bibtex",
+          "title": "Fitting the cusp catastrophe in {R}: A cusp package primer",
+          "url": null,
+          "venue": "Journal of Statistical Software",
+          "year": 2009
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-a59e146297a4",
+        "in_bibliography": true,
+        "key": "wissel1984",
+        "raw": "@article{wissel1984} A universal law of the characteristic return time near thresholds",
+        "resolved": {
+          "authors": [
+            "Wissel, Christian"
+          ],
+          "doi": "10.1007/BF00384470",
+          "source": "bibtex",
+          "title": "A universal law of the characteristic return time near thresholds",
+          "url": null,
+          "venue": "Oecologia",
+          "year": 1984
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-d4c6c651754a",
+        "in_bibliography": true,
+        "key": "scheffer2009",
+        "raw": "@article{scheffer2009} Early-warning signals for critical transitions",
+        "resolved": {
+          "authors": [
+            "Scheffer, Marten",
+            "Bascompte, Jordi",
+            "Brock, William A.",
+            "Brovkin, Victor",
+            "Carpenter, Stephen R.",
+            "Dakos, Vasilis",
+            "Held, Hermann",
+            "van Nes, Egbert H.",
+            "Rietkerk, Max",
+            "Sugihara, George"
+          ],
+          "doi": "10.1038/nature08227",
+          "source": "bibtex",
+          "title": "Early-warning signals for critical transitions",
+          "url": null,
+          "venue": "Nature",
+          "year": 2009
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-9715b57f2abb",
+        "in_bibliography": true,
+        "key": "scheffer2012",
+        "raw": "@article{scheffer2012} Anticipating critical transitions",
+        "resolved": {
+          "authors": [
+            "Scheffer, Marten",
+            "Carpenter, Stephen R.",
+            "Lenton, Timothy M.",
+            "Bascompte, Jordi",
+            "Brock, William",
+            "Dakos, Vasilis",
+            "van de Koppel, Johan",
+            "van de Leemput, Ingrid A.",
+            "Levin, Simon A.",
+            "van Nes, Egbert H.",
+            "Pascual, Mercedes",
+            "Vandermeer, John"
+          ],
+          "doi": "10.1126/science.1225244",
+          "source": "bibtex",
+          "title": "Anticipating critical transitions",
+          "url": null,
+          "venue": "Science",
+          "year": 2012
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-d13765bbf420",
+        "in_bibliography": true,
+        "key": "dakos2012",
+        "raw": "@article{dakos2012} Methods for detecting early warnings of critical transitions in\ntime series illustrated using simulated ecological data",
+        "resolved": {
+          "authors": [
+            "Dakos, Vasilis",
+            "Carpenter, Stephen R.",
+            "Brock, William A.",
+            "Ellison, Aaron M.",
+            "Guttal, Vishwesha",
+            "Ives, Anthony R.",
+            "K{'e}fi, Sonia",
+            "Livina, Valerie",
+            "Seekell, David A.",
+            "van Nes, Egbert H.",
+            "Scheffer, Marten"
+          ],
+          "doi": "10.1371/journal.pone.0041010",
+          "source": "bibtex",
+          "title": "Methods for detecting early warnings of critical transitions in\ntime series illustrated using simulated ecological data",
+          "url": null,
+          "venue": "PLOS ONE",
+          "year": 2012
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-9634af5b69c6",
+        "in_bibliography": true,
+        "key": "ditlevsen2010",
+        "raw": "@article{ditlevsen2010} Tipping points: Early warning and wishful thinking",
+        "resolved": {
+          "authors": [
+            "Ditlevsen, Peter D.",
+            "Johnsen, Sigfus J."
+          ],
+          "doi": "10.1029/2010GL044486",
+          "source": "bibtex",
+          "title": "Tipping points: Early warning and wishful thinking",
+          "url": null,
+          "venue": "Geophysical Research Letters",
+          "year": 2010
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-8d8a60729980",
+        "in_bibliography": true,
+        "key": "boettiger2012",
+        "raw": "@article{boettiger2012} Quantifying limits to detection of early warning for critical\ntransitions",
+        "resolved": {
+          "authors": [
+            "Boettiger, Carl",
+            "Hastings, Alan"
+          ],
+          "doi": "10.1098/rsif.2012.0125",
+          "source": "bibtex",
+          "title": "Quantifying limits to detection of early warning for critical\ntransitions",
+          "url": null,
+          "venue": "Journal of the Royal Society Interface",
+          "year": 2012
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-af3e13510ddd",
+        "in_bibliography": true,
+        "key": "leemput2014",
+        "raw": "@article{leemput2014} Critical slowing down as early warning for the onset and\ntermination of depression",
+        "resolved": {
+          "authors": [
+            "van de Leemput, Ingrid A.",
+            "Wichers, Marieke",
+            "Cramer, Ang{'e}lique O. J.",
+            "Borsboom, Denny",
+            "Tuerlinckx, Francis",
+            "Kuppens, Peter",
+            "van Nes, Egbert H.",
+            "Viechtbauer, Wolfgang",
+            "Giltay, Erik J.",
+            "Aggen, Steven H.",
+            "Derom, Catherine",
+            "Jacobs, Nele",
+            "Kendler, Kenneth S.",
+            "van der Maas, Han L. J.",
+            "Neale, Michael C.",
+            "Peeters, Frenk",
+            "Thiery, Evert",
+            "Zachar, Peter",
+            "Scheffer, Marten"
+          ],
+          "doi": "10.1073/pnas.1312114110",
+          "source": "bibtex",
+          "title": "Critical slowing down as early warning for the onset and\ntermination of depression",
+          "url": null,
+          "venue": "Proceedings of the National Academy of Sciences USA",
+          "year": 2014
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-56a91d0d5d94",
+        "in_bibliography": true,
+        "key": "helmich2021",
+        "raw": "@article{helmich2021} Early warning signals and critical transitions in psychopathology:\nChallenges and recommendations",
+        "resolved": {
+          "authors": [
+            "Helmich, Marieke A.",
+            "Olthof, Merlijn",
+            "Oldehinkel, Albertine J.",
+            "Wichers, Marieke",
+            "Bringmann, Laura F.",
+            "Smit, Arnout C."
+          ],
+          "doi": "10.1016/j.copsyc.2021.02.008",
+          "source": "bibtex",
+          "title": "Early warning signals and critical transitions in psychopathology:\nChallenges and recommendations",
+          "url": null,
+          "venue": "Current Opinion in Psychology",
+          "year": 2021
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-7dc34ae61c18",
+        "in_bibliography": true,
+        "key": "wichers2020",
+        "raw": "@article{wichers2020} Early warning signals based on momentary affect dynamics can\nexpose nearby transitions in depression: A confirmatory\nsingle-subject time-series study",
+        "resolved": {
+          "authors": [
+            "Wichers, Marieke",
+            "Smit, Arnout C.",
+            "Snippe, Evelien"
+          ],
+          "doi": "10.17505/jpor.2020.22042",
+          "source": "bibtex",
+          "title": "Early warning signals based on momentary affect dynamics can\nexpose nearby transitions in depression: A confirmatory\nsingle-subject time-series study",
+          "url": null,
+          "venue": "Journal for Person-Oriented Research",
+          "year": 2020
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-202b6df34ade",
+        "in_bibliography": true,
+        "key": "smit2025",
+        "raw": "@article{smit2025} Critical slowing down in momentary affect as early warning signal\nof impending transitions in depression",
+        "resolved": {
+          "authors": [
+            "Smit, Arnout C.",
+            "Helmich, Marieke A.",
+            "Bringmann, Laura F.",
+            "Oldehinkel, Albertine J.",
+            "Wichers, Marieke",
+            "Snippe, Evelien"
+          ],
+          "doi": "10.1177/21677026241305136",
+          "source": "bibtex",
+          "title": "Critical slowing down in momentary affect as early warning signal\nof impending transitions in depression",
+          "url": null,
+          "venue": "Clinical Psychological Science",
+          "year": 2025
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-712008ba50af",
+        "in_bibliography": true,
+        "key": "kramers1940",
+        "raw": "@article{kramers1940} Brownian motion in a field of force and the diffusion model of\nchemical reactions",
+        "resolved": {
+          "authors": [
+            "Kramers, Hendrik A."
+          ],
+          "doi": "10.1016/S0031-8914(40)90098-2",
+          "source": "bibtex",
+          "title": "Brownian motion in a field of force and the diffusion model of\nchemical reactions",
+          "url": null,
+          "venue": "Physica",
+          "year": 1940
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-c8d1545430dc",
+        "in_bibliography": true,
+        "key": "gardiner2009",
+        "raw": "@book{gardiner2009} Stochastic Methods: A Handbook for the Natural and Social\nSciences",
+        "resolved": {
+          "authors": [
+            "Gardiner, Crispin W."
+          ],
+          "doi": null,
+          "source": "bibtex",
+          "title": "Stochastic Methods: A Handbook for the Natural and Social\nSciences",
+          "url": null,
+          "venue": null,
+          "year": 2009
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-6b3896394e52",
+        "in_bibliography": true,
+        "key": "julier2004",
+        "raw": "@article{julier2004} Unscented filtering and nonlinear estimation",
+        "resolved": {
+          "authors": [
+            "Julier, Simon J.",
+            "Uhlmann, Jeffrey K."
+          ],
+          "doi": "10.1109/JPROC.2003.823141",
+          "source": "bibtex",
+          "title": "Unscented filtering and nonlinear estimation",
+          "url": null,
+          "venue": "Proceedings of the IEEE",
+          "year": 2004
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-e8cbe66a5c3c",
+        "in_bibliography": true,
+        "key": "hutzenthaler2012",
+        "raw": "@article{hutzenthaler2012} Strong convergence of an explicit numerical method for {SDE}s with\nnon-globally {L}ipschitz continuous coefficients",
+        "resolved": {
+          "authors": [
+            "Hutzenthaler, Martin",
+            "Jentzen, Arnulf",
+            "Kloeden, Peter E."
+          ],
+          "doi": "10.1214/11-AAP803",
+          "source": "bibtex",
+          "title": "Strong convergence of an explicit numerical method for {SDE}s with\nnon-globally {L}ipschitz continuous coefficients",
+          "url": null,
+          "venue": "Annals of Applied Probability",
+          "year": 2012
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-3b0759d37abd",
+        "in_bibliography": true,
+        "key": "li2023",
+        "raw": "@article{li2023} Estimating hidden {M}arkov models ({HMM}s) of the cognitive\nprocess in strategic thinking using eye-tracking",
+        "resolved": {
+          "authors": [
+            "Li, Xiaomin",
+            "Henning, Thomas",
+            "Camerer, Colin"
+          ],
+          "doi": "10.3389/frbhe.2023.1225856",
+          "source": "bibtex",
+          "title": "Estimating hidden {M}arkov models ({HMM}s) of the cognitive\nprocess in strategic thinking using eye-tracking",
+          "url": null,
+          "venue": "Frontiers in Behavioral Economics",
+          "year": 2023
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-49306d65b47e",
+        "in_bibliography": true,
+        "key": "eisenberg2019",
+        "raw": "@article{eisenberg2019} Uncovering the structure of self-regulation through data-driven\nontology discovery",
+        "resolved": {
+          "authors": [
+            "Eisenberg, Ian W.",
+            "Bissett, Patrick G.",
+            "Enkavi, A. Zeynep",
+            "Li, Jamie",
+            "MacKinnon, David P.",
+            "Marsch, Lisa A.",
+            "Poldrack, Russell A."
+          ],
+          "doi": "10.1038/s41467-019-10301-1",
+          "source": "bibtex",
+          "title": "Uncovering the structure of self-regulation through data-driven\nontology discovery",
+          "url": null,
+          "venue": "Nature Communications",
+          "year": 2019
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-8059fdaa252c",
+        "in_bibliography": true,
+        "key": "schmidt2018wesad",
+        "raw": "@inproceedings{schmidt2018wesad} Introducing {WESAD}, a multimodal dataset for wearable stress\nand affect detection",
+        "resolved": {
+          "authors": [
+            "Schmidt, Philip",
+            "Reiss, Attila",
+            "Duerichen, Robert",
+            "Marberger, Claus",
+            "Van Laerhoven, Kristof"
+          ],
+          "doi": "10.1145/3242969.3242985",
+          "source": "bibtex",
+          "title": "Introducing {WESAD}, a multimodal dataset for wearable stress\nand affect detection",
+          "url": null,
+          "venue": "Proc. 20th ACM Int. Conf. Multimodal Interaction (ICMI)",
+          "year": 2018
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-385b0afb579b",
+        "in_bibliography": true,
+        "key": "amin2022exam",
+        "raw": "@misc{amin2022exam} A wearable exam stress dataset for predicting cognitive\nperformance in real-world settings (version 1.0.0)",
+        "resolved": {
+          "authors": [
+            "Amin, Md. Rafiul",
+            "Wickramasuriya, Dilranjan",
+            "Faghih, Rose T."
+          ],
+          "doi": "10.13026/kvkb-aj90",
+          "source": "bibtex",
+          "title": "A wearable exam stress dataset for predicting cognitive\nperformance in real-world settings (version 1.0.0)",
+          "url": null,
+          "venue": null,
+          "year": 2022
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-4245502b8cf9",
+        "in_bibliography": true,
+        "key": "hosseini2022nurse",
+        "raw": "@article{hosseini2022nurse} A multimodal sensor dataset for continuous stress detection of\nnurses in a hospital",
+        "resolved": {
+          "authors": [
+            "Hosseini, Seyedmajid",
+            "Gottumukkala, Raju",
+            "Katragadda, Satya",
+            "Bhupatiraju, Ravi Teja",
+            "Ashkar, Ziad",
+            "Borst, Christoph W.",
+            "Cochran, Kenneth"
+          ],
+          "doi": "10.1038/s41597-022-01361-y",
+          "source": "bibtex",
+          "title": "A multimodal sensor dataset for continuous stress detection of\nnurses in a hospital",
+          "url": null,
+          "venue": "Scientific Data",
+          "year": 2022
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-1a10387501b2",
+        "in_bibliography": true,
+        "key": "boucsein2012",
+        "raw": "@book{boucsein2012} Electrodermal Activity",
+        "resolved": {
+          "authors": [
+            "Boucsein, Wolfram"
+          ],
+          "doi": "10.1007/978-1-4614-1126-0",
+          "source": "bibtex",
+          "title": "Electrodermal Activity",
+          "url": null,
+          "venue": null,
+          "year": 2012
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-153decb63bd3",
+        "in_bibliography": true,
+        "key": "benedek2010",
+        "raw": "@article{benedek2010} A continuous measure of phasic electrodermal activity",
+        "resolved": {
+          "authors": [
+            "Benedek, Mathias",
+            "Kaernbach, Christian"
+          ],
+          "doi": "10.1016/j.jneumeth.2010.04.028",
+          "source": "bibtex",
+          "title": "A continuous measure of phasic electrodermal activity",
+          "url": null,
+          "venue": "Journal of Neuroscience Methods",
+          "year": 2010
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-4467a3ddbb2b",
+        "in_bibliography": true,
+        "key": "greco2016cvxeda",
+        "raw": "@article{greco2016cvxeda} {cvxEDA}: A convex optimization approach to electrodermal\nactivity processing",
+        "resolved": {
+          "authors": [
+            "Greco, Alberto",
+            "Valenza, Gaetano",
+            "Lanata, Antonio",
+            "Scilingo, Enzo Pasquale",
+            "Citi, Luca"
+          ],
+          "doi": "10.1109/TBME.2015.2474131",
+          "source": "bibtex",
+          "title": "cvxEDA}: A convex optimization approach to electrodermal\nactivity processing",
+          "url": null,
+          "venue": "IEEE Transactions on Biomedical Engineering",
+          "year": 2016
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-e2b2f4c6efa7",
+        "in_bibliography": true,
+        "key": "posadaquintero2020",
+        "raw": "@article{posadaquintero2020} Innovations in electrodermal activity data collection and signal\nprocessing: A systematic review",
+        "resolved": {
+          "authors": [
+            "Posada-Quintero, Hugo F.",
+            "Chon, Ki H."
+          ],
+          "doi": "10.3390/s20020479",
+          "source": "bibtex",
+          "title": "Innovations in electrodermal activity data collection and signal\nprocessing: A systematic review",
+          "url": null,
+          "venue": "Sensors",
+          "year": 2020
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-29de35c75c0f",
+        "in_bibliography": true,
+        "key": "shaffer2017",
+        "raw": "@article{shaffer2017} An overview of heart rate variability metrics and norms",
+        "resolved": {
+          "authors": [
+            "Shaffer, Fred",
+            "Ginsberg, J. P."
+          ],
+          "doi": "10.3389/fpubh.2017.00258",
+          "source": "bibtex",
+          "title": "An overview of heart rate variability metrics and norms",
+          "url": null,
+          "venue": "Frontiers in Public Health",
+          "year": 2017
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-5883201aa282",
+        "in_bibliography": true,
+        "key": "nahumshani2018",
+        "raw": "@article{nahumshani2018} Just-in-time adaptive interventions ({JITAI}s) in mobile health:\nKey components and design principles for ongoing health behavior\nsupport",
+        "resolved": {
+          "authors": [
+            "Nahum-Shani, Inbal",
+            "Smith, Shawna N.",
+            "Spring, Bonnie J.",
+            "Collins, Linda M.",
+            "Witkiewitz, Katie",
+            "Tewari, Ambuj",
+            "Murphy, Susan A."
+          ],
+          "doi": "10.1007/s12160-016-9830-8",
+          "source": "bibtex",
+          "title": "Just-in-time adaptive interventions ({JITAI}s) in mobile health:\nKey components and design principles for ongoing health behavior\nsupport",
+          "url": null,
+          "venue": "Annals of Behavioral Medicine",
+          "year": 2018
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-b7d87b8b09a1",
+        "in_bibliography": true,
+        "key": "chen2025ema",
+        "raw": "@article{chen2025ema} A systematic review of ecological momentary assessment in autism\nresearch",
+        "resolved": {
+          "authors": [
+            "Chen, Yixin",
+            "Xi, Zhenyang",
+            "Greene, Talya",
+            "Mandy, Will"
+          ],
+          "doi": "10.1177/13623613241305722",
+          "source": "bibtex",
+          "title": "A systematic review of ecological momentary assessment in autism\nresearch",
+          "url": null,
+          "venue": "Autism",
+          "year": 2025
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-caacc7a0765c",
+        "in_bibliography": true,
+        "key": "scheeren2025",
+        "raw": "@article{scheeren2025} Masking, social context and perceived stress in autistic adults:\nAn ecological momentary assessment study",
+        "resolved": {
+          "authors": [
+            "Scheeren, Anke M.",
+            "Nieuwenhuis, Smiddy",
+            "Crane, Laura",
+            "Roke, Yvette",
+            "Begeer, Sander"
+          ],
+          "doi": "10.1177/13623613251353358",
+          "source": "bibtex",
+          "title": "Masking, social context and perceived stress in autistic adults:\nAn ecological momentary assessment study",
+          "url": null,
+          "venue": "Autism",
+          "year": 2025
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-d3cd4c078025",
+        "in_bibliography": true,
+        "key": "cano2024",
+        "raw": "@article{cano2024} Wearable solutions using physiological signals for stress\nmonitoring on individuals with autism spectrum disorder\n({ASD}): A systematic literature review",
+        "resolved": {
+          "authors": [
+            "Cano, Sandra",
+            "Cubillos, Claudio",
+            "Alfaro, Rodrigo",
+            "Romo, Andres"
+          ],
+          "doi": "10.3390/s24248137",
+          "source": "bibtex",
+          "title": "Wearable solutions using physiological signals for stress\nmonitoring on individuals with autism spectrum disorder\n({ASD}): A systematic literature review",
+          "url": null,
+          "venue": "Sensors",
+          "year": 2024
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-b4f86bc06efd",
+        "in_bibliography": true,
+        "key": "siepe2026",
+        "raw": "@article{siepe2026} Introducing {openESM}: A database of openly available experience\nsampling datasets",
+        "resolved": {
+          "authors": [
+            "Siepe, Bj{\\\"o}rn S.",
+            "Haslbeck, Jonas M. B.",
+            "Kloft, Matthias",
+            "B{\\\"u}chner, Aaron"
+          ],
+          "doi": "10.3758/s13428-026-03112-y",
+          "source": "bibtex",
+          "title": "Introducing {openESM}: A database of openly available experience\nsampling datasets",
+          "url": null,
+          "venue": "Behavior Research Methods",
+          "year": 2026
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-a58de5613fcd",
+        "in_bibliography": true,
+        "key": "sussmann1978",
+        "raw": "@article{sussmann1978} Catastrophe theory as applied to the social and biological\nsciences: A critique",
+        "resolved": {
+          "authors": [
+            "Sussmann, H{\\'e}ctor J.",
+            "Zahler, Raphael S."
+          ],
+          "doi": "10.1007/BF00869575",
+          "source": "bibtex",
+          "title": "Catastrophe theory as applied to the social and biological\nsciences: A critique",
+          "url": null,
+          "venue": "Synthese",
+          "year": 1978
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-ac1b01117588",
+        "in_bibliography": true,
+        "key": "zahler1977",
+        "raw": "@article{zahler1977} Claims and accomplishments of applied catastrophe theory",
+        "resolved": {
+          "authors": [
+            "Zahler, Raphael S.",
+            "Sussmann, H{\\'e}ctor J."
+          ],
+          "doi": "10.1038/269759a0",
+          "source": "bibtex",
+          "title": "Claims and accomplishments of applied catastrophe theory",
+          "url": null,
+          "venue": "Nature",
+          "year": 1977
+        },
+        "sentence_id": null
+      },
+      {
+        "id": "cit-7651015928cd",
+        "in_bibliography": true,
+        "key": "schreiber1996",
+        "raw": "@article{schreiber1996} Improved surrogate data for nonlinearity tests",
+        "resolved": {
+          "authors": [
+            "Schreiber, Thomas",
+            "Schmitz, Andreas"
+          ],
+          "doi": "10.1103/PhysRevLett.77.635",
+          "source": "bibtex",
+          "title": "Improved surrogate data for nonlinearity tests",
+          "url": null,
+          "venue": "Physical Review Letters",
+          "year": 1996
+        },
+        "sentence_id": null
+      }
+    ],
+    "counts": {
+      "citations_in_bibliography": 46,
+      "citations_used": 18,
+      "floats": 10,
+      "paragraphs": 44,
+      "protected_ranges": 295,
+      "sections": 20,
+      "sentences": 185,
+      "words_of_prose": 3715
+    },
+    "files": [],
+    "floats": [
+      {
+        "char_range": [
+          1861,
+          2482
+        ],
+        "id": "flt-a5b5362637db",
+        "kind": "front_matter",
+        "label": "front matter"
+      },
+      {
+        "char_range": [
+          4551,
+          4742
+        ],
+        "id": "flt-9ed8038ab4ab",
+        "kind": "front_matter",
+        "label": "IEEEkeywords"
+      },
+      {
+        "char_range": [
+          8772,
+          9239
+        ],
+        "id": "flt-662f92fdd788",
+        "kind": "figure",
+        "label": "figure*"
+      },
+      {
+        "char_range": [
+          9358,
+          9477
+        ],
+        "id": "flt-53ec67c4da6f",
+        "kind": "equation",
+        "label": "equation"
+      },
+      {
+        "char_range": [
+          9590,
+          9800
+        ],
+        "id": "flt-baacc6647287",
+        "kind": "equation",
+        "label": "align"
+      },
+      {
+        "char_range": [
+          14488,
+          14648
+        ],
+        "id": "flt-6266d591b987",
+        "kind": "equation",
+        "label": "equation"
+      },
+      {
+        "char_range": [
+          18084,
+          18483
+        ],
+        "id": "flt-9487486f62e9",
+        "kind": "figure",
+        "label": "figure"
+      },
+      {
+        "char_range": [
+          18485,
+          19576
+        ],
+        "id": "flt-5839e5ab01c0",
+        "kind": "table",
+        "label": "table"
+      },
+      {
+        "char_range": [
+          21327,
+          21670
+        ],
+        "id": "flt-ec04ec970cab",
+        "kind": "figure",
+        "label": "figure"
+      },
+      {
+        "char_range": [
+          24947,
+          25624
+        ],
+        "id": "flt-d887c731836d",
+        "kind": "table",
+        "label": "table"
+      }
+    ],
+    "format": "latex",
+    "metadata": {
+      "author": "Neil Thomas Mathew\\, 0009-0001-8802-7376 Department of Computer Applications CHRIST (Deemed to be University), Bengaluru, India ORCID: https://orcid.org/0009-0001-8802-7376 0009-0001-8802-7376",
+      "title": "Overload as a Cusp Catastrophe: Identifiability Limits and a Ground-Truth Failure of Rolling-Window Early-Warning Estimators in Wearable Physiology"
+    },
+    "path": "main.tex",
+    "sections": [
+      {
+        "id": "sec-9fbf4a74b17d",
+        "level": 3,
+        "parent_id": null,
+        "path": [
+          "Introduction"
+        ],
+        "title": "Introduction"
+      },
+      {
+        "id": "sec-818b7cbf87e3",
+        "level": 3,
+        "parent_id": null,
+        "path": [
+          "The Cusp--Hysteretic Model"
+        ],
+        "title": "The Cusp--Hysteretic Model"
+      },
+      {
+        "id": "sec-3ad538067c01",
+        "level": 4,
+        "parent_id": "sec-818b7cbf87e3",
+        "path": [
+          "The Cusp--Hysteretic Model",
+          "Fast dynamics and a slow debt variable"
+        ],
+        "title": "Fast dynamics and a slow debt variable"
+      },
+      {
+        "id": "sec-8c9eae4d63ed",
+        "level": 4,
+        "parent_id": "sec-818b7cbf87e3",
+        "path": [
+          "The Cusp--Hysteretic Model",
+          "Folds and two scaling laws"
+        ],
+        "title": "Folds and two scaling laws"
+      },
+      {
+        "id": "sec-58657f0178c6",
+        "level": 4,
+        "parent_id": "sec-818b7cbf87e3",
+        "path": [
+          "The Cusp--Hysteretic Model",
+          "States and transition kernel"
+        ],
+        "title": "States and transition kernel"
+      },
+      {
+        "id": "sec-923c70c216ff",
+        "level": 3,
+        "parent_id": null,
+        "path": [
+          "Materials and Methods"
+        ],
+        "title": "Materials and Methods"
+      },
+      {
+        "id": "sec-cbb78732c2d9",
+        "level": 4,
+        "parent_id": "sec-923c70c216ff",
+        "path": [
+          "Materials and Methods",
+          "Corpora"
+        ],
+        "title": "Corpora"
+      },
+      {
+        "id": "sec-819ac3e391e8",
+        "level": 4,
+        "parent_id": "sec-923c70c216ff",
+        "path": [
+          "Materials and Methods",
+          "Sensor assignment and a negative control"
+        ],
+        "title": "Sensor assignment and a negative control"
+      },
+      {
+        "id": "sec-dabb2703b815",
+        "level": 4,
+        "parent_id": "sec-923c70c216ff",
+        "path": [
+          "Materials and Methods",
+          "Estimation"
+        ],
+        "title": "Estimation"
+      },
+      {
+        "id": "sec-4e79ac77b491",
+        "level": 4,
+        "parent_id": "sec-923c70c216ff",
+        "path": [
+          "Materials and Methods",
+          "Nulls"
+        ],
+        "title": "Nulls"
+      },
+      {
+        "id": "sec-cc751835abcf",
+        "level": 4,
+        "parent_id": "sec-923c70c216ff",
+        "path": [
+          "Materials and Methods",
+          "Settings"
+        ],
+        "title": "Settings"
+      },
+      {
+        "id": "sec-e81ca0cec16a",
+        "level": 3,
+        "parent_id": null,
+        "path": [
+          "What This Data Can Identify"
+        ],
+        "title": "What This Data Can Identify"
+      },
+      {
+        "id": "sec-419e0ea3d9b4",
+        "level": 3,
+        "parent_id": null,
+        "path": [
+          "Results"
+        ],
+        "title": "Results"
+      },
+      {
+        "id": "sec-2dc4efeb2147",
+        "level": 4,
+        "parent_id": "sec-419e0ea3d9b4",
+        "path": [
+          "Results",
+          "The nominal test is invalid; the calibrated one is powered"
+        ],
+        "title": "The nominal test is invalid; the calibrated one is powered"
+      },
+      {
+        "id": "sec-f372819e40e9",
+        "level": 4,
+        "parent_id": "sec-419e0ea3d9b4",
+        "path": [
+          "Results",
+          "The early-warning estimator fails on ground truth"
+        ],
+        "title": "The early-warning estimator fails on ground truth"
+      },
+      {
+        "id": "sec-cfa26c7faa43",
+        "level": 4,
+        "parent_id": "sec-419e0ea3d9b4",
+        "path": [
+          "Results",
+          "The identifiable prediction is not supported"
+        ],
+        "title": "The identifiable prediction is not supported"
+      },
+      {
+        "id": "sec-b32a6264c03d",
+        "level": 4,
+        "parent_id": "sec-419e0ea3d9b4",
+        "path": [
+          "Results",
+          "Structure without fold structure"
+        ],
+        "title": "Structure without fold structure"
+      },
+      {
+        "id": "sec-d3a2c0fd1dec",
+        "level": 3,
+        "parent_id": null,
+        "path": [
+          "Discussion and Conclusion"
+        ],
+        "title": "Discussion and Conclusion"
+      },
+      {
+        "id": "sec-9b37fc6c2bee",
+        "level": 3,
+        "parent_id": null,
+        "path": [
+          "Code and Data Availability"
+        ],
+        "title": "Code and Data Availability"
+      },
+      {
+        "id": "sec-d4b8883944cb",
+        "level": 3,
+        "parent_id": null,
+        "path": [
+          "Acknowledgment"
+        ],
+        "title": "Acknowledgment"
+      }
+    ],
+    "sentences": [
+      {
+        "char_range": [
+          2501,
+          2589
+        ],
+        "id": "s-b244d4ff64f5",
+        "line": 60,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "Overload is usually modelled by naming states and counting the transitions\nbetween them."
+      },
+      {
+        "char_range": [
+          2590,
+          2634
+        ],
+        "id": "s-f90be7076617",
+        "line": 61,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "Such models fit anything and forbid nothing."
+      },
+      {
+        "char_range": [
+          2635,
+          2846
+        ],
+        "id": "s-389c830c62d6",
+        "line": 61,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "We derive it instead\nfrom the geometry of a cusp catastrophe: a latent load coordinate relaxing in a\nquartic potential whose tilt follows momentary demand and whose bistability\nfollows accumulated recovery debt."
+      },
+      {
+        "char_range": [
+          2847,
+          2951
+        ],
+        "id": "s-ac4f001fe2d7",
+        "line": 64,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "Functional states become metastable basins,\nand the transition kernel follows from Kramers escape rates."
+      },
+      {
+        "char_range": [
+          2952,
+          3010
+        ],
+        "id": "s-ecce981f5784",
+        "line": 65,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "The geometry fixes\ntwo exponents before any data are seen."
+      },
+      {
+        "char_range": [
+          3011,
+          3178
+        ],
+        "id": "s-ebb9856d402a",
+        "line": 66,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "Hysteresis width grows as the $3/2$\npower of the splitting factor; near the fold, variance and log-autocorrelation\nscale as $\\mp 1/2$ in distance to the tipping point."
+      },
+      {
+        "char_range": [
+          3179,
+          3299
+        ],
+        "id": "s-f6bb99bf03f4",
+        "line": 68,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "Estimation is exact, since\nconditional on the slow variable the drift is linear in a reparameterised\ncoefficient vector."
+      },
+      {
+        "char_range": [
+          3300,
+          3374
+        ],
+        "id": "s-4a0e45ba7eef",
+        "line": 70,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "Three findings follow, of which two concern method rather\nthan physiology."
+      },
+      {
+        "char_range": [
+          3375,
+          3555
+        ],
+        "id": "s-bae61ae4ad24",
+        "line": 71,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "A Monte Carlo study over $1.2\\times10^{4}$ simulated series\nshows that at the lengths wearable corpora supply, only the relaxation rate and\nthe diffusion coefficient are recovered."
+      },
+      {
+        "char_range": [
+          3556,
+          3802
+        ],
+        "id": "s-fce1d5a0e97c",
+        "line": 73,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "The parameters carrying the geometry\nare ratios with an unbounded denominator, so length buys their ordering but\nnever their value: rank correlation for the splitting factor reaches $0.88$ at\n$n=1000$ while its linear correlation stays at $0.10$."
+      },
+      {
+        "char_range": [
+          3803,
+          3940
+        ],
+        "id": "s-3330e663d2c8",
+        "line": 76,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "That bound, rather than\nthe model, is the paper's primary result: it holds for any cusp analysis of\ndata of this kind, this one included."
+      },
+      {
+        "char_range": [
+          3941,
+          4199
+        ],
+        "id": "s-3218ae206bc9",
+        "line": 78,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "Next,\nthe rolling-window variance and autocorrelation indicators the early-warning\nliterature runs on return exponents of the wrong sign on data simulated from a\nmodel that does contain a fold, so we withdraw our own early-warning test rather\nthan report it."
+      },
+      {
+        "char_range": [
+          4200,
+          4422
+        ],
+        "id": "s-8445fc2cd514",
+        "line": 82,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "Finally, across 147\nrecordings from 40 people in three open corpora, the one identifiable prediction\nis not supported above a surrogate-calibrated null; measured power bounds this\nto excluding strong and moderate dynamics."
+      },
+      {
+        "char_range": [
+          4423,
+          4464
+        ],
+        "id": "s-024bc6d1fa69",
+        "line": 85,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "The work is motivated by autistic\nadults."
+      },
+      {
+        "char_range": [
+          4465,
+          4534
+        ],
+        "id": "s-138ce16a22d8",
+        "line": 86,
+        "paragraph_id": "par-ca4ae8d95639",
+        "section_id": null,
+        "text": "None are analysed here, and a pre-registered validation is specified."
+      },
+      {
+        "char_range": [
+          4840,
+          5014
+        ],
+        "id": "s-d80ff96849bf",
+        "line": 97,
+        "paragraph_id": "par-045ea8bbc127",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "Autistic adults describe functional breakdown under combined sensory and\ncognitive demand in consistent terms: it arrives suddenly, and it clears slowly\n\\cite{maclennan2022}."
+      },
+      {
+        "char_range": [
+          5015,
+          5259
+        ],
+        "id": "s-b6d8420ad28e",
+        "line": 99,
+        "paragraph_id": "par-045ea8bbc127",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "Adult cohort studies link sensory atypicality to\nexecutive difficulty \\cite{kiep2025}, and meta-analysis finds executive\ndysfunction across the spectrum, though with smaller effect sizes in adult\nsamples than in child ones \\cite{demetriou2018}."
+      },
+      {
+        "char_range": [
+          5260,
+          5291
+        ],
+        "id": "s-7375f671b219",
+        "line": 102,
+        "paragraph_id": "par-045ea8bbc127",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "The phenomenon is not in\ndoubt."
+      },
+      {
+        "char_range": [
+          5292,
+          5344
+        ],
+        "id": "s-1e7fac21adbb",
+        "line": 103,
+        "paragraph_id": "par-045ea8bbc127",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "What is missing is a formal account of the dynamics."
+      },
+      {
+        "char_range": [
+          5346,
+          5380
+        ],
+        "id": "s-875248142ce9",
+        "line": 105,
+        "paragraph_id": "par-a097b7ee606c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "Existing models do not supply one."
+      },
+      {
+        "char_range": [
+          5381,
+          5703
+        ],
+        "id": "s-55b5496c7480",
+        "line": 105,
+        "paragraph_id": "par-a097b7ee606c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "Computational work on autism is dominated by\nBayesian and predictive-coding framings whose empirical support a ten-year\nreview found mixed and methodologically inconsistent \\cite{chrysaitis2023}, and\nthe most recent dynamical treatment of symptom trajectories is avowedly\ntheoretical, collecting no data \\cite{adamou2026}."
+      },
+      {
+        "char_range": [
+          5704,
+          5815
+        ],
+        "id": "s-edcff14e782f",
+        "line": 109,
+        "paragraph_id": "par-a097b7ee606c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "Applied state-transition work\nassigns states from experimental condition labels and counts a transition\nmatrix."
+      },
+      {
+        "char_range": [
+          5816,
+          5962
+        ],
+        "id": "s-4226a09519cc",
+        "line": 111,
+        "paragraph_id": "par-a097b7ee606c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "That is close to circular: the recovered matrix re-describes the block\nstructure of the protocol, and yields nothing observation could contradict."
+      },
+      {
+        "char_range": [
+          5964,
+          5990
+        ],
+        "id": "s-169f65734443",
+        "line": 114,
+        "paragraph_id": "par-a45755199ae5",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "We take a different route."
+      },
+      {
+        "char_range": [
+          5991,
+          6158
+        ],
+        "id": "s-1f399cf305a9",
+        "line": 114,
+        "paragraph_id": "par-a45755199ae5",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "Instead of positing states and fitting transitions\nbetween them, we posit a one-dimensional stochastic relaxation in a cusp\npotential and let the phenomenology follow."
+      },
+      {
+        "char_range": [
+          6159,
+          6359
+        ],
+        "id": "s-f56f2e6ed9ce",
+        "line": 116,
+        "paragraph_id": "par-a45755199ae5",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "The load coordinate $x_t$ sits in\n$V(x;a,b)=\\tfrac14 x^4-\\tfrac12 a x^2-bx$, where the normal factor $b_t$ carries\nmomentary demand and the splitting factor $a_t$ carries depleted regulatory\ncapacity."
+      },
+      {
+        "char_range": [
+          6360,
+          6420
+        ],
+        "id": "s-9f1fc7768934",
+        "line": 119,
+        "paragraph_id": "par-a45755199ae5",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "The substantive claim is that capacity does not add to load."
+      },
+      {
+        "char_range": [
+          6421,
+          6445
+        ],
+        "id": "s-19a592e1dd43",
+        "line": 119,
+        "paragraph_id": "par-a45755199ae5",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "It\nchanges the geometry."
+      },
+      {
+        "char_range": [
+          6446,
+          6601
+        ],
+        "id": "s-bcf4d4721495",
+        "line": 120,
+        "paragraph_id": "par-a45755199ae5",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "Below a critical $a$ the load tracks demand and returns;\nabove it a second attractor appears, bringing a fold, a hysteresis loop and\ncritical slowing down."
+      },
+      {
+        "char_range": [
+          6602,
+          6780
+        ],
+        "id": "s-3a1165dfdf52",
+        "line": 122,
+        "paragraph_id": "par-a45755199ae5",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "Sudden onset and slow recovery stop being observations to\nreport and become consequences to check --- numerical exponents that data can\nreject, since the geometry is closed-form."
+      },
+      {
+        "char_range": [
+          6781,
+          6863
+        ],
+        "id": "s-f44157a69853",
+        "line": 124,
+        "paragraph_id": "par-a45755199ae5",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "This paper is about how far that\npromise survives contact with real wearable data."
+      },
+      {
+        "char_range": [
+          6865,
+          7189
+        ],
+        "id": "s-e0c1a4358376",
+        "line": 127,
+        "paragraph_id": "par-e0c1a4358376",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "We present a cusp formulation of overload (Sec.~\\ref{sec:model}), an\nidentifiability study bounding which of its parameters recordings of wearable\nlength can support (Sec.~\\ref{sec:ident}), and a ground-truth test of the\nrolling-window early-warning estimators the formulation would be checked with\n(Sec.~\\ref{sec:results})."
+      },
+      {
+        "char_range": [
+          7200,
+          7223
+        ],
+        "id": "s-f380fd1e2bdf",
+        "line": 133,
+        "paragraph_id": "par-d10abc1ae99c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "\\textbf{Contributions.}"
+      },
+      {
+        "char_range": [
+          7224,
+          7458
+        ],
+        "id": "s-cfa43cee4411",
+        "line": 133,
+        "paragraph_id": "par-d10abc1ae99c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "(i) A cusp formulation in which the five\nfunctional states are geometric regions rather than labels, and the $5\\times5$\nkernel is generated by nine interpretable parameters instead of twenty counted\nfrequencies (Sec.~\\ref{sec:model})."
+      },
+      {
+        "char_range": [
+          7459,
+          7633
+        ],
+        "id": "s-09c04e3cc6b9",
+        "line": 136,
+        "paragraph_id": "par-d10abc1ae99c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "(ii) An exact profiled-least-squares\nestimator, with a high-replication identifiability study bounding what any such\nanalysis can claim, ours included (Sec.~\\ref{sec:ident})."
+      },
+      {
+        "char_range": [
+          7634,
+          7889
+        ],
+        "id": "s-b1e6ad8927ab",
+        "line": 138,
+        "paragraph_id": "par-d10abc1ae99c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "(iii) A ground-truth\ndemonstration that the standard early-warning indicators report the wrong sign\non data containing a genuine fold, and a measurement of the eightfold size\ninflation of the nominal test on near-unit-root series (Sec.~\\ref{sec:results})."
+      },
+      {
+        "char_range": [
+          7890,
+          8005
+        ],
+        "id": "s-b4ad37bd9893",
+        "line": 142,
+        "paragraph_id": "par-d10abc1ae99c",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "(iv) A calibrated null on 147 recordings, with power characterised so the result\nis a bound rather than an absence."
+      },
+      {
+        "char_range": [
+          8007,
+          8048
+        ],
+        "id": "s-583f13fafb0b",
+        "line": 145,
+        "paragraph_id": "par-03dc01aee001",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "The target population is autistic adults."
+      },
+      {
+        "char_range": [
+          8049,
+          8270
+        ],
+        "id": "s-1959a7d09b45",
+        "line": 145,
+        "paragraph_id": "par-03dc01aee001",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "No public wearable dataset of that\ngroup exists at the temporal density this model needs\n\\cite{cano2024,chen2025ema}, so none are analysed here, and we say so instead\nof titling the work after a group it does not measure."
+      },
+      {
+        "char_range": [
+          8271,
+          8583
+        ],
+        "id": "s-f28b62ea6245",
+        "line": 148,
+        "paragraph_id": "par-03dc01aee001",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "What general stress\ncorpora can settle is not whether autistic overload is a cusp, but whether the\nmachinery could establish that it is: they carry the same sensor, sampling rate\nand recording lengths such a study would, so an identifiability bound and an\nestimator failure measured here transfer to it directly."
+      },
+      {
+        "char_range": [
+          8584,
+          8642
+        ],
+        "id": "s-9e9168b501ef",
+        "line": 152,
+        "paragraph_id": "par-03dc01aee001",
+        "section_id": "sec-9fbf4a74b17d",
+        "text": "No claim about the\npopulation transfers, and we make none."
+      },
+      {
+        "char_range": [
+          9293,
+          9357
+        ],
+        "id": "s-efa6690708a6",
+        "line": 171,
+        "paragraph_id": "par-efa6690708a6",
+        "section_id": "sec-3ad538067c01",
+        "text": "The latent load obeys a gradient relaxation with additive noise,"
+      },
+      {
+        "char_range": [
+          9478,
+          9589
+        ],
+        "id": "s-009de2f5ac1b",
+        "line": 176,
+        "paragraph_id": "par-009de2f5ac1b",
+        "section_id": "sec-3ad538067c01",
+        "text": "with control parameters linked to observed drivers and to a slow variable $A_t$\nthat accumulates recovery debt:"
+      },
+      {
+        "char_range": [
+          9801,
+          9971
+        ],
+        "id": "s-09257333f545",
+        "line": 183,
+        "paragraph_id": "par-dd284390b0af",
+        "section_id": "sec-3ad538067c01",
+        "text": "Here $\\mathrm{sp}$ is a softplus, $S_t$, $T_t$ and $U_t$ are sensory,\ntask-switch and uncertainty drivers, and $\\lambda$ sets the timescale without\ntouching the geometry."
+      },
+      {
+        "char_range": [
+          9972,
+          10109
+        ],
+        "id": "s-27b8cf101b18",
+        "line": 185,
+        "paragraph_id": "par-dd284390b0af",
+        "section_id": "sec-3ad538067c01",
+        "text": "Load above baseline accrues debt, debt raises $a_t$, and\na higher $a_t$ widens the hysteresis loop, so one episode makes the next easier."
+      },
+      {
+        "char_range": [
+          10110,
+          10195
+        ],
+        "id": "s-439ea235d85f",
+        "line": 187,
+        "paragraph_id": "par-dd284390b0af",
+        "section_id": "sec-3ad538067c01",
+        "text": "That is a mechanistic reading of the refractory period qualitative accounts\ndescribe."
+      },
+      {
+        "char_range": [
+          10237,
+          10351
+        ],
+        "id": "s-2facb926fdad",
+        "line": 191,
+        "paragraph_id": "par-c868f6384db1",
+        "section_id": "sec-8c9eae4d63ed",
+        "text": "Equilibria solve $x^3-ax-b=0$, whose discriminant $4a^3-27b^2$ is positive\nexactly when two stable basins coexist."
+      },
+      {
+        "char_range": [
+          10352,
+          10482
+        ],
+        "id": "s-01b1ccd4733c",
+        "line": 192,
+        "paragraph_id": "par-c868f6384db1",
+        "section_id": "sec-8c9eae4d63ed",
+        "text": "Folds sit where $V''(x)=0$, at\n$x_\\pm=\\pm\\sqrt{a/3}$, giving critical drives $\\pm b_c(a)$ with\n$b_c(a)=\\tfrac{2}{3\\sqrt3}a^{3/2}$."
+      },
+      {
+        "char_range": [
+          10543,
+          10691
+        ],
+        "id": "s-9197b36b6af4",
+        "line": 197,
+        "paragraph_id": "par-9197b36b6af4",
+        "section_id": "sec-8c9eae4d63ed",
+        "text": "For $a>0$ the system jumps to the upper branch at $b=+b_c$ and returns at\n$b=-b_c$, so the loop has width\n$\\Delta b(a)=\\tfrac{4}{3\\sqrt3}\\,a^{3/2}$."
+      },
+      {
+        "char_range": [
+          10711,
+          10916
+        ],
+        "id": "s-7550ae6224c4",
+        "line": 202,
+        "paragraph_id": "par-2e01107184b4",
+        "section_id": "sec-8c9eae4d63ed",
+        "text": "Linearising \\eqref{eq:sde} about a stable equilibrium gives a relaxation rate\n$\\lambda_{\\text{rel}}=3x^{*2}-a$ that vanishes at a fold, so critical slowing\ndown is a theorem here rather than an assumption."
+      },
+      {
+        "char_range": [
+          10917,
+          11027
+        ],
+        "id": "s-2ae0b7f1463c",
+        "line": 204,
+        "paragraph_id": "par-2e01107184b4",
+        "section_id": "sec-8c9eae4d63ed",
+        "text": "With $\\mu=b_c-b$ the distance\nto the fold, the normal form gives $\\lambda_{\\text{rel}}\\propto\\mu^{1/2}$, hence"
+      },
+      {
+        "char_range": [
+          11094,
+          11162
+        ],
+        "id": "s-4ae6c3d5baab",
+        "line": 208,
+        "paragraph_id": "par-4ae6c3d5baab",
+        "section_id": "sec-8c9eae4d63ed",
+        "text": "$\\Var(x)\\propto\\mu^{-1/2}$ and $-\\log\\mathrm{AC1}\\propto\\mu^{+1/2}$."
+      },
+      {
+        "char_range": [
+          11182,
+          11451
+        ],
+        "id": "s-7110e1391d66",
+        "line": 211,
+        "paragraph_id": "par-7110e1391d66",
+        "section_id": "sec-8c9eae4d63ed",
+        "text": "These are point hypotheses about exponents, differing in kind from the usual\ndirectional claim that an indicator rises before a transition --- which the\nsceptical literature shows arises spuriously on almost any autocorrelated series\n\\cite{ditlevsen2010,boettiger2012}."
+      },
+      {
+        "char_range": [
+          11495,
+          11908
+        ],
+        "id": "s-17fca9b16756",
+        "line": 217,
+        "paragraph_id": "par-0966467ccd41",
+        "section_id": "sec-58657f0178c6",
+        "text": "Crossing basin membership with the bistability condition partitions the $(a,b)$\nplane into five regions (Fig.~\\ref{fig:geometry}b): \\emph{calm} and\n\\emph{focused} in the lower basin when monostable, \\emph{stuck} in the lower\nbasin while an overloaded attractor coexists, \\emph{overloaded} in the upper\nbasin, and \\emph{recovering} there once demand has fallen below the level that\nwould have put the system there."
+      },
+      {
+        "char_range": [
+          11909,
+          12055
+        ],
+        "id": "s-096f6f16b334",
+        "line": 222,
+        "paragraph_id": "par-0966467ccd41",
+        "section_id": "sec-58657f0178c6",
+        "text": "The last two matter most: qualitative work uses\nboth words freely, and to our knowledge neither has previously had a precise\nmathematical meaning."
+      },
+      {
+        "char_range": [
+          12056,
+          12368
+        ],
+        "id": "s-6e357db79ac8",
+        "line": 224,
+        "paragraph_id": "par-0966467ccd41",
+        "section_id": "sec-58657f0178c6",
+        "text": "Between-basin moves are noise-induced escapes with Kramers\nrate\n$r=\\tfrac{1}{2\\pi}\\sqrt{|V''(x^*)V''(x_s)|}\\exp(-2\\Delta V/\\sigma^2)$\n\\cite{kramers1940}, so the kernel is a deterministic function of\n$(a_t,b_t,\\sigma)$: twenty counted probabilities replaced by nine interpretable\nparameters that move with demand."
+      },
+      {
+        "char_range": [
+          12516,
+          12883
+        ],
+        "id": "s-f0db463f5d7b",
+        "line": 236,
+        "paragraph_id": "par-bdac38a22a03",
+        "section_id": "sec-cbb78732c2d9",
+        "text": "Three open corpora, each from its primary repository rather than a mirror, span\na gradient of experimental control: WESAD, 15 subjects in a laboratory protocol\n\\cite{schmidt2018wesad}; Wearable Exam Stress, 10 students across 30\nexaminations \\cite{amin2022exam}; and Nurse Stress, 15 nurses across roughly\n\\SI{1250}{\\hour} of hospital shifts \\cite{hosseini2022nurse}."
+      },
+      {
+        "char_range": [
+          12884,
+          12986
+        ],
+        "id": "s-fe012813aa96",
+        "line": 240,
+        "paragraph_id": "par-bdac38a22a03",
+        "section_id": "sec-cbb78732c2d9",
+        "text": "All supply\nEmpatica E4 electrodermal activity, blood volume pulse, skin temperature and\naccelerometry."
+      },
+      {
+        "char_range": [
+          12987,
+          13089
+        ],
+        "id": "s-98bc1ee683fd",
+        "line": 242,
+        "paragraph_id": "par-bdac38a22a03",
+        "section_id": "sec-cbb78732c2d9",
+        "text": "Windowing and quality screening leave \\textbf{147 recordings from\n40 people}, median 194 windows each."
+      },
+      {
+        "char_range": [
+          13145,
+          13354
+        ],
+        "id": "s-61590542377b",
+        "line": 246,
+        "paragraph_id": "par-3f8d110b3865",
+        "section_id": "sec-819ac3e391e8",
+        "text": "Read the load coordinate and its drivers off the same sensor and the model stops\nbeing falsifiable, since shared measurement noise alone manufactures the\ncoupling; we therefore assign them to disjoint sensors."
+      },
+      {
+        "char_range": [
+          13355,
+          13492
+        ],
+        "id": "s-52cda9d5ffd0",
+        "line": 248,
+        "paragraph_id": "par-3f8d110b3865",
+        "section_id": "sec-819ac3e391e8",
+        "text": "Which signal carries the\nload is settled by measurement, not preference: the coordinate of a slow\nrelaxation process must itself be slow."
+      },
+      {
+        "char_range": [
+          13493,
+          13709
+        ],
+        "id": "s-1baa6766182f",
+        "line": 250,
+        "paragraph_id": "par-3f8d110b3865",
+        "section_id": "sec-819ac3e391e8",
+        "text": "At a \\SI{30}{\\second} window tonic\nelectrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index\nfrom heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by\nbeat-detection error."
+      },
+      {
+        "char_range": [
+          13710,
+          13803
+        ],
+        "id": "s-3da3f85e043c",
+        "line": 253,
+        "paragraph_id": "par-3f8d110b3865",
+        "section_id": "sec-819ac3e391e8",
+        "text": "Configuration B (tonic EDA) is therefore primary and C\n(skin temperature) a robustness check."
+      },
+      {
+        "char_range": [
+          13804,
+          13909
+        ],
+        "id": "s-12d88e814722",
+        "line": 254,
+        "paragraph_id": "par-3f8d110b3865",
+        "section_id": "sec-819ac3e391e8",
+        "text": "We keep A, the cardiac index, as a\n\\emph{negative control}: a working pipeline should find nothing in it."
+      },
+      {
+        "char_range": [
+          13910,
+          13954
+        ],
+        "id": "s-532998e4cd42",
+        "line": 255,
+        "paragraph_id": "par-3f8d110b3865",
+        "section_id": "sec-819ac3e391e8",
+        "text": "Both\ncomparisons are internal to this paper."
+      },
+      {
+        "char_range": [
+          13955,
+          14056
+        ],
+        "id": "s-92713d98cad8",
+        "line": 256,
+        "paragraph_id": "par-3f8d110b3865",
+        "section_id": "sec-819ac3e391e8",
+        "text": "The cardiac index is a reference\nchannel used to justify a sensor assignment, not a competing method."
+      },
+      {
+        "char_range": [
+          14057,
+          14200
+        ],
+        "id": "s-7a76c7146fe7",
+        "line": 257,
+        "paragraph_id": "par-3f8d110b3865",
+        "section_id": "sec-819ac3e391e8",
+        "text": "No\npublished system is claimed to be outperformed in Sec.~\\ref{sec:results}, where\nevery baseline is one of our own nested or competing models."
+      },
+      {
+        "char_range": [
+          14226,
+          14396
+        ],
+        "id": "s-eba49088cef5",
+        "line": 262,
+        "paragraph_id": "par-11dba6de141e",
+        "section_id": "sec-dabb2703b815",
+        "text": "Taking the Euler map of \\eqref{eq:sde} as the model, rather than as an\napproximation to it, makes the transition density exactly Gaussian and removes\ndiscretisation bias."
+      },
+      {
+        "char_range": [
+          14397,
+          14487
+        ],
+        "id": "s-55f9e4b10849",
+        "line": 264,
+        "paragraph_id": "par-11dba6de141e",
+        "section_id": "sec-dabb2703b815",
+        "text": "Expanding the drift, the mean increment is linear in a\nreparameterised coefficient vector,"
+      },
+      {
+        "char_range": [
+          14649,
+          14767
+        ],
+        "id": "s-8f950b3dc7fd",
+        "line": 271,
+        "paragraph_id": "par-0b325be6eca8",
+        "section_id": "sec-dabb2703b815",
+        "text": "with $\\theta_1=\\lambda$, $\\theta_2=\\lambda\\alpha_0$, $\\theta_3=\\lambda\\alpha_A$\nand $\\theta_{4:7}=\\lambda\\beta_{0:U}$."
+      },
+      {
+        "char_range": [
+          14768,
+          14925
+        ],
+        "id": "s-805eb26d81d6",
+        "line": 272,
+        "paragraph_id": "par-0b325be6eca8",
+        "section_id": "sec-dabb2703b815",
+        "text": "Since $A_t$ depends only on\n$\\varepsilon$, the fit is ordinary least squares profiled over one scalar:\nexact, no bounds, no starting values, no local optima."
+      },
+      {
+        "char_range": [
+          14926,
+          15152
+        ],
+        "id": "s-8783015187bd",
+        "line": 274,
+        "paragraph_id": "par-0b325be6eca8",
+        "section_id": "sec-dabb2703b815",
+        "text": "We impose\n$\\theta_1\\ge0$, since a negative value puts the system outside the model rather\nthan merely fitting it badly, and we keep units where that constraint binds so\nno reported proportion is conditioned on its own outcome."
+      },
+      {
+        "char_range": [
+          15173,
+          15225
+        ],
+        "id": "s-7193f86fa98d",
+        "line": 280,
+        "paragraph_id": "par-5a81f379a779",
+        "section_id": "sec-4e79ac77b491",
+        "text": "The nominal $t$-test on $\\theta_1$ is unusable here."
+      },
+      {
+        "char_range": [
+          15226,
+          15351
+        ],
+        "id": "s-63af04b6550f",
+        "line": 280,
+        "paragraph_id": "par-5a81f379a779",
+        "section_id": "sec-4e79ac77b491",
+        "text": "Tonic EDA is close to a\nunit-root process, and regressing on an integrated series inflates significance\nin the classical way."
+      },
+      {
+        "char_range": [
+          15352,
+          15637
+        ],
+        "id": "s-e4df5ffc7470",
+        "line": 282,
+        "paragraph_id": "par-5a81f379a779",
+        "section_id": "sec-4e79ac77b491",
+        "text": "We calibrate every test against surrogate ensembles:\nrandom-walk surrogates matched on length, increment variance and marginal scale,\nand amplitude-adjusted Fourier surrogates (IAAFT \\cite{schreiber1996}) that\npreserve spectrum and marginal, so only nonlinearity can drive a rejection."
+      },
+      {
+        "char_range": [
+          15638,
+          15830
+        ],
+        "id": "s-b3e6436cd1b4",
+        "line": 286,
+        "paragraph_id": "par-5a81f379a779",
+        "section_id": "sec-4e79ac77b491",
+        "text": "Competing models --- homogeneous Markov, covariate logistic, Gaussian HMM, the\nnested Ornstein--Uhlenbeck case and gradient boosting --- are scored by held-out\none-step predictive log-density."
+      },
+      {
+        "char_range": [
+          15854,
+          15949
+        ],
+        "id": "s-1c8ef167143e",
+        "line": 291,
+        "paragraph_id": "par-749564c62523",
+        "section_id": "sec-cc751835abcf",
+        "text": "Windows are \\SI{30}{\\second} without overlap, swept to \\SI{120}{\\second} as a\nrobustness check."
+      },
+      {
+        "char_range": [
+          15950,
+          16055
+        ],
+        "id": "s-3bd4d37dbe07",
+        "line": 292,
+        "paragraph_id": "par-749564c62523",
+        "section_id": "sec-cc751835abcf",
+        "text": "Calibrated tests draw 200 surrogates, 100 in the power and\npersistence sweeps; IAAFT runs 200 iterations."
+      },
+      {
+        "char_range": [
+          16056,
+          16410
+        ],
+        "id": "s-58e830fd9a57",
+        "line": 293,
+        "paragraph_id": "par-749564c62523",
+        "section_id": "sec-cc751835abcf",
+        "text": "The Monte Carlo grid uses\n$n\\in\\{100,150,200,300,500,1000\\}$ at 2000 replicates per cell for recovery\n($1.2\\times10^{4}$ series), 5000 for size ($30{,}000$ nominal, $7{,}500$\ncalibrated) and 100 for power; the early-warning validation covers 90\nconfigurations --- five window widths, two detrending choices, three lengths to\n$n=20{,}000$ --- at 500 each."
+      },
+      {
+        "char_range": [
+          16411,
+          16527
+        ],
+        "id": "s-857a386d969d",
+        "line": 298,
+        "paragraph_id": "par-749564c62523",
+        "section_id": "sec-cc751835abcf",
+        "text": "Counts were fixed in advance to hold the Monte\nCarlo standard error on a proportion below $0.01$ for size and power."
+      },
+      {
+        "char_range": [
+          16528,
+          16638
+        ],
+        "id": "s-7e191413e596",
+        "line": 299,
+        "paragraph_id": "par-749564c62523",
+        "section_id": "sec-cc751835abcf",
+        "text": "The\nexception is the AR(1) persistence study at 40 replicates per point, which is\nwhy it is quoted as a bound."
+      },
+      {
+        "char_range": [
+          16639,
+          16792
+        ],
+        "id": "s-ae13b7f0d291",
+        "line": 301,
+        "paragraph_id": "par-749564c62523",
+        "section_id": "sec-cc751835abcf",
+        "text": "All of it is seeded from one master seed and runs\non one machine, ten workers on a six-core, twelve-thread CPU, about seven hours\nfor a full replication."
+      },
+      {
+        "char_range": [
+          16923,
+          17020
+        ],
+        "id": "s-efe24b424168",
+        "line": 309,
+        "paragraph_id": "par-10ac50b7bf91",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Before testing anything we asked which parameters are recoverable at the series\nlengths on offer."
+      },
+      {
+        "char_range": [
+          17021,
+          17086
+        ],
+        "id": "s-f1999cefd545",
+        "line": 310,
+        "paragraph_id": "par-10ac50b7bf91",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Not a formality: it turned out to organise the rest of the\npaper."
+      },
+      {
+        "char_range": [
+          17087,
+          17277
+        ],
+        "id": "s-3d5d8bef0d7b",
+        "line": 311,
+        "paragraph_id": "par-10ac50b7bf91",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "We simulated with randomised true parameters and refitted, 2000\nreplicates at each of six lengths, then compared true against estimated values\n(Table~\\ref{tab:ident}, Fig.~\\ref{fig:ident}a)."
+      },
+      {
+        "char_range": [
+          17279,
+          17390
+        ],
+        "id": "s-7fa2a8e619b8",
+        "line": 315,
+        "paragraph_id": "par-9fd07d0e10f5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Two correlations are reported, because they answer different questions and the\ngap between them is the finding."
+      },
+      {
+        "char_range": [
+          17391,
+          17513
+        ],
+        "id": "s-bbd4fff38c53",
+        "line": 316,
+        "paragraph_id": "par-9fd07d0e10f5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Spearman's $\\rho$ asks whether the\n\\emph{ordering} survives; Pearson's $r$ asks whether the \\emph{number} can be\nread off."
+      },
+      {
+        "char_range": [
+          17514,
+          17587
+        ],
+        "id": "s-e308e9ffe4f2",
+        "line": 318,
+        "paragraph_id": "par-9fd07d0e10f5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "For $\\lambda$ and $\\sigma$ they agree, and both are high from $n=100$\nup."
+      },
+      {
+        "char_range": [
+          17588,
+          17617
+        ],
+        "id": "s-92837ebfa80f",
+        "line": 319,
+        "paragraph_id": "par-9fd07d0e10f5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Everywhere else they diverge."
+      },
+      {
+        "char_range": [
+          17619,
+          17693
+        ],
+        "id": "s-18f5cd873fa2",
+        "line": 321,
+        "paragraph_id": "par-672222bc45d5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "The splitting factor carries the geometry, so it is the case that matters."
+      },
+      {
+        "char_range": [
+          17694,
+          17777
+        ],
+        "id": "s-588acfb0c49c",
+        "line": 321,
+        "paragraph_id": "par-672222bc45d5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Its\nrank recovery climbs with length, $\\rho=0.33$ at $n=100$ to $0.88$ at $n=1000$."
+      },
+      {
+        "char_range": [
+          17778,
+          17862
+        ],
+        "id": "s-c8e3588fb4f1",
+        "line": 323,
+        "paragraph_id": "par-672222bc45d5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Its value recovery does not climb at all: $r=0.15$ at $n=200$, $r=0.10$ at\n$n=1000$."
+      },
+      {
+        "char_range": [
+          17863,
+          18015
+        ],
+        "id": "s-5557d0ae6481",
+        "line": 324,
+        "paragraph_id": "par-672222bc45d5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "There $\\hat\\alpha_0$ spans $[-140,3.3]$ against a $99$th percentile of\n$2.0$, so one blow-up in two thousand replicates destroys the linear\ncorrelation."
+      },
+      {
+        "char_range": [
+          18016,
+          18082
+        ],
+        "id": "s-aa94e41ba1c9",
+        "line": 326,
+        "paragraph_id": "par-672222bc45d5",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "That is the model's own arithmetic, not a quirk of the\nsimulation."
+      },
+      {
+        "char_range": [
+          19578,
+          19662
+        ],
+        "id": "s-a02f83dcc9bb",
+        "line": 363,
+        "paragraph_id": "par-62493e77074f",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "The consequence is sharp, and it binds any study of this kind rather than only\nours."
+      },
+      {
+        "char_range": [
+          19663,
+          19801
+        ],
+        "id": "s-86b5594eb795",
+        "line": 364,
+        "paragraph_id": "par-62493e77074f",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Recovered geometry is built from the ratios $a=\\theta_2/\\theta_1$ and\n$b=\\theta_4/\\theta_1$, and nothing bounds $\\theta_1$ away from zero."
+      },
+      {
+        "char_range": [
+          19802,
+          19886
+        ],
+        "id": "s-73dd8788bec8",
+        "line": 365,
+        "paragraph_id": "par-62493e77074f",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Both\ntherefore inflate without bound as $\\hat\\lambda$ falls (Fig.~\\ref{fig:ident}b)."
+      },
+      {
+        "char_range": [
+          19887,
+          20067
+        ],
+        "id": "s-158c24f766f2",
+        "line": 367,
+        "paragraph_id": "par-62493e77074f",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "That explains the pattern in Table~\\ref{tab:ident} exactly: dividing by a small\nnumber preserves order, which is why $\\rho$ recovers, and destroys scale, which\nis why $r$ does not."
+      },
+      {
+        "char_range": [
+          20069,
+          20103
+        ],
+        "id": "s-1074239660ef",
+        "line": 371,
+        "paragraph_id": "par-d724e64cd903",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "The real fits behave the same way."
+      },
+      {
+        "char_range": [
+          20104,
+          20310
+        ],
+        "id": "s-bdbcfadd2a57",
+        "line": 371,
+        "paragraph_id": "par-d724e64cd903",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "Among units where the constraint does not\nbind, the median $\\hat\\lambda$ is $0.0059$ and the median recovered\n$\\hat\\alpha_0$ is $12$ --- attractors near $\\pm2$ on a coordinate standardised\nto unit variance."
+      },
+      {
+        "char_range": [
+          20311,
+          20349
+        ],
+        "id": "s-01a1968d0340",
+        "line": 374,
+        "paragraph_id": "par-d724e64cd903",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "These are not weakly bistable systems."
+      },
+      {
+        "char_range": [
+          20350,
+          20461
+        ],
+        "id": "s-6683e3233e92",
+        "line": 374,
+        "paragraph_id": "par-d724e64cd903",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "They are systems with\nno restoring cubic term whatever, whose apparent geometry is an artefact of the\ndivision."
+      },
+      {
+        "char_range": [
+          20462,
+          20672
+        ],
+        "id": "s-1263b5463875",
+        "line": 376,
+        "paragraph_id": "par-d724e64cd903",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "That median $\\hat\\lambda$ also falls below the entire range our\nsimulation covers, so the recordings sit further into the non-identified regime\nthan any of the $1.2\\times10^{4}$ synthetic series used to map it."
+      },
+      {
+        "char_range": [
+          20674,
+          20816
+        ],
+        "id": "s-7fe664ed64d6",
+        "line": 380,
+        "paragraph_id": "par-7fe664ed64d6",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "The practical reading is narrower than ``collect more data'': length buys a\ndefensible \\emph{ranking} by $\\alpha_0$, never a reportable value."
+      },
+      {
+        "char_range": [
+          20818,
+          20998
+        ],
+        "id": "s-3b9b248d45a1",
+        "line": 383,
+        "paragraph_id": "par-93e9034e2624",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "One of the five pre-stated predictions survives as evaluable here: the existence\nof the restoring cubic term, governed by $\\theta_1$, the only parameter\nrecovered on both measures."
+      },
+      {
+        "char_range": [
+          20999,
+          21143
+        ],
+        "id": "s-81e90d73e21c",
+        "line": 385,
+        "paragraph_id": "par-93e9034e2624",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "P1 needs the ratio of two badly identified\nquantities and P2 the distance to the fold, while P3 through P5 rest on\n$\\varepsilon$ and $\\alpha_A$."
+      },
+      {
+        "char_range": [
+          21144,
+          21214
+        ],
+        "id": "s-5bd8c91ab2f7",
+        "line": 387,
+        "paragraph_id": "par-93e9034e2624",
+        "section_id": "sec-e81ca0cec16a",
+        "text": "We report that structure rather than four numbers\ndressed up as tests."
+      },
+      {
+        "char_range": [
+          21744,
+          21897
+        ],
+        "id": "s-a2856b97aaa1",
+        "line": 404,
+        "paragraph_id": "par-24e13373c616",
+        "section_id": "sec-2dc4efeb2147",
+        "text": "Over $30{,}000$ random-walk replicates spanning six lengths, the nominal\none-sided $t$-test on $\\theta_1$ rejects $41.9\\%$ of the time rather than $5\\%$."
+      },
+      {
+        "char_range": [
+          21898,
+          21945
+        ],
+        "id": "s-a27e4d9aa713",
+        "line": 406,
+        "paragraph_id": "par-24e13373c616",
+        "section_id": "sec-2dc4efeb2147",
+        "text": "The inflation does not shrink with sample size."
+      },
+      {
+        "char_range": [
+          21946,
+          22141
+        ],
+        "id": "s-947deeca08ae",
+        "line": 406,
+        "paragraph_id": "par-24e13373c616",
+        "section_id": "sec-2dc4efeb2147",
+        "text": "It grows, from $36.3\\%$\n($95\\%$ CI $[35.0,37.7]$) at $n=100$ to $44.4\\%$ $([43.0,45.8])$ at $n=1000$ ---\nthe signature of spurious regression on an integrated series, not a small-sample\nartefact."
+      },
+      {
+        "char_range": [
+          22142,
+          22292
+        ],
+        "id": "s-d762567a4f81",
+        "line": 409,
+        "paragraph_id": "par-24e13373c616",
+        "section_id": "sec-2dc4efeb2147",
+        "text": "Surrogate calibration restores nominal size across the same grid:\n$5.0\\%$ pooled over $7{,}500$ replicates, every per-length interval covering\n$0.05$."
+      },
+      {
+        "char_range": [
+          22293,
+          22363
+        ],
+        "id": "s-ecd2e6836c4a",
+        "line": 411,
+        "paragraph_id": "par-24e13373c616",
+        "section_id": "sec-2dc4efeb2147",
+        "text": "Calibration costs power, so we quote power for the test actually used."
+      },
+      {
+        "char_range": [
+          22364,
+          22521
+        ],
+        "id": "s-f9ad7944e9ff",
+        "line": 412,
+        "paragraph_id": "par-24e13373c616",
+        "section_id": "sec-2dc4efeb2147",
+        "text": "At $n=200$ it is $1.00$ for strong cusp dynamics, $0.76$ for moderate and $0.24$\nfor weak, reaching $1.00$ everywhere by $n=1000$ (Fig.~\\ref{fig:powersize})."
+      },
+      {
+        "char_range": [
+          22522,
+          22585
+        ],
+        "id": "s-0e075c71c28e",
+        "line": 413,
+        "paragraph_id": "par-24e13373c616",
+        "section_id": "sec-2dc4efeb2147",
+        "text": "The\nnull below therefore excludes strong and moderate dynamics."
+      },
+      {
+        "char_range": [
+          22586,
+          22619
+        ],
+        "id": "s-af49dfdd8ca2",
+        "line": 414,
+        "paragraph_id": "par-24e13373c616",
+        "section_id": "sec-2dc4efeb2147",
+        "text": "It does not exclude\na faint fold."
+      },
+      {
+        "char_range": [
+          22684,
+          22732
+        ],
+        "id": "s-f21d280d43f1",
+        "line": 418,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "Proposition~\\ref{prop:ews} describes the system."
+      },
+      {
+        "char_range": [
+          22733,
+          22803
+        ],
+        "id": "s-52e2de4b578c",
+        "line": 418,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "Testing it needs an estimator,\nand we checked ours before trusting it."
+      },
+      {
+        "char_range": [
+          22804,
+          23008
+        ],
+        "id": "s-f552365b4884",
+        "line": 419,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "On data simulated from a model that\ngenuinely contains a fold, the exponent computed from the true equilibrium\ncurvature comes back at $+0.565$ against a predicted $+0.5$: theory and\nimplementation agree."
+      },
+      {
+        "char_range": [
+          23009,
+          23115
+        ],
+        "id": "s-f710015c595a",
+        "line": 422,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "The rolling-window indicators the early-warning literature\nrelies on \\cite{scheffer2009,dakos2012} do not."
+      },
+      {
+        "char_range": [
+          23116,
+          23254
+        ],
+        "id": "s-d96fe7f30afd",
+        "line": 423,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "We swept five window lengths,\ntwo detrending choices and three series lengths to $n=20{,}000$: ninety\nconfigurations, 500 replicates each."
+      },
+      {
+        "char_range": [
+          23255,
+          23308
+        ],
+        "id": "s-a9d770dcbe1f",
+        "line": 425,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "The failure has two regimes\n(Table~\\ref{tab:ewsval})."
+      },
+      {
+        "char_range": [
+          23309,
+          23512
+        ],
+        "id": "s-2240d9d08596",
+        "line": 426,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "At windows of 20 to 120 the sign is systematically\n\\emph{inverted}, and near-totally so --- $99\\%$ of replicates carry the wrong\nsign for variance at window 30, and some configurations invert in all 500."
+      },
+      {
+        "char_range": [
+          23513,
+          23631
+        ],
+        "id": "s-17a0569fde79",
+        "line": 428,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "At\nwindow 240 both indicators instead collapse onto zero, medians between $-0.018$\nand $+0.027$, the sign a coin flip."
+      },
+      {
+        "char_range": [
+          23632,
+          23703
+        ],
+        "id": "s-e8488482e139",
+        "line": 430,
+        "paragraph_id": "par-f2ff78da2fec",
+        "section_id": "sec-f372819e40e9",
+        "text": "Nowhere on the grid does an estimate come\nnear the predicted magnitude."
+      },
+      {
+        "char_range": [
+          23705,
+          23759
+        ],
+        "id": "s-15885fa13913",
+        "line": 433,
+        "paragraph_id": "par-e26611efd1d9",
+        "section_id": "sec-f372819e40e9",
+        "text": "This is structural, and Sec.~\\ref{sec:model} says why."
+      },
+      {
+        "char_range": [
+          23760,
+          24035
+        ],
+        "id": "s-a0b7cca40567",
+        "line": 433,
+        "paragraph_id": "par-e26611efd1d9",
+        "section_id": "sec-f372819e40e9",
+        "text": "The relaxation rate\nvanishes as $\\lambda_{\\text{rel}}\\propto\\mu^{1/2}$, so the correlation time\ndiverges as $\\mu^{-1/2}$ while the window stays fixed: near the fold the window\nis shorter than the process it measures, which is where\nTable~\\ref{tab:ewsval} shows the inversion."
+      },
+      {
+        "char_range": [
+          24036,
+          24221
+        ],
+        "id": "s-1e48ab3dfc8d",
+        "line": 437,
+        "paragraph_id": "par-e26611efd1d9",
+        "section_id": "sec-f372819e40e9",
+        "text": "Widening it reaches the other end\nof the same bias, averaging over the approach itself --- the window-240 rows\n--- and detrending removes the low-frequency power carrying what survives."
+      },
+      {
+        "char_range": [
+          24222,
+          24269
+        ],
+        "id": "s-ed189fa70f65",
+        "line": 439,
+        "paragraph_id": "par-e26611efd1d9",
+        "section_id": "sec-f372819e40e9",
+        "text": "We\nwithdraw our own P2 test as uninterpretable."
+      },
+      {
+        "char_range": [
+          24271,
+          24334
+        ],
+        "id": "s-3666775aa9ea",
+        "line": 442,
+        "paragraph_id": "par-dbd6d90b278c",
+        "section_id": "sec-f372819e40e9",
+        "text": "The claim we draw is narrow, and worth stating at its own size."
+      },
+      {
+        "char_range": [
+          24335,
+          24553
+        ],
+        "id": "s-837ed43db935",
+        "line": 442,
+        "paragraph_id": "par-dbd6d90b278c",
+        "section_id": "sec-f372819e40e9",
+        "text": "It covers\nfixed-width rolling variance and lag-1 autocorrelation with and without\nGaussian detrending, which is what the applied literature mostly runs, and says\nnothing about adaptive-bandwidth or spectral estimators."
+      },
+      {
+        "char_range": [
+          24554,
+          24672
+        ],
+        "id": "s-3f2bb1d1073d",
+        "line": 445,
+        "paragraph_id": "par-dbd6d90b278c",
+        "section_id": "sec-f372819e40e9",
+        "text": "It indicts those\nestimators, not early-warning theory: the exponent from the true curvature\nrecovers on the same data."
+      },
+      {
+        "char_range": [
+          24673,
+          24824
+        ],
+        "id": "s-7a44c1795646",
+        "line": 447,
+        "paragraph_id": "par-dbd6d90b278c",
+        "section_id": "sec-f372819e40e9",
+        "text": "And it sharpens an existing scepticism\n\\cite{ditlevsen2010,boettiger2012} by supplying a case where ground truth is\nknown, instead of establishing one."
+      },
+      {
+        "char_range": [
+          24825,
+          24945
+        ],
+        "id": "s-05833cf2f76e",
+        "line": 449,
+        "paragraph_id": "par-dbd6d90b278c",
+        "section_id": "sec-f372819e40e9",
+        "text": "Within that scope the caution is firm: a\ndirectional early-warning result obtained this way is weak evidence either way."
+      },
+      {
+        "char_range": [
+          25684,
+          25911
+        ],
+        "id": "s-6fdececbb827",
+        "line": 473,
+        "paragraph_id": "par-64b542c4aca7",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "Under the calibrated test the restoring cubic term is significant in $2.7\\%$ of\nthe 147 units against a nominal $5\\%$: $0.0\\%$ for WESAD ($n=15$), $0.0\\%$ for\nthe examinations ($n=30$), $3.9\\%$ for the nurse sessions ($n=102$)."
+      },
+      {
+        "char_range": [
+          25912,
+          26193
+        ],
+        "id": "s-2b364d06b805",
+        "line": 475,
+        "paragraph_id": "par-64b542c4aca7",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "Since those\n102 units come from 15 nurses we also weight one vote per person, giving $1.5\\%$\n(Wilson $[0.0,3.1]\\%$), with $10\\%$ of people showing at least one significant\nsession --- the most generous reading available, and still what chance produces\nacross several sessions each."
+      },
+      {
+        "char_range": [
+          26195,
+          26245
+        ],
+        "id": "s-846c6c92f854",
+        "line": 481,
+        "paragraph_id": "par-6f35d6e2a0be",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "Held-out prediction agrees from another direction."
+      },
+      {
+        "char_range": [
+          26246,
+          26431
+        ],
+        "id": "s-77816b48a054",
+        "line": 481,
+        "paragraph_id": "par-6f35d6e2a0be",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "The full model loses to its\nown nested monostable special case: it wins on $33.8\\%$ of units, median\ndifference $-0.25$ nats per step, Wilcoxon $p=8\\times10^{-5}$ for the simpler\nmodel."
+      },
+      {
+        "char_range": [
+          26432,
+          26575
+        ],
+        "id": "s-40f512c316b0",
+        "line": 484,
+        "paragraph_id": "par-6f35d6e2a0be",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "Since the monostable model is this model with the cubic term switched\noff, that is the cleanest available statement that the term does no work."
+      },
+      {
+        "char_range": [
+          26576,
+          26665
+        ],
+        "id": "s-5615e0ee7b44",
+        "line": 486,
+        "paragraph_id": "par-6f35d6e2a0be",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "Prospective onset prediction gives AUC $0.50$ to $0.46$ at lead times of 3 to 12\nwindows."
+      },
+      {
+        "char_range": [
+          26666,
+          26673
+        ],
+        "id": "s-1b5d349830f3",
+        "line": 487,
+        "paragraph_id": "par-6f35d6e2a0be",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "Chance."
+      },
+      {
+        "char_range": [
+          26675,
+          26862
+        ],
+        "id": "s-0413a32e1410",
+        "line": 489,
+        "paragraph_id": "par-c12777b10256",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "Of the model's three separable components --- the cubic restoring term, the\ndebt variable and the driver set --- that comparison isolates the cubic term,\non which the paper's claim rests."
+      },
+      {
+        "char_range": [
+          26863,
+          27126
+        ],
+        "id": "s-e6357dc4f83b",
+        "line": 491,
+        "paragraph_id": "par-c12777b10256",
+        "section_id": "sec-cfa26c7faa43",
+        "text": "We do not ablate the other two in turn,\nbecause Sec.~\\ref{sec:ident} shows $\\alpha_A$ and $\\varepsilon$ are not\nrecovered at these lengths, and removing a component whose parameters are\nunidentified attributes a change in fit to something the data cannot resolve."
+      },
+      {
+        "char_range": [
+          27174,
+          27232
+        ],
+        "id": "s-61c858d07de8",
+        "line": 497,
+        "paragraph_id": "par-5dd74b017836",
+        "section_id": "sec-b32a6264c03d",
+        "text": "The null is specific, and calling it noise would be wrong."
+      },
+      {
+        "char_range": [
+          27233,
+          27415
+        ],
+        "id": "s-330a478f1fd0",
+        "line": 497,
+        "paragraph_id": "par-5dd74b017836",
+        "section_id": "sec-b32a6264c03d",
+        "text": "Two of the three\ncalibrated statistics do exceed their surrogate nulls: the likelihood ratio\nagainst the monostable restriction at $40.8\\%$ of units, marginal bimodality at\n$49.7\\%$."
+      },
+      {
+        "char_range": [
+          27416,
+          27475
+        ],
+        "id": "s-d130fa4c982b",
+        "line": 500,
+        "paragraph_id": "par-5dd74b017836",
+        "section_id": "sec-b32a6264c03d",
+        "text": "Only the statistic isolating the cubic term sits at chance."
+      },
+      {
+        "char_range": [
+          27476,
+          27639
+        ],
+        "id": "s-4365d6b028d3",
+        "line": 500,
+        "paragraph_id": "par-5dd74b017836",
+        "section_id": "sec-b32a6264c03d",
+        "text": "A bimodal\nmarginal with no cubic drift is precisely the configuration in which a study\nreporting distributional evidence alone concludes the opposite of the truth."
+      },
+      {
+        "char_range": [
+          27641,
+          27688
+        ],
+        "id": "s-93aaa9e8fa63",
+        "line": 504,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "Robustness is mixed, and we report it that way."
+      },
+      {
+        "char_range": [
+          27689,
+          27852
+        ],
+        "id": "s-84e0db3cae57",
+        "line": 504,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "Configuration B sits at nominal\nunder both the random-walk ($0.046$) and the harder IAAFT ($0.069$) ensembles,\nand holds across \\SIrange{30}{120}{\\second} windows."
+      },
+      {
+        "char_range": [
+          27853,
+          27895
+        ],
+        "id": "s-83ac450b97ad",
+        "line": 506,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "A and C are elevated, at\n$0.11$ to $0.16$."
+      },
+      {
+        "char_range": [
+          27896,
+          27934
+        ],
+        "id": "s-95b71c3d5d75",
+        "line": 507,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "We tested three explanations for that."
+      },
+      {
+        "char_range": [
+          27935,
+          27952
+        ],
+        "id": "s-f3a78f3ce047",
+        "line": 507,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "All three failed."
+      },
+      {
+        "char_range": [
+          27953,
+          27980
+        ],
+        "id": "s-4868bb48ffd0",
+        "line": 508,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "IAAFT did not bring C down."
+      },
+      {
+        "char_range": [
+          27981,
+          28023
+        ],
+        "id": "s-6d1bf8f1ce5c",
+        "line": 508,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "Clipping rates run opposite to the effect."
+      },
+      {
+        "char_range": [
+          28024,
+          28222
+        ],
+        "id": "s-da5e85fe9e5e",
+        "line": 508,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "And an\nAR(1) size study, $\\phi$ from $0$ to $1$, found no persistence at which the\ncalibrated test over-rejects --- though at 40 replicates per point it would miss\nan inflation below roughly $0.15$."
+      },
+      {
+        "char_range": [
+          28223,
+          28291
+        ],
+        "id": "s-30ccefdc7e7c",
+        "line": 511,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "What is left is nonlinear structure the\nsurrogates cannot\nreproduce."
+      },
+      {
+        "char_range": [
+          28292,
+          28467
+        ],
+        "id": "s-33aa6d5b92b2",
+        "line": 513,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "But A is the negative control, built on a coordinate already shown to\nbe noise-dominated, so the parsimonious reading is motion and peak-detection\nartefact rather than a fold."
+      },
+      {
+        "char_range": [
+          28468,
+          28597
+        ],
+        "id": "s-330025ce044d",
+        "line": 515,
+        "paragraph_id": "par-3a2d97fd32aa",
+        "section_id": "sec-b32a6264c03d",
+        "text": "A test that fires on the negative control tells us\nsignificance does not mean cusp there, which is why the conclusion rests on B."
+      },
+      {
+        "char_range": [
+          28708,
+          28845
+        ],
+        "id": "s-798e10fcceb8",
+        "line": 521,
+        "paragraph_id": "par-ffdf5ce84377",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Modelling overload as motion in a cusp potential trades a descriptive account\nfor a generative one whose consequences compute in advance."
+      },
+      {
+        "char_range": [
+          28846,
+          28961
+        ],
+        "id": "s-eb6cffc93777",
+        "line": 522,
+        "paragraph_id": "par-ffdf5ce84377",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "States become\nbasins, the kernel a function of nine parameters, sudden onset and delayed\nrecovery point hypotheses."
+      },
+      {
+        "char_range": [
+          28962,
+          29021
+        ],
+        "id": "s-c9a0e859f090",
+        "line": 524,
+        "paragraph_id": "par-ffdf5ce84377",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Precision of that kind costs something: the model can\nlose."
+      },
+      {
+        "char_range": [
+          29022,
+          29072
+        ],
+        "id": "s-b3668df3d087",
+        "line": 525,
+        "paragraph_id": "par-ffdf5ce84377",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Here it did, twice over and in two different ways."
+      },
+      {
+        "char_range": [
+          29073,
+          29287
+        ],
+        "id": "s-eef385a372be",
+        "line": 525,
+        "paragraph_id": "par-ffdf5ce84377",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "The geometry is not\nrecoverable at these lengths, and the one component that is recoverable --- the\nrestoring cubic --- is not supported above a calibrated null and is beaten by\nits own removal on held-out density."
+      },
+      {
+        "char_range": [
+          29288,
+          29466
+        ],
+        "id": "s-0a9ab8b598b9",
+        "line": 528,
+        "paragraph_id": "par-ffdf5ce84377",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Bimodality and a likelihood-ratio excess\ndo survive their surrogates, but a bimodal marginal with no cubic drift is\nstructure of some other kind, and we do not read it as a fold."
+      },
+      {
+        "char_range": [
+          29468,
+          29778
+        ],
+        "id": "s-3c604460a70b",
+        "line": 532,
+        "paragraph_id": "par-3fd96dea8852",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "The identifiability result is the durable contribution here, and it is a\nnegative methodological one: cusp geometry recovered from short wearable series\nis largely an artefact of ratios involving a poorly constrained relaxation\nrate, and rolling early-warning indicators can invert even when a fold is\npresent."
+      },
+      {
+        "char_range": [
+          29779,
+          29913
+        ],
+        "id": "s-aed5aca68fb8",
+        "line": 536,
+        "paragraph_id": "par-3fd96dea8852",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Every attempt to fit cusp geometry to wearable physiology inherits the\nsame ratio structure, and the remedy depends on what is wanted."
+      },
+      {
+        "char_range": [
+          29914,
+          29991
+        ],
+        "id": "s-fb974134dcc0",
+        "line": 537,
+        "paragraph_id": "par-3fd96dea8852",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Ranking\nparticipants by $\\alpha_0$ needs length, order $n\\gtrsim500$ windows."
+      },
+      {
+        "char_range": [
+          29992,
+          30243
+        ],
+        "id": "s-77b75a0d2229",
+        "line": 538,
+        "paragraph_id": "par-3fd96dea8852",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Reporting\na value needs a reparameterisation estimating $a$ and $b$ directly: over the\nsix lengths and $1.2\\times10^{4}$ series of Sec.~\\ref{sec:ident} length alone\nnever fixed it, with $r$ for $\\alpha_0$ at $0.15$ for $n=200$ and $0.10$ for\n$n=1000$."
+      },
+      {
+        "char_range": [
+          30244,
+          30385
+        ],
+        "id": "s-d0b708885b5a",
+        "line": 542,
+        "paragraph_id": "par-3fd96dea8852",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "A splitting factor of 12 from a 200-window recording is not a\nfinding, and the arithmetic producing it is not specific to our implementation."
+      },
+      {
+        "char_range": [
+          30387,
+          30406
+        ],
+        "id": "s-59476761d750",
+        "line": 545,
+        "paragraph_id": "par-4b7d32aee7fc",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "\\emph{Limitations.}"
+      },
+      {
+        "char_range": [
+          30407,
+          30502
+        ],
+        "id": "s-2da796d40be5",
+        "line": 545,
+        "paragraph_id": "par-4b7d32aee7fc",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "No autistic participants are analysed, so the motivating\nclaim is untested rather than refuted."
+      },
+      {
+        "char_range": [
+          30503,
+          30551
+        ],
+        "id": "s-3634c4b2ad54",
+        "line": 546,
+        "paragraph_id": "par-4b7d32aee7fc",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Tonic EDA is a peripheral,\nartefact-prone proxy."
+      },
+      {
+        "char_range": [
+          30552,
+          30608
+        ],
+        "id": "s-3dcca40551b7",
+        "line": 547,
+        "paragraph_id": "par-4b7d32aee7fc",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Weak cusp dynamics stay compatible with everything here."
+      },
+      {
+        "char_range": [
+          30609,
+          30679
+        ],
+        "id": "s-cf579c57e1bb",
+        "line": 548,
+        "paragraph_id": "par-4b7d32aee7fc",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "The estimator critique is bounded as stated in Sec.~\\ref{sec:results}."
+      },
+      {
+        "char_range": [
+          30680,
+          30897
+        ],
+        "id": "s-dcf697f2c7e4",
+        "line": 548,
+        "paragraph_id": "par-4b7d32aee7fc",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "Window\nwidth we swept; the softplus form of debt accumulation, the driver set\n$(S,T,U)$ and the decision to treat the Euler map as the model rather than an\napproximation to it we did not, and each could move the fits."
+      },
+      {
+        "char_range": [
+          30898,
+          31034
+        ],
+        "id": "s-df78e236a4de",
+        "line": 551,
+        "paragraph_id": "par-4b7d32aee7fc",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "And\nlonger records rescue rankings, not values --- nor every parameter even in rank:\n$\\varepsilon$ reaches only $\\rho=0.44$ at $n=1000$."
+      },
+      {
+        "char_range": [
+          31036,
+          31061
+        ],
+        "id": "s-e4a2db9c137b",
+        "line": 555,
+        "paragraph_id": "par-8a9a90cdcf58",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "\\emph{Toward validation.}"
+      },
+      {
+        "char_range": [
+          31062,
+          31331
+        ],
+        "id": "s-a8aaaa61bed8",
+        "line": 555,
+        "paragraph_id": "par-8a9a90cdcf58",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "We pre-specify the study that would test the mechanism\nin its intended population: 28 days of ecological momentary assessment with\ncontinuous wrist physiology in autistic adults and a matched comparison group,\nusing the same estimator, nulls and falsification criteria."
+      },
+      {
+        "char_range": [
+          31332,
+          31504
+        ],
+        "id": "s-fb683ef70fef",
+        "line": 558,
+        "paragraph_id": "par-8a9a90cdcf58",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "The primary\nhypothesis is a between-group difference in $\\alpha_0$, better powered than the\nwithin-group detection attempted here, at $n\\gtrsim500$ windows per participant."
+      },
+      {
+        "char_range": [
+          31505,
+          31759
+        ],
+        "id": "s-99a649788d88",
+        "line": 561,
+        "paragraph_id": "par-8a9a90cdcf58",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "The debt mechanism needs more than length: with $\\alpha_A$ and $\\varepsilon$\nunrecoverable from passive data at any duration tested, P3 to P5 need either\nexperimental control over recovery intervals or a hierarchical fit pooling them\nacross participants."
+      },
+      {
+        "char_range": [
+          31760,
+          31896
+        ],
+        "id": "s-6a65a596d5f8",
+        "line": 564,
+        "paragraph_id": "par-8a9a90cdcf58",
+        "section_id": "sec-d3a2c0fd1dec",
+        "text": "A second well-powered null under those conditions would be\nevidence that overload is not a cusp catastrophe at physiological timescales."
+      },
+      {
+        "char_range": [
+          31936,
+          32234
+        ],
+        "id": "s-0e28fa5f05ce",
+        "line": 568,
+        "paragraph_id": "par-e8b0afd0c686",
+        "section_id": "sec-9b37fc6c2bee",
+        "text": "The estimator, the analysis pipeline, the Monte Carlo suite, the figure scripts\nand this manuscript are released under the MIT licence at\n\\url{https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe}, together with\na provenance table recording the replication count behind every number\nreported."
+      },
+      {
+        "char_range": [
+          32235,
+          32424
+        ],
+        "id": "s-0f6ea3bb7203",
+        "line": 572,
+        "paragraph_id": "par-e8b0afd0c686",
+        "section_id": "sec-9b37fc6c2bee",
+        "text": "The three corpora are third-party open datasets and are not\nredistributed: WESAD from the UCI Machine Learning Repository (ID 465), and\nWearable Exam Stress and Nurse Stress from PhysioNet."
+      },
+      {
+        "char_range": [
+          32425,
+          32600
+        ],
+        "id": "s-f7c0cf292f77",
+        "line": 574,
+        "paragraph_id": "par-e8b0afd0c686",
+        "section_id": "sec-9b37fc6c2bee",
+        "text": "Each was obtained\nprogrammatically from its primary repository under that repository's own terms,\nwith the exact URLs, download dates and byte counts recorded in the artefact."
+      },
+      {
+        "char_range": [
+          32628,
+          32735
+        ],
+        "id": "s-b25516ce6235",
+        "line": 579,
+        "paragraph_id": "par-8090d1f8bd57",
+        "section_id": "sec-d4b8883944cb",
+        "text": "I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets\nfor releasing them openly."
+      },
+      {
+        "char_range": [
+          32736,
+          33005
+        ],
+        "id": "s-8ec173d08ac3",
+        "line": 580,
+        "paragraph_id": "par-8090d1f8bd57",
+        "section_id": "sec-d4b8883944cb",
+        "text": "In accordance with IEEE policy on generative AI, the\nauthor discloses that an AI assistant was used for code implementation,\nliterature organisation and manuscript drafting; the author verified all\nanalyses, results and claims and is solely responsible for the content."
+      }
+    ],
+    "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373"
+  },
+  "source_file": "main.tex",
+  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "tool_version": "0.3.0"
+}

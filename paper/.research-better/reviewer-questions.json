@@ -1,0 +1,45 @@
+{
+  "artifact": "reviewer-questions",
+  "created_at": "2026-08-10T23:54:08+00:00",
+  "offline": false,
+  "payload": {
+    "counts": {
+      "blocking": 0,
+      "minor": 0,
+      "serious": 2
+    },
+    "questions": [
+      {
+        "category": "missing_baseline",
+        "char_range": [
+          13493,
+          13709
+        ],
+        "question": "Outperforms what, exactly?",
+        "quote": "At a \\SI{30}{\\second} window tonic electrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index from heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by beat-detection error.",
+        "resolution": "Name the systems compared against and cite them, or say which configuration of your own method is the baseline.",
+        "severity": "serious",
+        "span_id": "s-1baa6766182f",
+        "why": "A comparison with no named point of comparison cannot be checked or reproduced. A reviewer who cannot tell what you beat has to assume you chose the comparison that flattered the result."
+      },
+      {
+        "category": "undisclosed_method_detail",
+        "char_range": [
+          2501,
+          2589
+        ],
+        "question": "What hyperparameters were used?",
+        "quote": "",
+        "resolution": "State the hyperparameters in the method or in an appendix.",
+        "severity": "serious",
+        "span_id": "s-b244d4ff64f5",
+        "why": "The paper never states the hyperparameters. A reader cannot judge whether the result is solid or reproduce it without knowing, and a reviewer will ask rather than guess."
+      }
+    ],
+    "venue": "default",
+    "venue_verified": false
+  },
+  "source_file": "main.tex",
+  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "tool_version": "0.3.0"
+}

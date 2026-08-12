@@ -1,0 +1,20 @@
+{
+  "artifact": "originality",
+  "created_at": "2026-08-10T23:54:08+00:00",
+  "offline": false,
+  "payload": {
+    "boilerplate_ignored": 0,
+    "coverage_note": "Compared against 14 source(s): 3 as full text and 11 as abstract only, which sees almost none of the paper. 2 cited source(s) could not be retrieved and were not compared. This is not a plagiarism service. It cannot see paywalled work, most books, unindexed theses, or the web. A clean result means no overlap was found in what could be checked, and nothing about what could not.",
+    "matches": [],
+    "sources_compared": 14,
+    "sources_unavailable": 2,
+    "sources_with_full_text": 3,
+    "unavailable_titles": [
+      "Early-warning signals for critical transitions",
+      "Sensory processing and executive functioning in autistic adults"
+    ]
+  },
+  "source_file": "main.tex",
+  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "tool_version": "0.3.0"
+}

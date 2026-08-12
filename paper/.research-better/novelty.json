@@ -1,0 +1,577 @@
+{
+  "artifact": "novelty",
+  "created_at": "2026-08-10T23:54:40+00:00",
+  "offline": false,
+  "payload": {
+    "claim": "We present a cusp formulation of overload (Sec.~\\ref{sec:model}), an identifiability study bounding which of its parameters recordings of wearable length can support (Sec.~\\ref{sec:ident}), and a ground-truth test of the rolling-window early-warning estimators the formulation would be checked with (Sec.~\\ref{sec:results}).",
+    "claim_confirmed": true,
+    "claim_evidence_spans": [],
+    "claim_items": [],
+    "claim_span_id": "s-e0c1a4358376",
+    "orphans": [
+      {
+        "char_range": [
+          9293,
+          9357
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-efa6690708a6",
+        "text": "The latent load obeys a gradient relaxation with additive noise,"
+      },
+      {
+        "char_range": [
+          9478,
+          9589
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-009de2f5ac1b",
+        "text": "with control parameters linked to observed drivers and to a slow variable $A_t$ that accumulates recovery debt:"
+      },
+      {
+        "char_range": [
+          9801,
+          10195
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-09257333f545",
+        "text": "Here $\\mathrm{sp}$ is a softplus, $S_t$, $T_t$ and $U_t$ are sensory, task-switch and uncertainty drivers, and $\\lambda$ sets the timescale without touching the geometry. Load above baseline accrues debt, debt raises $a_t$, and a higher $a_t$ widens the hysteresis loop, so one episode makes the next easier. That is a mechanistic reading of the refractory period qualitative accounts describe."
+      },
+      {
+        "char_range": [
+          10237,
+          10482
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-2facb926fdad",
+        "text": "Equilibria solve $x^3-ax-b=0$, whose discriminant $4a^3-27b^2$ is positive exactly when two stable basins coexist. Folds sit where $V''(x)=0$, at $x_\\pm=\\pm\\sqrt{a/3}$, giving critical drives $\\pm b_c(a)$ with $b_c(a)=\\tfrac{2}{3\\sqrt3}a^{3/2}$."
+      },
+      {
+        "char_range": [
+          10711,
+          11027
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-7550ae6224c4",
+        "text": "Linearising \\eqref{eq:sde} about a stable equilibrium gives a relaxation rate $\\lambda_{\\text{rel}}=3x^{*2}-a$ that vanishes at a fold, so critical slowing down is a theorem here rather than an assumption. With $\\mu=b_c-b$ the distance to the fold, the normal form gives $\\lambda_{\\text{rel}}\\propto\\mu^{1/2}$, hence"
+      },
+      {
+        "char_range": [
+          11094,
+          11162
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-4ae6c3d5baab",
+        "text": "$\\Var(x)\\propto\\mu^{-1/2}$ and $-\\log\\mathrm{AC1}\\propto\\mu^{+1/2}$."
+      },
+      {
+        "char_range": [
+          13145,
+          14200
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-61590542377b",
+        "text": "Read the load coordinate and its drivers off the same sensor and the model stops being falsifiable, since shared measurement noise alone manufactures the coupling; we therefore assign them to disjoint sensors. Which signal carries the load is settled by measurement, not preference: the coordinate of a slow relaxation process must itself be slow. At a \\SI{30}{\\second} window tonic electrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index from heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by beat-detection error. Configuration B (tonic EDA) is therefore primary and C (skin temperature) a robustness check. We keep A, the cardiac index, as a \\emph{negative control}: a working pipeline should find nothing in it. Both comparisons are internal to this paper. The cardiac index is a reference channel used to justify a sensor assignment, not a competing method. No published system is claimed to be outperformed in Sec.~\\ref{sec:results}, where every baseline is one of our own nested or competing models."
+      },
+      {
+        "char_range": [
+          14226,
+          14487
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-eba49088cef5",
+        "text": "Taking the Euler map of \\eqref{eq:sde} as the model, rather than as an approximation to it, makes the transition density exactly Gaussian and removes discretisation bias. Expanding the drift, the mean increment is linear in a reparameterised coefficient vector,"
+      },
+      {
+        "char_range": [
+          17279,
+          17617
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-7fa2a8e619b8",
+        "text": "Two correlations are reported, because they answer different questions and the gap between them is the finding. Spearman's $\\rho$ asks whether the \\emph{ordering} survives; Pearson's $r$ asks whether the \\emph{number} can be read off. For $\\lambda$ and $\\sigma$ they agree, and both are high from $n=100$ up. Everywhere else they diverge."
+      },
+      {
+        "char_range": [
+          20818,
+          21214
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-3b9b248d45a1",
+        "text": "One of the five pre-stated predictions survives as evaluable here: the existence of the restoring cubic term, governed by $\\theta_1$, the only parameter recovered on both measures. P1 needs the ratio of two badly identified quantities and P2 the distance to the fold, while P3 through P5 rest on $\\varepsilon$ and $\\alpha_A$. We report that structure rather than four numbers dressed up as tests."
+      },
+      {
+        "char_range": [
+          27174,
+          27639
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-61c858d07de8",
+        "text": "The null is specific, and calling it noise would be wrong. Two of the three calibrated statistics do exceed their surrogate nulls: the likelihood ratio against the monostable restriction at $40.8\\%$ of units, marginal bimodality at $49.7\\%$. Only the statistic isolating the cubic term sits at chance. A bimodal marginal with no cubic drift is precisely the configuration in which a study reporting distributional evidence alone concludes the opposite of the truth."
+      },
+      {
+        "char_range": [
+          32628,
+          33005
+        ],
+        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
+        "span_id": "s-b25516ce6235",
+        "text": "I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress datasets for releasing them openly. In accordance with IEEE policy on generative AI, the author discloses that an AI assistant was used for code implementation, literature organisation and manuscript drafting; the author verified all analyses, results and claims and is solely responsible for the content."
+      }
+    ],
+    "roles": {
+      "s-009de2f5ac1b": "orphan",
+      "s-01a1968d0340": "orphan",
+      "s-01b1ccd4733c": "orphan",
+      "s-024bc6d1fa69": "orphan",
+      "s-0413a32e1410": "orphan",
+      "s-05833cf2f76e": "orphan",
+      "s-09257333f545": "orphan",
+      "s-096f6f16b334": "orphan",
+      "s-09c04e3cc6b9": "orphan",
+      "s-0a9ab8b598b9": "limitation",
+      "s-0e075c71c28e": "orphan",
+      "s-0e28fa5f05ce": "orphan",
+      "s-0f6ea3bb7203": "evidence",
+      "s-1074239660ef": "orphan",
+      "s-1263b5463875": "evidence",
+      "s-12d88e814722": "orphan",
+      "s-138ce16a22d8": "orphan",
+      "s-15885fa13913": "orphan",
+      "s-158c24f766f2": "limitation",
+      "s-169f65734443": "orphan",
+      "s-17a0569fde79": "orphan",
+      "s-17fca9b16756": "method",
+      "s-18f5cd873fa2": "orphan",
+      "s-1959a7d09b45": "limitation",
+      "s-19a592e1dd43": "orphan",
+      "s-1b5d349830f3": "orphan",
+      "s-1baa6766182f": "orphan",
+      "s-1c8ef167143e": "orphan",
+      "s-1e48ab3dfc8d": "orphan",
+      "s-1e7fac21adbb": "orphan",
+      "s-1f399cf305a9": "orphan",
+      "s-2240d9d08596": "orphan",
+      "s-27b8cf101b18": "orphan",
+      "s-2ae0b7f1463c": "orphan",
+      "s-2b364d06b805": "orphan",
+      "s-2da796d40be5": "limitation",
+      "s-2facb926fdad": "orphan",
+      "s-30ccefdc7e7c": "limitation",
+      "s-3218ae206bc9": "orphan",
+      "s-330025ce044d": "limitation",
+      "s-330a478f1fd0": "orphan",
+      "s-3330e663d2c8": "orphan",
+      "s-33aa6d5b92b2": "orphan",
+      "s-3634c4b2ad54": "limitation",
+      "s-3666775aa9ea": "orphan",
+      "s-389c830c62d6": "orphan",
+      "s-3a1165dfdf52": "orphan",
+      "s-3b9b248d45a1": "orphan",
+      "s-3bd4d37dbe07": "orphan",
+      "s-3c604460a70b": "limitation",
+      "s-3d5d8bef0d7b": "evidence",
+      "s-3da3f85e043c": "orphan",
+      "s-3dcca40551b7": "limitation",
+      "s-3f2bb1d1073d": "orphan",
+      "s-40f512c316b0": "orphan",
+      "s-4226a09519cc": "orphan",
+      "s-4365d6b028d3": "orphan",
+      "s-439ea235d85f": "orphan",
+      "s-4868bb48ffd0": "orphan",
+      "s-4a0e45ba7eef": "orphan",
+      "s-4ae6c3d5baab": "orphan",
+      "s-52cda9d5ffd0": "orphan",
+      "s-52e2de4b578c": "orphan",
+      "s-532998e4cd42": "orphan",
+      "s-5557d0ae6481": "orphan",
+      "s-55b5496c7480": "background",
+      "s-55f9e4b10849": "orphan",
+      "s-5615e0ee7b44": "orphan",
+      "s-583f13fafb0b": "orphan",
+      "s-588acfb0c49c": "evidence",
+      "s-58e830fd9a57": "evidence",
+      "s-59476761d750": "limitation",
+      "s-5bd8c91ab2f7": "orphan",
+      "s-61590542377b": "orphan",
+      "s-61c858d07de8": "orphan",
+      "s-63af04b6550f": "orphan",
+      "s-6683e3233e92": "orphan",
+      "s-6a65a596d5f8": "limitation",
+      "s-6d1bf8f1ce5c": "orphan",
+      "s-6e357db79ac8": "background",
+      "s-6fdececbb827": "evidence",
+      "s-7110e1391d66": "background",
+      "s-7193f86fa98d": "evidence",
+      "s-7375f671b219": "orphan",
+      "s-73dd8788bec8": "orphan",
+      "s-7550ae6224c4": "orphan",
+      "s-77816b48a054": "evidence",
+      "s-77b75a0d2229": "limitation",
+      "s-798e10fcceb8": "limitation",
+      "s-7a44c1795646": "background",
+      "s-7a76c7146fe7": "orphan",
+      "s-7e191413e596": "orphan",
+      "s-7fa2a8e619b8": "orphan",
+      "s-7fe664ed64d6": "evidence",
+      "s-805eb26d81d6": "orphan",
+      "s-81e90d73e21c": "orphan",
+      "s-837ed43db935": "evidence",
+      "s-83ac450b97ad": "orphan",
+      "s-8445fc2cd514": "evidence",
+      "s-846c6c92f854": "orphan",
+      "s-84e0db3cae57": "orphan",
+      "s-857a386d969d": "orphan",
+      "s-86b5594eb795": "orphan",
+      "s-875248142ce9": "limitation",
+      "s-8783015187bd": "method",
+      "s-8ec173d08ac3": "orphan",
+      "s-8f950b3dc7fd": "orphan",
+      "s-9197b36b6af4": "method",
+      "s-92713d98cad8": "orphan",
+      "s-92837ebfa80f": "orphan",
+      "s-93aaa9e8fa63": "orphan",
+      "s-947deeca08ae": "orphan",
+      "s-95b71c3d5d75": "orphan",
+      "s-98bc1ee683fd": "evidence",
+      "s-99a649788d88": "limitation",
+      "s-9e9168b501ef": "orphan",
+      "s-9f1fc7768934": "limitation",
+      "s-a02f83dcc9bb": "orphan",
+      "s-a0b7cca40567": "evidence",
+      "s-a27e4d9aa713": "limitation",
+      "s-a2856b97aaa1": "evidence",
+      "s-a8aaaa61bed8": "limitation",
+      "s-a9d770dcbe1f": "orphan",
+      "s-aa94e41ba1c9": "orphan",
+      "s-ac4f001fe2d7": "orphan",
+      "s-ae13b7f0d291": "orphan",
+      "s-aed5aca68fb8": "limitation",
+      "s-af49dfdd8ca2": "limitation",
+      "s-b1e6ad8927ab": "orphan",
+      "s-b244d4ff64f5": "orphan",
+      "s-b25516ce6235": "orphan",
+      "s-b3668df3d087": "limitation",
+      "s-b3e6436cd1b4": "orphan",
+      "s-b4ad37bd9893": "evidence",
+      "s-b6d8420ad28e": "background",
+      "s-bae61ae4ad24": "evidence",
+      "s-bbd4fff38c53": "orphan",
+      "s-bcf4d4721495": "orphan",
+      "s-bdbcfadd2a57": "limitation",
+      "s-c8e3588fb4f1": "limitation",
+      "s-c9a0e859f090": "limitation",
+      "s-cf579c57e1bb": "limitation",
+      "s-cfa43cee4411": "evidence",
+      "s-d0b708885b5a": "limitation",
+      "s-d130fa4c982b": "orphan",
+      "s-d762567a4f81": "orphan",
+      "s-d80ff96849bf": "background",
+      "s-d96fe7f30afd": "orphan",
+      "s-da5e85fe9e5e": "evidence",
+      "s-dcf697f2c7e4": "limitation",
+      "s-df78e236a4de": "limitation",
+      "s-e0c1a4358376": "contribution",
+      "s-e308e9ffe4f2": "orphan",
+      "s-e4a2db9c137b": "limitation",
+      "s-e4df5ffc7470": "background",
+      "s-e6357dc4f83b": "limitation",
+      "s-e8488482e139": "orphan",
+      "s-eb6cffc93777": "limitation",
+      "s-eba49088cef5": "orphan",
+      "s-ebb9856d402a": "orphan",
+      "s-ecce981f5784": "orphan",
+      "s-ecd2e6836c4a": "orphan",
+      "s-ed189fa70f65": "evidence",
+      "s-edcff14e782f": "orphan",
+      "s-eef385a372be": "limitation",
+      "s-efa6690708a6": "orphan",
+      "s-efe24b424168": "orphan",
+      "s-f0db463f5d7b": "background",
+      "s-f1999cefd545": "orphan",
+      "s-f21d280d43f1": "method",
+      "s-f28b62ea6245": "orphan",
+      "s-f380fd1e2bdf": "orphan",
+      "s-f3a78f3ce047": "orphan",
+      "s-f44157a69853": "orphan",
+      "s-f552365b4884": "evidence",
+      "s-f56f2e6ed9ce": "orphan",
+      "s-f6bb99bf03f4": "orphan",
+      "s-f710015c595a": "limitation",
+      "s-f7c0cf292f77": "orphan",
+      "s-f90be7076617": "orphan",
+      "s-f9ad7944e9ff": "evidence",
+      "s-fb683ef70fef": "limitation",
+      "s-fb974134dcc0": "limitation",
+      "s-fce1d5a0e97c": "method",
+      "s-fe012813aa96": "orphan"
+    },
+    "serves": {
+      "s-009de2f5ac1b": [
+        "parameters"
+      ],
+      "s-05833cf2f76e": [
+        "early-warning"
+      ],
+      "s-09c04e3cc6b9": [
+        "bounding",
+        "ident",
+        "identifiability",
+        "ref",
+        "sec"
+      ],
+      "s-0f6ea3bb7203": [
+        "wearable"
+      ],
+      "s-1263b5463875": [
+        "recordings"
+      ],
+      "s-15885fa13913": [
+        "model",
+        "ref",
+        "sec"
+      ],
+      "s-158c24f766f2": [
+        "ident",
+        "ref"
+      ],
+      "s-17fca9b16756": [
+        "ref"
+      ],
+      "s-1959a7d09b45": [
+        "model",
+        "wearable"
+      ],
+      "s-1f399cf305a9": [
+        "cusp"
+      ],
+      "s-3218ae206bc9": [
+        "early-warning",
+        "model",
+        "rolling-window",
+        "test"
+      ],
+      "s-330025ce044d": [
+        "cusp",
+        "test"
+      ],
+      "s-3330e663d2c8": [
+        "cusp",
+        "model"
+      ],
+      "s-389c830c62d6": [
+        "cusp"
+      ],
+      "s-3c604460a70b": [
+        "cusp",
+        "early-warning",
+        "identifiability",
+        "wearable"
+      ],
+      "s-3d5d8bef0d7b": [
+        "ident",
+        "parameters",
+        "ref"
+      ],
+      "s-3dcca40551b7": [
+        "cusp"
+      ],
+      "s-3f2bb1d1073d": [
+        "early-warning",
+        "estimators"
+      ],
+      "s-40f512c316b0": [
+        "model"
+      ],
+      "s-52e2de4b578c": [
+        "checked"
+      ],
+      "s-55b5496c7480": [
+        "support"
+      ],
+      "s-588acfb0c49c": [
+        "length"
+      ],
+      "s-58e830fd9a57": [
+        "early-warning"
+      ],
+      "s-61590542377b": [
+        "model"
+      ],
+      "s-6a65a596d5f8": [
+        "cusp",
+        "overload"
+      ],
+      "s-6e357db79ac8": [
+        "parameters"
+      ],
+      "s-6fdececbb827": [
+        "test"
+      ],
+      "s-7193f86fa98d": [
+        "test"
+      ],
+      "s-73dd8788bec8": [
+        "ident",
+        "ref"
+      ],
+      "s-77816b48a054": [
+        "model"
+      ],
+      "s-77b75a0d2229": [
+        "ident",
+        "length",
+        "ref",
+        "sec"
+      ],
+      "s-798e10fcceb8": [
+        "cusp",
+        "overload"
+      ],
+      "s-7a76c7146fe7": [
+        "ref",
+        "results",
+        "sec"
+      ],
+      "s-7fe664ed64d6": [
+        "length"
+      ],
+      "s-837ed43db935": [
+        "estimators"
+      ],
+      "s-8445fc2cd514": [
+        "recordings"
+      ],
+      "s-8783015187bd": [
+        "model"
+      ],
+      "s-8ec173d08ac3": [
+        "results"
+      ],
+      "s-98bc1ee683fd": [
+        "recordings"
+      ],
+      "s-99a649788d88": [
+        "length"
+      ],
+      "s-a0b7cca40567": [
+        "ref"
+      ],
+      "s-a2856b97aaa1": [
+        "test"
+      ],
+      "s-a8aaaa61bed8": [
+        "test"
+      ],
+      "s-a9d770dcbe1f": [
+        "ref"
+      ],
+      "s-aed5aca68fb8": [
+        "cusp",
+        "wearable"
+      ],
+      "s-b1e6ad8927ab": [
+        "early-warning",
+        "ground-truth",
+        "ref",
+        "results",
+        "sec",
+        "test"
+      ],
+      "s-b244d4ff64f5": [
+        "overload"
+      ],
+      "s-b25516ce6235": [
+        "wearable"
+      ],
+      "s-b4ad37bd9893": [
+        "recordings"
+      ],
+      "s-bae61ae4ad24": [
+        "wearable"
+      ],
+      "s-c9a0e859f090": [
+        "model"
+      ],
+      "s-cf579c57e1bb": [
+        "ref",
+        "results",
+        "sec"
+      ],
+      "s-cfa43cee4411": [
+        "cusp",
+        "formulation",
+        "model",
+        "parameters",
+        "ref",
+        "sec"
+      ],
+      "s-da5e85fe9e5e": [
+        "test"
+      ],
+      "s-dcf697f2c7e4": [
+        "model"
+      ],
+      "s-e4df5ffc7470": [
+        "length",
+        "test"
+      ],
+      "s-e6357dc4f83b": [
+        "ident",
+        "parameters",
+        "ref",
+        "sec"
+      ],
+      "s-eb6cffc93777": [
+        "parameters"
+      ],
+      "s-eba49088cef5": [
+        "model"
+      ],
+      "s-ecd2e6836c4a": [
+        "test"
+      ],
+      "s-ed189fa70f65": [
+        "test"
+      ],
+      "s-efe24b424168": [
+        "parameters"
+      ],
+      "s-f0db463f5d7b": [
+        "wearable"
+      ],
+      "s-f21d280d43f1": [
+        "ref"
+      ],
+      "s-f28b62ea6245": [
+        "cusp",
+        "identifiability",
+        "overload"
+      ],
+      "s-f44157a69853": [
+        "wearable"
+      ],
+      "s-f552365b4884": [
+        "model"
+      ],
+      "s-f710015c595a": [
+        "early-warning",
+        "rolling-window"
+      ],
+      "s-f9ad7944e9ff": [
+        "cusp",
+        "ref"
+      ],
+      "s-fb974134dcc0": [
+        "length"
+      ],
+      "s-fce1d5a0e97c": [
+        "length",
+        "parameters"
+      ]
+    },
+    "unsupported_claim_parts": []
+  },
+  "source_file": "main.tex",
+  "source_hash": "6bb4c482d26838d143fbef84c6edf08952e5d28300674326388bfa8bac060373",
+  "tool_version": "0.3.0"
+}
