@@ -1,18 +1,21 @@
 {
   "artifact": "novelty",
-  "created_at": "2026-08-12T01:18:59+00:00",
+  "created_at": "2026-08-12T10:33:12+00:00",
   "offline": false,
   "payload": {
-    "claim": "We present an identifiability analysis of cusp models fitted to wearable physiology, together with a ground-truth test of the rolling-window early-warning estimators such a model would be checked with.",
+    "claim": "We present an identifiability analysis of cusp models fitted to wearable physiology (Sec.~\\ref{sec:ident}) and a ground-truth test of the rolling-window early-warning estimators such a model would be checked with (Sec.~\\ref{sec:results}).",
     "claim_confirmed": false,
-    "claim_evidence_spans": [],
+    "claim_evidence_spans": [
+      "s-0a221e295376",
+      "s-4d4befafb8ee"
+    ],
     "claim_items": [],
-    "claim_span_id": "s-97621500b44a",
+    "claim_span_id": "s-f1ca543fec72",
     "orphans": [
       {
         "char_range": [
-          7938,
-          7961
+          7783,
+          7806
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-f380fd1e2bdf",
@@ -20,8 +23,8 @@
       },
       {
         "char_range": [
-          8941,
-          9082
+          8786,
+          8927
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-733259d6a774",
@@ -29,8 +32,8 @@
       },
       {
         "char_range": [
-          10388,
-          10452
+          10400,
+          10464
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-efa6690708a6",
@@ -38,8 +41,8 @@
       },
       {
         "char_range": [
-          10573,
-          10684
+          10585,
+          10696
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-009de2f5ac1b",
@@ -47,8 +50,8 @@
       },
       {
         "char_range": [
-          10896,
-          11290
+          10908,
+          11302
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-09257333f545",
@@ -56,8 +59,8 @@
       },
       {
         "char_range": [
-          11332,
-          11577
+          11344,
+          11589
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-2facb926fdad",
@@ -65,8 +68,8 @@
       },
       {
         "char_range": [
-          11806,
-          12122
+          11818,
+          12134
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-7550ae6224c4",
@@ -74,8 +77,8 @@
       },
       {
         "char_range": [
-          12189,
-          12257
+          12201,
+          12269
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-4ae6c3d5baab",
@@ -83,8 +86,8 @@
       },
       {
         "char_range": [
-          14372,
-          15361
+          14470,
+          15459
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-61590542377b",
@@ -92,26 +95,17 @@
       },
       {
         "char_range": [
-          15387,
-          15648
+          15485,
+          15908
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
-        "span_id": "s-eba49088cef5",
-        "text": "Taking the Euler map of \\eqref{eq:sde} as the model, rather than as an approximation to it, makes the transition density exactly Gaussian and removes discretisation bias. Expanding the drift, the mean increment is linear in a reparameterised coefficient vector,"
+        "span_id": "s-c42a58efde8a",
+        "text": "We take the Euler map of \\eqref{eq:sde} as the model rather than as an approximation to it. That makes the transition density exactly Gaussian and leaves no discretisation bias to correct, but it is a modelling choice and not a free one: at the $\\lambda$ of interest the two coincide closely, and at larger $\\lambda$ they would not. Expanding the drift, the mean increment is linear in a reparameterised coefficient vector,"
       },
       {
         "char_range": [
-          18077,
-          18409
-        ],
-        "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
-        "span_id": "s-efe24b424168",
-        "text": "Before testing anything we asked which parameters are recoverable at the series lengths on offer. The answer organised the rest of the paper. We simulated with randomised true parameters and refitted, 2000 replicates at each of six lengths, then compared true against estimated values (Table~\\ref{tab:ident}, Fig.~\\ref{fig:ident}a)."
-      },
-      {
-        "char_range": [
-          18411,
-          18749
+          18605,
+          18943
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-7fa2a8e619b8",
@@ -119,8 +113,8 @@
       },
       {
         "char_range": [
-          21811,
-          21953
+          22164,
+          22306
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-7fe664ed64d6",
@@ -128,26 +122,26 @@
       },
       {
         "char_range": [
-          21955,
-          22334
+          22308,
+          22677
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
-        "span_id": "s-e997b83de5de",
-        "text": "One of the five pre-stated predictions survives as evaluable here: the restoring cubic term, governed by $\\theta_1$, the only parameter recovered on both measures. P1 needs the ratio of two badly identified quantities and P2 the distance to the fold, while P3 through P5 rest on $\\varepsilon$ and $\\alpha_A$. We report that structure rather than four numbers dressed up as tests."
+        "span_id": "s-07a8c588a3e5",
+        "text": "One of the five pre-stated predictions survives as evaluable: the restoring cubic term, governed by $\\theta_1$, the only parameter recovered on both measures. P1 needs the ratio of two badly identified quantities and P2 the distance to the fold, while P3 to P5 rest on $\\varepsilon$ and $\\alpha_A$. We report that structure rather than four numbers dressed up as tests."
       },
       {
         "char_range": [
-          28225,
-          28688
+          28495,
+          29401
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-61c858d07de8",
-        "text": "The null is specific, and calling it noise would be wrong. Two of the three calibrated statistics do exceed their surrogate nulls: the likelihood ratio against the monostable restriction at $40.8\\%$ of units, marginal bimodality at $49.7\\%$. Only the statistic isolating the cubic term sits at chance. A bimodal marginal with no cubic drift is exactly the configuration in which a study reporting distributional evidence alone concludes the opposite of the truth."
+        "text": "The null is specific, and calling it noise would be wrong. Two of the three calibrated statistics do exceed their surrogate nulls: the likelihood ratio against the monostable restriction at $40.8\\%$ of units, marginal bimodality at $49.7\\%$. Only the statistic isolating the cubic term sits at chance. A bimodal marginal with no cubic drift is exactly the configuration in which distributional evidence alone concludes the opposite of the truth, so it is worth naming what else produces it. Exogenous switching does: a load tracking a driver with two typical levels is bimodal and beats a monostable fit with no restoring cubic anywhere. So does slow non-stationarity, a baseline drifting across a session. Both fit everything measured here and neither is a fold. Separating them from bistability needs the drivers manipulated rather than observed, which is a design requirement and not a longer recording."
       },
       {
         "char_range": [
-          28690,
-          29069
+          29403,
+          29782
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-8eb479696d51",
@@ -155,8 +149,8 @@
       },
       {
         "char_range": [
-          34050,
-          34401
+          34524,
+          34875
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-b25516ce6235",
@@ -165,73 +159,72 @@
     ],
     "roles": {
       "s-009de2f5ac1b": "orphan",
-      "s-01a1968d0340": "orphan",
       "s-01b1ccd4733c": "orphan",
-      "s-022f3f44fad1": "orphan",
-      "s-03cdd71489fb": "limitation",
       "s-05833cf2f76e": "orphan",
+      "s-066c4e3e277f": "limitation",
+      "s-07a8c588a3e5": "orphan",
       "s-08d86f26c2b5": "orphan",
       "s-09257333f545": "orphan",
       "s-0938468d6525": "evidence",
       "s-096f6f16b334": "orphan",
       "s-0a221e295376": "evidence",
-      "s-0a9ab8b598b9": "limitation",
       "s-0b8817eab47d": "background",
-      "s-0cd4720a8e9b": "orphan",
       "s-0e075c71c28e": "orphan",
-      "s-0e28fa5f05ce": "evidence",
       "s-0e351322ba35": "limitation",
-      "s-0f6ea3bb7203": "evidence",
       "s-1074239660ef": "orphan",
-      "s-117d58892642": "limitation",
+      "s-114d232a2b95": "limitation",
       "s-1263b5463875": "orphan",
       "s-12d88e814722": "orphan",
+      "s-12da1c7308b6": "orphan",
       "s-15885fa13913": "orphan",
       "s-158c24f766f2": "limitation",
-      "s-169f65734443": "orphan",
       "s-17a0569fde79": "orphan",
       "s-17fca9b16756": "method",
       "s-18f5cd873fa2": "orphan",
-      "s-19a592e1dd43": "orphan",
       "s-1b5d349830f3": "orphan",
       "s-1baa6766182f": "orphan",
-      "s-1bc82d4ebb01": "orphan",
       "s-1c8ef167143e": "orphan",
       "s-1e6aade9b1c1": "limitation",
-      "s-1f399cf305a9": "orphan",
       "s-2225c24b185a": "orphan",
       "s-246d3e110afd": "orphan",
-      "s-2680f9d3226e": "orphan",
+      "s-274fa3891cd0": "orphan",
       "s-27b8cf101b18": "orphan",
+      "s-284784e24eb8": "orphan",
       "s-2ae0b7f1463c": "orphan",
       "s-2cf7117bef72": "evidence",
+      "s-2d0993c47f72": "orphan",
       "s-2da796d40be5": "limitation",
       "s-2facb926fdad": "orphan",
-      "s-3299d3b14901": "limitation",
+      "s-300575975758": "orphan",
+      "s-32db558886a0": "evidence",
       "s-330a478f1fd0": "orphan",
       "s-34fe9f82efcb": "limitation",
       "s-3592f6c6d2aa": "orphan",
+      "s-35c728c13e3c": "orphan",
       "s-3634c4b2ad54": "limitation",
       "s-363a45c079b6": "orphan",
       "s-3666775aa9ea": "orphan",
       "s-374a8f5277d2": "orphan",
-      "s-39162853118f": "orphan",
       "s-3b6acc86a21b": "orphan",
       "s-3bd4d37dbe07": "orphan",
       "s-3c604460a70b": "limitation",
-      "s-3d5d8bef0d7b": "orphan",
+      "s-3c73244f4ace": "limitation",
+      "s-3d5d8bef0d7b": "evidence",
       "s-3da3f85e043c": "orphan",
-      "s-3dcca40551b7": "limitation",
       "s-3f2bb1d1073d": "orphan",
-      "s-40c13643f97d": "limitation",
-      "s-4226a09519cc": "orphan",
+      "s-400bdbaffb64": "orphan",
+      "s-42785f0ee1d4": "limitation",
       "s-439ea235d85f": "orphan",
-      "s-4736b645edf4": "orphan",
       "s-4ae6c3d5baab": "orphan",
+      "s-4c09d5566b5e": "evidence",
+      "s-4d22e7f90f2a": "orphan",
       "s-4d4befafb8ee": "evidence",
       "s-50f3939a3ad8": "orphan",
+      "s-518a524faff7": "orphan",
       "s-52cda9d5ffd0": "orphan",
       "s-52e2de4b578c": "orphan",
+      "s-535b5e5f65ff": "orphan",
+      "s-54889440010d": "limitation",
       "s-5557d0ae6481": "orphan",
       "s-55b5496c7480": "background",
       "s-55f9e4b10849": "orphan",
@@ -239,18 +232,22 @@
       "s-574422884d8d": "orphan",
       "s-588acfb0c49c": "orphan",
       "s-59476761d750": "limitation",
+      "s-59d6e5a17ef5": "orphan",
+      "s-5b34ce65d6c3": "orphan",
       "s-5bd8c91ab2f7": "orphan",
       "s-5d7a1b02aaaf": "orphan",
+      "s-5e48e6c115c6": "limitation",
       "s-5fa2ef3fcdf5": "orphan",
-      "s-60d151230788": "orphan",
       "s-61590542377b": "orphan",
       "s-61c858d07de8": "orphan",
+      "s-6217a749473b": "orphan",
+      "s-63533aa527f6": "background",
       "s-63af04b6550f": "orphan",
-      "s-6683e3233e92": "orphan",
-      "s-697da77207ce": "limitation",
       "s-69e3f220dd78": "limitation",
       "s-6a65a596d5f8": "limitation",
       "s-6e357db79ac8": "background",
+      "s-6ea5b7916035": "evidence",
+      "s-6f6206a99433": "orphan",
       "s-6fdececbb827": "evidence",
       "s-7193f86fa98d": "evidence",
       "s-733259d6a774": "orphan",
@@ -260,102 +257,95 @@
       "s-77b75a0d2229": "limitation",
       "s-78500994ccb9": "orphan",
       "s-7d5c20ef9dbc": "orphan",
-      "s-7e191413e596": "orphan",
       "s-7fa2a8e619b8": "orphan",
       "s-7fe664ed64d6": "orphan",
       "s-805eb26d81d6": "orphan",
       "s-81c1ab783eaf": "orphan",
-      "s-81e90d73e21c": "orphan",
+      "s-82f8b5d5efaa": "orphan",
       "s-837ed43db935": "evidence",
       "s-846c6c92f854": "orphan",
-      "s-857a386d969d": "orphan",
       "s-86907ca59f15": "orphan",
       "s-86b5594eb795": "orphan",
-      "s-875248142ce9": "limitation",
       "s-8783015187bd": "method",
+      "s-893ec47ef904": "limitation",
+      "s-8a599cdfb021": "limitation",
+      "s-8b94bcfdcebe": "limitation",
       "s-8c4f4370c8d8": "orphan",
       "s-8eb479696d51": "orphan",
       "s-8f950b3dc7fd": "orphan",
       "s-9197b36b6af4": "method",
       "s-92837ebfa80f": "orphan",
       "s-943d71790d80": "orphan",
-      "s-96ff06f26f93": "orphan",
-      "s-97621500b44a": "contribution",
+      "s-9b2ed0397e3b": "orphan",
       "s-9e9168b501ef": "orphan",
-      "s-9f1fc7768934": "limitation",
+      "s-9f9973f2af9b": "orphan",
       "s-a02f83dcc9bb": "orphan",
-      "s-a0b7cca40567": "orphan",
+      "s-a0b7cca40567": "evidence",
       "s-a27e4d9aa713": "limitation",
       "s-a2856b97aaa1": "evidence",
+      "s-a29c580b70b4": "orphan",
+      "s-a3da7e990efb": "background",
       "s-a4e1002f6851": "orphan",
       "s-a8aaaa61bed8": "limitation",
       "s-a9d770dcbe1f": "orphan",
       "s-a9e2d86b55b3": "orphan",
       "s-aa94e41ba1c9": "orphan",
-      "s-ae13b7f0d291": "orphan",
       "s-aed5aca68fb8": "limitation",
       "s-af49dfdd8ca2": "limitation",
+      "s-b240b8acad40": "orphan",
       "s-b25516ce6235": "orphan",
-      "s-b6d8420ad28e": "background",
+      "s-b525ec69fad1": "limitation",
       "s-bbd4fff38c53": "orphan",
-      "s-bcbb529fe116": "background",
-      "s-bcf4d4721495": "orphan",
       "s-bd9799099c5a": "orphan",
+      "s-bf65f09adf6f": "orphan",
       "s-c2c65dead527": "orphan",
       "s-c2d7d51c5c2b": "orphan",
       "s-c41015dd69e5": "evidence",
-      "s-c6813e964004": "evidence",
+      "s-c42a58efde8a": "orphan",
+      "s-c48792d56552": "orphan",
       "s-c8e3588fb4f1": "limitation",
-      "s-cf579c57e1bb": "limitation",
+      "s-ca9c75266173": "orphan",
+      "s-cd1ce472a4bd": "background",
+      "s-cf8d51e2db0d": "orphan",
       "s-d0b708885b5a": "limitation",
       "s-d130fa4c982b": "orphan",
       "s-d656a9678ebe": "orphan",
       "s-d762567a4f81": "orphan",
       "s-d96fe7f30afd": "orphan",
-      "s-dba488029683": "orphan",
       "s-dc39365ead7f": "orphan",
-      "s-dcf697f2c7e4": "limitation",
+      "s-dd79323ed75f": "orphan",
       "s-de7f300a0500": "evidence",
-      "s-e0383470c6d5": "orphan",
       "s-e0a52a7f9d21": "evidence",
-      "s-e1f198e84000": "orphan",
+      "s-e24e46fa1fe5": "limitation",
       "s-e308e9ffe4f2": "orphan",
       "s-e4a2db9c137b": "limitation",
       "s-e4df5ffc7470": "background",
-      "s-e706e451a3cb": "orphan",
+      "s-e7359a29b135": "orphan",
       "s-e8488482e139": "orphan",
-      "s-e997b83de5de": "orphan",
-      "s-e9d5c61c9fd5": "orphan",
+      "s-e866d6af4c08": "orphan",
+      "s-e989e069f06b": "limitation",
       "s-eae9c7bbd219": "orphan",
-      "s-eba49088cef5": "orphan",
       "s-ecd2e6836c4a": "orphan",
       "s-ed189fa70f65": "evidence",
       "s-ed3ee6f10767": "orphan",
-      "s-edcff14e782f": "orphan",
       "s-efa6690708a6": "orphan",
       "s-efe24b424168": "orphan",
       "s-f00117041ae8": "evidence",
+      "s-f1ca543fec72": "contribution",
       "s-f21d280d43f1": "method",
       "s-f380fd1e2bdf": "orphan",
-      "s-f3da4e845719": "limitation",
-      "s-f4156e9aa4e9": "background",
       "s-f552365b4884": "evidence",
       "s-f56f2e6ed9ce": "orphan",
+      "s-f5898c49a283": "orphan",
       "s-f5ff457ab01c": "method",
       "s-f710015c595a": "limitation",
-      "s-f7c0cf292f77": "orphan",
-      "s-f8b135ce8bd1": "background",
       "s-f94ca864c917": "limitation",
-      "s-fb683ef70fef": "limitation",
       "s-fb974134dcc0": "limitation",
       "s-fcf003d709e5": "background",
       "s-fe012813aa96": "orphan",
       "s-fed39db1cd0e": "orphan"
     },
     "serves": {
-      "s-022f3f44fad1": [
-        "test"
-      ],
       "s-05833cf2f76e": [
         "early-warning"
       ],
@@ -364,38 +354,53 @@
       ],
       "s-0a221e295376": [
         "cusp",
+        "ident",
         "identifiability",
         "models",
         "physiology",
+        "ref",
+        "sec",
         "wearable"
       ],
       "s-0b8817eab47d": [
         "wearable"
       ],
-      "s-0e28fa5f05ce": [
-        "analysis",
-        "together"
-      ],
-      "s-0f6ea3bb7203": [
-        "wearable"
-      ],
-      "s-117d58892642": [
-        "cusp"
-      ],
       "s-15885fa13913": [
-        "model"
+        "model",
+        "ref",
+        "sec"
+      ],
+      "s-158c24f766f2": [
+        "ident",
+        "ref"
+      ],
+      "s-17fca9b16756": [
+        "ref"
       ],
       "s-1e6aade9b1c1": [
-        "cusp"
-      ],
-      "s-1f399cf305a9": [
         "cusp"
       ],
       "s-2225c24b185a": [
         "estimators"
       ],
+      "s-274fa3891cd0": [
+        "results"
+      ],
       "s-2cf7117bef72": [
-        "cusp"
+        "cusp",
+        "ref"
+      ],
+      "s-2d0993c47f72": [
+        "model",
+        "wearable"
+      ],
+      "s-32db558886a0": [
+        "wearable"
+      ],
+      "s-34fe9f82efcb": [
+        "ident",
+        "ref",
+        "sec"
       ],
       "s-3592f6c6d2aa": [
         "models"
@@ -409,17 +414,32 @@
         "identifiability",
         "wearable"
       ],
-      "s-3dcca40551b7": [
-        "cusp"
+      "s-3d5d8bef0d7b": [
+        "ident",
+        "ref"
       ],
       "s-3f2bb1d1073d": [
         "early-warning",
         "estimators"
       ],
+      "s-42785f0ee1d4": [
+        "ref",
+        "results",
+        "sec"
+      ],
+      "s-4c09d5566b5e": [
+        "analysis"
+      ],
+      "s-4d22e7f90f2a": [
+        "models"
+      ],
       "s-4d4befafb8ee": [
         "early-warning",
         "estimators",
         "ground-truth",
+        "ref",
+        "results",
+        "sec",
         "test"
       ],
       "s-50f3939a3ad8": [
@@ -429,17 +449,33 @@
       "s-52e2de4b578c": [
         "checked"
       ],
+      "s-54889440010d": [
+        "cusp"
+      ],
       "s-574422884d8d": [
         "model"
       ],
+      "s-5b34ce65d6c3": [
+        "cusp"
+      ],
       "s-5d7a1b02aaaf": [
-        "models"
+        "models",
+        "ref",
+        "results",
+        "sec"
       ],
       "s-61590542377b": [
         "model"
       ],
+      "s-69e3f220dd78": [
+        "ref",
+        "sec"
+      ],
       "s-6a65a596d5f8": [
         "cusp"
+      ],
+      "s-6ea5b7916035": [
+        "test"
       ],
       "s-6fdececbb827": [
         "test"
@@ -447,14 +483,23 @@
       "s-7193f86fa98d": [
         "test"
       ],
+      "s-73dd8788bec8": [
+        "ident",
+        "ref"
+      ],
       "s-764b67e84916": [
         "wearable"
       ],
+      "s-77b75a0d2229": [
+        "ident",
+        "ref",
+        "sec"
+      ],
+      "s-81c1ab783eaf": [
+        "results"
+      ],
       "s-837ed43db935": [
         "estimators"
-      ],
-      "s-875248142ce9": [
-        "models"
       ],
       "s-8783015187bd": [
         "model"
@@ -462,12 +507,25 @@
       "s-8eb479696d51": [
         "test"
       ],
+      "s-a0b7cca40567": [
+        "ref"
+      ],
       "s-a2856b97aaa1": [
         "test"
+      ],
+      "s-a3da7e990efb": [
+        "model",
+        "wearable"
       ],
       "s-a8aaaa61bed8": [
         "physiology",
         "test"
+      ],
+      "s-a9d770dcbe1f": [
+        "ref"
+      ],
+      "s-a9e2d86b55b3": [
+        "results"
       ],
       "s-aed5aca68fb8": [
         "cusp",
@@ -477,15 +535,17 @@
       "s-b25516ce6235": [
         "wearable"
       ],
+      "s-b525ec69fad1": [
+        "cusp"
+      ],
       "s-c41015dd69e5": [
         "cusp",
         "fitted",
-        "model"
+        "model",
+        "ref",
+        "sec"
       ],
-      "s-c6813e964004": [
-        "test"
-      ],
-      "s-dcf697f2c7e4": [
+      "s-c42a58efde8a": [
         "model"
       ],
       "s-de7f300a0500": [
@@ -500,15 +560,6 @@
       "s-e4df5ffc7470": [
         "test"
       ],
-      "s-e706e451a3cb": [
-        "model"
-      ],
-      "s-e9d5c61c9fd5": [
-        "test"
-      ],
-      "s-eba49088cef5": [
-        "model"
-      ],
       "s-ecd2e6836c4a": [
         "test"
       ],
@@ -516,14 +567,14 @@
         "test"
       ],
       "s-ed3ee6f10767": [
-        "estimators"
+        "estimators",
+        "results"
       ],
       "s-f00117041ae8": [
         "early-warning"
       ],
-      "s-f4156e9aa4e9": [
-        "model",
-        "wearable"
+      "s-f21d280d43f1": [
+        "ref"
       ],
       "s-f552365b4884": [
         "model"
@@ -536,6 +587,6 @@
     "unsupported_claim_parts": []
   },
   "source_file": "main.tex",
-  "source_hash": "09a97776af96eaf63238e07fbc7fd417c53f50fa1382525d65ea6f413ceadd1c",
+  "source_hash": "88df1cc0588acbd080950addcb16886c5e0017dd06a2cd822631324423d0bef9",
   "tool_version": "0.3.0"
 }

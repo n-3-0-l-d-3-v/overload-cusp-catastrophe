@@ -1,22 +1,22 @@
-<!-- research-better 0.3.0 | source: main.tex | hash: 09a97776af96eaf6 | generated: 2026-08-12T01:19:12+00:00 -->
+<!-- research-better 0.3.0 | source: main.tex | hash: 88df1cc0588acbd0 | generated: 2026-08-12T10:33:21+00:00 -->
 
 # main.tex
 
-**The paper claims *(not confirmed)*:** We present an identifiability analysis of cusp models fitted to wearable physiology, together with a ground-truth test of the rolling-window early-warning estimators such a model would be checked with.
+**The paper claims *(not confirmed)*:** We present an identifiability analysis of cusp models fitted to wearable physiology (Sec.~\ref{sec:ident}) and a ground-truth test of the rolling-window early-warning estimators such a model would be checked with (Sec.~\ref{sec:results}).
 
-**Length.** 3816 words of prose.
+**Length.** 3883 words of prose.
 
 **Citations.** 46 entries: 1 not found, 33 verified, 12 year mismatch. 3 of 16 cited works had retrievable full text.
 
-**Claims.** 18 cited claims: 1 partial, 15 uncheckable, 2 unsupported.
+**Claims.** 18 cited claims: 15 uncheckable, 3 unsupported.
 
-**Cuts.** 17 orphan paragraphs. 0 refused or displaced.
+**Cuts.** 16 orphan paragraphs. 0 refused or displaced.
 
-**Reviewer questions.** 2 serious.
+**Reviewer questions.** 3 serious.
 
-**May read as machine-written.** 4 passage(s), 4 looked at and left alone as likely false positives.
+**May read as machine-written.** 4 passage(s), 3 looked at and left alone as likely false positives.
 
-- Introduction, paragraph 1: unsupported claim + uniform rhythm
+- Introduction, paragraph 1: unsupported claim + unsupported claim
 - Corpora, paragraph 1: unsupported claim
 - Introduction (whole section): voice hedging
 - Sensor assignment and a negative control (whole section): voice passive ratio
@@ -33,5 +33,5 @@
 ## Check
 
 - 13 unverified citations, limit 0
-- 2 unsupported claims, limit 0
+- 3 unsupported claims, limit 0
 - Thresholds from defaults.

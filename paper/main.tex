@@ -84,11 +84,11 @@ data simulated from a model that does contain a fold, wrong in $99\%$ of
 replicates at a 30-sample window, while the exponent computed from the true
 curvature recovers correctly. The failure is structural: the correlation time
 diverges at the fold while the window stays fixed. Applying the one prediction that remains identifiable to 147 recordings from
-40 people in three open corpora returns a surrogate-calibrated null, powered so
-that this excludes strong and moderate dynamics rather than reporting an
-absence. The work is motivated by sensory and executive overload in autistic
-adults; none are analysed here, and a pre-registered validation is
-specified.
+40 people in three open stress corpora returns a surrogate-calibrated null;
+measured power makes that a bound excluding strong and moderate dynamics
+\emph{in those corpora}, not a general absence. The motivating case is overload in autistic adults, for whom no corpus of this
+density exists; both method results transfer regardless, and a pre-registered
+validation is specified.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -99,41 +99,38 @@ identifiability, electrodermal activity, wearable sensing, sensory overload.
 % =====================================================================
 \section{Introduction}
 
-Autistic adults report sensory reactivity differences across vision, sound
-and touch, and describe the difficulty of tolerating and controlling them
-\cite{maclennan2022}. Adult cohort studies link sensory atypicality to
-executive difficulty \cite{kiep2025}, and meta-analysis finds executive
-dysfunction across the spectrum, though with smaller effect sizes in adult
-samples than in child ones \cite{demetriou2018}. The phenomenon is not in doubt;
-a formal account of its dynamics is what is missing. Those accounts suggest a
-characteristic temporal shape, abrupt onset and slow clearance, which any
-dynamical model of overload has to reproduce. We treat that shape as a premise
-to formalise and test, not as a result inherited from the qualitative
-literature.
+Catastrophe models are an attractive way to formalise overload. A latent load
+coordinate relaxing in a quartic potential turns functional states into
+metastable basins and makes abrupt onset with slow recovery a consequence of
+the geometry rather than an observation to be reported. The motivating case is sensory and executive overload in autistic adults, who
+report sensory reactivity differences across modalities \cite{maclennan2022}
+and in whom sensory atypicality tracks executive difficulty \cite{kiep2025};
+meta-analysis finds executive dysfunction across the spectrum, with smaller
+effect sizes in adults \cite{demetriou2018}. Nothing below depends on that
+case. The question this paper answers is what such a model can be estimated to
+support from a wearable recording, and the answer constrains the approach
+wherever it is applied.
 
-Existing models do not supply one. Computational work on autism is dominated by
-Bayesian and predictive-coding framings whose empirical support a ten-year
+Existing formal accounts are thin. Computational work on autism is dominated
+by Bayesian and predictive-coding framings whose empirical support a ten-year
 review found mixed and methodologically inconsistent \cite{chrysaitis2023}, and
 the most recent dynamical treatment of symptom trajectories is avowedly
-theoretical, collecting no data \cite{adamou2026}. Applied state-transition work
-assigns states from experimental condition labels and counts a transition
-matrix. That is close to circular: the recovered matrix re-describes the block
-structure of the protocol, and yields nothing observation could contradict.
+theoretical, collecting no data \cite{adamou2026}. Applied state-transition
+work assigns states from experimental condition labels and counts a transition
+matrix, which is close to circular: the recovered matrix re-describes the block
+structure of the protocol and yields nothing observation could contradict.
 
-We take a different route. Instead of positing states and fitting transitions
-between them, we posit a one-dimensional stochastic relaxation in a cusp
-potential and let the phenomenology follow. The load coordinate $x_t$ sits in
-$V(x;a,b)=\tfrac14 x^4-\tfrac12 a x^2-bx$, where the normal factor $b_t$ carries
-momentary demand and the splitting factor $a_t$ carries depleted regulatory
-capacity. The substantive claim is that capacity does not add to load. It
-changes the geometry. Below a critical $a$ the load tracks demand and returns;
-above it a second attractor appears, bringing a fold, a hysteresis loop and
-critical slowing down. Sudden onset and slow recovery stop being observations to
-report and become consequences to check: numerical exponents that data can
-reject, since the geometry is closed-form. That is the promise. This paper asks the prior question. We present an
-identifiability analysis of cusp models fitted to wearable physiology, together
-with a ground-truth test of the rolling-window early-warning estimators such a
-model would be checked with. Only two parameters survive a recording of
+The cusp formulation avoids that. The load coordinate $x_t$ sits in
+$V(x;a,b)=\tfrac14 x^4-\tfrac12 a x^2-bx$, where the normal factor $b_t$
+carries momentary demand and the splitting factor $a_t$ carries depleted
+regulatory capacity. The substantive claim is that capacity does not add to
+load; it changes the geometry. Below a critical $a$ the load tracks demand and
+returns, above it a second attractor appears, bringing a fold, a hysteresis
+loop and critical slowing down. Onset and recovery become consequences to
+check, numerical exponents that data can reject. That is the promise. This paper asks the prior question. We present an identifiability analysis of cusp models fitted to wearable
+physiology (Sec.~\ref{sec:ident}) and a ground-truth test of the rolling-window
+early-warning estimators such a model would be checked with
+(Sec.~\ref{sec:results}). Only two parameters survive a recording of
 wearable length, and the two carrying the geometry are not among them. That
 bound belongs to the estimator rather than to our corpora, so it constrains any
 study of this kind; the estimators, meanwhile, report the wrong sign on data
@@ -280,9 +277,11 @@ used to justify a sensor assignment, not a rival method, and every baseline in
 Sec.~\ref{sec:results} is one of our own nested or competing models.
 
 \subsection{Estimation}
-Taking the Euler map of \eqref{eq:sde} as the model, rather than as an
-approximation to it, makes the transition density exactly Gaussian and removes
-discretisation bias. Expanding the drift, the mean increment is linear in a
+We take the Euler map of \eqref{eq:sde} as the model rather than as an
+approximation to it. That makes the transition density exactly Gaussian and
+leaves no discretisation bias to correct, but it is a modelling choice and not
+a free one: at the $\lambda$ of interest the two coincide closely, and at
+larger $\lambda$ they would not. Expanding the drift, the mean increment is linear in a
 reparameterised coefficient vector,
 \begin{equation}
 \Delta x_t=\theta_1(-x_t^3)+\theta_2 x_t+\theta_3A_tx_t+\theta_4
@@ -345,7 +344,7 @@ $2.0$, so one blow-up in two thousand replicates destroys the linear
 correlation. That is the model's own arithmetic, not a quirk of the
 simulation.
 
-\begin{figure}[t]
+\begin{figure}[tb]
 \centering
 \includegraphics[width=\columnwidth]{fig9_identifiability}
 \caption{(a) Rank recovery against series length, 2000 replicates per point.
@@ -355,7 +354,7 @@ the real corpora lies below the whole simulated range.}
 \label{fig:ident}
 \end{figure}
 
-\begin{table}[t]
+\begin{table}[tb]
 \caption{Parameter recovery, 2000 replicates per cell. $\rho$ (Spearman) asks
 whether the ordering is recovered, $r$ (Pearson) whether the value is. Only
 $\lambda$ and $\sigma$ score well on both. For $\alpha_0$ they diverge and stay
@@ -388,29 +387,31 @@ number preserves order, which is why $\rho$ recovers, and destroys scale, which
 is why $r$ does not.
 
 The real fits behave the same way. Among units where the constraint does not
-bind, the median $\hat\lambda$ is $0.0059$ and the median recovered
-$\hat\alpha_0$ is $12$, putting attractors near $\pm2$ on a coordinate
-standardised to unit variance. These are not weakly bistable systems. They are systems with
-no restoring cubic term whatever, whose apparent geometry is an artefact of the
-division. That median $\hat\lambda$ also falls below the entire range our
-simulation covers, so the recordings sit further into the non-identified regime
-than any of the $1.2\times10^{4}$ synthetic series used to map it.
+bind, the median $\hat\lambda$ is $0.0059$: on the identifiable parameter, the
+restoring cubic term is estimated at close to zero. The median recovered
+$\hat\alpha_0$ is $12$, which would put attractors near $\pm2$ on a coordinate
+standardised to unit variance. We report that figure as a demonstration of the
+ratio pathology, not as an estimate of anything, since the preceding paragraph
+established that it cannot be one; the substantive reading rests on
+$\hat\lambda$ alone. That median $\hat\lambda$ also falls below the entire
+range our simulation covers, so the recordings sit further into the
+non-identified regime than any of the $1.2\times10^{4}$ synthetic series used
+to map it.
 
 The practical reading is narrower than ``collect more data'': length buys a
 defensible \emph{ranking} by $\alpha_0$, never a reportable value.
 
-One of the five pre-stated predictions survives as evaluable here: the
-restoring cubic term, governed by $\theta_1$, the only parameter recovered on
-both measures. P1 needs the ratio of two badly identified quantities and P2 the
-distance to the fold, while P3 through P5 rest on $\varepsilon$ and
-$\alpha_A$. We report that structure rather than four numbers dressed up as
-tests.
+One of the five pre-stated predictions survives as evaluable: the restoring
+cubic term, governed by $\theta_1$, the only parameter recovered on both
+measures. P1 needs the ratio of two badly identified quantities and P2 the
+distance to the fold, while P3 to P5 rest on $\varepsilon$ and $\alpha_A$. We
+report that structure rather than four numbers dressed up as tests.
 
 % =====================================================================
 \section{Results}
 \label{sec:results}
 
-\begin{figure}[t]
+\begin{figure}[tb]
 \centering
 \includegraphics[width=\columnwidth]{fig10_size_power}
 \caption{(a) Size on random-walk input: the nominal test rejects at roughly
@@ -469,7 +470,7 @@ recovers on the same data. And it sharpens an existing scepticism
 known. Within that scope the caution is firm: a directional early-warning
 result obtained this way is weak evidence either way.
 
-\begin{table}[t]
+\begin{table}[tb]
 \caption{Recovering the exponent from ground-truth cusp data, 1500 replicates
 per row. Theory does; the rolling estimators invert at short windows and
 collapse to zero at long ones.}
@@ -515,9 +516,14 @@ resolve.
 The null is specific, and calling it noise would be wrong. Two of the three
 calibrated statistics do exceed their surrogate nulls: the likelihood ratio
 against the monostable restriction at $40.8\%$ of units, marginal bimodality at
-$49.7\%$. Only the statistic isolating the cubic term sits at chance. A bimodal
-marginal with no cubic drift is exactly the configuration in which distributional
-evidence alone concludes the opposite of the truth.
+$49.7\%$. Only the statistic isolating the cubic term sits at chance. A bimodal marginal with no cubic drift is exactly the configuration in which
+distributional evidence alone concludes the opposite of the truth, so it is
+worth naming what else produces it. Exogenous switching does: a load tracking a
+driver with two typical levels is bimodal and beats a monostable fit with no
+restoring cubic anywhere. So does slow non-stationarity, a baseline drifting
+across a session. Both fit everything measured here and neither is a fold.
+Separating them from bistability needs the drivers manipulated rather than
+observed, which is a design requirement and not a longer recording.
 
 A test that fires where nothing should be found is a problem for the test, so
 we state it first rather than in passing. Configuration B, the primary, sits at
@@ -548,13 +554,11 @@ rests on B alone.
 Modelling overload as motion in a cusp potential trades a descriptive account
 for a generative one whose consequences compute in advance: states become
 basins, the kernel a function of nine parameters, sudden onset and delayed
-recovery point hypotheses. Precision of that kind can lose, and here it lost
-twice, in two different ways. The geometry is not
+recovery point hypotheses. Precision of that kind can lose, and here it lost twice. The geometry is not
 recoverable at these lengths, and the one component that is recoverable, the
-restoring cubic, is not supported above a calibrated null and is beaten by
-its own removal on held-out density. Bimodality and a likelihood-ratio excess
-do survive their surrogates, but a bimodal marginal with no cubic drift is
-structure of some other kind, and we do not read it as a fold.
+restoring cubic, is neither supported above a calibrated null nor preferred to
+its own removal on held-out density. The bimodality that survives has readier
+explanations than a fold (Sec.~\ref{sec:results}).
 
 The identifiability result is the durable contribution here, and it is a
 negative methodological one: cusp geometry recovered from short wearable series
@@ -571,11 +575,10 @@ finding, and the arithmetic producing it is not specific to our implementation.
 
 \emph{Limitations.} No autistic participants are analysed, so the motivating
 claim is untested rather than refuted. Tonic EDA is a peripheral,
-artefact-prone proxy. Weak cusp dynamics stay compatible with everything here.
-The estimator critique is bounded as stated in Sec.~\ref{sec:results}. Window
-width we swept; the softplus form of debt accumulation, the driver set
-$(S,T,U)$ and the decision to treat the Euler map as the model rather than an
-approximation to it we did not, and each could move the fits. And
+artefact-prone proxy. Weak cusp dynamics stay compatible with everything here, and the bound is over
+these corpora rather than over autistic recordings, which do not exist at this
+density. Window width we swept; the softplus form of debt accumulation, the
+driver set $(S,T,U)$ and the Euler-map choice we did not. And
 longer records rescue rankings, not values; not even every parameter in rank,
 since $\varepsilon$ reaches only $\rho=0.44$ at $n=1000$.
 
@@ -584,23 +587,21 @@ population: 28 days of ecological momentary assessment with continuous wrist
 physiology in autistic adults and a matched comparison group, using the same
 estimator, nulls and falsification criteria. The primary hypothesis is a
 between-group difference in $\alpha_0$ at $n\gtrsim500$ windows per
-participant, better powered than the within-group detection attempted here. P3
-to P5 need more than length: with $\alpha_A$ and $\varepsilon$ unrecoverable
-from passive data at any duration tested, they need experimental control over
-recovery intervals or a hierarchical fit pooling across participants. A second
-well-powered null under those conditions would be evidence that overload is not
-a cusp catastrophe at physiological timescales.
+participant. P3 to P5 need more than length: with $\alpha_A$ and $\varepsilon$
+unrecoverable from passive data, they need experimental control over recovery
+intervals, which would also separate exogenous switching from bistability. A
+second well-powered null under those conditions would be evidence that overload
+is not a cusp catastrophe at physiological timescales.
 
 \section*{Code and Data Availability}
-The estimator, the analysis pipeline, the Monte Carlo suite, the figure scripts
-and this manuscript are released under the MIT licence at
-\url{https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe}, together with
-a provenance table recording the replication count behind every number
-reported. The three corpora are third-party open datasets and are not
-redistributed: WESAD from the UCI Machine Learning Repository (ID 465), and
-Wearable Exam Stress and Nurse Stress from PhysioNet. Each was obtained
-programmatically from its primary repository under that repository's own terms,
-with the exact URLs, download dates and byte counts recorded in the artefact.
+The estimator, analysis pipeline, Monte Carlo suite, figure scripts and this
+manuscript are released under the MIT licence at
+\url{https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe}, with a
+provenance table recording the replication count behind every number. The three
+corpora are third-party and not redistributed: WESAD from the UCI repository
+(ID 465), Wearable Exam Stress and Nurse Stress from PhysioNet, each obtained
+programmatically from its primary repository with URLs, dates and byte counts
+recorded.
 
 \section*{Acknowledgment}
 I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress

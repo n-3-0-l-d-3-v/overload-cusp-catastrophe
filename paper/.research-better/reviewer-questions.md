@@ -1,4 +1,4 @@
-<!-- research-better 0.3.0 | source: main.tex | hash: 09a97776af96eaf6 | generated: 2026-08-12T01:19:12+00:00 -->
+<!-- research-better 0.3.0 | source: main.tex | hash: 88df1cc0588acbd0 | generated: 2026-08-12T10:33:21+00:00 -->
 
 # Reviewer questions
 
@@ -20,6 +20,16 @@ was assumed. Questions that depend on venue policy say so.
 **What resolves it.** Name the systems compared against and cite them, or say which configuration of your own method is the baseline.
 
 `s-1baa6766182f`
+
+### Outperforms what, exactly?
+
+> Exogenous switching does: a load tracking a driver with two typical levels is bimodal and beats a monostable fit with no restoring cubic anywhere.
+
+**Why a reviewer asks this.** A comparison with no named point of comparison cannot be checked or reproduced. A reviewer who cannot tell what you beat has to assume you chose the comparison that flattered the result.
+
+**What resolves it.** Name the systems compared against and cite them, or say which configuration of your own method is the baseline.
+
+`s-dd79323ed75f`
 
 ### What hyperparameters were used?
 

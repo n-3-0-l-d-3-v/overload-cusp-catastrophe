@@ -1,19 +1,19 @@
 {
   "artifact": "reviewer-questions",
-  "created_at": "2026-08-12T01:19:12+00:00",
+  "created_at": "2026-08-12T10:33:21+00:00",
   "offline": false,
   "payload": {
     "counts": {
       "blocking": 0,
       "minor": 0,
-      "serious": 2
+      "serious": 3
     },
     "questions": [
       {
         "category": "missing_baseline",
         "char_range": [
-          14720,
-          14936
+          14818,
+          15034
         ],
         "question": "Outperforms what, exactly?",
         "quote": "At a \\SI{30}{\\second} window tonic electrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index from heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by beat-detection error.",
@@ -23,10 +23,23 @@
         "why": "A comparison with no named point of comparison cannot be checked or reproduced. A reviewer who cannot tell what you beat has to assume you chose the comparison that flattered the result."
       },
       {
+        "category": "missing_baseline",
+        "char_range": [
+          28986,
+          29132
+        ],
+        "question": "Outperforms what, exactly?",
+        "quote": "Exogenous switching does: a load tracking a driver with two typical levels is bimodal and beats a monostable fit with no restoring cubic anywhere.",
+        "resolution": "Name the systems compared against and cite them, or say which configuration of your own method is the baseline.",
+        "severity": "serious",
+        "span_id": "s-dd79323ed75f",
+        "why": "A comparison with no named point of comparison cannot be checked or reproduced. A reviewer who cannot tell what you beat has to assume you chose the comparison that flattered the result."
+      },
+      {
         "category": "undisclosed_method_detail",
         "char_range": [
-          3060,
-          3256
+          3063,
+          3259
         ],
         "question": "What hyperparameters were used?",
         "quote": "",
@@ -40,6 +53,6 @@
     "venue_verified": false
   },
   "source_file": "main.tex",
-  "source_hash": "09a97776af96eaf63238e07fbc7fd417c53f50fa1382525d65ea6f413ceadd1c",
+  "source_hash": "88df1cc0588acbd080950addcb16886c5e0017dd06a2cd822631324423d0bef9",
   "tool_version": "0.3.0"
 }
