@@ -1,6 +1,6 @@
 {
   "artifact": "novelty",
-  "created_at": "2026-08-12T00:48:45+00:00",
+  "created_at": "2026-08-12T01:18:59+00:00",
   "offline": false,
   "payload": {
     "claim": "We present an identifiability analysis of cusp models fitted to wearable physiology, together with a ground-truth test of the rolling-window early-warning estimators such a model would be checked with.",
@@ -11,8 +11,8 @@
     "orphans": [
       {
         "char_range": [
-          8184,
-          8207
+          7938,
+          7961
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-f380fd1e2bdf",
@@ -20,8 +20,8 @@
       },
       {
         "char_range": [
-          9187,
-          9328
+          8941,
+          9082
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-733259d6a774",
@@ -29,8 +29,8 @@
       },
       {
         "char_range": [
-          10634,
-          10698
+          10388,
+          10452
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-efa6690708a6",
@@ -38,8 +38,8 @@
       },
       {
         "char_range": [
-          10819,
-          10930
+          10573,
+          10684
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-009de2f5ac1b",
@@ -47,8 +47,8 @@
       },
       {
         "char_range": [
-          11142,
-          11536
+          10896,
+          11290
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-09257333f545",
@@ -56,8 +56,8 @@
       },
       {
         "char_range": [
-          11578,
-          11823
+          11332,
+          11577
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-2facb926fdad",
@@ -65,8 +65,8 @@
       },
       {
         "char_range": [
-          12052,
-          12368
+          11806,
+          12122
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-7550ae6224c4",
@@ -74,8 +74,8 @@
       },
       {
         "char_range": [
-          12435,
-          12503
+          12189,
+          12257
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-4ae6c3d5baab",
@@ -83,17 +83,17 @@
       },
       {
         "char_range": [
-          14483,
-          15538
+          14372,
+          15361
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-61590542377b",
-        "text": "Read the load coordinate and its drivers off the same sensor and the model stops being falsifiable, since shared measurement noise alone manufactures the coupling; we therefore assign them to disjoint sensors. Which signal carries the load is settled by measurement, not preference: the coordinate of a slow relaxation process must itself be slow. At a \\SI{30}{\\second} window tonic electrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index from heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by beat-detection error. Configuration B (tonic EDA) is therefore primary and C (skin temperature) a robustness check. We keep A, the cardiac index, as a \\emph{negative control}: a working pipeline should find nothing in it. Both comparisons are internal to this paper. The cardiac index is a reference channel used to justify a sensor assignment, not a competing method. No published system is claimed to be outperformed in Sec.~\\ref{sec:results}, where every baseline is one of our own nested or competing models."
+        "text": "Read the load coordinate and its drivers off the same sensor and the model stops being falsifiable, since shared measurement noise alone manufactures the coupling; we therefore assign them to disjoint sensors. Which signal carries the load is settled by measurement, not preference: the coordinate of a slow relaxation process must itself be slow. At a \\SI{30}{\\second} window tonic electrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index from heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by beat-detection error. Configuration B (tonic EDA) is therefore primary and C (skin temperature) a robustness check. We keep A, the cardiac index, as a \\emph{negative control}: a working pipeline should find nothing in it. Both comparisons here are internal: the cardiac index is a reference channel used to justify a sensor assignment, not a rival method, and every baseline in Sec.~\\ref{sec:results} is one of our own nested or competing models."
       },
       {
         "char_range": [
-          15564,
-          15825
+          15387,
+          15648
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-eba49088cef5",
@@ -101,8 +101,8 @@
       },
       {
         "char_range": [
-          18254,
-          18586
+          18077,
+          18409
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-efe24b424168",
@@ -110,8 +110,8 @@
       },
       {
         "char_range": [
-          18588,
-          18926
+          18411,
+          18749
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-7fa2a8e619b8",
@@ -119,8 +119,8 @@
       },
       {
         "char_range": [
-          21988,
-          22130
+          21811,
+          21953
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-7fe664ed64d6",
@@ -128,8 +128,8 @@
       },
       {
         "char_range": [
-          22132,
-          22511
+          21955,
+          22334
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-e997b83de5de",
@@ -137,17 +137,17 @@
       },
       {
         "char_range": [
-          28431,
-          28896
+          28225,
+          28688
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-61c858d07de8",
-        "text": "The null is specific, and calling it noise would be wrong. Two of the three calibrated statistics do exceed their surrogate nulls: the likelihood ratio against the monostable restriction at $40.8\\%$ of units, marginal bimodality at $49.7\\%$. Only the statistic isolating the cubic term sits at chance. A bimodal marginal with no cubic drift is precisely the configuration in which a study reporting distributional evidence alone concludes the opposite of the truth."
+        "text": "The null is specific, and calling it noise would be wrong. Two of the three calibrated statistics do exceed their surrogate nulls: the likelihood ratio against the monostable restriction at $40.8\\%$ of units, marginal bimodality at $49.7\\%$. Only the statistic isolating the cubic term sits at chance. A bimodal marginal with no cubic drift is exactly the configuration in which a study reporting distributional evidence alone concludes the opposite of the truth."
       },
       {
         "char_range": [
-          28898,
-          29277
+          28690,
+          29069
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-8eb479696d51",
@@ -155,8 +155,8 @@
       },
       {
         "char_range": [
-          34258,
-          34609
+          34050,
+          34401
         ],
         "reason": "No sentence in this paragraph serves any part of the contribution claim, carries a citation, reports a result, or is background or a limitation. Check whether the paper needs it at all.",
         "span_id": "s-b25516ce6235",
@@ -176,6 +176,7 @@
       "s-096f6f16b334": "orphan",
       "s-0a221e295376": "evidence",
       "s-0a9ab8b598b9": "limitation",
+      "s-0b8817eab47d": "background",
       "s-0cd4720a8e9b": "orphan",
       "s-0e075c71c28e": "orphan",
       "s-0e28fa5f05ce": "evidence",
@@ -209,6 +210,7 @@
       "s-3299d3b14901": "limitation",
       "s-330a478f1fd0": "orphan",
       "s-34fe9f82efcb": "limitation",
+      "s-3592f6c6d2aa": "orphan",
       "s-3634c4b2ad54": "limitation",
       "s-363a45c079b6": "orphan",
       "s-3666775aa9ea": "orphan",
@@ -223,15 +225,13 @@
       "s-3f2bb1d1073d": "orphan",
       "s-40c13643f97d": "limitation",
       "s-4226a09519cc": "orphan",
-      "s-4365d6b028d3": "orphan",
       "s-439ea235d85f": "orphan",
+      "s-4736b645edf4": "orphan",
       "s-4ae6c3d5baab": "orphan",
-      "s-4c1428481512": "evidence",
       "s-4d4befafb8ee": "evidence",
       "s-50f3939a3ad8": "orphan",
       "s-52cda9d5ffd0": "orphan",
       "s-52e2de4b578c": "orphan",
-      "s-532998e4cd42": "orphan",
       "s-5557d0ae6481": "orphan",
       "s-55b5496c7480": "background",
       "s-55f9e4b10849": "orphan",
@@ -240,6 +240,7 @@
       "s-588acfb0c49c": "orphan",
       "s-59476761d750": "limitation",
       "s-5bd8c91ab2f7": "orphan",
+      "s-5d7a1b02aaaf": "orphan",
       "s-5fa2ef3fcdf5": "orphan",
       "s-60d151230788": "orphan",
       "s-61590542377b": "orphan",
@@ -257,8 +258,7 @@
       "s-7550ae6224c4": "orphan",
       "s-764b67e84916": "orphan",
       "s-77b75a0d2229": "limitation",
-      "s-7a44c1795646": "background",
-      "s-7a76c7146fe7": "orphan",
+      "s-78500994ccb9": "orphan",
       "s-7d5c20ef9dbc": "orphan",
       "s-7e191413e596": "orphan",
       "s-7fa2a8e619b8": "orphan",
@@ -277,12 +277,10 @@
       "s-8eb479696d51": "orphan",
       "s-8f950b3dc7fd": "orphan",
       "s-9197b36b6af4": "method",
-      "s-92713d98cad8": "orphan",
       "s-92837ebfa80f": "orphan",
       "s-943d71790d80": "orphan",
       "s-96ff06f26f93": "orphan",
       "s-97621500b44a": "contribution",
-      "s-98bc1ee683fd": "orphan",
       "s-9e9168b501ef": "orphan",
       "s-9f1fc7768934": "limitation",
       "s-a02f83dcc9bb": "orphan",
@@ -317,6 +315,7 @@
       "s-dba488029683": "orphan",
       "s-dc39365ead7f": "orphan",
       "s-dcf697f2c7e4": "limitation",
+      "s-de7f300a0500": "evidence",
       "s-e0383470c6d5": "orphan",
       "s-e0a52a7f9d21": "evidence",
       "s-e1f198e84000": "orphan",
@@ -326,7 +325,6 @@
       "s-e706e451a3cb": "orphan",
       "s-e8488482e139": "orphan",
       "s-e997b83de5de": "orphan",
-      "s-e9ce7f0bceca": "orphan",
       "s-e9d5c61c9fd5": "orphan",
       "s-eae9c7bbd219": "orphan",
       "s-eba49088cef5": "orphan",
@@ -337,7 +335,6 @@
       "s-efa6690708a6": "orphan",
       "s-efe24b424168": "orphan",
       "s-f00117041ae8": "evidence",
-      "s-f0db463f5d7b": "background",
       "s-f21d280d43f1": "method",
       "s-f380fd1e2bdf": "orphan",
       "s-f3da4e845719": "limitation",
@@ -351,6 +348,7 @@
       "s-f94ca864c917": "limitation",
       "s-fb683ef70fef": "limitation",
       "s-fb974134dcc0": "limitation",
+      "s-fcf003d709e5": "background",
       "s-fe012813aa96": "orphan",
       "s-fed39db1cd0e": "orphan"
     },
@@ -369,6 +367,9 @@
         "identifiability",
         "models",
         "physiology",
+        "wearable"
+      ],
+      "s-0b8817eab47d": [
         "wearable"
       ],
       "s-0e28fa5f05ce": [
@@ -396,6 +397,9 @@
       "s-2cf7117bef72": [
         "cusp"
       ],
+      "s-3592f6c6d2aa": [
+        "models"
+      ],
       "s-3b6acc86a21b": [
         "models"
       ],
@@ -411,10 +415,6 @@
       "s-3f2bb1d1073d": [
         "early-warning",
         "estimators"
-      ],
-      "s-4c1428481512": [
-        "model",
-        "wearable"
       ],
       "s-4d4befafb8ee": [
         "early-warning",
@@ -432,6 +432,9 @@
       "s-574422884d8d": [
         "model"
       ],
+      "s-5d7a1b02aaaf": [
+        "models"
+      ],
       "s-61590542377b": [
         "model"
       ],
@@ -446,9 +449,6 @@
       ],
       "s-764b67e84916": [
         "wearable"
-      ],
-      "s-7a76c7146fe7": [
-        "models"
       ],
       "s-837ed43db935": [
         "estimators"
@@ -488,6 +488,10 @@
       "s-dcf697f2c7e4": [
         "model"
       ],
+      "s-de7f300a0500": [
+        "model",
+        "wearable"
+      ],
       "s-e0a52a7f9d21": [
         "early-warning",
         "model",
@@ -498,9 +502,6 @@
       ],
       "s-e706e451a3cb": [
         "model"
-      ],
-      "s-e9ce7f0bceca": [
-        "models"
       ],
       "s-e9d5c61c9fd5": [
         "test"
@@ -520,9 +521,6 @@
       "s-f00117041ae8": [
         "early-warning"
       ],
-      "s-f0db463f5d7b": [
-        "wearable"
-      ],
       "s-f4156e9aa4e9": [
         "model",
         "wearable"
@@ -538,6 +536,6 @@
     "unsupported_claim_parts": []
   },
   "source_file": "main.tex",
-  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
+  "source_hash": "09a97776af96eaf63238e07fbc7fd417c53f50fa1382525d65ea6f413ceadd1c",
   "tool_version": "0.3.0"
 }

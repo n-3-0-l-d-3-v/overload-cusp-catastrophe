@@ -52,8 +52,8 @@
 
 \begin{document}
 
-\title{Ratio Non-Identifiability in Cusp Models of Physiological Overload,
-and a Ground-Truth Failure of Rolling-Window Early-Warning Estimators}
+\title{When Cusp Geometry Is an Artefact: Non-Identifiability and
+Sign-Inverting Early-Warning Estimators in Wearable Physiology}
 
 \author{\IEEEauthorblockN{Neil Thomas Mathew}
 \IEEEauthorblockA{Department of Computer Applications\\
@@ -68,12 +68,11 @@ CHRIST (Deemed to be University), Bengaluru, India\\
 \maketitle
 
 \begin{abstract}
-Catastrophe models promise a generative account of overload: a latent load
-coordinate relaxing in a quartic potential, functional states as metastable
-basins, sudden onset and slow recovery as consequences rather than
-observations. We ask what such a model can actually recover from recordings of
-the length wearable corpora supply, and answer with a Monte Carlo study over
-$1.2\times10^{4}$ simulated series. Only the relaxation rate and the diffusion
+Catastrophe models promise a generative account of overload: functional states
+as metastable basins of a quartic potential, sudden onset and slow recovery as
+consequences rather than observations. We ask what such a model can recover
+from recordings of the length wearable corpora supply, over $1.2\times10^{4}$
+simulated series. Only the relaxation rate and the diffusion
 coefficient are identified. The parameters carrying the geometry are ratios
 whose denominator is not bounded away from zero, so length buys their ordering
 and never their value: rank correlation for the splitting factor reaches $0.88$
@@ -254,14 +253,16 @@ parameters that move with demand.
 \label{sec:methods}
 
 \subsection{Corpora}
-Three open corpora, each from its primary repository rather than a mirror, span
-a gradient of experimental control: WESAD, 15 subjects in a laboratory protocol
-\cite{schmidt2018wesad}; Wearable Exam Stress, 10 students across 30
-examinations \cite{amin2022exam}; and Nurse Stress, 15 nurses across roughly
-\SI{1250}{\hour} of hospital shifts \cite{hosseini2022nurse}. All supply
-Empatica E4 electrodermal activity, blood volume pulse, skin temperature and
-accelerometry. Windowing and quality screening leave \textbf{147 recordings from
-40 people}, median 194 windows each.
+Three open corpora, taken from their primary repositories rather than
+mirrors, span a gradient of experimental control: WESAD, a laboratory stress
+and affect protocol \cite{schmidt2018wesad}; Wearable Exam Stress, students
+recorded across examinations \cite{amin2022exam}; and Nurse Stress, hospital
+shifts recorded during the COVID-19 outbreak \cite{hosseini2022nurse}. All
+supply Empatica E4 electrodermal activity, blood volume pulse, skin temperature
+and accelerometry. Counted from the released files they give 15, 10 and 15
+participants, the nurse corpus covering roughly \SI{1250}{\hour} of shifts;
+windowing and quality screening leave \textbf{147 recordings from 40 people},
+median 194 windows each.
 
 \subsection{Sensor assignment and a negative control}
 Read the load coordinate and its drivers off the same sensor and the model stops
@@ -273,11 +274,9 @@ electrodermal activity has lag-1 autocorrelation $0.98$, while a cardiac index
 from heart rate and RMSSD has $0.19$, RMSSD over so few beats being dominated by
 beat-detection error. Configuration B (tonic EDA) is therefore primary and C
 (skin temperature) a robustness check. We keep A, the cardiac index, as a
-\emph{negative control}: a working pipeline should find nothing in it. Both
-comparisons are internal to this paper. The cardiac index is a reference
-channel used to justify a sensor assignment, not a competing method. No
-published system is claimed to be outperformed in Sec.~\ref{sec:results}, where
-every baseline is one of our own nested or competing models.
+\emph{negative control}: a working pipeline should find nothing in it. Both comparisons here are internal: the cardiac index is a reference channel
+used to justify a sensor assignment, not a rival method, and every baseline in
+Sec.~\ref{sec:results} is one of our own nested or competing models.
 
 \subsection{Estimation}
 Taking the Euler map of \eqref{eq:sde} as the model, rather than as an
@@ -467,8 +466,8 @@ nothing about adaptive-bandwidth or spectral estimators. It indicts those
 estimators, not early-warning theory: the exponent from the true curvature
 recovers on the same data. And it sharpens an existing scepticism
 \cite{ditlevsen2010,boettiger2012} by supplying a case where ground truth is
-known, instead of establishing one. Within that scope the caution is firm: a
-directional early-warning result obtained this way is weak evidence either way.
+known. Within that scope the caution is firm: a directional early-warning
+result obtained this way is weak evidence either way.
 
 \begin{table}[t]
 \caption{Recovering the exponent from ground-truth cusp data, 1500 replicates
@@ -519,7 +518,7 @@ The null is specific, and calling it noise would be wrong. Two of the three
 calibrated statistics do exceed their surrogate nulls: the likelihood ratio
 against the monostable restriction at $40.8\%$ of units, marginal bimodality at
 $49.7\%$. Only the statistic isolating the cubic term sits at chance. A bimodal
-marginal with no cubic drift is precisely the configuration in which a study
+marginal with no cubic drift is exactly the configuration in which a study
 reporting distributional evidence alone concludes the opposite of the truth.
 
 A test that fires where nothing should be found is a problem for the test, so

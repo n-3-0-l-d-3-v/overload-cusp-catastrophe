@@ -1,10 +1,10 @@
-<!-- research-better 0.3.0 | source: main.tex | hash: b7377eb1363acd41 | generated: 2026-08-12T00:49:08+00:00 -->
+<!-- research-better 0.3.0 | source: main.tex | hash: 09a97776af96eaf6 | generated: 2026-08-12T01:19:12+00:00 -->
 
 # main.tex
 
 **The paper claims *(not confirmed)*:** We present an identifiability analysis of cusp models fitted to wearable physiology, together with a ground-truth test of the rolling-window early-warning estimators such a model would be checked with.
 
-**Length.** 3826 words of prose.
+**Length.** 3816 words of prose.
 
 **Citations.** 46 entries: 1 not found, 33 verified, 12 year mismatch. 3 of 16 cited works had retrievable full text.
 

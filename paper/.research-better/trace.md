@@ -1,4 +1,4 @@
-<!-- research-better 0.3.0 | source: main.tex | hash: b7377eb1363acd41 | generated: 2026-08-12T00:49:08+00:00 -->
+<!-- research-better 0.3.0 | source: main.tex | hash: 09a97776af96eaf6 | generated: 2026-08-12T01:19:12+00:00 -->
 
 # Passages that may read as machine-written
 
@@ -20,7 +20,7 @@ offered. See docs/INTEGRITY.md.
 - **unsupported claim.** cited to [demetriou2018], and the full text that was read does not carry it
   - Why this reads as generated: A sentence whose own cited source does not support it is the strongest content-level signal there is. Text that was generated attaches a citation because a citation belongs in that position, not because anybody read the source.
   - What to do: Read the quoted passage in grounding.json. Cite the work that establishes this, weaken the sentence to what the source actually says, or cut it.
-- **uniform rhythm.** 5 sentences varying by 5.0 words, against 10.9 across this paper
+- **uniform rhythm.** 5 sentences varying by 5.0 words, against 11.0 across this paper
   - Why this reads as generated: Even sentence length is a texture a reader notices without being able to name it. It is also what a genuinely formulaic passage looks like, so it is never a reason to change anything on its own.
   - What to do: Nothing on its own. If the causes above are fixed the rhythm changes with them. Do not lengthen a sentence to break a pattern.
 
@@ -30,7 +30,7 @@ Flagged on the content signals above. The texture, if any is listed, is recorded
 
 ### Corpora, paragraph 1
 
-> Three open corpora, each from its primary repository rather than a mirror, span a gradient of experimental control: WESAD, 15 subjects in a laboratory protocol…
+> Three open corpora, taken from their primary repositories rather than mirrors, span a gradient of experimental control: WESAD, a laboratory stress and affect p…
 
 *fix: unsupported claim*
 
@@ -40,7 +40,7 @@ Flagged on the content signals above. The texture, if any is listed, is recorded
 
 Flagged on the content signals above. The texture, if any is listed, is recorded because it is there and is not a reason to change anything.
 
-`par-bdac38a22a03`
+`par-270c7c876f61`
 
 ### Introduction (whole section)
 
@@ -62,7 +62,7 @@ A voice that departs from the rest of the paper is copied, drafted elsewhere, or
 
 *review: voice passive ratio*
 
-- **voice passive ratio.** 0.38 of sentences here against 0.15 for the paper, which is further than any other section sits from it
+- **voice passive ratio.** 0.33 of sentences here against 0.15 for the paper, which is further than any other section sits from it
   - Why this reads as generated: A section whose texture departs this far from the rest of the paper is what a reader notices as a change of voice. It is measured against this paper only, so it says nothing about how anybody else writes.
   - What to do: Read it beside a section you know you wrote. If it is yours, leave it. If it came from somewhere else, that is what to resolve, and no wording change resolves it.
 
@@ -77,25 +77,25 @@ them. That is not a reason to change writing that is doing its job.
 
 ### What This Data Can Identify, paragraph 2
 
-- 4 sentences varying by 5.3 words, against 10.9 across this paper
+- 4 sentences varying by 5.3 words, against 11.0 across this paper
 
 Likely a false positive, and worth leaving. Only texture fired here: rhythm and shape, which a careful writer can have naturally and which detectors get wrong most often on writers whose first language is not English. Nothing here is a reason to change a sentence.
 
 ### What This Data Can Identify, paragraph 3
 
-- 5 sentences varying by 3.3 words, against 10.9 across this paper
+- 5 sentences varying by 3.3 words, against 11.0 across this paper
 
 Likely a false positive, and worth leaving. Only texture fired here: rhythm and shape, which a careful writer can have naturally and which detectors get wrong most often on writers whose first language is not English. Nothing here is a reason to change a sentence.
 
 ### The early-warning estimator fails on ground truth, paragraph 3
 
-- 5 sentences varying by 5.2 words, against 10.9 across this paper
+- 5 sentences varying by 5.4 words, against 11.0 across this paper
 
 Likely a false positive, and worth leaving. Only texture fired here: rhythm and shape, which a careful writer can have naturally and which detectors get wrong most often on writers whose first language is not English. Nothing here is a reason to change a sentence.
 
 ### Structure without fold structure, paragraph 3
 
-- 5 sentences varying by 3.6 words, against 10.9 across this paper
+- 5 sentences varying by 3.6 words, against 11.0 across this paper
 
 Likely a false positive, and worth leaving. Only texture fired here: rhythm and shape, which a careful writer can have naturally and which detectors get wrong most often on writers whose first language is not English. Nothing here is a reason to change a sentence.
 

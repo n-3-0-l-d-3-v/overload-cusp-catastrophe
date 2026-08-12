@@ -1,6 +1,6 @@
 {
   "artifact": "trace",
-  "created_at": "2026-08-12T00:49:08+00:00",
+  "created_at": "2026-08-12T01:19:12+00:00",
   "offline": false,
   "payload": {
     "counts": {
@@ -11,8 +11,8 @@
     "flagged": [
       {
         "char_range": [
-          5310,
-          6070
+          5064,
+          5824
         ],
         "quote": "Autistic adults report sensory reactivity differences across vision, sound and touch, and describe the difficulty of tolerating and controlling them \\cite{macl…",
         "reason": "Flagged on the content signals above. The texture, if any is listed, is recorded because it is there and is not a reason to change anything.",
@@ -25,7 +25,7 @@
             "why": "A sentence whose own cited source does not support it is the strongest content-level signal there is. Text that was generated attaches a citation because a citation belongs in that position, not because anybody read the source."
           },
           {
-            "evidence": "5 sentences varying by 5.0 words, against 10.9 across this paper",
+            "evidence": "5 sentences varying by 5.0 words, against 11.0 across this paper",
             "fix": "Nothing on its own. If the causes above are fixed the rhythm changes with them. Do not lengthen a sentence to break a pattern.",
             "id": "uniform_rhythm",
             "texture": true,
@@ -38,10 +38,10 @@
       },
       {
         "char_range": [
-          13854,
-          14427
+          13608,
+          14316
         ],
-        "quote": "Three open corpora, each from its primary repository rather than a mirror, span a gradient of experimental control: WESAD, 15 subjects in a laboratory protocol…",
+        "quote": "Three open corpora, taken from their primary repositories rather than mirrors, span a gradient of experimental control: WESAD, a laboratory stress and affect p…",
         "reason": "Flagged on the content signals above. The texture, if any is listed, is recorded because it is there and is not a reason to change anything.",
         "signals": [
           {
@@ -52,14 +52,14 @@
             "why": "A sentence whose own cited source does not support it is the strongest content-level signal there is. Text that was generated attaches a citation because a citation belongs in that position, not because anybody read the source."
           }
         ],
-        "span_id": "par-bdac38a22a03",
+        "span_id": "par-270c7c876f61",
         "standing": "fix",
         "where": "Corpora, paragraph 1"
       },
       {
         "char_range": [
-          5286,
-          10057
+          5040,
+          9811
         ],
         "quote": "\\section{Introduction}",
         "reason": "A voice that departs from the rest of the paper is copied, drafted elsewhere, or written by a coauthor. Which one it is, is a question for you: the tool reports the inconsistency and does not guess.",
@@ -78,14 +78,14 @@
       },
       {
         "char_range": [
-          14429,
-          15540
+          14318,
+          15363
         ],
         "quote": "\\subsection{Sensor assignment and a negative control}",
         "reason": "A voice that departs from the rest of the paper is copied, drafted elsewhere, or written by a coauthor. Which one it is, is a question for you: the tool reports the inconsistency and does not guess.",
         "signals": [
           {
-            "evidence": "0.38 of sentences here against 0.15 for the paper, which is further than any other section sits from it",
+            "evidence": "0.33 of sentences here against 0.15 for the paper, which is further than any other section sits from it",
             "fix": "Read it beside a section you know you wrote. If it is yours, leave it. If it came from somewhere else, that is what to resolve, and no wording change resolves it.",
             "id": "voice_passive_ratio",
             "texture": false,
@@ -100,14 +100,14 @@
     "left_alone": [
       {
         "char_range": [
-          18588,
-          18926
+          18411,
+          18749
         ],
         "quote": "Two correlations are reported, because they answer different questions and the gap between them is the finding. Spearman's $\\rho$ asks whether the \\emph{orderi…",
         "reason": "Likely a false positive, and worth leaving. Only texture fired here: rhythm and shape, which a careful writer can have naturally and which detectors get wrong most often on writers whose first language is not English. Nothing here is a reason to change a sentence.",
         "signals": [
           {
-            "evidence": "4 sentences varying by 5.3 words, against 10.9 across this paper",
+            "evidence": "4 sentences varying by 5.3 words, against 11.0 across this paper",
             "fix": "Nothing on its own. If the causes above are fixed the rhythm changes with them. Do not lengthen a sentence to break a pattern.",
             "id": "uniform_rhythm",
             "texture": true,
@@ -120,14 +120,14 @@
       },
       {
         "char_range": [
-          18928,
-          19391
+          18751,
+          19214
         ],
         "quote": "The splitting factor carries the geometry, so it is the case that matters. Its rank recovery climbs with length, $\\rho=0.33$ at $n=100$ to $0.88$ at $n=1000$.…",
         "reason": "Likely a false positive, and worth leaving. Only texture fired here: rhythm and shape, which a careful writer can have naturally and which detectors get wrong most often on writers whose first language is not English. Nothing here is a reason to change a sentence.",
         "signals": [
           {
-            "evidence": "5 sentences varying by 3.3 words, against 10.9 across this paper",
+            "evidence": "5 sentences varying by 3.3 words, against 11.0 across this paper",
             "fix": "Nothing on its own. If the causes above are fixed the rhythm changes with them. Do not lengthen a sentence to break a pattern.",
             "id": "uniform_rhythm",
             "texture": true,
@@ -140,34 +140,34 @@
       },
       {
         "char_range": [
-          25627,
-          26301
+          25450,
+          26095
         ],
         "quote": "The claim we draw is narrow, and worth stating at its own size. It covers fixed-width rolling variance and lag-1 autocorrelation with and without Gaussian detr…",
         "reason": "Likely a false positive, and worth leaving. Only texture fired here: rhythm and shape, which a careful writer can have naturally and which detectors get wrong most often on writers whose first language is not English. Nothing here is a reason to change a sentence.",
         "signals": [
           {
-            "evidence": "5 sentences varying by 5.2 words, against 10.9 across this paper",
+            "evidence": "5 sentences varying by 5.4 words, against 11.0 across this paper",
             "fix": "Nothing on its own. If the causes above are fixed the rhythm changes with them. Do not lengthen a sentence to break a pattern.",
             "id": "uniform_rhythm",
             "texture": true,
             "why": "Even sentence length is a texture a reader notices without being able to name it. It is also what a genuinely formulaic passage looks like, so it is never a reason to change anything on its own."
           }
         ],
-        "span_id": "par-dbd6d90b278c",
+        "span_id": "par-4cd71494c546",
         "standing": "leave",
         "where": "The early-warning estimator fails on ground truth, paragraph 3"
       },
       {
         "char_range": [
-          29279,
-          29668
+          29071,
+          29460
         ],
         "quote": "Three explanations were tested; all three failed. IAAFT surrogates did not bring C down, so a purely spectral artefact does not account for it. Clipping rates…",
         "reason": "Likely a false positive, and worth leaving. Only texture fired here: rhythm and shape, which a careful writer can have naturally and which detectors get wrong most often on writers whose first language is not English. Nothing here is a reason to change a sentence.",
         "signals": [
           {
-            "evidence": "5 sentences varying by 3.6 words, against 10.9 across this paper",
+            "evidence": "5 sentences varying by 3.6 words, against 11.0 across this paper",
             "fix": "Nothing on its own. If the causes above are fixed the rhythm changes with them. Do not lengthen a sentence to break a pattern.",
             "id": "uniform_rhythm",
             "texture": true,
@@ -182,6 +182,6 @@
     "not_checked": []
   },
   "source_file": "main.tex",
-  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
+  "source_hash": "09a97776af96eaf63238e07fbc7fd417c53f50fa1382525d65ea6f413ceadd1c",
   "tool_version": "0.3.0"
 }

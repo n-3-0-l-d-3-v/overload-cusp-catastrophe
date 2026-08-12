@@ -1,6 +1,6 @@
 {
   "artifact": "grounding",
-  "created_at": "2026-08-12T00:48:52+00:00",
+  "created_at": "2026-08-12T01:19:03+00:00",
   "offline": false,
   "payload": {
     "citations": {
@@ -1255,40 +1255,40 @@
         },
         {
           "citation_key": "schmidt2018wesad",
-          "claim": "Three open corpora, each from its primary repository rather than a mirror, span a gradient of experimental control: WESAD, 15 subjects in a laboratory protocol \\cite{schmidt2018wesad}; Wearable Exam Stress, 10 students across 30 examinations \\cite{amin2022exam}; and Nurse Stress, 15 nurses across roughly \\SI{1250}{\\hour} of hospital shifts \\cite{hosseini2022nurse}.",
-          "coverage": 0.138,
+          "claim": "Three open corpora, taken from their primary repositories rather than mirrors, span a gradient of experimental control: WESAD, a laboratory stress and affect protocol \\cite{schmidt2018wesad}; Wearable Exam Stress, students recorded across examinations \\cite{amin2022exam}; and Nurse Stress, hospital shifts recorded during the COVID-19 outbreak \\cite{hosseini2022nurse}.",
+          "coverage": 0.207,
           "locator": null,
           "note": "Only the abstract was retrievable and it does not discuss this. An abstract not mentioning something is no evidence the paper does not say it, so this was not checked rather than found wanting.",
           "quote": null,
           "source_kind": "abstract",
           "source_url": "",
-          "span_id": "s-f0db463f5d7b",
+          "span_id": "s-0b8817eab47d",
           "support": "UNCHECKABLE",
           "unmet": []
         },
         {
           "citation_key": "amin2022exam",
-          "claim": "Three open corpora, each from its primary repository rather than a mirror, span a gradient of experimental control: WESAD, 15 subjects in a laboratory protocol \\cite{schmidt2018wesad}; Wearable Exam Stress, 10 students across 30 examinations \\cite{amin2022exam}; and Nurse Stress, 15 nurses across roughly \\SI{1250}{\\hour} of hospital shifts \\cite{hosseini2022nurse}.",
-          "coverage": 0.138,
+          "claim": "Three open corpora, taken from their primary repositories rather than mirrors, span a gradient of experimental control: WESAD, a laboratory stress and affect protocol \\cite{schmidt2018wesad}; Wearable Exam Stress, students recorded across examinations \\cite{amin2022exam}; and Nurse Stress, hospital shifts recorded during the COVID-19 outbreak \\cite{hosseini2022nurse}.",
+          "coverage": 0.207,
           "locator": null,
           "note": "Only the abstract was retrievable and it does not discuss this. An abstract not mentioning something is no evidence the paper does not say it, so this was not checked rather than found wanting.",
           "quote": null,
           "source_kind": "abstract",
           "source_url": "https://doi.org/10.13026/kvkb-aj90",
-          "span_id": "s-f0db463f5d7b",
+          "span_id": "s-0b8817eab47d",
           "support": "UNCHECKABLE",
           "unmet": []
         },
         {
           "citation_key": "hosseini2022nurse",
-          "claim": "Three open corpora, each from its primary repository rather than a mirror, span a gradient of experimental control: WESAD, 15 subjects in a laboratory protocol \\cite{schmidt2018wesad}; Wearable Exam Stress, 10 students across 30 examinations \\cite{amin2022exam}; and Nurse Stress, 15 nurses across roughly \\SI{1250}{\\hour} of hospital shifts \\cite{hosseini2022nurse}.",
-          "coverage": 0.138,
-          "locator": "full_text, block 66, sentences 1-2",
+          "claim": "Three open corpora, taken from their primary repositories rather than mirrors, span a gradient of experimental control: WESAD, a laboratory stress and affect protocol \\cite{schmidt2018wesad}; Wearable Exam Stress, students recorded across examinations \\cite{amin2022exam}; and Nurse Stress, hospital shifts recorded during the COVID-19 outbreak \\cite{hosseini2022nurse}.",
+          "coverage": 0.207,
+          "locator": "full_text, block 21, sentences 1-2",
           "note": "The full text was read and no passage overlaps this claim. Matching is lexical, so a claim supported in quite different words could be missed. Worth checking by hand before changing anything.",
-          "quote": "senting nurse subjects were enrolled in the study. The stress detection scenario was described to the nurses from",
+          "quote": "settings during the COVID-19 outbreak. The primary motivation to create a wearable biometric nursing stress",
           "source_kind": "full_text",
           "source_url": "https://www.nature.com/articles/s41597-022-01361-y.pdf",
-          "span_id": "s-f0db463f5d7b",
+          "span_id": "s-0b8817eab47d",
           "support": "UNSUPPORTED",
           "unmet": []
         },
@@ -1333,27 +1333,27 @@
         },
         {
           "citation_key": "ditlevsen2010",
-          "claim": "And it sharpens an existing scepticism \\cite{ditlevsen2010,boettiger2012} by supplying a case where ground truth is known, instead of establishing one.",
-          "coverage": 0.091,
+          "claim": "And it sharpens an existing scepticism \\cite{ditlevsen2010,boettiger2012} by supplying a case where ground truth is known.",
+          "coverage": 0.125,
           "locator": null,
           "note": "Only the abstract was retrievable and it does not discuss this. An abstract not mentioning something is no evidence the paper does not say it, so this was not checked rather than found wanting.",
           "quote": null,
           "source_kind": "abstract",
           "source_url": "",
-          "span_id": "s-7a44c1795646",
+          "span_id": "s-fcf003d709e5",
           "support": "UNCHECKABLE",
           "unmet": []
         },
         {
           "citation_key": "boettiger2012",
-          "claim": "And it sharpens an existing scepticism \\cite{ditlevsen2010,boettiger2012} by supplying a case where ground truth is known, instead of establishing one.",
+          "claim": "And it sharpens an existing scepticism \\cite{ditlevsen2010,boettiger2012} by supplying a case where ground truth is known.",
           "coverage": 0.0,
           "locator": null,
           "note": "Only the abstract was retrievable and it does not discuss this. An abstract not mentioning something is no evidence the paper does not say it, so this was not checked rather than found wanting.",
           "quote": null,
           "source_kind": "abstract",
           "source_url": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2012.0125",
-          "span_id": "s-7a44c1795646",
+          "span_id": "s-fcf003d709e5",
           "support": "UNCHECKABLE",
           "unmet": []
         }
@@ -1382,6 +1382,6 @@
     }
   },
   "source_file": "main.tex",
-  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
+  "source_hash": "09a97776af96eaf63238e07fbc7fd417c53f50fa1382525d65ea6f413ceadd1c",
   "tool_version": "0.3.0"
 }

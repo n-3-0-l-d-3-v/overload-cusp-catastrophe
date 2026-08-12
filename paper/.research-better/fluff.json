@@ -1,9 +1,9 @@
 {
   "artifact": "fluff",
-  "created_at": "2026-08-12T00:49:07+00:00",
+  "created_at": "2026-08-12T01:19:11+00:00",
   "offline": false,
   "payload": [],
   "source_file": "main.tex",
-  "source_hash": "b7377eb1363acd418a6787621a26a1c11f3909929e2a02c1e93904e0c244cfb1",
+  "source_hash": "09a97776af96eaf63238e07fbc7fd417c53f50fa1382525d65ea6f413ceadd1c",
   "tool_version": "0.3.0"
 }
