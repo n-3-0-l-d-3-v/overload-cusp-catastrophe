@@ -31,7 +31,7 @@ Everything is checkpointed in `results/_checkpoints/`; `--resume` continues.
 | `m2_size_summary.csv` | Results §A, Fig. 3a | **5000/cell**, 30,000 nominal + 7,500 calibrated | complete |
 | `m5_ews_summary.csv` | Table II, Results §B | **500/cell**, 15,000 series | complete, 90 configurations |
 | `m6_noise_summary.csv` | supplementary robustness | **1000/cell** | **10 of 15 cells.** Run stopped before the high-$\sigma$ end. The `complete` column marks which cells are full; no cell is partial |
-| `m3_power_summary.csv` | Results §A, Fig. 3b | **100/cell** | rebuilt from `e0_power_size.csv`; the power block never ran. `source` column records this |
+| `m3_power_summary.csv` | Results §A, Fig. 3b | **2000/cell**, 48,000 series | complete, run 2026-08-12. Supersedes the 100/cell rebuild from `e0_power_size.csv`. Adds the `marginal` regime, which the earlier file did not carry |
 | — persistence | Results §D | see `e15` below | block never ran |
 
 `m1_recovery_summary.csv` reports **both** Spearman and Pearson. They answer
@@ -46,7 +46,7 @@ did not reach. Replication is lower and the paper says so where it matters.
 
 | File | Backs | Replicates | Note |
 |---|---|---|---|
-| `e0_power_size.csv` | power at $n=200$: 1.00 / 0.76 / 0.24 | 100/cell | valid, just less precise than the rest |
+| `e0_power_size.csv` | — | 100/cell | **superseded** by `m3` at 2000/cell. Its $n=200$ figures (1.00 / 0.76 / 0.24) were what the paper quoted before 2026-08-12; the full run gives 1.00 / 0.89 / 0.28. Retained for the record; nothing cites it |
 | `e15_size_vs_persistence.csv` | AR(1) persistence robustness, Fig. 12 | 40/point | thin. At 40 replicates this cannot detect an inflation below about 0.15, and the paper now states that |
 | `e12_ews_validation.csv` | — | 24/cell | **superseded** by `m5` at 500/cell. Retained for the record; nothing cites it |
 | `e2`–`e9`, `e11`, `e13`, `e14` | corpus analyses, Results §C–D | 147 units, 40 people | real data, not simulation |
