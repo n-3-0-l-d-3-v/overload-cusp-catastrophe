@@ -82,8 +82,8 @@ def fig_identifiability():
 
     # Two rows, not two columns: at \columnwidth a side-by-side pair leaves
     # each panel 1.7in wide, which is too narrow for a log axis and a legend.
-    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.80),
-                             gridspec_kw={"height_ratios": [1.30, 1.0]},
+    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.88),
+                             gridspec_kw={"height_ratios": [1.22, 1.0]},
                              constrained_layout=True)
 
     # (a) recovery correlation vs length
@@ -114,7 +114,7 @@ def fig_identifiability():
     ax.set_ylim(-0.35, 1.12)
     ax.set_title("(a) which parameters are recoverable", fontsize=8, pad=6)
     ax.legend(frameon=False, ncol=4, loc="upper center",
-              bbox_to_anchor=(0.5, -0.44), fontsize=5.4,
+              bbox_to_anchor=(0.5, -0.46), fontsize=5.6,
               handlelength=1.5, handletextpad=0.4, columnspacing=0.9,
               labelspacing=0.35, borderpad=0.1)
 
@@ -143,11 +143,12 @@ def fig_identifiability():
             ax.plot(xs, med, "-", color=C["bad"], marker="o", ms=3)
             ax.fill_between(xs, lo, hi, color=C["bad"], alpha=0.18, lw=0)
             ax.axvline(0.0059, color=C["alt"], lw=1.0)
-            ax.annotate("median $\\hat\\lambda$ in\nthe real corpora",
-                        xy=(0.0059, max(med)), xytext=(0.010, max(med) * 1.25),
-                        fontsize=5.8, color=C["alt"], va="center",
-                        arrowprops=dict(arrowstyle="-", color=C["alt"],
-                                        lw=0.6, shrinkA=0, shrinkB=2))
+            # The band left of the first bin is empty, so the label sits there
+            # beside its own rule. No leader line: one would have to cross the
+            # whole panel to reach the text, which is worse than none.
+            ax.text(0.055, 0.45, "median $\\hat\\lambda$ in\nthe real corpora",
+                    transform=ax.transAxes, fontsize=5.8, color=C["alt"],
+                    ha="left", va="center")
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xlabel(r"estimated $\hat\lambda$")
@@ -168,8 +169,10 @@ def fig_size_power():
     # Stacked, sharing the log-x series-length axis. Both panels are rejection
     # rates against the same abscissa, so one x-label serves both and each
     # panel keeps the full column width.
-    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.15), sharex=True,
-                             sharey=True, constrained_layout=True)
+    # Not sharey: panel (a) lives under 0.5 and panel (b) runs to 1.0, so a
+    # shared range wastes half of (a) and squashes (b).
+    fig, axes = plt.subplots(2, 1, figsize=(COL1, 2.68), sharex=True,
+                             constrained_layout=True)
     ax = axes[0]
     ax.plot(s["n"], s["size_nominal"], "o-", color=C["bad"], ms=3.2,
             label="nominal $t$-test")
@@ -183,8 +186,13 @@ def fig_size_power():
     ax.axhline(0.05, color=C["ref"], ls="--", lw=0.8, label="nominal 0.05")
     ax.set_ylabel("rejection rate")
     ax.set_title("(a) size: random-walk input (no cusp)", fontsize=8)
-    ax.legend(frameon=False, fontsize=6, loc="center right",
-              handlelength=1.8, labelspacing=0.3, borderpad=0.2)
+    # The nominal curve sits at ~0.44 and the calibrated one at ~0.05, so the
+    # band between them is empty across the whole width. Upper right put the
+    # second legend row straight through the red line.
+    ax.set_ylim(-0.06, 0.62)
+    ax.legend(frameon=False, fontsize=6, loc="center left",
+              bbox_to_anchor=(0.03, 0.42), handlelength=1.8,
+              labelspacing=0.3, borderpad=0.2)
 
     ax = axes[1]
     if fp.exists():
@@ -201,19 +209,21 @@ def fig_size_power():
                                 alpha=0.15, lw=0)
     ax.axhline(0.05, color=C["ref"], ls="--", lw=0.8)
     ax.axhline(0.8, color=C["grey"], ls=":", lw=0.8)
-    ax.text(0.99, 0.80, "0.8", transform=ax.get_yaxis_transform(),
+    # Inside the axes, not flush against the spine, or it clips.
+    ax.text(0.965, 0.80, "0.8", transform=ax.get_yaxis_transform(),
             fontsize=5.5, color=C["grey"], ha="right", va="bottom")
     ax.set_xscale("log")
-    ax.set_xlabel("series length $n$ (windows)")
+    ax.set_xlabel("series length $n$ (windows)", labelpad=1)
     ax.set_ylabel("rejection rate")
     ax.set_title("(b) power: input that genuinely contains a cusp", fontsize=8)
     # Power curves rise from bottom-left to top-right and converge on 1.0, so
     # every corner of the axes is occupied at some length. Extra headroom above
     # the ceiling gives the legend somewhere to sit that is not on the data.
-    ax.set_ylim(-0.05, 1.46)
-    ax.legend(frameon=False, fontsize=5.6, ncol=4, loc="upper center",
-              handlelength=1.4, handletextpad=0.4, columnspacing=0.8,
-              labelspacing=0.2, borderpad=0.1)
+    ax.set_ylim(-0.06, 1.12)
+    ax.legend(frameon=False, fontsize=5.8, ncol=4, loc="upper center",
+              bbox_to_anchor=(0.5, -0.46), handlelength=1.5,
+              handletextpad=0.4, columnspacing=1.0, labelspacing=0.2,
+              borderpad=0.1)
 
     _save(fig, "fig10_size_power")
 

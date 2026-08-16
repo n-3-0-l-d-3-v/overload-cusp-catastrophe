@@ -30,10 +30,10 @@
 % equations sit flush against the paragraphs around them. The paper is six
 % pages now, so these are back at (or above) the IEEEtran defaults and the page
 % is allowed to breathe. Do not re-tighten them to save a line.
-\setlength{\textfloatsep}{13pt plus 3pt minus 2pt}
+\setlength{\textfloatsep}{11pt plus 3pt minus 2pt}
 \setlength{\floatsep}{12pt plus 3pt minus 2pt}
 \setlength{\intextsep}{12pt plus 3pt minus 2pt}
-\setlength{\dbltextfloatsep}{14pt plus 3pt minus 2pt}
+\setlength{\dbltextfloatsep}{12pt plus 3pt minus 2pt}
 \setlength{\dblfloatsep}{14pt plus 3pt minus 3pt}
 \setlength{\abovedisplayskip}{9pt plus 3pt minus 2pt}
 \setlength{\belowdisplayskip}{9pt plus 3pt minus 2pt}
@@ -44,7 +44,7 @@
 % cells than with rules jammed against the text; booktabs supplies the rules,
 % this supplies the air.
 \setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.12}
+\renewcommand{\arraystretch}{1.06}
 
 % Caption text one size down from body, which is IEEE house style and stops
 % the two long captions from competing with the paragraphs beside them.
@@ -560,27 +560,25 @@ restoring cubic, is neither supported above a calibrated null nor preferred to
 its own removal on held-out density. The bimodality that survives has readier
 explanations than a fold (Sec.~\ref{sec:results}).
 
-The identifiability result is the durable contribution here, and it is a
-negative methodological one: cusp geometry recovered from short wearable series
-is largely an artefact of ratios involving a poorly constrained relaxation
-rate, and rolling early-warning indicators can invert even when a fold is
-present. Every attempt to fit cusp geometry to wearable physiology inherits the
-same ratio structure, and the remedy depends on what is wanted. Ranking
-participants by $\alpha_0$ needs length, order $n\gtrsim500$ windows. Reporting
-a value needs a reparameterisation estimating $a$ and $b$ directly: over the
-six lengths and $1.2\times10^{4}$ series of Sec.~\ref{sec:ident} length alone
-never fixed it, with $r$ for $\alpha_0$ at $0.15$ for $n=200$ and $0.10$ for
-$n=1000$. A splitting factor of 12 from a 200-window recording is not a
-finding, and the arithmetic producing it is not specific to our implementation.
+The identifiability result is the durable contribution, and it is a negative
+methodological one: cusp geometry recovered from short wearable series is
+largely an artefact of ratios involving a poorly constrained relaxation rate,
+and rolling early-warning indicators can invert even when a fold is present.
+Any attempt to fit cusp geometry to wearable physiology inherits that ratio
+structure. Ranking participants by $\alpha_0$ needs length, order
+$n\gtrsim500$ windows; reporting a value needs a reparameterisation estimating
+$a$ and $b$ directly, since over the six lengths of Sec.~\ref{sec:ident} length
+alone never fixed it. A splitting factor of 12 from a 200-window recording is
+not a finding, and the arithmetic producing it is not specific to our
+implementation.
 
-\emph{Limitations.} No autistic participants are analysed, so the motivating
-claim is untested rather than refuted. Tonic EDA is a peripheral,
-artefact-prone proxy. Weak cusp dynamics stay compatible with everything here, and the bound is over
-these corpora rather than over autistic recordings, which do not exist at this
-density. Window width we swept; the softplus form of debt accumulation, the
-driver set $(S,T,U)$ and the Euler-map choice we did not. And
-longer records rescue rankings, not values; not even every parameter in rank,
-since $\varepsilon$ reaches only $\rho=0.44$ at $n=1000$.
+\emph{Limitations.} No autistic participants are analysed, so the motivating claim
+is untested rather than refuted. Tonic EDA is a peripheral, artefact-prone
+proxy. Weak cusp dynamics stay compatible with everything here, and the bound
+is over these corpora. Window width we swept; the softplus debt form, the
+driver set $(S,T,U)$ and the Euler-map choice we did not. Longer records rescue
+rankings, not values, and not every parameter even in rank: $\varepsilon$
+reaches only $\rho=0.44$ at $n=1000$.
 
 \emph{Toward validation.} We pre-specify the study that would test the mechanism in its intended
 population: 28 days of ecological momentary assessment with continuous wrist
@@ -594,14 +592,12 @@ second well-powered null under those conditions would be evidence that overload
 is not a cusp catastrophe at physiological timescales.
 
 \section*{Code and Data Availability}
-The estimator, analysis pipeline, Monte Carlo suite, figure scripts and this
-manuscript are released under the MIT licence at
+Code, figures and this manuscript are released under the MIT licence at
 \url{https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe}, with a
 provenance table recording the replication count behind every number. The three
 corpora are third-party and not redistributed: WESAD from the UCI repository
-(ID 465), Wearable Exam Stress and Nurse Stress from PhysioNet, each obtained
-programmatically from its primary repository with URLs, dates and byte counts
-recorded.
+(ID 465), Wearable Exam Stress and Nurse Stress from PhysioNet, each fetched
+programmatically with URLs, dates and byte counts recorded.
 
 \section*{Acknowledgment}
 I thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress
