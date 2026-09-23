@@ -9,7 +9,8 @@ page count, boxes that overflow the column, and unresolved references.
     python code/experiments/compile_paper.py --tex paper_journal.tex
 
 Uses Tectonic if it is on PATH or under tools/, because it is self-contained
-and fetches only the packages the document needs. Falls back to pdflatex.
+and fetches only the packages the document needs. Falls back to XeLaTeX, then
+pdflatex (which substitutes Times for the Latin Modern look).
 
 Why the log is parsed rather than skimmed
 -----------------------------------------
@@ -85,9 +86,10 @@ def find_engine():
     for cand in TOOLS.glob("**/tectonic*"):
         if cand.is_file():
             return ("tectonic", str(cand))
-    p = shutil.which("pdflatex")
-    if p:
-        return ("pdflatex", p)
+    for name in ("xelatex", "pdflatex"):
+        p = shutil.which(name)
+        if p:
+            return (name, p)
     return (None, None)
 
 

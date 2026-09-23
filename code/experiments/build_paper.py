@@ -162,7 +162,7 @@ def main():
     make_docx()
     problems = sanity_checks()
     print("\nTo compile: upload paper/overleaf_bundle.zip to Overleaf, "
-          "set the compiler to pdfLaTeX, and build main.tex.")
+          "set the compiler to XeLaTeX, and build main.tex.")
     return 1 if problems else 0
 
 
