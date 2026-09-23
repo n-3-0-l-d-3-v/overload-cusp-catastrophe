@@ -124,7 +124,10 @@ def fig1_geometry():
     ax.set_xlabel(r"drive $b$")
     ax.set_ylabel(r"equilibrium load $x^*$")
     ax.set_title(r"(c) hysteresis, width $\Delta b=\frac{4}{3\sqrt{3}}a^{3/2}$")
-    ax.legend(frameon=False, loc="lower right", handlelength=1.4)
+    # Headroom above the upper branch gives the legend a place off the curves.
+    ax.set_ylim(-1.95, 2.75)
+    ax.legend(frameon=False, loc="upper center", handlelength=1.4,
+              fontsize=6.5, labelspacing=0.25, borderaxespad=0.3)
 
     _save(fig, "fig1_geometry")
 
