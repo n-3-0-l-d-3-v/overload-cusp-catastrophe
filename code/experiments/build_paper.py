@@ -34,7 +34,7 @@ BUILD = PAPER / "build"
 def make_bundle():
     """Flatten graphics paths and zip everything Overleaf needs."""
     BUILD.mkdir(exist_ok=True, parents=True)
-    tex = (PAPER / "main.tex").read_text(encoding="utf-8")
+    tex = (PAPER / "paper_conference.tex").read_text(encoding="utf-8")
     # Overleaf bundle keeps figures/ and tables/ alongside main.tex
     tex = tex.replace(r"\graphicspath{{../figures/}}", r"\graphicspath{{figures/}}")
     (BUILD / "main.tex").write_text(tex, encoding="utf-8")
@@ -109,8 +109,8 @@ def make_docx():
 
 
 def _expanded_tex():
-    r"""main.tex with \input{...} files spliced in, so label checks see them."""
-    tex = (PAPER / "main.tex").read_text(encoding="utf-8")
+    r"""paper_conference.tex with \input{...} spliced in, for the label checks."""
+    tex = (PAPER / "paper_conference.tex").read_text(encoding="utf-8")
     for inc in re.findall(r"\\input\{([^}]*)\}", tex):
         f = PAPER / (inc if inc.endswith(".tex") else inc + ".tex")
         if f.exists():

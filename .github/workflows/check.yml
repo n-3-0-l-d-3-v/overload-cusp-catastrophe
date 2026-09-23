@@ -62,12 +62,12 @@ jobs:
       - name: Conference paper -- 5 pages, no overfull boxes, no empty refs
         run: |
           python code/experiments/compile_paper.py \
-            --tex main.tex --target 5 --strict
+            --tex paper_conference.tex --target 5 --strict
 
       - name: Journal draft -- no overfull boxes, no empty refs
         run: |
           python code/experiments/compile_paper.py \
-            --tex main_full_journal.tex --strict
+            --tex paper_journal.tex --strict
 
       - name: Upload compiled PDFs
         if: always()
@@ -75,6 +75,6 @@ jobs:
         with:
           name: compiled-papers
           path: |
-            paper/paper_5page.pdf
-            paper/main_full_journal.pdf
+            paper/paper_conference.pdf
+            paper/paper_journal.pdf
           if-no-files-found: warn

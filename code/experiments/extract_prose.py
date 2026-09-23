@@ -135,7 +135,7 @@ def extract(tex: str) -> str:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tex", default="main.tex")
+    ap.add_argument("--tex", default="paper_conference.tex")
     ap.add_argument("--out", default="prose.txt")
     ap.add_argument("--stdout", action="store_true")
     a = ap.parse_args()

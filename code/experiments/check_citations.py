@@ -40,7 +40,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-TEX = ROOT / "paper" / "main.tex"
+TEX = ROOT / "paper" / "paper_conference.tex"
 BIB = ROOT / "paper" / "refs.bib"
 
 CITE_RE = re.compile(r"\\cite[tp]?\*?(?:\[[^\]]*\])*\{([^}]*)\}")

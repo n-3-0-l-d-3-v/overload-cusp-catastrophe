@@ -84,11 +84,12 @@ excluding strong and moderate dynamics — **not** a faint fold.
 ```
 .
 ├── paper/
-│   ├── main.tex                 IEEE two-column conference manuscript
-│   ├── main_full_journal.tex    long-form draft for the journal version
+│   ├── paper_conference.tex     IEEE two-column conference manuscript
+│   ├── paper_journal.tex        long-form draft for the journal version
 │   ├── refs.bib                 46 entries, all DOIs verified
 │   ├── REFERENCE_CHECK.md       what was wrong and how it was found
-│   ├── paper_conference.pdf     compiled output (6 pages)
+│   ├── paper_conference.pdf     compiled conference paper (6 pages)
+│   ├── paper_journal.pdf        compiled journal draft
 │   └── tables/                  auto-generated LaTeX tables
 ├── code/
 │   ├── chm/

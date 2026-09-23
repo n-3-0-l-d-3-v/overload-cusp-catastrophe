@@ -10,7 +10,7 @@ whoever or whatever wrote it, and evening out that rhythm is ordinary line
 editing that improves a paper regardless.
 
     python code/experiments/prose_stats.py
-    python code/experiments/prose_stats.py --tex main_full_journal.tex --list
+    python code/experiments/prose_stats.py --tex paper_journal.tex --list
 
 Reports mean, standard deviation, and the share of very short and very long
 sentences. A standard deviation near or above the mean's half is healthy
@@ -89,7 +89,7 @@ def report(path: Path, show_list: bool):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tex", default="main.tex")
+    ap.add_argument("--tex", default="paper_conference.tex")
     ap.add_argument("--list", action="store_true",
                     help="show the longest sentences, which are what to fix")
     a = ap.parse_args()

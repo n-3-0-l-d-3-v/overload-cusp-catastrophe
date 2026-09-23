@@ -6,7 +6,7 @@ page count, boxes that overflow the column, and unresolved references.
 
     python code/experiments/compile_paper.py
     python code/experiments/compile_paper.py --target 5 --strict
-    python code/experiments/compile_paper.py --tex main_full_journal.tex
+    python code/experiments/compile_paper.py --tex paper_journal.tex
 
 Uses Tectonic if it is on PATH or under tools/, because it is self-contained
 and fetches only the packages the document needs. Falls back to pdflatex.
@@ -124,7 +124,7 @@ def parse_log(text, threshold):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tex", default="main.tex")
+    ap.add_argument("--tex", default="paper_conference.tex")
     ap.add_argument("--target", type=int, default=None,
                     help="expected page count; nonzero exit if different")
     ap.add_argument("--strict", action="store_true",
@@ -191,8 +191,7 @@ def main():
         # Not named for a page count: the target moved from 5 to 6 once the
         # reviewer-requested settings, availability and scoping text went in,
         # and a filename that encodes the count goes stale silently.
-        out = PAPER / (args.out or ("paper_conference.pdf" if stem == "main"
-                                    else f"{stem}.pdf"))
+        out = PAPER / (args.out or f"{stem}.pdf")
         shutil.copy(pdf, out)
 
         d = parse_log(log_text, args.threshold)
