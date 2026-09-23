@@ -159,8 +159,7 @@ independently of the negative empirical result reported here.
 \item \textbf{An identifiability bound on cusp models of wearable
   physiology} (Sec.~\ref{sec:ident}): a $1.2\times10^{4}$-replicate study
   showing the geometric parameters are ratios with an unbounded denominator, so
-  length recovers their ordering and never their value. It binds any study of
-  this kind, ours included.
+  length recovers their ordering and never their value.
 \item \textbf{A ground-truth failure of the standard early-warning estimators}
   (Sec.~\ref{sec:results}): rolling variance and lag-1 autocorrelation report
   the wrong sign on data containing a genuine fold, with the mechanism
@@ -179,9 +178,9 @@ autistic adults, which is why the phenomenology above is the phenomenology of
 overload. Systematic reviews of wearable sensing \cite{cano2024} and ecological
 momentary assessment \cite{chen2025ema} in autism survey what has been
 collected; none of the corpora they describe is openly released at the temporal
-density this model needs, and we could not find one elsewhere. So none are
-analysed here and the paper is not titled after them. That costs the results nothing, because
-the results are about estimators. General stress corpora carry the same sensor,
+density this model needs, and we could not find one elsewhere. None is
+therefore analysed here, which costs nothing because the results concern
+estimators. General stress corpora carry the same sensor,
 sampling rate and recording lengths an autism study would, so a bound measured
 here transfers to that study directly. No claim about the population transfers,
 and we make none.
@@ -336,9 +335,9 @@ calibrated) and 100 for power; the early-warning validation covers 90
 configurations (five window widths, two detrending choices, three lengths to
 $n=20{,}000$) at 500 each. Counts were fixed in advance to hold the Monte Carlo standard error on a
 proportion below $0.01$ for size and power, and the AR(1) persistence study
-runs 1000 replicates at each of nine values of $\phi$. All of it is seeded from
-one master seed and runs on one machine, ten workers on a six-core,
-twelve-thread CPU.
+runs 1000 replicates at each of nine values of $\phi$. All runs derive from one
+master seed and execute on a single six-core, twelve-thread CPU with ten
+workers.
 
 % =====================================================================
 \section{What This Data Can Identify}
@@ -478,8 +477,7 @@ of the same bias, averaging over the approach itself (the window-240 rows), and
 detrending removes the low-frequency power carrying what survives. We
 withdraw our own P2 test as uninterpretable.
 
-The claim we draw is narrow, and worth stating at its own size. It covers
-fixed-width rolling variance and lag-1 autocorrelation with and without
+The claim is deliberately narrow. It covers fixed-width rolling variance and lag-1 autocorrelation with and without
 Gaussian detrending, which is what the applied literature mostly runs, and says
 nothing about adaptive-bandwidth or spectral estimators. It indicts those
 estimators, not early-warning theory: the exponent from the true curvature
@@ -583,8 +581,7 @@ The identifiability result is the durable contribution, and it is a negative
 methodological one: cusp geometry recovered from short wearable series is
 largely an artefact of ratios involving a poorly constrained relaxation rate,
 and rolling early-warning indicators can invert even when a fold is present.
-Any attempt to fit cusp geometry to wearable physiology inherits that ratio
-structure. Ranking participants by $\alpha_0$ needs length, order
+Ranking participants by $\alpha_0$ needs length, order
 $n\gtrsim500$ windows; reporting a value needs a reparameterisation estimating
 $a$ and $b$ directly, since over the six lengths of Sec.~\ref{sec:ident} length
 alone never fixed it. A splitting factor of 12 from a 200-window recording is
