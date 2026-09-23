@@ -101,8 +101,10 @@ def fig_identifiability():
             ax.plot(s["n"], s["corr"], ls, marker=mk, color=col, ms=3.0,
                     label=lab, alpha=0.9)
     ax.axhline(0.8, color=C["ref"], lw=0.7, ls="--")
-    ax.text(880, 0.84, "identified", fontsize=5.8, color=C["ref"],
-            ha="right", va="bottom")
+    # Below the line at short lengths is the only empty stretch near it; at
+    # the right end the curves converge on 0.8 and would cover the label.
+    ax.text(106, 0.74, "identified above 0.8", fontsize=5.8, color=C["ref"],
+            ha="left", va="top")
     ax.axvline(200, color=C["grey"], lw=0.8, alpha=0.7)
     ax.text(212, -0.30, "median observed $n$", fontsize=5.4, color=C["grey"],
             ha="left", va="bottom")
@@ -114,8 +116,8 @@ def fig_identifiability():
     ax.set_ylim(-0.35, 1.12)
     ax.set_title("(a) which parameters are recoverable", fontsize=8, pad=6)
     ax.legend(frameon=False, ncol=4, loc="upper center",
-              bbox_to_anchor=(0.5, -0.46), fontsize=5.6,
-              handlelength=1.5, handletextpad=0.4, columnspacing=0.9,
+              bbox_to_anchor=(0.5, -0.46), fontsize=5.8,
+              handlelength=1.5, handletextpad=0.4, columnspacing=1.3,
               labelspacing=0.35, borderpad=0.1)
 
     # (b) the failure mode itself: error in alpha0 explodes as lambda-hat -> 0
