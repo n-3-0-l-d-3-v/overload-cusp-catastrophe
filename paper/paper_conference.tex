@@ -436,20 +436,20 @@ on input that genuinely contains a cusp. Bands are Wilson intervals.}
 \label{fig:powersize}
 \end{figure}
 
-\subsection{The nominal test is invalid; the calibrated one is powered}
-Over $30{,}000$ random-walk replicates spanning six lengths, the nominal
-one-sided $t$-test on $\theta_1$ rejects $41.9\%$ of the time rather than $5\%$.
-The inflation does not shrink with sample size. It grows, from $36.3\%$
-($95\%$ CI $[35.0,37.7]$) at $n=100$ to $44.4\%$ $([43.0,45.8])$ at $n=1000$.
-That is the signature of spurious regression on an integrated series, not a
-small-sample artefact. Surrogate calibration restores nominal size across the same grid:
-$5.0\%$ pooled over $7{,}500$ replicates, every per-length interval covering
-$0.05$. Calibration costs power, so we quote power for the test actually used.
-At $n=200$, over 2000 replicates per cell, it is $1.00$ for strong cusp
-dynamics, $0.89$ for moderate and $0.28$ for weak; by $n=1000$ it is $1.00$ for
-strong and moderate and $0.99$ for weak (Fig.~\ref{fig:powersize}). The
-null below therefore excludes strong and moderate dynamics. It does not exclude
-a faint fold.
+\subsection{Validity and power of the significance test}
+Across $30{,}000$ random-walk replicates spanning six lengths, the nominal
+one-sided $t$-test on $\theta_1$ rejects $41.9\%$ of the time instead of $5\%$.
+The inflation increases with sample size, from $36.3\%$ ($95\%$ CI
+$[35.0,37.7]$) at $n=100$ to $44.4\%$ ($[43.0,45.8]$) at $n=1000$, as expected
+from spurious regression on an integrated series and unlike a small-sample
+artefact. Surrogate calibration restores nominal size on the same grid
+($5.0\%$ pooled over $7{,}500$ replicates, with every per-length interval
+covering $0.05$). Because calibration costs power, we report power for the
+calibrated test. At $n=200$ (2000 replicates per cell) it is $1.00$ for strong
+cusp dynamics, $0.89$ for moderate and $0.28$ for weak; at $n=1000$ it is
+$1.00$ for strong and moderate and $0.99$ for weak (Fig.~\ref{fig:powersize}).
+The null reported below therefore rules out strong and moderate dynamics in
+these corpora but cannot exclude a faint fold.
 
 \subsection{The early-warning estimator fails on ground truth}
 Proposition~\ref{prop:ews} describes the system. Testing it needs an estimator,
@@ -463,9 +463,9 @@ configurations, 500 replicates each. The failure has two regimes
 (Table~\ref{tab:ewsval}). At windows of 20 to 120 the sign is systematically
 \emph{inverted}, and near-totally so: $99\%$ of replicates carry the wrong
 sign for variance at window 30, and some configurations invert in all 500. At
-window 240 both indicators instead collapse onto zero, medians between $-0.018$
-and $+0.027$, the sign a coin flip. Nowhere on the grid does an estimate come
-near the predicted magnitude.
+window 240, both indicators collapse toward zero instead, with medians between
+$-0.018$ and $+0.027$, so the sign is effectively a coin flip.
+Nowhere on the grid does an estimate come near the predicted magnitude.
 
 This is structural, and Sec.~\ref{sec:model} says why. The relaxation rate
 vanishes as $\lambda_{\text{rel}}\propto\mu^{1/2}$, so the correlation time
@@ -514,19 +514,19 @@ giving $1.5\%$ (Wilson $[0.0,3.1]\%$), with $10\%$ of people showing at least
 one significant session. That is the most generous reading available, and still
 what chance produces.
 
-Held-out prediction agrees from another direction. The full model loses to its
-own nested monostable special case, winning on $33.8\%$ of units, median
-difference $-0.25$ nats per step, Wilcoxon $p=8\times10^{-5}$ for the simpler
-model. Since that special case is this model with the cubic switched off, it is
-the cleanest available statement that the term does no work. Prospective onset
-prediction gives AUC $0.50$ to $0.46$ at lead times of 3 to 12 windows.
-Chance.
+Held-out prediction points the same way. The full model loses to its own
+nested monostable special case, winning on only $33.8\%$ of units with a
+median difference of $-0.25$ nats per step (Wilcoxon $p=8\times10^{-5}$ in
+favour of the simpler model). Since that special case is the same model with
+the cubic switched off, this is the clearest evidence available that the term
+adds nothing. Prospective onset prediction is no better than chance, with AUC
+between $0.50$ and $0.46$ at lead times of 3 to 12 windows.
 
-That comparison isolates the cubic term, the component the claim rests on. We
-do not ablate the debt variable or the driver set in turn: Sec.~\ref{sec:ident}
-shows $\alpha_A$ and $\varepsilon$ are unidentified at these lengths, so
-removing them would credit a change in fit to something the data cannot
-resolve.
+This comparison isolates the cubic term, which is the component the claim
+depends on. The debt variable and driver set are not ablated in the same way:
+Sec.~\ref{sec:ident} shows $\alpha_A$ and $\varepsilon$ are unidentified at
+these lengths, so removing them would attribute a change in fit to quantities
+the data cannot resolve.
 
 \subsection{Structure without fold structure}
 The null is specific, and calling it noise would be wrong. Two of the three
@@ -541,28 +541,29 @@ across a session. Both fit everything measured here and neither is a fold.
 Separating them from bistability needs the drivers manipulated rather than
 observed, which is a design requirement and not a longer recording.
 
-A test that fires where nothing should be found is a problem for the test, so
-we state it first rather than in passing. Configuration B, the primary, sits at
-nominal under both the random-walk ($0.046$) and the harder IAAFT ($0.069$)
-ensembles, and holds across \SIrange{30}{120}{\second} windows. Configurations
-A and C reject at $0.11$ to $0.16$, and A is the negative control.
+Because a test that fires where nothing should be found would undermine the
+result, we report the control channels explicitly. Configuration B, the
+primary channel, stays at nominal size under both the random-walk ($0.046$) and the harder
+IAAFT ($0.069$) ensembles across \SIrange{30}{120}{\second} windows.
+Configurations A and C reject at $0.11$ to $0.16$, and A is the negative
+control.
 
-Three explanations were tested; all three failed. IAAFT surrogates did not
-bring C down, so a purely spectral artefact does not account for it. Clipping rates run opposite to the effect, ruling out saturation. And an AR(1)
-size study across $\phi\in[0,1]$, 1000 replicates per point, bounds what
-persistence alone can buy: against random-walk surrogates the calibrated test
-stays at or below nominal, peaking at $0.040$ at the unit root, and against
-IAAFT it reaches $0.094$ there. That covers B's IAAFT rate of $0.069$ but
-leaves A and C unexplained. What remains for those two is nonlinear structure
-the surrogates do not reproduce.
+We tested three explanations and none accounted for this. IAAFT surrogates did
+not bring C down, which excludes a purely spectral artefact, and clipping rates
+move opposite to the effect, which excludes saturation. An AR(1) size study
+across $\phi\in[0,1]$, with 1000 replicates per point, bounds what persistence
+alone can produce: the calibrated test stays at or below nominal against
+random-walk surrogates, peaking at $0.040$ at the unit root, and reaches
+$0.094$ against IAAFT. That covers B's IAAFT rate of $0.069$ but not A or C,
+where what remains is nonlinear structure the surrogates do not reproduce.
 
-Two readings survive, and Sec.~\ref{sec:methods} decides between them on
-independent grounds: at a \SI{30}{\second} window the cardiac coordinate has
-lag-1 autocorrelation $0.19$, so whatever else it carries it cannot be the slow
-coordinate of a relaxation process. The conservative reading is motion and peak-detection artefact, and its
-consequence is not buried: on A and C a significant result does not license the
-word cusp, which is what a negative control is for, and why the conclusion
-rests on B alone.
+Two readings survive, and Sec.~\ref{sec:methods} separates them on independent
+grounds. At a \SI{30}{\second} window the cardiac coordinate has lag-1
+autocorrelation $0.19$, too low for the slow coordinate of a relaxation
+process, so the conservative reading is motion and peak-detection artefact.
+On A and C, then, a significant result does not license the word cusp; that
+is the purpose of a negative control, and it is why the conclusion rests on B
+alone.
 
 % =====================================================================
 \section{Discussion and Conclusion}
