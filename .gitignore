@@ -58,3 +58,6 @@ paper/prose.txt
 
 # research-better tool cache: large, regenerable, not part of the artefact
 paper/.research-better/cache/
+
+# Word exports of the progress Markdown; regenerate from the .md
+progress/*.docx
