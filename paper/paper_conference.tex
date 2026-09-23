@@ -366,18 +366,19 @@ not reflect any quirk of the simulation.
 \begin{figure}[tb]
 \centering
 \includegraphics[width=\columnwidth]{fig9_identifiability}
-\caption{(a) Rank recovery against series length, 2000 replicates per point.
-(b) The mechanism: error in the recovered splitting factor rises as
-$\hat\lambda$ falls, because $a=\theta_2/\theta_1$. The median $\hat\lambda$ in
-the real corpora lies below the whole simulated range.}
+\caption{(a) Correlation between true and estimated values against series
+length (2000 replicates per point). (b) Error in the recovered splitting factor
+against $\hat\lambda$, growing as $\hat\lambda$ falls because
+$a=\theta_2/\theta_1$; the vertical line is the median $\hat\lambda$ of the
+real corpora.}
 \label{fig:ident}
 \end{figure}
 
 \begin{table}[tb]
-\caption{Parameter recovery, 2000 replicates per cell. $\rho$ (Spearman) asks
-whether the ordering is recovered, $r$ (Pearson) whether the value is. Only
-$\lambda$ and $\sigma$ score well on both. For $\alpha_0$ they diverge and stay
-diverged.}
+\caption{Recovery of each parameter from simulated series (2000 replicates
+per cell). Spearman's $\rho$ measures recovery of the ordering and Pearson's
+$r$ recovery of the value. Bold entries mark the two parameters recovered well
+on both measures.}
 \label{tab:ident}
 \centering
 \begin{tabular}{@{}lcccc@{}}
@@ -430,9 +431,10 @@ report that structure instead of four numbers presented as tests.
 \begin{figure}[tb]
 \centering
 \includegraphics[width=\columnwidth]{fig10_size_power}
-\caption{(a) Size on random-walk input: the nominal test rejects at roughly
-$0.42$ at every length, surrogate calibration restores nominal size. (b) Power
-on input that genuinely contains a cusp. Bands are Wilson intervals.}
+\caption{(a) Random-walk input without a cusp: the nominal $t$-test rejects
+$36$--$44\%$ of the time, while the calibrated test stays near $0.05$. (b)
+Power of the calibrated test for cusp dynamics of four strengths, with Wilson
+intervals.}
 \label{fig:powersize}
 \end{figure}
 
@@ -487,9 +489,9 @@ known. Within that scope the caution is firm: a directional early-warning
 result obtained this way is weak evidence either way.
 
 \begin{table}[tb]
-\caption{Recovering the exponent from ground-truth cusp data, 1500 replicates
-per row. Theory does; the rolling estimators invert at short windows and
-collapse to zero at long ones.}
+\caption{Exponent estimates on ground-truth cusp data (1500 replicates per
+row). The exponent from the true curvature matches theory, whereas the rolling
+estimators invert at short windows and collapse toward zero at long ones.}
 \label{tab:ewsval}
 \centering
 \begin{tabular}{@{}lccrrr@{}}
