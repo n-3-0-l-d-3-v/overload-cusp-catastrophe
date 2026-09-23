@@ -5,7 +5,7 @@ Compile the manuscript and report anything a reviewer would see as a defect:
 page count, boxes that overflow the column, and unresolved references.
 
     python code/experiments/compile_paper.py
-    python code/experiments/compile_paper.py --target 5 --strict
+    python code/experiments/compile_paper.py --target 6 --strict
     python code/experiments/compile_paper.py --tex paper_journal.tex
 
 Uses Tectonic if it is on PATH or under tools/, because it is self-contained

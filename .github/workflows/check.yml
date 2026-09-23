@@ -59,10 +59,10 @@ jobs:
           curl -fsSL https://drop-sh.fullyjustified.net | sh
           sudo mv tectonic /usr/local/bin/
 
-      - name: Conference paper -- 5 pages, no overfull boxes, no empty refs
+      - name: Conference paper -- 6 pages, no overfull boxes, no empty refs
         run: |
           python code/experiments/compile_paper.py \
-            --tex paper_conference.tex --target 5 --strict
+            --tex paper_conference.tex --target 6 --strict
 
       - name: Journal draft -- no overfull boxes, no empty refs
         run: |
