@@ -1,12 +1,12 @@
-# When Cusp Geometry Is an Artefact
+# Identifiability and Early-Warning Reliability of Cusp Catastrophe Dynamics in Wearable Electrodermal Recordings
 
-Non-identifiability and sign-inverting early-warning estimators in wearable
-physiology. Cusp geometry recovered from short wearable series is largely an
+Cusp geometry recovered from short wearable series is largely an
 artefact of ratios involving a poorly constrained relaxation rate, and rolling
 early-warning indicators can invert sign even when a fold is present.
 
-**Neil Thomas Mathew** — [ORCID 0009-0001-8802-7376](https://orcid.org/0009-0001-8802-7376)
-Department of Computer Applications, CHRIST (Deemed to be University), Bengaluru
+**Neil Thomas Mathew** ([ORCID 0009-0001-8802-7376](https://orcid.org/0009-0001-8802-7376)),
+**Nismon Rio Robert** and **Cecil Donald**
+Christ University, Bengaluru
 
 Complete research artefact: derivation, implementation, Monte Carlo validation,
 figures, manuscript, and an unedited record of everything that broke along the

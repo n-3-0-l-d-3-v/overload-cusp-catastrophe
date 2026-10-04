@@ -1,8 +1,8 @@
 # Research progress brief
 
 **Neil Thomas Mathew** — Department of Computer Applications, CHRIST (Deemed to be University)
-Paper: *When Cusp Geometry Is an Artefact: Non-Identifiability and Sign-Inverting
-Early-Warning Estimators in Wearable Physiology*
+Paper: *Identifiability and Early-Warning Reliability of Cusp Catastrophe
+Dynamics in Wearable Electrodermal Recordings*
 Repository: https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe
 
 ---
