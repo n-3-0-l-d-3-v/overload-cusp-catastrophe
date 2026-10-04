@@ -62,6 +62,7 @@ Sign-Inverting Early-Warning Estimators in Wearable Physiology}
 \IEEEauthorblockA{Department of Computer Applications\\
 Christ University\\
 Bangalore 560029, India\\
+neil.mathew@bcah.christuniversity.in\\
 ORCID: \href{https://orcid.org/0009-0001-8802-7376}{0009-0001-8802-7376}}
 \and
 \IEEEauthorblockN{Nismon Rio Robert}
@@ -191,7 +192,7 @@ and we make none.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.78\textwidth]{fig1_geometry}
+\includegraphics[width=0.72\textwidth]{fig1_geometry}
 \caption{The geometry from which everything else follows. (a) The cusp potential
 at three levels of drive $b$. (b) The bifurcation set in the $(a,b)$ plane, with
 the five functional states appearing as regions rather than as assigned labels.
@@ -344,7 +345,7 @@ workers.
 \label{sec:ident}
 
 Before testing anything we asked which parameters are recoverable at the
-series lengths on offer. The answer organised the rest of the paper. We simulated with randomised true parameters and refitted, 2000
+series lengths on offer. We simulated with randomised true parameters and refitted, 2000
 replicates at each of six lengths, then compared true against estimated values
 (Table~\ref{tab:ident}, Fig.~\ref{fig:ident}a).
 
@@ -364,7 +365,7 @@ not reflect any quirk of the simulation.
 
 \begin{figure}[tb]
 \centering
-\includegraphics[width=\columnwidth]{fig9_identifiability}
+\includegraphics[width=0.94\columnwidth]{fig9_identifiability}
 \caption{(a) Correlation between true and estimated values against series
 length (2000 replicates per point). (b) Error in the recovered splitting factor
 against $\hat\lambda$, growing as $\hat\lambda$ falls because
@@ -429,7 +430,7 @@ report that structure instead of four numbers presented as tests.
 
 \begin{figure}[tb]
 \centering
-\includegraphics[width=\columnwidth]{fig10_size_power}
+\includegraphics[width=0.94\columnwidth]{fig10_size_power}
 \caption{(a) Random-walk input without a cusp: the nominal $t$-test rejects
 $36$--$44\%$ of the time, while the calibrated test stays near $0.05$. (b)
 Power of the calibrated test for cusp dynamics of four strengths, with Wilson
@@ -453,8 +454,8 @@ The null reported below therefore rules out strong and moderate dynamics in
 these corpora but cannot exclude a faint fold.
 
 \subsection{The early-warning estimator fails on ground truth}
-Proposition~\ref{prop:ews} describes the system. Testing it needs an estimator,
-and we checked ours before trusting it. On data simulated from a model that
+Testing Proposition~\ref{prop:ews} needs an estimator, and we checked ours
+before trusting it. On data simulated from a model that
 genuinely contains a fold, the exponent computed from the true equilibrium
 curvature comes back at $+0.565$ against a predicted $+0.5$: theory and
 implementation agree. The rolling-window indicators the early-warning literature
@@ -537,8 +538,7 @@ distributional evidence alone concludes the opposite of the truth, so it is
 worth naming what else produces it. Exogenous switching does: a load tracking a
 driver with two typical levels is bimodal and beats a monostable fit with no
 restoring cubic anywhere. So does slow non-stationarity, a baseline drifting
-across a session. Both fit everything measured here and neither is a fold.
-Separating them from bistability needs the drivers manipulated rather than
+across a session. Neither is a fold, and separating them from bistability needs the drivers manipulated rather than
 observed, which is a design requirement and not a longer recording.
 
 Because a test that fires where nothing should be found would undermine the
@@ -612,15 +612,15 @@ Code, figures and this manuscript are released under the MIT licence at
 \url{https://github.com/n-3-0-l-d-3-v/overload-cusp-catastrophe}, with a
 provenance table recording the replication count behind every number. The three
 corpora are third-party and not redistributed: WESAD from the UCI repository
-(ID 465), Wearable Exam Stress and Nurse Stress from PhysioNet, each fetched
-programmatically with URLs, dates and byte counts recorded.
+(ID 465), Wearable Exam Stress and Nurse Stress from PhysioNet.
 
 \section*{Acknowledgment}
 We thank the authors of the WESAD, Wearable Exam Stress and Nurse Stress
-datasets for releasing them openly. Per IEEE policy, the authors disclose the
-use of an AI assistant for code implementation, literature organisation and
-manuscript drafting; all analyses, results and claims were verified by the
-authors, who are solely responsible for the content.
+datasets for releasing them openly. An AI assistant was used mainly for
+repeated model test runs, including the simulation and validation runs, and
+gave limited support during early drafting. The model, the analysis and the
+final manuscript are the work of the authors, who verified all results and are
+solely responsible for the content.
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
