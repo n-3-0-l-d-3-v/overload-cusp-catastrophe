@@ -11,7 +11,7 @@ paper/paper_conference.tex, without touching that file:
 
 Both are set on A4 with pdflatex, which gives the Times face of the IEEE Word
 template the conference distributes. Output goes to paper/build/, which is not
-tracked.
+tracked; the review PDF is also copied to paper/paper_conference_anonymous.pdf.
 """
 
 from __future__ import annotations
@@ -27,10 +27,9 @@ PAPER = ROOT / "paper"
 FIGS = ROOT / "figures"
 BUILD = PAPER / "build"
 
-ANON_AUTHOR = (
-    "\\author{\\IEEEauthorblockN{Anonymous Authors}\n"
-    "\\IEEEauthorblockA{Author details withheld for double-blind review}}"
-)
+# Empty, not a placeholder line: a committee screening for author blocks
+# flagged "Anonymous Authors" as one and asked for a resubmission.
+ANON_AUTHOR = "\\author{}"
 LINK_RE = re.compile(
     r"Code, figures and this manuscript are released under the MIT licence at\s+"
     r"\\url\{[^}]*\}, with a\s+provenance table recording the replication count "
@@ -91,6 +90,9 @@ def main() -> int:
         (BUILD / f"{stem}.tex").write_text(variant(src, anonymous),
                                            encoding="utf-8", newline="\n")
         pages.append(compile_pdf(stem))
+    shutil.copy(BUILD / "submission_review.pdf",
+                PAPER / "paper_conference_anonymous.pdf")
+    print("copied the review PDF to paper/paper_conference_anonymous.pdf")
     return 0 if all(p <= 6 for p in pages) else 1
 
 
